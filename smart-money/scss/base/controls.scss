@@ -1,0 +1,35 @@
+.g-btn-stroke
+{
+	display: block;
+	position: relative;
+	width: 270px;
+	max-width: calc(100% - 16px);
+	height: 54px;
+	line-height: 54px;
+	font-family: $semi-font;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	background-color: #F04F48;
+	border: 0;
+	box-shadow: 0px 4.49425px 17.977px rgba(226, 35, 26, 0.2), 0px 1.7977px 3.5954px rgba(226, 35, 26, 0.4);
+	border-radius: 98px;
+
+	&:before
+	{
+		position: absolute;
+		content: "";
+		width: calc(100% + 16px);
+		height: calc(100% + 16px);
+		left: -8px;
+		top: -8px;
+		border-radius: 116px;
+		border: 2px solid #f04f48;
+		transition: .2s;
+	}
+
+	&:hover:before
+	{
+		transform: scale(1.03);
+	}
+}

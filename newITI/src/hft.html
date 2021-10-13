@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('./inc/components/pagehead.html')
+</head>
+	<body>
+		@@include('./inc/components/header.html')
+		<!-- @@include('./inc/components/trade-ideas-element.html') -->
+		<div class="wrap">
+			<div class="container">
+				<ul class="breadcrumbs clearfix hft-breadcrumbs">
+					<li><a href="#">Услуги</a></li>
+					<li><a href="#">HFT и алготрейдерам</a></li>
+				</ul>
+				<!-- <form onsubmit="return o2.arrange(this,event)" class="htf"> -->
+				<!-- <form onsubmit="return o2.prev(this,event)" class="htf" name="htf"> -->
+				<form class="htf" name="htf">
+					<div class="hft-content">
+						<h1 class="hft-content__title">HFT-конструктор</h1>
+						<div class="hft-content__flex">
+							<div class="hft-content__flex-main">
+								<h2 class="hft-content__flex-main-title">Рынки</h2>
+								<div class="hft-content__flex-main-check">
+									<label class="g-checkbox ">
+										<input type="checkbox" name="fondovi" class="g-checkbox__input _g-checkbox__input" data-number="0" onchange="o2.connectionMarkets(this);o2.tap(this,'_market');o2.showMore(this,'htf_fondFustVlute','_market');o2.checkEl(this);" checked>
+										<div class="g-checkbox__body">
+											<span class="g-checkbox__box"></span>
+											<span class="g-checkbox__text _g-checkbox__text">Фондовый</span>
+										</div>
+									</label>
+									<label class="g-checkbox ">
+										<input type="checkbox" name="valutni" class="g-checkbox__input _g-checkbox__input" data-number="1" onchange="o2.connectionMarkets(this);o2.tap(this,'_market');o2.showMore(this,'htf_fondFustVlute','_market');o2.checkEl(this)">
+										<div class="g-checkbox__body">
+											<span class="g-checkbox__box"></span>
+											<span class="g-checkbox__text _g-checkbox__text">Валютный</span>
+										</div>
+									</label>
+									<label class="g-checkbox ">
+										<input type="checkbox" name="srochni" class="g-checkbox__input _g-checkbox__input" data-number="2" onchange="o2.connectionMarkets(this);o2.tap(this,'_market');o2.showMore(this,'htf_fondFustVlute','_market');o2.checkEl(this)" checked>
+										<div class="g-checkbox__body">
+											<span class="g-checkbox__box"></span>
+											<span class="g-checkbox__text _g-checkbox__text">Срочный</span>
+										</div>
+									</label>
+								</div>
+								<div class="htf_fondFustVlute active" data-number="0">
+									<h2 class="hft-content__flex-main-title">Фондовый рынок: шлюзы</h2>
+									<ul class="htf__list">
+										<li class="htf__item _calculated htf__item-one _lvl-1" id = 'fondFast'>
+											<div class="htf__item-flex">
+												<label class="g-checkbox ">
+													<input type="checkbox" name="fastFond" class="g-checkbox__input" onchange="o2.checkParrent(this);o2.check(this)" checked>
+													<div class="g-checkbox__body">
+														<span class="g-checkbox__box"></span>
+														<div class="g-checkbox__block">
+															<span class="g-checkbox__text _g-checkbox__text">FAST</span>
+															<div class="g-checkbox__text g-checkbox__text--dop">Получение котировок</div>
+														</div>
+													</div>
+												</label>
+												<div class="htf__item-summ active">
+													<p><span class="init _one-of">2 200</span> руб. за подключение</p>
+													<p>+<span class="month _per-month">2 200</span> руб./мес.</p>
+												</div>
+											</div>
+										</li>
+										<li class="htf__item _calculated htf__item-one _lvl-1" id = 'fondFIX'>
+											<div class="htf__item-flex">
+												<label class="g-checkbox ">
+													<input type="checkbox" name="fixFond" class="g-checkbox__input" onchange="o2.checkParrent(this);o2.check(this)">
+													<div class="g-checkbox__body">
+														<span class="g-checkbox__box"></span>
+														<div class="g-checkbox__block">
+															<span class="g-checkbox__text _g-checkbox__text">FIX</span>
+															<div class="g-checkbox__text g-checkbox__text--dop">Подача приказов</div>
+														</div>
+													</div>
+												</label>
+												<div class="htf__item-summ">
+													<p><span class="init _one-of" data-value="2200">2 200</span> руб. за подключение</p>
+													<p>+<span data-value="2200" class="month _per-month">2 200</span> руб./мес.</p>
+												</div>
+											</div>
+										</li>
+										<li class="htf__item htf__item-one _lvl-1" id = 'fondTEAP'>
+											<div class="htf__item-flex">
+												<label class="g-checkbox ">
+													<input type="checkbox" name="teapFond" class="g-checkbox__input" onchange="o2.checkParrent(this);o2.check(this);o2.showInform(this)" checked>
+													<div class="g-checkbox__body">
+														<span class="g-checkbox__box"></span>
+														<div class="g-checkbox__block">
+															<span class="g-checkbox__text _g-checkbox__text">TEAP</span>
+															<div class="g-checkbox__text g-checkbox__text--dop">Подача приказов и&nbsp;получение котировок</div>
+														</div>
+													</div>
+												</label>
+												<div class="htf__item-summ active"><span class="summ _one-of"></span> руб. за подключение</div>
+												<div class="htf__item-summ" style="display: none"><span class="summ _per-month"></span> руб. за подключение</div>
+											</div>
+											<ul class="htf__item-inner-list _htf__item-inner active _fondTEAP">
+											<!-- <ul class="htf__item-inner-list _htf__item-inner active" style="height: 120px;"> -->
+												<li class="htf__item-inner-item _htf-flex _calculated all">
+													<div class="htf__item-inner-flex _lvl-2" id = "fondTEAP_torg">
+														<label class="g-checkbox g-checkbox--innet">
+															<input type="checkbox" name="torgFond" class="g-checkbox__input" onchange="o2.check(this)" onclick="o2.checkParrentPrice(this)" checked>
+															<div class="g-checkbox__body">
+																<span class="g-checkbox__box"></span>
+																<span class="g-checkbox__text _g-checkbox__text">Торговый</span>
+															</div>
+														</label>
+														<div class="htf__item-price htf__item-price--display active">+<span data-value="550" class="test _per-month _one-of">550</span> руб./мес.</div>
+														<!-- <div class="htf__item-price htf__item-price--display" style="display: none">+<span data-value="550" class="test _one-of"></span> руб./мес.</div> -->
+													</div>
+												</li>
+												<li class="htf__item-inner-item _htf-flex _calculated all">
+													<div class="htf__item-inner-flex _lvl-2" id = "fondTEAP_see">
+														<label class="g-checkbox g-checkbox--innet">
+															<input type="checkbox" name="prosmotrFond" class="g-checkbox__input" onchange="o2.check(this)" onclick="o2.checkParrentPrice(this)">
+															<div class="g-checkbox__body">
+																<span class="g-checkbox__box"></span>
+																<span class="g-checkbox__text _g-checkbox__text">Просмотровый</span>
+															</div>
+														</label>
+														<div class="htf__item-price htf__item-price--display">+<span data-value="550" class="test _per-month _one-of">550</span> руб./мес.</div>
+														<!-- <div class="htf__item-price htf__item-price--display" style="display: none">+<span data-value="550" class="test _one-of"></span> руб./мес.</div> -->
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<div class="htf_fondFustVlute" data-number="1">
+									<h2 class="hft-content__flex-main-title">Валютный рынок: шлюзы</h2>
+									<ul class="htf__list _calculated">
+										<li class="htf__item htf__item-one _lvl-1" id = 'valuteFAST' >
+											<div class="htf__item-flex">
+												<label class="g-checkbox ">
+													<input type="checkbox" name="fastValute" class="g-checkbox__input" onchange="o2.check(this),o2.checkParrent(this)">
+													<div class="g-checkbox__body">
+														<span class="g-checkbox__box"></span>
+														<div class="g-checkbox__block">
+															<span class="g-checkbox__text _g-checkbox__text">FAST</span>
+															<div class="g-checkbox__text g-checkbox__text--dop">Получение котировок</div>
+														</div>
+													</div>
+												</label>
+												<div class="htf__item-summ">
+													<p><span class="init _one-of">2 200</span> руб. за подключение</p>
+													<p>+<span class="month _per-month">2 200</span> руб./мес.</p>
+												</div>
+											</div>
+										</li>
+										<li class="htf__item _calculated htf__item-one _lvl-1" id = 'valuteFIX'>
+											<div class="htf__item-flex">
+												<label class="g-checkbox ">
+													<input type="checkbox" name="fixValute" class="g-checkbox__input" onchange="o2.check(this);o2.checkParrent(this)">
+													<div class="g-checkbox__body">
+														<span class="g-checkbox__box"></span>
+														<div class="g-checkbox__block">
+															<span class="g-checkbox__text _g-checkbox__text">FIX</span>
+															<div class="g-checkbox__text g-checkbox__text--dop">Подача приказов</div>
+														</div>
+													</div>
+												</label>
+												<div class="htf__item-summ">
+													<p><span class="init _one-of">2 200</span> руб. за подключение</p>
+													<p>+<span class="month _per-month">2 200</span> руб./мес.</p>
+												</div>
+											</div>
+										</li>
+										<li class="htf__item _lvl-1" id = 'valuteTEAP'>
+											<div class="htf__item-flex">
+												<label class="g-checkbox ">
+													<input type="checkbox" name="teapValute" class="g-checkbox__input" onchange="o2.checkParrent(this);o2.check(this);o2.showInform(this)">
+													<div class="g-checkbox__body">
+														<span class="g-checkbox__box"></span>
+														<div class="g-checkbox__block">
+															<span class="g-checkbox__text _g-checkbox__text">TEAP</span>
+															<div class="g-checkbox__text g-checkbox__text--dop">Подача приказов и&nbsp;получение котировок</div>
+														</div>
+													</div>
+												</label>
+												<div class="htf__item-summ"><span class="summ _one-of"></span> руб. за подключение</div>
+												<div class="htf__item-summ" style="display: none"><span class="summ _per-month"></span> руб. за подключение</div>
+											</div>
+											<ul class="htf__item-inner-list _htf__item-inner">
+												<li class="htf__item-inner-item _calculated">
+													<div class="htf__item-inner-flex _lvl-2" id = "valuteTEAP_torg">
+														<label class="g-checkbox g-checkbox--innet">
+															<input type="checkbox" name="torgValute" class="g-checkbox__input" onchange="o2.check(this)" onclick="o2.checkParrentPrice(this)">
+															<div class="g-checkbox__body">
+																<span class="g-checkbox__box"></span>
+																<span class="g-checkbox__text _g-checkbox__text">Торговый</span>
+															</div>
+														</label>
+														<div class="htf__item-price htf__item-price--display">+<span data-value="550" class="test _per-month">550</span> руб./мес.</div>
+														<div class="htf__item-price htf__item-price--display" style="display: none">+<span data-value="550" class="test _one-of">550</span> руб./мес.</div>
+													</div>
+												</li>
+												<li class="htf__item-inner-item _calculated">
+													<div class="htf__item-inner-flex _lvl-2" id = "valuteTEAP_see">
+														<label class="g-checkbox g-checkbox--innet">
+															<input type="checkbox" name="prosmotrValute" class="g-checkbox__input" onchange="o2.check(this)" onclick="o2.checkParrentPrice(this)">
+															<div class="g-checkbox__body">
+																<span class="g-checkbox__box"></span>
+																<span class="g-checkbox__text _g-checkbox__text">Просмотровый</span>
+															</div>
+														</label>
+														<div class="htf__item-price htf__item-price--display">+<span data-value="550" class="test _per-month">550</span> руб./мес.</div>
+														<div class="htf__item-price htf__item-price--display" style="display: none">+<span data-value="550" class="test _one-of">550</span> руб./мес.</div>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<div class="htf_fondFustVlute active" data-number="2">
+									<h2 class="hft-content__flex-main-title">Срочный рынок: шлюзы</h2>
+									<ul class="htf__list">
+										<li class="htf__item _lvl-1" id="fastPlaza">
+											<div class="htf__item-flex">
+												<label class="g-checkbox ">
+													<input type="checkbox" name="plaza" class="g-checkbox__input" onchange="o2.checkParrent(this);o2.check(this);o2.showInform(this)" checked>
+													<div class="g-checkbox__body">
+														<span class="g-checkbox__box"></span>
+														<div class="g-checkbox__block">
+															<span class="g-checkbox__text _g-checkbox__text">PLAZA&nbsp;II</span>
+															<div class="g-checkbox__text g-checkbox__text--dop">Подача приказов и&nbsp;получение котировок</div>
+														</div>
+													</div>
+												</label>
+												<div class="htf__item-summ active"><span class="summ _one-of"></span> руб. за подключение</div>
+												<div class="htf__item-summ" style="display: none"><span class="summ _per-month"></span> руб. за подключение</div>
+											</div>
+											<ul class="htf__item-inner-list _htf__item-inner-list-plaza _htf__item-inner active _fastPlaza">
+											<!-- <ul class="htf__item-inner-list _htf__item-inner active" style="height: 176px;"> -->
+												<li class="htf__item-inner-item _calculated _calc-separately _htf-flex htf__item-one _checkAllText">
+													<div class="htf__item-inner-flex _lvl-2" id="fastPlaza_main">
+														<label class="g-checkbox g-checkbox--innet">
+															<input type="checkbox" name="osnovaSrochni" class="g-checkbox__input" onchange="o2.check(this);o2.checkParrentPrice(this);" onclick="o2.showRange(this)">
+															<div class="g-checkbox__body">
+																<span class="g-checkbox__box"></span>
+																<span class="g-checkbox__text _g-checkbox__text">Основной</span>
+															</div>
+														</label>
+														<div class="htf__item-price htf__item-price--display">+<span data-value="4400" class="test _per-month _one-of _separately">4 400</span> руб./мес.</div>
+														<!-- <div class="htf__item-price" style="display: none">+<span data-value="4400" class="<table></table>est _one-of _separately"></span> руб./мес.</div> -->
+													</div>
+													<div class="g-range-slider _range-slider-wrap hft-range hft-range--showRange">
+														<div class="g-range-slider__name _g-range-slider__name"><span class="_label-in">30</span> транзакций в секунду</div>
+														<div class="_range-slider _rangeS"
+															data-min="30"
+															data-max="300"
+															data-start="30"
+															data-padding=""
+														></div>
+														<input type="hidden" class="_min">
+														<input type="hidden" class="_max">
+														<div class="g-range-slider__labels">
+															<div class="_label-to">0</div>
+															<div class="_label-from">0</div>
+														</div>
+													</div>
+												</li>
+												<li class="htf__item-inner-item _calculated _calc-separately _htf-flex htf__item-one _checkAllText">
+													<div class="htf__item-inner-flex _lvl-2" id = "fastPlaza_tranzakc">
+														<label class="g-checkbox g-checkbox--innet">
+															<input type="checkbox" name="tranzaktsiaSrochni" class="g-checkbox__input" onchange="o2.checkParrentPrice(this);o2.check(this)" onclick="o2.showRange(this);" >
+															<div class="g-checkbox__body">
+																<span class="g-checkbox__box"></span>
+																<span class="g-checkbox__text _g-checkbox__text">Транзакционный</span>
+															</div>
+														</label>
+														<div class="htf__item-price htf__item-price--display">+<span data-value="2200" class="test _per-month _one-of _separately">2 200</span> руб./мес.</div>
+														<!-- <div class="htf__item-price" style="display: none;">+<span data-value="2200" class="test _one-of _separately"></span> руб./мес.</div> -->
+													</div>
+													<div class="g-range-slider _range-slider-wrap hft-range hft-range--showRange">
+														<div class="g-range-slider__name _g-range-slider__name"><span class="_label-in">30</span> транзакций в секунду</div>
+														<div class="_range-slider _rangeS"
+															data-min="30"
+															data-max="300"
+															data-start="30"
+															data-padding=""
+														></div>
+														<input type="hidden" class="_min">
+														<input type="hidden" class="_max">
+														<div class="g-range-slider__labels">
+															<div class="_label-to">0</div>
+															<div class="_label-from">0</div>
+														</div>
+													</div>
+												</li>
+												<li class="htf__item-inner-item _calculated _calc-separately _htf-flex _readyPage htf__item-one _checkAllText">
+													<div class="htf__item-inner-flex _lvl-2" id="fastPlaza_see">
+														<label class="g-checkbox g-checkbox--innet">
+															<input type="checkbox" name="prosmotrSrochni" class="g-checkbox__input" onchange="o2.checkParrentPrice(this);o2.check(this)" checked>
+															<div class="g-checkbox__body">
+																<span class="g-checkbox__box"></span>
+																<span class="g-checkbox__text _g-checkbox__text">Просмотровый</span>
+															</div>
+														</label>
+														<div class="htf__item-price htf__item-price--display active">+<span data-value="2200" class="test _per-month _one-of _separately">2 200</span> руб./мес.</div>
+														<!-- <div class="htf__item-price" style="display: none">+<span data-value="2200" class="test _one-of _separately"></span> руб./мес.</div> -->
+													</div>
+												</li>
+											</ul>
+										</li>
+										<!-- <li class="htf__item _calculated htf__item-one _lvl-1" id="fastFIX">
+											<div class="htf__item-flex">
+												<label class="g-checkbox ">
+													<input type="checkbox" name="fixSrochni" class="g-checkbox__input" onchange="o2.checkParrent(this);o2.check(this);">
+													<div class="g-checkbox__body">
+														<span class="g-checkbox__box"></span>
+														<div class="g-checkbox__block">
+															<span class="g-checkbox__text _g-checkbox__text">FIX</span>
+															<div class="g-checkbox__text g-checkbox__text--dop">Подача приказов</div>
+														</div>
+													</div>
+												</label>
+												<div class="htf__item-summ">
+													<p><span class="_one-of">2 200</span> руб. за подключение</p>
+													<p>+<span data-value="2200" class="_per-month">2 200</span> руб./мес.</p>
+												</div>
+											</div>
+										</li> -->
+
+										<li class="htf__item _calculated _htf-flex all _lvl-1 _fix" id="fastFIX">
+											<div class="htf__item-flex">
+												<label class="g-checkbox ">
+													<input type="checkbox" name="fixSrochni" class="g-checkbox__input" onchange="o2.showInform(this);" onclick="o2.checkParrent(this);o2.check(this);">
+													<div class="g-checkbox__body">
+														<span class="g-checkbox__box"></span>
+														<div class="g-checkbox__block">
+															<span class="g-checkbox__text _g-checkbox__text">FIX</span>
+															<div class="g-checkbox__text g-checkbox__text--dop">Подача приказов</div>
+														</div>
+													</div>
+												</label>
+												<div class="htf__item-summ"><span class="summ _one-of"></span> руб. за подключение</div>
+												<div class="htf__item-summ" style="display: none"><span class="summ _per-month"></span> руб. за подключение</div>
+											</div>
+											<ul class="htf__item-inner-list _htf__item-inner">
+												<li class="htf__item-inner-item htf__item-inner-item--flex _lvl-2 htf__item-inner-item--column _checkAllText" id = "fastPlaza_fix">
+													<label style="display: none;" class="g-checkbox ">
+														<input type="checkbox" name="" class="g-checkbox__input g-checkbox__input--twime" checked>
+													</label>
+													<div class="g-range-slider _range-slider-wrap hft-range">
+														<div class="g-range-slider__name _g-range-slider__name"><span class="_label-in">30</span> транзакций в секунду</div>
+														<div class="_range-slider _rangeS"
+															data-min="30"
+															data-max="300"
+															data-start="30"
+															data-padding=""
+														></div>
+														<input type="hidden" class="_min">
+														<input type="hidden" class="_max">
+														<div class="g-range-slider__labels">
+															<div class="_label-to">0</div>
+															<div class="_label-from">0</div>
+														</div>
+													</div>
+													<div class="htf__item-price">+<span data-value="2200" class="test _per-month _one-of">2 200</span> руб./мес.</div>
+												</li>
+											</ul>
+										</li>
+
+
+										<li class="htf__item _calculated _htf-flex all twime _lvl-1 _twime" id="fastTWiME">
+											<div class="htf__item-flex">
+												<label class="g-checkbox ">
+													<input type="checkbox" name="twimeSrochni" class="g-checkbox__input" onchange="o2.showInform(this);" onclick="o2.checkParrent(this);o2.check(this);">
+													<div class="g-checkbox__body">
+														<span class="g-checkbox__box"></span>
+														<div class="g-checkbox__block">
+															<span class="g-checkbox__text _g-checkbox__text">TWIME</span>
+															<div class="g-checkbox__text g-checkbox__text--dop">Подача приказов</div>
+														</div>
+													</div>
+												</label>
+												<div class="htf__item-summ"><span class="summ _one-of"></span> руб. за подключение</div>
+												<div class="htf__item-summ" style="display: none"><span class="summ _per-month"></span> руб. за подключение</div>
+											</div>
+											<ul class="htf__item-inner-list _htf__item-inner">
+												<li class="htf__item-inner-item htf__item-inner-item--flex _lvl-2 _checkAllText" id = "fastPlaza_twime">
+													<label style="display: none;" class="g-checkbox ">
+														<input type="checkbox" name="" class="g-checkbox__input g-checkbox__input--twime" checked>
+													</label>
+													<div class="g-range-slider _range-slider-wrap hft-range">
+														<div class="g-range-slider__name _g-range-slider__name"><span class="_label-in">30</span> транзакций в секунду</div>
+														<div class="_range-slider _rangeS"
+															data-min="30"
+															data-max="300"
+															data-start="30"
+															data-padding=""
+														></div>
+														<input type="hidden" class="_min">
+														<input type="hidden" class="_max">
+														<div class="g-range-slider__labels">
+															<div class="_label-to">0</div>
+															<div class="_label-from">0</div>
+														</div>
+													</div>
+													<div class="htf__item-price">+<span data-value="2200" class="test _per-month _one-of">2 200</span> руб./мес.</div>
+												</li>
+											</ul>
+										</li>
+										<li class="htf__item _calculated htf__item-one _lvl-1" id="fastFAST">
+											<div class="htf__item-flex">
+												<label class="g-checkbox ">
+													<input type="checkbox" name="fastSrochni" class="g-checkbox__input" onchange="o2.checkParrent(this); o2.check(this);" checked>
+													<div class="g-checkbox__body">
+														<span class="g-checkbox__box"></span>
+														<div class="g-checkbox__block">
+															<span class="g-checkbox__text _g-checkbox__text">FAST</span>
+															<div class="g-checkbox__text g-checkbox__text--dop">Получение котировок</div>
+														</div>
+													</div>
+												</label>
+												<div class="active htf__item-summ">
+													<p><span class="_one-of">2 200</span> руб. за подключение</p>
+													<p>+<span data-value="2200" class="_per-month">2 200</span> руб./мес.</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<h2 class="hft-content__flex-main-title">Оборудование</h2>
+								<ul class="htf__list">
+									<li class="htf__item _equipment _lvl-1" id="equipment">
+										<div class="htf__item-flex">
+											<label class="g-checkbox ">
+												<input type="checkbox" name="razmeshenie" class="g-checkbox__input" onchange="o2.showInform(this);o2.check(this);o2.asideEq(this)" checked>
+												<div class="g-checkbox__body">
+													<span class="g-checkbox__box"></span>
+													<div class="g-checkbox__block">
+														<span class="g-checkbox__text _g-checkbox__text">Размещение вашего сервера</span>
+													</div>
+													<div style="display: none"><span class="summ _one-of">2 200</span></div>
+													<div style="display: none"><span class="summ _per-month"></span></div>
+												</div>
+											</label>
+										</div>
+										<ul class="htf__item-inner-list _htf__item-inner-list-eq _htf__item-inner active _equipmentUl">
+										<!-- <ul class="htf__item-inner-list _htf__item-inner active" style="height: 163px;"> -->
+											<li class="htf__item-inner-item _calculated htf__item-one eq-absolute">
+												<div class="htf__item-inner-flex htf__item-inner-flex--end _lvl-2" id="equipment_mos">
+													<label class="g-checkbox g-checkbox--innet">
+														<input type="checkbox" name="kolokatsia" data-number="0" class="g-checkbox__input" onclick="o2.showRange(this);o2.check(this)" onchange="o2.checkParrentPrice(this);o2.showMore(this,'_inner-check','_inner-checks')">
+														<div class="g-checkbox__body">
+															<span class="g-checkbox__box"></span>
+															<span class="g-checkbox__text _g-checkbox__text">Зона колокации MOEX</span>
+														</div>
+													</label>
+													<div class="htf__item-price htf__item-price--display">
+														<div class="htf__item-price-big"><span data-value="28320" class="_one-of">28 320</span> руб. за монтаж</div>
+														+<span data-value="28320" class="test _per-month">28 320</span> руб./мес.
+													</div>
+												</div>
+												<div class="g-range-slider _range-slider-wrap hft-range hft-range--showRange">
+													<div class="g-range-slider__name _g-range-slider__name"><span class="_label-in">1</span> <span class="unit">юнит</span></div>
+													<div class="_range-slider--unit _rangeS"
+														data-min="1"
+														data-max="5"
+														data-start="1"
+														data-padding=""
+													></div>
+													<input type="hidden" class="_min">
+													<input type="hidden" class="_max">
+													<div class="g-range-slider__labels">
+														<div class="_label-to">0</div>
+														<div class="_label-from">0</div>
+													</div>
+												</div>
+											</li>
+											<li class="htf__item-inner-item _calculated htf__item-one eq-absolute">
+												<div class="htf__item-inner-flex htf__item-inner-flex--end _lvl-2" id="equipment_svoboda">
+													<label class="g-checkbox g-checkbox--innet">
+														<input type="checkbox" name="svobodnaiaZona" class="g-checkbox__input" data-number="1" onclick="o2.showRange(this);o2.check(this)" onchange="o2.checkParrentPrice(this);o2.showMore(this,'_inner-check','_inner-checks')" checked>
+														<div class="g-checkbox__body">
+															<span class="g-checkbox__box"></span>
+															<span class="g-checkbox__text _g-checkbox__text">Свободная зона</span>
+														</div>
+													</label>
+													<div class="htf__item-price htf__item-price--display active">
+														<div class="htf__item-price-big"><span data-value="7080" class="_one-of">7 080</span> руб. за монтаж</div>
+														+<span data-value="4720" class="test _per-month">4 720</span> руб./мес.
+													</div>
+												</div>
+												<div class="g-range-slider _range-slider-wrap hft-range hft-range--showRange active" style="height: 46px;">
+													<div class="g-range-slider__name _g-range-slider__name"><span class="_label-in">1</span> <span class="unit">юнит</span></div>
+													<div class="_range-slider--unit _rangeS"
+														data-min="1"
+														data-max="5"
+														data-start="1"
+														data-padding=""
+													></div>
+													<input type="hidden" class="_min">
+													<input type="hidden" class="_max">
+													<div class="g-range-slider__labels">
+														<div class="_label-to">0</div>
+														<div class="_label-from">0</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</li>
+									<li class="htf__item htf__item--virtualMashina _lvl-1 _equipment _equipment-virt" id="equipment-virt">
+										<div class="htf__item-flex">
+											<label class="g-checkbox ">
+												<input type="checkbox" name="virtualMashina" class="g-checkbox__input" onchange="o2.showInform(this);o2.check(this);o2.choiseOs(this);o2.choice(this)">
+												<div class="g-checkbox__body">
+													<span class="g-checkbox__box"></span>
+													<div class="g-checkbox__block">
+														<span class="g-checkbox__text _g-checkbox__text">Виртуальная машина</span>
+														<div class="g-checkbox__text g-checkbox__text--dop">В зоне колокации MOEX</div>
+													</div>
+												</div>
+											</label>
+											<div class="htf__item-summ" style="display: none;"><span class="summ _one-of"></span> руб. за подключение</div>
+											<div class="htf__item-summ" style="display: none;"><span class="summ _per-month"></span> руб. за подключение</div>
+										</div>
+										<ul class="htf__item-inner-list _htf__item-inner">
+											<li class="htf__item-inner-item _htf__item-inner-maschin">
+												<h2 class="htf__item-inner-item-name">Какую операционную систему установить?</h2>
+												<div class="htf__item-inner-item--flex htf__item-inner-item--center htf__item-inner-item--flex--small _lvl-2" id="equipment-virt_os">
+													<label style="display: none;" class="g-checkbox _os-check">
+														<input type="checkbox" name="" class="g-checkbox__input" checked>
+													</label>
+													<div>
+														<div class="htf__item-inner-item-choice">
+															<div class="htf__item-inner-item-choice-w-l visible">
+																<label class="g-radio ">
+																	<input type="radio" name="os" class="g-radio__input" onchange="o2.changeOs(this)" checked>
+																	<div class="g-radio__body">
+																		<span class="g-radio__box g-radio__box--first"></span>
+																		<div class="g-radio__block g-radio__block--flex">
+																			<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<path d="M0 9.41177H8.23496V1.67531L0 2.84822V9.41177ZM9.41146 1.50764V9.41177H20V0L9.41146 1.50764ZM0 17.1529L8.23496 18.3253V10.5882H0V17.1529ZM9.41146 18.4929L20 20V10.5882H9.41146V18.4929Z" fill="#575762"/>
+																			</svg>
+																			<span class="g-radio__text">Windows</span>
+																		</div>
+																	</div>
+																</label>
+																<label class="g-radio g-radio--transform">
+																	<input type="radio" name="os" class="g-radio__input" onchange="o2.changeOs(this)">
+																	<div class="g-radio__body">
+																		<span class="g-radio__box g-radio__box--last"></span>
+																		<div class="g-radio__block g-radio__block--flex">
+																			<svg width="16" height="23" viewBox="0 0 16 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<path d="M12 10.6674C11.264 10.6674 10.6667 11.2647 10.6667 12.0007C10.6667 12.7366 11.264 13.3339 12 13.3339C12.736 13.3339 13.3333 12.7366 13.3333 12.0007C13.3333 11.2647 12.736 10.6674 12 10.6674ZM4 13.3339C4.736 13.3339 5.33333 12.7366 5.33333 12.0007C5.33333 11.2647 4.736 10.6674 4 10.6674C3.264 10.6674 2.66667 11.2647 2.66667 12.0007C2.66667 12.7366 3.264 13.3339 4 13.3339ZM8 0C3.582 0 0 3.5818 0 7.99955V23H16V7.99955C16 3.5818 12.418 0 8 0ZM1.33333 10.6668C1.33333 9.19484 2.52867 8.0009 4 8.0009C5.474 8.0009 6.66667 9.19484 6.66667 10.6668V13.0886L2.46867 15.5118C1.784 15.0292 1.33333 14.2365 1.33333 13.3339V10.6668ZM14 18.7256L8 22.1888L2 18.7256V17.3224L8 13.8593L14 17.3224V18.7256ZM14.6667 13.3339C14.6667 14.2365 14.2166 15.0298 13.532 15.5125L9.33333 13.0886V10.6668C9.33333 9.19484 10.5287 8.0009 12 8.0009C13.474 8.0009 14.6667 9.19484 14.6667 10.6668V13.3339ZM4.66667 18.7256H11.3333V17.3924H4.66667V18.7256Z" fill="#575762"/>
+																			</svg>
+																			<span class="g-radio__text">Linux</span>
+																		</div>
+																	</div>
+																</label>
+															</div>
+														</div>
+													</div>
+													<div class="htf__item-summ htf__item-summ--small active" >
+														<p><span class="_one-of-os _one-of">6 900</span> руб.</p>
+														<p style="display: none;"><span class="_one-of-os _per-month"></span> руб.</p>
+													</div>
+												</div>
+											</li>
+											<li class="htf__item-inner-item">
+												<h2 class="htf__item-inner-item-name">Железо</h2>
+											</li>
+											<!-- <div class="htf__item-inner-item--flex htf__item-inner-item--center htf__item-inner-item--flex--small _lvl-2" id="equipment-min_price">
+												<label style="display: none;" class="g-checkbox _os-check">
+													<input type="checkbox" name="" class="g-checkbox__input" checked>
+												</label>
+												<div class="htf__item-summ htf__item-summ--small active" >
+													<p style="display: none;"><span class="_one-of-os _one-of"></span> руб.</p>
+													<p style="display: none;"><span class="_one-of-os _per-month">4 500</span> руб.</p>
+												</div>
+											</div> -->
+											<li class="htf__item-inner-item htf__item-inner-item--flex _htf__item-inner-maschin _calculated _lvl-2 _equipment-virt-range" id="equipment-virt_processor">
+												<label style="display: none;" class="g-checkbox g-checkbox--vm">
+													<input type="checkbox" name="" class="g-checkbox__input" checked>
+												</label>
+												<div class="g-range-slider _range-slider-wrap hft-range" data-val = "0">
+													<div class="g-range-slider__name _g-range-slider__name"><span class="textVirt">Процессор:</span> <span class="_label-in">1</span> <span class="core">ядро</span></div>
+													<div class="_range-slider--unit _rangeS"
+														data-min="1"
+														data-max="5"
+														data-start="1"
+														data-padding=""
+													></div>
+													<input type="hidden" class="_min">
+													<input type="hidden" class="_max">
+													<div class="g-range-slider__labels">
+														<div class="_label-to">0</div>
+														<div class="_label-from">0</div>
+													</div>
+												</div>
+												<div class="htf__item-price">
+													+<span data-value="1500" class="test _per-month">1 500</span> руб./мес.
+												</div>
+												<div class="htf__item-price" style="display: none;">
+													+<span data-value="1500" class="test _one-of"></span> руб./мес.
+												</div>
+											</li>
+											<li class="htf__item-inner-item htf__item-inner-item--flex _htf__item-inner-maschin _calculated _lvl-2 _equipment-virt-range" id="equipment-virt_member">
+												<label style="display: none;" class="g-checkbox g-checkbox--vm">
+													<input type="checkbox" name="" class="g-checkbox__input" checked>
+												</label>
+												<div class="g-range-slider _range-slider-wrap hft-range" data-val = "1">
+													<div class="g-range-slider__name _g-range-slider__name"><span class="textVirt">Оперативная память:</span> <span class="_label-in">4</span> GB</div>
+													<div class="_range-slider--unit _rangeS"
+														data-min="1"
+														data-max="12"
+														data-start="1"
+														data-padding=""
+													></div>
+													<input type="hidden" class="_min">
+													<input type="hidden" class="_max">
+													<div class="g-range-slider__labels">
+														<div class="_label-to">0</div>
+														<div class="_label-from">0</div>
+													</div>
+												</div>
+												<div class="htf__item-price">
+													+<span data-value="1500" class="test _per-month">1 500</span> руб./мес.
+												</div>
+												<div class="htf__item-price" style="display: none;">
+													+<span data-value="1500" class="test _one-of"></span> руб./мес.
+												</div>
+											</li>
+											<li class="htf__item-inner-item htf__item-inner-item--flex _htf__item-inner-maschin _calculated _lvl-2 _equipment-virt-range" id="equipment-virt_hd">
+												<label style="display: none;" class="g-checkbox g-checkbox--vm">
+													<input type="checkbox" name="" class="g-checkbox__input" checked>
+												</label>
+												<div class="g-range-slider _range-slider-wrap hft-range" data-val = "2">
+													<div class="g-range-slider__name _g-range-slider__name"><span class="textVirt">Жёсткий диск (SSD):</span> <span class="_label">20</span> GB</div>
+													<div class="_range-slider--iron _rangeS"
+														data-min="60"
+														data-max="600"
+														data-start="60"
+														data-padding=""
+													></div>
+													<input type="hidden" class="_min">
+													<input type="hidden" class="_max">
+													<div class="g-range-slider__labels">
+														<div class="_label-to">0</div>
+														<div class="_label-from">0</div>
+													</div>
+												</div>
+												<div class="htf__item-price">
+													+<span data-value="1500" class="test _per-month">1 500</span> руб./мес.
+												</div>
+												<div class="htf__item-price" style="display: none;">
+													+<span data-value="1500" class="test _one-of"></span> руб./мес.
+												</div>
+											</li>
+										</ul>
+									</li>
+								</ul>
+								<h2 class="hft-content__flex-main-title">Дополнительно</h2>
+								<ul class="htf__list">
+									<li class="htf__item _added _lvl-1" id="vpn">
+										<div class="htf__item-flex">
+											<label class="g-checkbox ">
+												<input type="checkbox" name="vpn" data-number="0" class="g-checkbox__input" onchange="o2.checkParrent(this);o2.check(this);o2.showMore(this,'_dop')" checked>
+												<div class="g-checkbox__body">
+													<span class="g-checkbox__box"></span>
+													<div class="g-checkbox__block">
+														<span class="g-checkbox__text _g-checkbox__text">VPN</span>
+													</div>
+												</div>
+											</label>
+											<div class="htf__item-summ active">
+												<p>+<span data-value="500" class="_per-month">500</span> руб./мес.</p>
+												<p style="display: none;"><span class="_one-of"></span></p>
+											</div>
+										</div>
+									</li>
+									<li class="htf__item _added _lvl-1" id="smart">
+										<div class="htf__item-flex">
+											<label class="g-checkbox ">
+												<input type="checkbox" name="smart" data-number="1" class="g-checkbox__input" onchange="o2.checkParrent(this);o2.check(this);o2.showMore(this,'_dop')">
+												<div class="g-checkbox__body">
+													<span class="g-checkbox__box"></span>
+													<div class="g-checkbox__block">
+														<span class="g-checkbox__text _g-checkbox__text">SMARTcom</span>
+													</div>
+												</div>
+											</label>
+											<div class="htf__item-summ">
+												<p>+<span data-value="600" class="_per-month">600</span> руб./мес.</p>
+												<p style="display: none;"><span class="_one-of"></span></p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="hft-content__flex-aside"></div>
+						</div>
+					</div>
+					<div class="test">
+						<div class="htf__aside">
+							<h2 class="htf__aside-title">Предварительный<br> расчёт</h2>
+							<div class="htf__aside-content">
+								<svg class="robot" width="45" height="61" viewBox="0 0 45 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M39 29H40C42.7614 29 45 31.2386 45 34C45 36.7614 42.7614 39 40 39H39V29Z" fill="#808080"/>
+									<path d="M6 29H5C2.23858 29 0 31.2386 0 34C0 36.7614 2.23858 39 5 39H6V29Z" fill="#808080"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M24.0193 8.73425C25.7529 8.10892 26.9922 6.44917 26.9922 4.5C26.9922 2.01472 24.9774 0 22.4922 0C20.0069 0 17.9922 2.01472 17.9922 4.5C17.9922 6.45045 19.2331 8.11108 20.9685 8.73547V14.5985C12.5748 15.2903 6.00022 21.634 6.00022 29.3564C5.99973 39.2375 6.00022 51.1186 6.00022 60.9997H38.9875V29.5536V29.3564C38.9875 21.634 32.4129 15.2903 24.0193 14.5985V8.73425Z" fill="#A8A8A8"/>
+									<rect x="9" y="27" width="27" height="14" rx="7" fill="#808080"/>
+									<circle cx="16" cy="34" r="4" fill="white"/>
+									<circle cx="29" cy="34" r="4" fill="white"/>
+									<rect x="15" y="49" width="15" height="3" rx="1.5" fill="#808080"/>
+								</svg>
+								<div class="htf__aside-content-item">
+									<div class="onetime-payment">
+										<div class="onetime-payment__text">Разовая оплата</div>
+										<div class="onetime-payment__dots"></div>
+										<div class="onetime-payment__price" data-text="oneTimePay"><span class="on-pay">63750</span> руб.</div>
+									</div>
+									<p class="htf__aside-content-abs _htf__aside-content-abs">Подключение к рынкам (
+										<span class="par" >
+											<span data-number="1" class="hft__aside-market _market">Валютный</span>
+											<span data-number="0" class="hft__aside-market _market active">Фондовый</span>
+											<span data-number="2" class="hft__aside-market _market active">Срочный</span>
+										</span>)
+									</p>
+									<p class="htf__aside-content-abs htf__aside-content-abs--os _os">Установка ОС <span class="_os-text">Windows</span> на виртуальную машину</p>
+									<p class="htf__aside-content-abs htf__aside-content-abs--eq _eq active">Монтаж серверов (
+										<span class="par par--block">
+											<span data-value="0" class="_hft__aside-market-unit hft__aside-market htf__aside-text-tap _inner-check">Зона колокации MOEX: 
+												<span class="_value">1</span> 
+												<span class="_text">юнит</span>
+											</span>
+											<span data-value="1" class="_hft__aside-market-unit hft__aside-market htf__aside-text-tap _inner-check active">Свободная зона: 
+												<span class="_value">1</span>
+												<span class="_text">юнит</span>
+											</span>
+										</span>)
+									</p>
+								</div>
+								<div class="htf__aside-content-item">
+									<div class="onetime-payment">
+										<div class="onetime-payment__text">Ежемесячно</div>
+										<div class="onetime-payment__dots"></div>
+										<div class="onetime-payment__price" data-text="monthly"><span class="month-pay">61040</span> руб./мес.</div>
+									</div>
+									<p class="htf__aside-content-abs">Шлюзы  </p>
+									<p class="htf__aside-content-abs htf__aside-content-abs--os _os">Аренда виртуальной машины (Процессор: 
+										<span class="htf__aside-text-tap _count">1</span> 
+										<span class="_yadro-text os-tap">ядро</span> Оперативная память: 
+										<span class="htf__aside-text-tap  _count">4 </span> <span class="os-tap">GB</span> &nbsp; Жёсткий диск (SSD): 
+										<span class="htf__aside-text-tap _count">20</span>&nbsp;GB)
+									</p>
+									<p class="htf__aside-content-abs htf__aside-content-abs--eq _eq active">Аренда мест для серверов (
+										<span class="par par--block">
+											<span data-value="0" data-number="0" class="_hft__aside-market-unit hft__aside-market _inner-checks">Зона колокации MOEX: 
+												<span class="_value">1</span>
+												<span class="_text">юнит</span>
+											</span>
+											<span data-value="1" data-number="1" class="_hft__aside-market-unit hft__aside-market _inner-checks active">Свободная зона: 
+												<span class="_value">1</span>
+												<span class="_text">юнит</span>
+											</span>
+										</span>)
+									</p>
+									<p class="htf__aside-content-abs">
+										<span data-number="0" class="dop _dop active">VPN</span>
+										<span data-number="1" class="dop _dop">SMARTcom</span>
+									</p>
+								</div>
+								<div class="htf__aside-content-item">
+									<div class="onetime-payment onetime-payment--bold">
+										<div class="onetime-payment__text">Итого в первый месяц</div>
+										<div class="onetime-payment__dots"></div>
+										<div class="onetime-payment__price" data-text="totalFirstMonth"><span class="_total">124790</span> руб.</div>
+									</div>
+									<div class="onetime-payment onetime-payment--bold">
+										<div class="onetime-payment__text">Далее ежемесячно</div>
+										<div class="onetime-payment__dots"></div>
+										<div class="onetime-payment__price" data-text="futherMonthly"><span class="_total-month-pay">61040</span> руб.</div>
+									</div>
+									<!-- <button class="htf__aside-content-btn" type="submit" onclick="o2.gPopup.openPop('hft-popup')">Оформить заявку</button> -->
+									<button class="htf__aside-content-btn" type="button" onclick="o2.gPopup.openPop('hft-popup')">Оформить заявку</button>
+									<p class="htf__aside-content-abs htf__aside-content-abs--center">Получив заявку, наш менеджер свяжется с вами и уточнит детали</p>
+								</div>
+							</div>
+							<div class="htf__aside-content-text">
+								Если остались вопросы, напишите нам на почту
+							</div>
+							<a class="htf__aside-content-link" href="mailto:Roman.Khamedulin@iticapital.ru">Roman.Khamedulin@iticapital.ru</a>
+						</div>
+					</div>
+				</form>
+
+
+			</div>
+			@@include('./inc/components/index-footer.html')
+		</div>
+		@@include('./inc/components/search-box.html')
+		<div class="hft-popup" style="display: none;">
+			<div class="g-popup__content _popup-content">
+				<div class="hft-form-close" onclick="o2.gPopup.closePop()"><div class="hft-form-close__icon"></div></div>
+				<div class="hft-popup-send">
+					<h2 class="hft-popup__title">Наш менеджер свяжется с вами для уточнения деталей</h2>
+					<div class="hft-popup-inputs">
+						<div class="hft-popup__inp">
+							<div class="hft-popup__inp-name">Ваше имя</div>
+							<input type="text" name="firsName">
+						</div>
+						<div class="hft-popup__inp">
+							<div class="hft-popup__inp-name">Ваш Email или телефон</div>
+							<input type="text" name="email">
+						</div>
+						<div class="err">Заполните форму</div>
+					</div>
+					<div class="hft-btn-block">
+						<button class="hft-btn" onclick="o2.sendHftForm(this)">
+							<span class="hft-btn__text">Отправить заявку →</span>
+						</button>
+					</div>
+				</div>
+				<div class="hft-popup-success">
+					<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M36 72C55.8823 72 72 55.8823 72 36C72 16.1177 55.8823 0 36 0C16.1177 0 0 16.1177 0 36C0 55.8823 16.1177 72 36 72Z" fill="#66B759"/>
+						<path d="M17.4375 51.7502H26.4375V33.7502H17.4375V51.7502ZM42.5019 29.2502L45.0506 19.7349C45.5338 17.9355 44.4662 16.0855 42.6645 15.6017L41.5789 15.3092L30.1939 34.8752L30.204 34.878C29.2444 36.5329 28.6875 38.4493 28.6875 40.5002C28.6875 46.713 33.7236 51.7502 39.9375 51.7502H46.0193C49.1946 51.7502 51.8501 49.5548 52.5701 46.6011L52.5774 46.5955L57.2169 29.2502H42.5019Z" fill="white"/>
+					</svg>
+					<h2 class="hft-popup__title">Спасибо, ваша заявка принята</h2>
+					<p class="hft-popup__paragraph">
+						Наш менеджер свяжется с&nbsp;вами и&nbsp;уточнит детали. Если остались вопросы, напишите нам на&nbsp;почту <a href="#">Roman.Khamedulin@iticapital.ru</a>
+					</p>
+					<div class="hft-btn-block">
+						<button class="hft-btn" onclick="o2.gPopup.closePop()">
+							<span class="hft-btn__text">Понятно</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="g-popup _overlayHft"></div>
+	</body>
+</html>

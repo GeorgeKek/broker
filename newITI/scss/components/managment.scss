@@ -1,0 +1,178 @@
+.managment-item
+{
+	margin-bottom: 70px;
+}
+
+.managment-item__img
+{
+	width: 987px;
+	height: 395px;
+	position: relative;
+	background-color: rgb(235,235,235);
+	img
+	{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.managment-item__img-text
+{
+	position: absolute;
+	bottom: 90px;
+	left: 52px;
+}
+.managment-item__img-text
+{
+	color: #fff
+}
+.managment-item__img-text__bot
+{
+	font-size: 36px;
+	margin-top: -5px;
+	font-family: $air;
+	font-feature-settings: "ss01" 0;
+}
+.managment-item__img-text__top
+{
+	font-size: 12px;
+	line-height: 26px;
+}
+.managment-item__descr
+{
+	width: 928px;
+	background-color: #fafafa;
+	padding: 50px 48px 32px 179px;
+	position: relative;
+	margin-top: -50px;
+	left: -0.6px;
+	p
+	{
+		font-size: 16px;
+		line-height: 26px;
+		color: rgba(51, 51, 51, 0.87);
+		margin-bottom: 30px;
+	}
+}
+.managment-item__no-img
+{
+	padding: 140px 48px 32px 179px;
+	margin-top: 0;
+}
+.managment-item__img-text_black
+{
+	color: #000;
+	top: 50px;
+	left: 51px;
+	bottom: inintial;
+}
+.managment-item__img-text__mobile
+{
+	display: none;
+}
+.managment-item__img-text_black.managment-item__img-text__mobile
+{
+	display: block;
+}
+.special
+{
+	.managment-item__img-text__top
+	{
+		font-size: 20px;
+	}
+	.managment-item__img-text__bot
+	{
+		font-size: 48px;
+	}
+	.managment-item__descr p
+	{
+		font-size: 24px;
+		line-height: 36px;
+	}
+}
+@media (max-width: 1439px)
+{
+	.managment-item__img
+	{
+		width: 100%;
+	}
+	.managment-item__descr
+	{
+		width: 95%;
+	}
+	.managment-text
+	{
+		padding-right: 10px;
+	}
+	.managment-item__img img
+	{
+		object-position: 100% 50%;
+	}
+}
+@media (max-width: 1023px)
+{
+	.managment-page-content
+	{
+		width: 100%;
+	}
+	.managment-item__descr
+	{
+		padding-left: 52px;
+	}
+}
+@media (max-width: 767px)
+{
+	.managment-item__img-text
+	{
+		display: none;
+	}
+	.managment-text
+	{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.managment-page-content
+	{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.yakovlev-object-pos img
+	{
+		object-position: 87%;
+	}
+	.managment-item__descr
+	{
+		width: calc(100% - 20px);
+		padding-left: 20px;
+		padding-top: 30px;
+	}
+	.managment-item__img-text__mobile
+	{
+		display: block;
+		position: static;
+		color: #000;
+	}
+
+	.managment-item__img-text__bot
+	{
+		font-size: 26px;
+		line-height: normal;
+		margin-bottom: 20px;
+	}
+	.special
+	{
+		.managment-item__img-text__top
+		{
+			font-size: 20px;
+		}
+		.managment-item__img-text__bot
+		{
+			font-size: 36px;
+		}
+		.managment-item__descr p
+		{
+			font-size: 22px;
+			line-height: 28px;
+		}
+	}
+}

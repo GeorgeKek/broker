@@ -1,0 +1,175 @@
+.subscription
+{
+	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
+	&--usd
+	{
+		position: relative;
+		margin-top: -44px;
+		z-index: 10;
+	}
+}
+.subscription__main
+{
+	position: relative;
+	padding: 64px 100px;
+	background-image: url('../img/subscription-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right;
+	max-width: 1340px;
+	margin-right: auto;
+}
+.subscription__title
+{
+	font-family: $semi-font;
+	max-width: 730px;
+	font-size: 44px;
+	line-height: 53px;
+	color: #323240;
+	margin-bottom: 28px;
+}
+.subscription__form
+{
+	margin-bottom: 32px;
+	&--hidden
+	{
+		position: absolute;
+		visibility: hidden;
+		opacity: 0;
+		user-select: none;
+		pointer-events: none;
+	}
+}
+.subscription__label
+{
+	font-family: $semi-font;
+	font-size: 20px;
+	line-height: 28px;
+	font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on;
+	color: #323240;
+	margin-bottom: 10px;
+}
+.subscription__form-wrap
+{
+	display: flex;
+	justify-content: flex-start;
+}
+.subscription__input
+{
+	max-width: 405px;
+	width: 100%;
+	background-color: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.08);
+	border-radius: 4px;
+	padding: 16px 20px;
+	margin-right: 10px;
+	font-size: 20px;
+	line-height: 30px;
+	font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on;
+	&::placeholder
+	{
+		color: #A1A0A8;
+	}
+}
+.subscription__success
+{
+	color: #323240;
+	width: 100%;
+	text-align: left;
+	font-size: 22px;
+	line-height: 27px;
+	display: none;
+	margin-bottom: 28px;
+}
+.subscription__button
+{
+	max-width: 240px;
+	width: 100%;
+	background-color: #F04F48;
+	transition: 0.25s;
+	border: none;
+	border-radius: 116.851px;
+	padding-top: 19px;
+	padding-bottom: 19px;
+	font-size: 20px;
+	line-height: 24px;
+	text-align: center;
+	color: #FFFFFF;
+	&:hover
+	{
+		background-color: #EC231A;
+		transition: 0.25s;
+	}
+}
+.subscription__descr
+{
+	max-width: 500px;
+	width: 100%;
+	font-size: 20px;
+	line-height: 30px;
+	font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on;
+	color: #323240;
+	opacity: 0.8;
+}
+
+
+@media (max-width: 1024px)
+{
+	.subscription__main
+	{
+		z-index: 1;
+		&:after
+		{
+			content: '';
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			left: 0;
+			top: 0;
+			z-index: -1;
+			background-image: linear-gradient(90deg, #EFF5FF 38.1%, rgba(239, 245, 255, 0) 100%);
+		}
+	}
+	.subscription__main
+	{
+		padding: 44px 20px;
+	}
+	.subscription__title
+	{
+		max-width: 650px;
+	    font-size: 40px;
+	    line-height: 48px;
+	}
+}
+
+
+@media (max-width: 767px)
+{
+	.subscription
+	{
+		&--usd
+		{
+			margin-top: -14px;
+		}
+	}
+	.subscription__form-wrap
+	{
+		flex-direction: column;
+	}
+	.subscription__title
+	{
+		font-size: 28px;
+		line-height: 34px;
+	}
+	.subscription__input
+	{
+		margin-bottom: 16px;
+	}
+	.subscription__button
+	{
+		display: block;
+	}
+}

@@ -1,0 +1,348 @@
+.sevices-content_large-content
+{
+	padding-right: 5px;
+	.services-text
+	{
+		width: 100%;
+		overflow: auto;
+	}
+	.services__right-cards
+	{
+		position: relative;
+		top: 0;
+	}
+	table
+	{
+		min-width: 640px;
+	}
+}
+.analitics-detail
+{
+	.services__right-block
+	{
+		position: sticky;
+		top: 20px;
+	}
+	.services__right-consult
+	{
+		width: 265px;
+		background-color: #fafafa;
+		border: solid 1px #e8e8e8;
+	}
+	h2
+	{
+		color: #000000;
+		font-size: 25px;
+		font-family: $bold;
+		// margin-bottom: 51px;
+		line-height: 36px;
+	}
+	h3
+	{
+		-webkit-margin-before: 0.2em;
+		margin-top: 44px;
+		margin-bottom: 24px;
+		&:first-child
+		{
+			margin-top: 0;
+		}
+	}
+	br
+	{
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+	}
+	.p-no-margin
+	{
+		margin-bottom: 0;
+		margin-top: 2px;
+	}
+	.tables-block
+	{
+		margin-bottom: 53px;
+	}
+	.buy-table
+	{
+		width: 43%;
+		float: left;
+		margin-right: 7%;
+		th
+		{
+			font-family: $bold;
+			font-size: 16px;
+			text-align: left;
+			padding: 5px;
+			padding-left: 0;
+		}
+		td
+		{
+			font-size: 16px;
+			text-align: left;
+			padding: 8px 0;
+			&:last-child
+			{
+				text-align: right;
+				color: #8ea66c;
+			}
+		}
+	}
+	.sell-table
+	{
+		margin-right: 0;
+		td:last-child
+		{
+			color: $main;
+		}
+	}
+	.market
+	{
+		width: 100%;
+		thead
+		{
+			border-bottom: 1px solid #e8e8e8;
+			th
+			{
+				color: #999999;
+				font-weight: 500;
+				padding: 15px 0;
+				text-align: right;
+				&:first-child
+				{
+					text-align: left;
+				}
+			}
+		}
+		tr
+		{
+			&:first-child
+			{
+				td
+				{
+					padding-top: 15px;
+				}
+			}
+		}
+		td
+		{
+			text-align: right;
+			padding: 10px 0;
+			&:first-child
+			{
+				text-align: left;
+
+			}
+			&:last-child
+			{
+				width: 25%;
+			}
+			&:nth-child(3)
+			{
+				width: 20%;
+			}
+			&.green
+			{
+				color: #8ea66c;
+			}
+			&.red
+			{
+				color: $main;
+			}
+		}
+	}
+	.analitics-detail__table-date
+	{
+		font-size: 14px;
+		border-top: 1px solid #e8e8e8;
+		padding-top: 5px;
+	}
+	hr
+	{
+		border-width: 2px;
+		margin-bottom: 68px;
+	}
+	.services__right-consult
+	{
+		padding-top: 50px;
+	}
+	.services__right-consult-img
+	{
+		margin-bottom: 16px;
+	}
+	.services__right-consult-descr
+	{
+		font-size: 16px;
+		line-height: 1.63;
+	}
+}
+.services__right-consult__author
+{
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 10px;
+	display: block;
+	width: 100%;
+	max-width: 335px;
+}
+.services__right-consult__info
+{
+	text-align: center;
+	font-size: 16px;
+	color: #333333;
+	float: right;
+	width: 265px;
+	line-height: 35px;
+
+}
+.visible__cell
+{
+	display: none;
+}
+.services__right-consult__info-views
+{
+	&:before
+	{
+		display: inline-block;
+		content: '';
+		width: 18px;
+		height: 12px;
+		background-image: url('../images/svg/eye.svg');
+		background-size: contain;
+		background-position: center;
+		margin-right: 8px;
+	}
+}
+.special
+{
+	.analitics-detail
+	{
+		h2
+		{
+			font-size: 38px;
+			line-height: 60px;
+		}
+	}
+	.analitics-detail__mobile-info-left
+	{
+		font-size: 22px;
+	}
+}
+@media (max-width: 1439px)
+{
+	.services__right-consult__info-date
+	{
+		margin-right: 20px;
+	}
+	.services__right-consult,
+	.services__right-consult__info,
+	{
+		width: 100% !important;
+	}
+}
+@media (max-width: 1279px)
+{
+	.analitics-detail__mobile-info-left
+	{
+		float: left;
+	}
+	.analitics-detail__mobile-info-right
+	{
+		float: right;
+	}
+	.analitics-detail
+	{
+		.services-accordeon__mobile
+		{
+			display: none;
+		}
+	}
+}
+@media (max-width: 1023px)
+{
+	.sevices-content_large-content
+	{
+		padding-right: 0;
+	}
+	.analitics-detail .sevices-top
+	{
+		padding-left: 22px;
+	}
+	.analitics-detail .services-text
+	{
+		padding-top: 30px;
+	}
+}
+@media (max-width: 767px)
+{
+	.sevices-content_large-content
+	{
+		padding-right: 15px;
+	}
+	.services__right-consult__author
+	{
+		max-width: 100%;
+	}
+	.analitics-detail h3
+	{
+		margin-top: 34px;
+	}
+	.analitics-detail__mobile-info-left
+	{
+		display: inline-block;
+		width: 100%;
+	}
+	.analitics-detail__mobile-info-right
+	{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	.analitics-detail .services-text
+	{
+		padding-top: 30px;
+	}
+	.analitics-detail .buy-table
+	{
+		width: 100%;
+		margin-bottom: 30px;
+
+	}
+	.mobile__hidden-row
+	{
+		display: none;
+	}
+	.analitics-detail .market td:nth-child(2),
+	.analitics-detail .market th:nth-child(2)
+	{
+		text-align: left;
+	}
+	.visible__cell
+	{
+		display: inline-block;
+		width: 100%;
+	}
+	.analitics-detail .market thead th,
+	.analitics-detail .market td,
+	{
+		font-size: 15px;
+	}
+	.analitics-detail .market td
+	{
+		&:nth-child(2)
+		{
+			min-width: 0px;
+		}
+		&:nth-child(3)
+		{
+			min-width: 90px
+		}
+		&:nth-child(4)
+		{
+			min-width: 105px
+		}
+	}
+	.analitics-detail__mobile-info
+	{
+		padding-left: 20px;
+	}
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('./inc/components/pagehead.html')
+</head>
+<body>
+	<div class="forms">
+		<div class="container" style="padding-top: 200px;">
+			<div class="forms-overlay">
+				<div class="buy-form clearfix">
+					<div class="buy-form__close"></div>
+					<div class="buy-form-left clearfix">
+						<div class="buy-form__logo">
+							<img src="images/svg/gazprom.svg" alt="">
+						</div>
+						<div class="buy-form__descr">
+							Пожалуйста, введите сумму инвестирования.<br>
+							Не менее 300 000 руб.
+						</div>
+					</div>
+					<div class="buy-form-right">
+						<button class="buy-form__buy">Купить</button>
+					</div>
+					<div class="buy-form-middle">
+						<div class="buy-form__input">
+							<input value="300 000 руб." class="_price-mask" type="text">
+						</div>
+					</div>
+				</div>
+				<br>
+				<br>
+				<div class="buy-form error clearfix">
+					<div class="buy-form__close"></div>
+					<div class="buy-form-left clearfix">
+						<div class="buy-form__logo">
+							<img src="images/svg/triangle.svg" alt="">
+						</div>
+						<div class="buy-form__descr">
+							Извините, при покупке структурного продукта произошла ошибка.<br>
+							Повторите покупку немного позже.
+						</div>
+					</div>
+					<div class="buy-form-right">
+						<button class="buy-form__buy">Закрыть</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

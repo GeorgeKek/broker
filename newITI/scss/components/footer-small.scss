@@ -1,0 +1,41 @@
+.footer-small
+{
+	padding: 56px 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+.footer-small__text
+{
+	text-align: center;
+	font-size: 14px;
+	line-height: 22px;
+	p
+	{
+		margin: 0;
+	}
+}
+
+@media (max-width: 767px)
+{
+	.footer-small
+	{
+		padding: 32px 16px;
+		.container
+		{
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	.footer-small__text
+	{
+		text-align: left;
+		font-size: 13px;
+		line-height: 17px;
+	}
+	p
+	{
+		&:not(:last-child)
+		{
+			margin-bottom: 13px;
+		}
+	}
+}

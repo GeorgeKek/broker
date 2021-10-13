@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('components/pagehead.html')
+</head>
+	<body>
+		<div class="page-wrapper">
+			@@include('components/header.html')
+
+			<div class="content">
+				<h2 class="content-header">Документы для подписи</h2>
+				<div class="all-docs-nav">
+					<div class="all-docs-nav__item" onclick="PdfRender.scrollToDoc(0);">
+						<span class="all-docs-nav__item-content">Анкета клиента</span>
+					</div>
+					<div class="all-docs-nav__item" onclick="PdfRender.scrollToDoc(1);">
+						<span class="all-docs-nav__item-content">Технический протокол</span>
+					</div>
+					<div class="all-docs-nav__item" onclick="PdfRender.scrollToDoc(2);">
+						<span class="all-docs-nav__item-content">Заявление</span>
+					</div>
+					<div class="all-docs-nav__item" onclick="PdfRender.scrollToDoc(3);">
+						<span class="all-docs-nav__item-content">Назначение оператора счета Депо</span>
+					</div>
+					<div class="all-docs-nav__item" onclick="PdfRender.scrollToDoc(4);">
+						<span class="all-docs-nav__item-content">Поручение на открытие дополнительного раздела</span>
+					</div>
+				</div>
+				<div class="pdf-container" id="0" data-pdf-id="0">
+				</div>
+				<div class="pdf-container" id="1" data-pdf-id="1">
+				</div>
+				<div class="pdf-container" id="2" data-pdf-id="2">
+				</div>
+				<div class="pdf-container" id="3" data-pdf-id="3">
+				</div>
+				<div class="pdf-container" id="4" data-pdf-id="4">
+				</div>
+			</div>
+		</div>
+		@@include('components/security-footer.html')
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.2/pdf.min.js" async></script>
+		<script src="../js/open-account/render-pdfs.min.js" async></script>
+		<script>
+			// на препроде рендери вот этот список,
+			// на боевом уже будешь подставлять данные от api
+			window.pdfToRender = {"code":"200","data":{"status":"ok","result":
+				[{"name_file":"\u0410\u043d\u043a\u0435\u0442\u0430 \u043a\u043b\u0438\u0435\u043d\u0442\u0430","link_file":"../BP26900-anketa_utf_fiz_all.pdf"},
+				{"name_file":"\u0422\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u043f\u0440\u043e\u0442\u043e\u043a\u043e\u043b","link_file":"../BP26376-tp_utf.pdf"},
+				{"name_file":"\u0417\u0430\u044f\u0432\u043b\u0435\u043d\u0438\u0435","link_file":"../BP26376-state_utf.pdf"},
+				{"name_file":"\u041d\u0430\u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u043e\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0430 \u0441\u0447\u0435\u0442\u0430 \u0414\u0435\u043f\u043e","link_file":"../BP26376-oper_accno_utf.pdf"},
+				{"name_file":"\u041f\u043e\u0440\u0443\u0447\u0435\u043d\u0438\u0435 \u043d\u0430 \u043e\u0442\u043a\u0440\u044b\u0442\u0438\u0435 \u0434\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0433\u043e \u0440\u0430\u0437\u0434\u0435\u043b\u0430","link_file":"../BP26376-oper_spb_utf.pdf"}]}};
+
+		</script>
+	</body>
+	</html>

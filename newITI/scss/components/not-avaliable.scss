@@ -1,0 +1,292 @@
+.not-avaliable
+{
+	h1
+	{
+		margin-bottom: 90px;
+		font-size: 50px;
+		line-height: 55px;
+		font-family: $air;
+		font-feature-settings: "ss01" 0;
+	}
+}
+.not-avaliable__left,
+.not-avaliable__middle,
+.not-avaliable__right
+{
+	font-size: 21px;
+	line-height: 40px;
+	font-family: $regular;
+}
+.not-avaliable__left
+{
+	width: 566px;
+
+}
+.not-avaliable__mobile
+{
+	display: none;
+}
+.not-avaliable__middle
+{
+	width: 478px;
+	a
+	{
+		color: #292929;
+		border-bottom: 1px solid #80b6b4;
+		transition: all .3s;
+		&:hover
+		{
+			border-color: transparent
+		}
+	}
+}
+.not-avaliable__top-left-item
+{
+	display: flex;
+}
+.not-avaliable__top-left-item-title
+{
+	white-space: nowrap;
+	a
+	{
+		color: #292929;
+		border-bottom: 1px solid #80b6b4;
+		transition: all .3s;
+		&:hover
+		{
+			border-color: transparent
+		}
+	}
+}
+.not-avaliable__top-left-item-line
+{
+	width: 100%;
+	background-color: #9b9b9b;
+	height: 1px;
+	position: relative;
+	top: 27px;
+	margin: 0 18px;
+}
+.not-avaliable
+{
+	margin-bottom: 95px;
+}
+.not-avaliable__wrapper
+{
+	display: flex;
+}
+.footer__not-avaliable-title
+{
+	font-family: $air;
+	font-feature-settings: "ss01" 0;
+	font-size: 30px;
+	line-height: 36px;
+	margin-bottom: 35px;
+}
+.footer__not-avaliable-descr
+{
+	margin-bottom: 30px;
+}
+.footer__not-avaliable-descr,
+.footer__not-avaliable-contacts
+{
+	font-size: 21px;
+	line-height: 26px;
+	font-family: $regular;
+}
+.footer__not-avaliable-contacts
+{
+
+	a
+	{
+		transition: all .3s;
+		font-family: $medium;
+		color: #292929;
+		border-bottom: 1px solid #80b6b4;
+		margin-top: 10px;
+		display: inline-block;
+		&:hover
+		{
+			border-color: transparent
+		}
+	}
+}
+.small-footer-wrapper
+{
+	display: flex;
+	margin-bottom: 64px;
+}
+.small-footer-disclamer
+{
+	font-size: 14px;
+	line-height: 21px;
+}
+@media (max-width: 1439px)
+{
+	.not-avaliable-container
+	{
+		width: 1240px;
+	}
+	.not-avaliable__left
+	{
+		width: 580px;
+	}
+	.not-avaliable__right
+	{
+		width: 300px;
+	}
+	.not-avaliable__middle
+	{
+		width: 370px;
+	}
+}
+@media (max-width: 1279px)
+{
+	.not-avaliable-container
+	{
+		width: 100%;
+		padding-left: 35px;
+		padding-right: 35px;
+	}
+	.not-avaliable__left
+	{
+		width: 470px;
+	}
+	.not-avaliable__middle
+	{
+		width: 342px;
+	}
+	.not-avaliable
+	{
+		h1
+		{
+			font-size: 40px;
+			line-height: 55px;
+		}
+	}
+	.not-avaliable__left,
+	.not-avaliable__middle,
+	.not-avaliable__right
+	{
+		font-size: 16px;
+		line-height: 40px;
+	}
+	.footer__not-avaliable-descr,
+	.footer__not-avaliable-contacts
+	{
+		font-size: 16px;
+		line-height: 26px;
+	}
+	.footer__not-avaliable-title
+	{
+		font-size: 25px;
+		line-height: 26px;
+	}
+}
+@media (max-width: 1023px)
+{
+	.not-avaliable__mobile
+	{
+		display: block;
+	}
+	.not-avaliable
+	{
+		h1
+		{
+			font-size: 30px;
+			line-height: 42px;
+			margin-bottom: 40px;
+		}
+	}
+	.not-avaliable__wrapper
+	{
+		display: none;
+	}
+	.not-avaliable__top-left-item
+	{
+		flex-wrap: wrap;
+		margin-bottom: 15px;
+	}
+	.not-avaliable__top-left-item-title
+	{
+		width: 100%;
+		line-height: 26px;
+		margin-bottom: 0;
+	}
+	.not-avaliable__right
+	{
+		width: 100%;
+	}
+	.not-avaliable__right
+	{
+		line-height: 26px;
+	}
+	.small-header
+	{
+		margin-bottom: 50px;
+		.header-phone__mobile,
+		.burger
+		{
+			display: none !important;
+		}
+		.header-right a
+		{
+			display: block;
+		}
+	}
+	.not-avaliable
+	{
+		margin-bottom: 50px;
+	}
+	.small-footer-wrapper
+	{
+		flex-wrap: wrap;
+		.not-avaliable__left,
+		.not-avaliable__middle,
+		.not-avaliable__right
+		{
+			width: 100%;
+			margin-bottom: 54px;
+		}
+		.not-avaliable__right
+		{
+			margin-bottom: 0;
+		}
+	}
+}
+@media (max-width: 767px)
+{
+	.small-header
+	{
+		.header-top-left-country
+		{
+			display: flex;
+			flex-wrap: wrap;
+			width: 60px;
+			align-items: center;
+			padding-top: 25px;
+			a
+			{
+				margin-bottom: 10px;
+				margin-left: 0;
+				margin-right: 0;
+				&:last-child
+				{
+					margin-bottom: 0;
+				}
+			}
+		}
+		.header-right a
+		{
+			padding-top: 0;
+		}
+		.header-phone__320
+		{
+			display: none !important;
+		}
+		.header-right
+		{
+			padding-top: 25px;
+		}
+	}
+}

@@ -1,0 +1,87 @@
+.alter-about
+{
+	max-width: 1440px;
+	width: 100%;
+
+	margin-right: auto;
+}
+.alter-about__main
+{
+	position: relative;
+	max-width: 1380px;
+	width: 100%;
+	background-image: url('../img/alter-about.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-right: auto;
+	padding: 72px 130px;
+	&:after
+	{
+		content: '';
+		background-image: url('../img/alter-lines.svg');
+		background-repeat: repeat-x;
+		position: absolute;
+		height: 191px;
+		width: 200px;
+		right: -100px;
+		bottom: 0;
+		z-index: -1;
+	}
+}
+.alter-about__title
+{
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 48px;
+	color: #FFFFFF;
+	margin-bottom: 16px;
+}
+.alter-about__descr
+{
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 36px;
+	color: #FFFFFF;
+}
+
+@media (min-width: 1441px)
+{
+	.alter-about
+	{
+		margin-left: auto;
+	}
+}
+
+
+
+@media (max-width: 768px)
+{
+	.alter-about__main
+	{
+		background-image: url('../img/alter-about-mobile.png');
+		background-size: cover;
+		background-position: top;
+		padding-top: 32px;
+		padding-bottom: 34px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.alter-about__title
+	{
+		font-size: 24px;
+		line-height: 29px;
+	}
+	.alter-about__descr
+	{
+		font-size: 14px;
+		line-height: 21px;
+		br
+		{
+			display: none;
+		}
+	}
+}
+
+
+

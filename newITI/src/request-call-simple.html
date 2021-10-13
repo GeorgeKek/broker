@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Заказ обратного звонка iticapital.ru</title>
+	<meta name="viewport" content="width=device-width">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="HandheldFriendly" content="true"/>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport min-width=320px" content="min-width=320, initial-scale=1.0" />
+	<style>
+		.rqc-form-wr,
+		.rqc-form-wr *
+		{
+			box-sizing: border-box;
+			font-family: inherit;
+			font-size: inherit;
+			font-weight: inherit;
+			font-style: inherit;
+			text-transform: inherit;
+			text-decoration: inherit;
+			white-space: normal;
+			font-family: sans-serif;
+		}
+		.rqc-form-wr
+		{
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			font-size: 14px;
+			-webkit-transition: 0.2s;
+			-o-transition: 0.2s;
+			transition: 0.2s;
+		}
+		.rqc-form-wr.rqc-form-wr_opened
+		{
+		}
+		.rqc-form-wr.rqc-form-wr_opened .rqc-form-overlay
+		{
+			visibility: visible;
+			opacity: 1;
+		}
+		.rqc-form-wr.rqc-form-wr_opened .rqc-form-body
+		{
+			opacity: 1;
+			-webkit-transform: translateY(0);
+			-ms-transform: translateY(0);
+			-o-transform: translateY(0);
+			transform: translateY(0);
+		}
+		.rqc-form-overlay
+		{
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,.42);
+			z-index: -1;
+		}
+		.rqc-form-body-wr
+		{
+			height: 100%;
+			width: 100%;
+			margin: auto;
+			padding-bottom: 50px;
+			padding-top: 20px;
+		}
+		.rqc-form-body
+		{
+			margin-bottom: 20px;
+			max-width: 410px;
+			height: 630px;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 4px;
+			box-shadow: 0 12px 27.26px 1.74px rgba(0,0,0,.4);
+			overflow: hidden;
+			margin-top: auto;
+			margin-bottom: auto;
+			-webkit-transition: 0.3s;
+			-o-transition: 0.3s;
+			transition: 0.3s;
+			border: 1px solid #d9d9d9;
+		}
+		.rqc-form-body-top
+		{
+			position: relative;
+		}
+		.rqc-form__header
+		{
+			font-size: 18px;
+			font-weight: 700;
+			margin-bottom: 16px;
+			line-height: 1.2;
+		}
+		.rqc-form-close
+		{
+			position: absolute;
+			width: 44px;
+			height: 44px;
+			top: -20px;
+			right: -20px;
+			padding-top: 24px;
+			padding-right: 24px;
+			cursor: pointer;
+		}
+		.rqc-form-close:hover .rqc-form-close__icon
+		{
+			-webkit-transform: rotate(90deg);
+			-ms-transform: rotate(90deg);
+			-o-transform: rotate(90deg);
+			transform: rotate(90deg);
+		}
+		.rqc-form-close__icon
+		{
+			-webkit-transition: 0.2s;
+			-o-transition: 0.2s;
+			transition: 0.2s;
+			-webkit-transform-origin: center center;
+			-moz-transform-origin: center center;
+			-ms-transform-origin: center center;
+			-o-transform-origin: center center;
+			transform-origin: center center;
+			background-color: red;
+			position: absolute;
+			top: 20px;
+			right: 20px;
+		}
+		.rqc-form-close__icon:before,
+		.rqc-form-close__icon:after
+		{
+			position: absolute;
+			content: '';
+			width: 2px;
+			height: 14px;
+			background-color: #d8d8d8;
+			top: 0;
+			left: 0;
+			-webkit-transform-origin: center;
+			-moz-transform-origin: center;
+			-ms-transform-origin: center;
+			-o-transform-origin: center;
+			transform-origin: center;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+		}
+		.rqc-form-close__icon:before
+		{
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+		.rqc-form-close__icon:after
+		{
+			-webkit-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
+			-o-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+		}
+		.rqc-form-field
+		{
+			margin-bottom: 15px;
+		}
+		.rqc-form-field__group
+		{
+			padding-top: 10px;
+		}
+		.rqc-form-field__group-delimeter
+		{
+			/*text-align: center;*/
+			/*text-transform: uppercase;*/
+			color: rgba(0,0,0, 0.7);
+			font-size: 12px;
+			margin-bottom: 15px;
+		}
+		.rqc-form-field__label
+		{
+			color: #333333;
+			font-size: 14px;
+			line-height: 1.15;
+			display: block;
+			margin-bottom: 4px;
+		}
+		.rqc-form-field__input
+		{
+			display: block;
+			height: 32px;
+			line-height: 32px;
+			width: 100%;
+			border: solid 1px #f0f0f0;
+			border-radius: 3px;
+			outline: 0 none!important;
+			background-color: #ffffff!important;
+			font-size: inherit!important;
+			padding: 0 8px!important;
+			color: #333333!important;
+		}
+		.rqc-radio-wr
+		{
+			display: block;
+			cursor: pointer;
+			line-height: 1.2;
+			display: block;
+			position: relative;
+			min-height: 14px;
+			border-radius: 2px;
+			padding: 10px;
+			overflow: hidden;
+			background: #f5f5f5;
+			transition: background-color .2s ease-out!important;
+			margin-bottom: 4px;
+			border-radius: 2px;
+		}
+		.rqc-radio-wr:hover
+		{
+			background-color: #e8e8e8;
+		}
+		.rqc-radio-wr:last-child
+		{
+			margin-bottom: 0;
+		}
+		.rqc-radio-box
+		{
+			margin-top: -2px;
+			padding-left: 3px;
+			position: relative;
+		}
+		.rqc-agreement
+		{
+			margin-top: 15px;
+			opacity: .5;
+    		font-size: 12px;
+    		line-height: 16px;
+		}
+		.rqc-agreement a
+		{
+			color: inherit;
+			text-decoration: underline;
+		}
+		.rqc-submit-wr
+		{
+			margin-top: 34px;
+		}
+		.rqc-btn,
+		.rqc-btn:active,
+		.rqc-btn:hover
+		{
+			background: #ee3931!important;
+			color: #ffffff!important;
+		}
+		.rqc-btn
+		{
+			width: 100%;
+			display: block;
+			font-size: 0;
+			padding: 0 26px;
+			text-align: center;
+			border-radius: 2px;
+			vertical-align: middle;
+			height: auto;
+			border: 0;
+		}
+		.rqc-btn__text
+		{
+			font-size: 14px;
+			font-weight: 700;
+			vertical-align: middle;
+			line-height: 32px;
+			word-wrap: normal;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			display: inline-block;
+			max-width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="rqc-form-wr">
+		<div class="rqc-form-overlay"></div>
+		<div class="rqc-form-body-wr">
+			<div class="rqc-form-body">
+				<div class="rqc-form-body-top">
+					<div class="rqc-form__header">Заявка на консультацию</div>
+				</div>
+				<form action="" class="rqc-form">
+					<div class="rqc-form-field">
+						<label class="rqc-form-field__label">Ваше имя</label>
+						<input type="text" name="name" class="rqc-form-field__input">
+					</div>
+					<div class="rqc-form-field__group">
+						<div class="rqc-form-field">
+							<label class="rqc-form-field__label">Email *</label>
+							<input type="text" name="email" class="rqc-form-field__input _rqc-email _rqc-required">
+						</div>
+						<div class="rqc-form-field__group-delimeter">
+							Или
+						</div>
+						<div class="rqc-form-field">
+							<label class="rqc-form-field__label">Номер телефона *</label>
+							<input type="tel" name="phone" class="rqc-form-field__input _rqc-phone-mask _rqc-required">
+						</div>
+					</div>
+					<div class="rqc-time-list">
+						<div class="rqc-form-field__label">Выберите удобное время для звонка:</div>
+						<div class="rqc-time-list-items">
+							<label class="rqc-radio-wr">
+								<input type="radio" class="rqc-radio" name="call-time" checked="" value="1">
+								<span class="rqc-radio-box">
+									<span class="rqc-radio-box__box"></span>
+									<span class="rqc-radio-box__text">Прямо сейчас</span>
+								</span>
+							</label>
+							<label class="rqc-radio-wr">
+								<input type="radio" class="rqc-radio" name="call-time" value="2">
+								<span class="rqc-radio-box">
+									<span class="rqc-radio-box__box"></span>
+									<span class="rqc-radio-box__text">Утром (9:00–12:00 МСК)</span>
+								</span>
+							</label>
+							<label class="rqc-radio-wr">
+								<input type="radio" class="rqc-radio" name="call-time" value="3">
+								<span class="rqc-radio-box">
+									<span class="rqc-radio-box__box"></span>
+									<span class="rqc-radio-box__text">Днём (12:00–17:00 МСК)</span>
+								</span>
+							</label>
+							<label class="rqc-radio-wr">
+								<input type="radio" class="rqc-radio" name="call-time" value="4">
+								<span class="rqc-radio-box">
+									<span class="rqc-radio-box__box"></span>
+									<span class="rqc-radio-box__text">Вечером (17:00–21:00 МСК)</span>
+								</span>
+							</label>
+						</div>
+					</div>
+					<div class="rqc-agreement">
+						Нажимая на&nbsp;кнопку, вы&nbsp;соглашаетесь с&nbsp;<a href="https://iticapital.ru/editorfiles/File/documents/agreement.pdf" target="_blank">политикой</a>  обработки персональных данных
+					</div>
+					<div class="rqc-submit-wr">
+						<button class="rqc-btn" type="submit"><span class="rqc-btn__text">Перезвоните мне</span></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

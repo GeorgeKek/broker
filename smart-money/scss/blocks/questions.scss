@@ -1,0 +1,162 @@
+.questions
+{
+	padding-top: 84px;
+	padding-bottom: 84px;
+	&--grey
+	{
+		padding-top: 62px;
+		padding-bottom: 62px;
+		background-color: #FAFAFA;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	}
+}
+.questions__wrap
+{
+	display: flex;
+	justify-content: space-between;
+}
+.questions__right
+{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex-grow: 1;
+}
+.questions__title
+{
+	font-family: $semi-font;
+	font-size: 44px;
+	line-height: 53px;
+	color: #575762;
+	margin-bottom: 10px;
+}
+.questions__subtitle
+{
+	font-size: 20px;
+	line-height: 30px;
+	font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on;
+	color: #575762;
+}
+.questions__button
+{
+	max-width: 265px;
+	width: 100%;
+	border: 2px solid #CCCCCC;
+	transition: 0.3s;
+	border-radius: 116.851px;
+	padding: 19px 0;
+	svg
+	{
+		vertical-align: middle;
+		margin-right: 16px;
+	}
+	&:hover
+	{
+		cursor: pointer;
+		border: 2px solid #F04F48;
+		transition: 0.3s;
+	}
+	&:not(:last-child)
+	{
+		margin-right: 16px;
+	}
+}
+.questions__phone
+{
+	max-width: 210px;
+	display: flex;
+	align-items: center;
+	transition: 0.2s;
+	margin-left: auto;
+	padding-top: 10px;
+	margin-right: 10px;
+	&:hover
+	{
+		transform: scale(1.05);
+		transition: 0.2s;
+	}
+}
+
+.questions__phone-icon
+{
+	margin-right: 17px;
+}
+
+.questions__phone-number
+{
+	font-family: $accent-font;
+	font-size: 18px;
+	line-height: 22px;
+	color: #575762;
+	text-transform: uppercase;
+}
+
+
+@media (max-width: 1024px)
+{
+	.questions
+	{
+		&--alter
+		{
+			text-align: center;
+			.questions__button
+			{
+				margin-left: auto;
+				margin-right: auto;
+				&:not(:last-child)
+				{
+					margin-right: auto;
+					margin-bottom: 24px;
+				}
+			}
+			.questions__phone
+			{
+				margin-right: auto;
+				padding-top: 20px;
+			}
+		}
+	}
+	.questions__wrap
+	{
+		flex-direction: column;
+	}
+	.questions__left
+	{
+		margin-bottom: 30px;
+	}
+	.questions__right
+	{
+		justify-content: flex-start;
+	}
+}
+
+@media (max-width: 767px)
+{
+	.questions
+	{
+		padding-top: 44px;
+		padding-bottom: 44px;
+	}
+	.questions__right
+	{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.questions__title
+	{
+		font-size: 28px;
+		line-height: 1.3;
+	}
+	.questions__subtitle
+	{
+		font-size: 16px;
+	}
+	.questions__button
+	{
+		&:not(:last-child)
+		{
+			margin-right: 0;
+			margin-bottom: 16px;
+		}
+	}
+}

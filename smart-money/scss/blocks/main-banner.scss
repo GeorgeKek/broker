@@ -1,0 +1,107 @@
+.main-banner
+{
+	background-image: url('../img/bg-main.png');
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	background-color: #EFF5FF;
+	background-size: contain;
+	position: relative;
+	padding-top: 150px;
+	padding-bottom: 155px;
+}
+
+.main-banner__text
+{
+	position: relative;
+	z-index: 1;
+}
+
+.main-banner__prescr
+{
+	font-family: $accent-font;
+	font-size: 18px;
+	line-height: 1.5;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	color: #7C7C85;
+	margin-bottom: 5px;
+}
+
+h1.main-banner__title
+{
+	font-family: $bold-font;
+	font-size: 68px;
+	line-height: 68px;
+	color: #323240;
+	margin-top: 0;
+	margin-bottom: 25px;
+}
+
+.main-banner__slogan
+{
+	font-size: 32px;
+	line-height: 42px;
+	color: #323240;
+	max-width: 350px;
+}
+@media (min-width: 1441px)
+{
+	.main-banner
+	{
+		background-position: center bottom;
+		&:before
+		{
+			height: 105px;
+			width: calc( 50% - 500px );
+		}
+	}
+}
+@media (min-width: 1035px)
+{
+	.main-banner:before
+	{
+		content: '';
+		height: 106px;
+		width: calc( 60% - 440px );
+		background-image: linear-gradient(180deg, #EAE9E9 0%, #F5F5F5 100%);
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+@media (max-width: 1023px)
+{
+
+	.main-banner
+	{
+	background-size: cover;
+	}
+}
+
+@media (max-width: 767px)
+{
+	.main-banner
+	{
+		padding-top: 80px;
+		padding-bottom: 80px;
+		margin-bottom: 40px;
+		background-position: 30% bottom;
+	}
+	h1.main-banner__title
+	{
+		max-width: 280px;
+		font-size: 38px;
+		line-height: 38px;
+		margin-bottom: 12px;
+	}
+	.main-banner__prescr
+	{
+		max-width: 280px;
+	}
+	.main-banner__slogan
+	{
+		max-width: 280px;
+		font-size: 24px;
+		line-height: 32px;
+	}
+}

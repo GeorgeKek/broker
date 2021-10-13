@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<!--[if IE 6]>		<html id="section-reco_main" class="nojs ie6 ieb7 ieb8 ieb9 ieb10 split1 nosplit5 platform-PC platform-notouch"><![endif]-->
+<!--[if IE 7]>		<html id="section-reco_main" class="nojs iea6 ie7 ieb8 ieb9 ieb10 split1 nosplit5 platform-PC platform-notouch"><![endif]-->
+<!--[if IE 8]>		<html id="section-reco_main" class="nojs iea6 iea7 ie8 ieb9 ieb10 split1 nosplit5 platform-PC platform-notouch"><![endif]-->
+<!--[if IE 9]>		<html id="section-reco_main" class="nojs iea6 iea7 iea8 ie9 ieb10 split1 nosplit5 platform-PC platform-notouch"><![endif]-->
+<meta name="viewport" content="width=device-width">
+<meta name="MobileOptimized" content="320"/>
+<meta name="HandheldFriendly" content="true"/>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport min-width=320px" content="min-width=320, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="../css/open-account-styles.css">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PMS7GZP');</script>
+<!-- End Google Tag Manager -->
+<script type="text/javascript" src="../js/open-account/main.min.js"></script>
+<script>
+	OpenAcc.api.baseHeadersUrl = 'http://pre-prod.iticapital.ru/api-entrance/getkey/';
+</script>
+<!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/libs/flexibility.min.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/libs/flexie.js"></script>
+<![endif]-->
+<title>index</title>
+
+<!-- <script async src="https://www.google-analytics.com/analytics_debug.js"></script> -->
+
+
+
+<!--
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics_debug.js','ga');
+
+	ga('create', 'UA-90746493-1', 'auto');
+	ga('send', 'pageview');
+	gtag('config', 'UA-90746493-1');
+</script> -->
+</head>
+	<body>
+		<div class="page-wrapper">
+			<div class="header-wr">
+	<header class="header">
+		<div class="header-logo-wr">
+			<a href="/" class="header-logo">
+				<img src="../images/open-acc-img/header-logo.svg" alt="">
+			</a>
+		</div>
+		<div class="header-label">Анкета инвестора</div>
+		<div class="header-work-info-wr">
+			<a href="tel:88002005532" class="header-phone-link">8 800 200 55 32</a>
+			<div class="header-working-hours">Пн–Пт · 9–21  /  Сб–Вс · 10–17</div>
+		</div>
+	</header>
+	<div class="header-label header-label_mobile">Анкета инвестора</div>
+</div>
+
+			<div class="test-box">
+				<!-- если юзера прошел тест и обновил страницу то блоку test-content добавляем класс test-content_end -->
+				<div class="test-content">
+					<div class="test-header">
+						Вопрос <span class="test-header__current">1</span> из <span class="test-header__all"> 9</span>
+					</div>
+					<div class="test-content__body">
+						<div class="test-questions-wr">
+							<div class="test-question"></div>
+							<div class="test-question-tooltip">
+								Можно выбрать несколько ответов или написать свой
+							</div>
+							<div class="test-questions-box">
+								<div class="test-answers">
+									<div class="test-answers-lists">
+										<div class="test-answers-list-wr"></div>
+										<!-- <div class="test-answers-list-wr"></div> -->
+									</div>
+									<div class="another-answer">
+										<span class="another-answer__icon">
+											<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.148 8.5824L8.185 1.545l2.2695 2.2695-7.037 7.0373-2.2696-2.2695zM0 12.0001l2.508-.6947L.6947 9.4921 0 12zM11.0818.3522c-.4708-.4697-1.2331-.4697-1.704 0l-.5111.5112 2.2695 2.2695.5111-.5112c.4699-.4708.4699-1.233 0-1.704l-.5655-.5655z" fill="#B2B2B2"/></svg>
+										</span>
+										<textarea type="text" id="another-answer" class="input another-answer__textarea" onchange="Testing.setAnotherAnswer(this)" placeholder="Ваш вариант"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="test-actions test-actions_first-step">
+							<button data-href="sign-up-success.html" class="open-acc-btn open-acc-btn_skin test-actions__prev" onclick="Testing.prevQuestion(this);">← Назад</button>
+							<button class="open-acc-btn test-actions__next" disabled="" onclick="Testing.nextQuestion(this);">Дальше →</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- если юзера прошел тест и обновил страницу то блоку test-content добавляем класс test-content_end -->
+				<div class="test-success">
+					<div class="test-success-header">
+						<span>Тест пройден, спасибо!</span>
+						<span class="test-success-header__icon">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#87AF4F"/><path d="M4.5 10.9993l1.0955-1.008 2.2039 2.0102L14.398 6l1.1019.9963L7.7994 14 4.5 10.9993z" fill="#fff"/></svg>
+						</span>
+					</div>
+					<div class="test-success-descr">
+						Ответы помогут сделать вам оптимальное инвестиционное предложение
+					</div>
+					<div class="test-success-actions">
+						<div class="test-actions">
+							<a href="#" class="open-acc-btn test-actions__prev">Пополнить счёт →</a>
+							<a href="#" class="open-acc-btn open-acc-btn_skin test-actions__next">Наши услуги →</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			window.testSuccessUrl = '/iticapital/open-account-html/test-success.html';
+
+			window.testQuestions = [
+				{
+					question: 'Сколько вам лет?',
+					answersList: ['19&nbsp;&mdash; 34', '35&nbsp;&mdash; 50', 'Старше 50'],
+				},
+				{
+					question: 'Какое у&nbsp;вас образование?',
+					answersList: ['Среднее или неполное высшее', 'Высшее', 'Высшее финансовое'],
+				},
+				{
+					question: 'Ваш доход за&nbsp;последние 12&nbsp;месяцев',
+					answersList: ['до&nbsp;3&nbsp;млн рублей', 'от&nbsp;3&nbsp;до&nbsp;6&nbsp;млн рублей', 'свыше 6&nbsp;млн рублей'],
+					answerListSubValues: ['до 250&nbsp;000 руб./мес.', '250-500&nbsp;000 руб./мес.', 'свыше 500&nbsp;000 руб./мес.'],
+				},
+				{
+					question: 'Какой процент вашего дохода <br> вы&nbsp;переводите в&nbsp;сбережения?',
+					answersList: ['до&nbsp;10% вашего дохода', '10-50% вашего дохода', 'более&nbsp;50% вашего дохода'],
+				},
+				{
+					question: 'Как вы&nbsp;планируете инвестировать?',
+					answersList: ['Уже есть стартовый капитал', 'Буду регулярно откладывать некоторую сумму'],
+				},
+				{
+					question: 'Для чего вам инвестиционный портфель?',
+					answersList: ['Хочу получать пассивный доход/ищу альтернативу депозиту', 'Коплю на&nbsp;дорогие покупки/пенсию', 'Делаю первые шаги на&nbsp;фондовом рынке'],
+					multi: true,
+					anotherAnswer: true,
+				},
+				{
+					question: 'Какую сумму вы&nbsp;хотели&nbsp;бы инвестировать?',
+					answersList: ['от&nbsp;50&nbsp;000 до&nbsp;1&nbsp;млн рублей', 'от&nbsp;1&nbsp;до&nbsp;10&nbsp;млн рублей', 'свыше 10&nbsp;млн рублей'],
+				},
+				{
+					question: 'На&nbsp;какой срок вы&nbsp;хотите инвестировать?',
+					answersList: ['до&nbsp;6&nbsp;месяцев', 'от&nbsp;6&nbsp;месяцев до&nbsp;1&nbsp;года', 'более 1&nbsp;года'],
+				},
+				{
+					question: 'Насколько вы&nbsp;готовы рисковать?',
+					answersList: ['Не&nbsp;готов к&nbsp;убыткам', 'Допускаю потери в&nbsp;5-10%', 'Готов рисковать ради дохода более&nbsp;10%'],
+				},
+			]
+		</script>
+		<script src="../js/open-account/test.js" defer></script>
+	</body>
+</html>

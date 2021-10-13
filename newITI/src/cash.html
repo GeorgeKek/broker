@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('./inc/components/pagehead.html')
+</head>
+	<body>
+		<div class="wrap">
+			@@include('./inc/components/header.html')
+			<section class="main cash">
+				<div class="sevices-top">
+					<div class="container">
+						<div class="sevices-top__wrapper sevices-top__wrapper--center">
+							@@include('./inc/components/breadcrumbs.html')
+							<h1 class="sevices-top__title">
+								Пополнить счет
+							</h1>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="content-wrapper">
+						<div class="sevices-bot">
+							@@include('./inc/components/cash-currency.html')
+						</div>
+					</div>
+				</div>
+			</section>
+			@@include('./inc/components/footer-small.html')
+		</div>
+	</body>
+</html>

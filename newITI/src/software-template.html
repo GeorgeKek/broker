@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('./inc/components/pagehead.html')
+</head>
+	<body>
+	<div class="page-wrapper">
+		@@include('./inc/components/header.html')
+		<section class="services software-detail">
+			<div class="gray"></div>
+				<div class="sevices-top">
+					<div class="sevices-top__title">
+						Терминал SMARTx
+					</div>
+				</div>
+				<div class="container no-container__1024">
+					<div class="row no-row__1024">
+						<div class="col-lg-3 col-md-3">
+							@@include('./inc/components/accordeon.html')
+						</div>
+						<div class="col-lg-9 col-md-9 sevices-bot__no-padding">
+							<div class="sevices-bot">
+								@@include('./inc/components/breadcrumbs.html')
+								<div class="sevices-content__main-img">
+									<img src="images/software-top.jpg" alt="">
+								</div>
+								<div class="sevices-content software software-template">
+									<div class="software-content">
+										<div class="software-padding">
+											<div class="smartx-download">
+												<div class="smartx-download__left">
+													<div class="smartx-download__title">
+														Торговый терминал нового поколения SMARTx предназначен для торговли на российском и международных финансовых рынках.
+													</div>
+													<div class="smartx-download__descr">
+														Торговый терминал SMARTx — собственная разработка компании ITI Capital. В SMARTx реализованы все преимущества терминала предыдущего поколения, а также предоставлены новые широкие возможности для различных категорий клиентов.
+													</div>
+												</div>
+												<div class="smartx-download__right">
+													<div class="smartx-download__right__top">
+														<div class="smartx-download__logo">
+															<img src="images/svg/smartx-download-logo.svg" alt="">
+														</div>
+													</div>
+													<a href="#" class="smartx-download__btn">Загрузить</a>
+													<div class="smartx-download__btn-descr">Для Windows 7, 8, 10, Vista и XP</div>
+													<a href="#" class="smartx-download__other-platform-link">Терминалы для других ОС</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+		<section class="registration">
+			@@include('./inc/components/registration.html')
+		</section>
+		@@include('./inc/components/footer.html')
+		</div>
+	</body>
+</html>

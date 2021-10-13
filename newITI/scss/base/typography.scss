@@ -1,0 +1,137 @@
+/*  Общая типографика для всех страниц. здесь описываются общие свойства для текстовых блоков  */
+
+html
+{
+	min-width: 375px;
+	&.overflow
+	{
+		overflow: hidden;
+		-webkit-overflow-scrolling: auto;
+	}
+}
+body
+{
+	font-family: $regular;
+	font-size: 16px;
+	min-width: 375px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: #333333;
+	overflow-x: hidden;
+	font-feature-settings: "dlig" 0, "numr" 0, "dnom" 0, "tnum" 0, "case" 0, "zero", "frac" 0, "sups" 0, "subs" 0, "cpsp" 0, "salt" 0, "ss01", "ss02" 0, "cv01" 0, "cv02" 0, "cv03" 0, "cv04" 0, "cv05" 0, "cv06" 0, "cv07" 0, "cv08" 0, "cv09" 0, "cv10" 0, "calt", "liga", "kern";
+	&.overflow
+	{
+		overflow: hidden;
+		-webkit-overflow-scrolling :auto;
+	}
+}
+
+ul
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	li
+	{
+		margin: 0;
+		padding: 0;
+	}
+}
+
+address
+{
+	font-style: normal;
+}
+
+h1
+{
+	font-family: $air;
+	font-feature-settings: "ss01" 0;
+	font-size: 48px;
+	font-weight: 400;
+	margin-top: 0;
+	margin-bottom: 10px;
+	line-height: 24px;
+}
+
+h2
+{
+	font-family: $air;
+	font-feature-settings: "ss01" 0;
+	font-size: 30px;
+	font-weight: 400;
+	margin-top: 0;
+	margin-bottom: 10px;
+	line-height: 24px;
+}
+
+h3
+{
+	font-family: $air;
+	font-feature-settings: "ss01" 0;
+	font-size: 30px;
+	line-height: 32px;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+h4
+{
+	font-size: 15px;
+	letter-spacing: 2.4px;;
+	line-height: 24px;
+	margin:0px 0 8px 0;
+}
+
+p
+{
+	margin-top: 10px;
+	color: $secondary-color;
+}
+
+b
+{
+	font-weight: 700;
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus
+{
+	outline: 0;
+	text-decoration: none;
+}
+
+.h1-style
+{
+	font-size: 32px;
+	line-height: 32px;
+	margin: 0;
+	letter-spacing: 0.9px;
+}
+
+.h2-style
+{
+	font-size: 30px;
+	font-family: $bold;
+	color: #232323;
+}
+
+.h3-style
+{
+	font-size: 20px;
+	color: $accent-color;
+	letter-spacing: 0;
+	line-height: 25px;
+	margin: 0;
+}
+
+@media (max-width: 767px)
+{
+	body
+	{
+		padding-right: 0 !important;
+	}
+}

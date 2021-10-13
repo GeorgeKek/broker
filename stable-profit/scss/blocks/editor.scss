@@ -1,0 +1,70 @@
+.editor
+{
+	padding-bottom: 80px;
+}
+.editor__title
+{
+	font-family: $bold-font;
+	font-size: 30px;
+	line-height: 39px;
+	color: #323240;
+	margin-bottom: 32px;
+	max-width: 720px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.visual-editor
+{
+	max-width: 720px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	h3
+	{
+		font-family: $bold-font;
+		font-size: 20px;
+		line-height: 28px;
+		color: #575762;
+		margin-bottom: 24px;
+	}
+	p
+	{
+		font-size: 15px;
+		line-height: 22px;
+		color: #575762;
+	}
+	img
+	{
+		width: 100%;
+		&:not(:last-child)
+		{
+			margin-bottom: 32px;
+		}
+	}
+	ul
+	{
+		li
+		{
+			padding-left: 23px;
+			position: relative;
+			font-size: 15px;
+			line-height: 22px;
+			color: #575762;
+			&:not(:last-child)
+			{
+				margin-bottom: 24px;
+			}
+			&:before
+			{
+				content: "—";
+				position: absolute;
+				left: 0px;
+			}
+		}
+		&:not(:last-child)
+		{
+			margin-bottom: 32px;
+		}
+	}
+}

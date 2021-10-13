@@ -1,0 +1,62 @@
+<form class="request-form" id="reg_form" autocomplete="on" onsubmit="OpenAcc.signup.signupStart(this, event)">
+	<input type="hidden" id="prod-id" value="18">
+	<label class="request-form__item">
+		<div class="request-form__item-name">Ваш телефон</div>
+		<span class="request-form__item-line">
+			<input type="tel" id="phone" name="phone" placeholder="+7 ___ ___ __ __" class="request-form__item-input request-form__item-input--phone _phone-mask def-input sign-up-input__input _form-number">
+			<span class="request-form__item-clear">
+				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M0.917053 0.200012L7.98813 7.27108L15.0592 0.200012L15.7663 0.907119L8.69522 7.97819L15.7663 15.0493L15.0592 15.7564L7.98813 8.68529L0.917053 15.7564L0.209961 15.0493L7.28101 7.97819L0.209961 0.907119L0.917053 0.200012Z" fill="black" fill-opacity="0.4"/>
+				</svg>
+			</span>
+			<div class="request-form__item-check"></div>
+		</span>
+		<span class="request-form__item-error def-input__err-label">Заполните это поле</span>
+		<span class="request-form__item-descr">Будет использоваться для подписания<br>документов через СМС</span>
+	</label>
+
+	<label class="request-form__item">
+		<div class="request-form__item-name">Ваша электронная почта</div>
+		<span class="request-form__item-line">
+			<input type="text" id="email" name="email" class="request-form__item-input sign-up-input__input">
+			<span class="request-form__item-clear">
+				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M0.917053 0.200012L7.98813 7.27108L15.0592 0.200012L15.7663 0.907119L8.69522 7.97819L15.7663 15.0493L15.0592 15.7564L7.98813 8.68529L0.917053 15.7564L0.209961 15.0493L7.28101 7.97819L0.209961 0.907119L0.917053 0.200012Z" fill="black" fill-opacity="0.4"/>
+				</svg>
+			</span>
+			<div class="request-form__item-check"></div>
+		</span>
+		<span class="request-form__item-error def-input__err-label">Заполните это поле</span>
+	</label>
+	<div class="request-form__item">
+		<label class="request-form__item-checkbox-wrap">
+			<input type="checkbox" id="checkbox" class="request-form__item-checkbox" onchange="o2.changeProdId(this, 23)">
+			<span></span>
+			<span class="request-form__item-checkbox-name">
+				Открыть также ИИС
+			</span>
+		</label>
+		<span class="request-form__item-checkbox-separator">
+			·
+		</span>
+		<span class="request-form__item-checkbox-tooltip" id="tooltip">
+			что это?
+		</span>
+	</div>
+	<div class="request-form__warn">Убедитесь, что вы заполнили оба поля.<br>Только после этого можно будет продолжить:</div>
+	<button class="request-form__submit">
+		Подать документы <span>-&gt;</span>
+	</button>
+
+	<div class="request-form__policy">
+		Нажимая кнопку, вы соглашаетесь с политикой <a href="https://iticapital.ru/assets/files/agreement.pdf">обработки персональных данных</a>
+	</div>
+	<div id="template" style="display: none;">
+		<div class="request-form__template">
+			<p>ИИС или Индивидуальный Инвестиционный Счёт — это государственная программа, которая позволяет получить 13% от суммы, вложенной за год, или освободить свой доход с этого счёта от уплаты налога</p>
+			<a href="#">
+				Подробнее &rarr;
+			</a>
+		</div>
+	</div>
+</form>

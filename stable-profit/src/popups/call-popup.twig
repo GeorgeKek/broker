@@ -1,0 +1,129 @@
+{% extends "./index.twig" %}
+
+{% block popup %}
+<div class="popup call-popup _call-popup">
+	<div class="call-popup__body call-popup__body--active">
+		<div class="call-popup__body-top">
+			<div class="call-popup__header">Закажите обратный звонок</div>
+			<div class="call-popup__close" onclick="o2.popups.close('._call-popup')">
+				<div class="call-popup__close-icon"></div>
+			</div>
+		</div>
+		<form action="#" class="rqc-form" novalidate="" onsubmit="o2.submitForm(this, event)">
+			<div class="rqc-enums-wr">
+				<div class="call-popup__radio">
+					<div class="call-popup__radio-container">
+						<label class="call-popup__radio-input">
+							<input type="radio" name="radio" class="call-popup__radio-button" checked="" value="Прямо сейчас">
+							<div class="call-popup__radio-tile">
+								<div class="call-popup__radio-icon">
+									<svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.1435 19.0081L16.4035 20.2791L16.4055 20.282L7.85049 11.7271L9.12149 6.98901L3.11148 0.977051L0.105469 3.98206L0.143494 4.02002C1.18349 9.78502 3.91549 15.3051 8.37149 19.7581C12.8185 24.2091 18.3305 26.938 24.0845 27.98L24.1475 28.0231L27.1525 25.019L21.1435 19.0081Z" fill="#A8A8A8"/><path d="M25.106 13.022V11.021L19.519 11.0229L29.126 1.41595L27.713 0L18.106 9.60797L18.107 4.02295H16.108L16.106 13.022H25.106Z" fill="#A8A8A8"/></svg>
+								</div>
+								<label for="now" class="call-popup__radio-tile-label">Прямо сейчас</label>
+							</div>
+						</label>
+						<label class="call-popup__radio-input">
+							<input type="radio" name="radio" class="call-popup__radio-button" value="Утром (9:00-12:00 МСК)">
+							<div class="call-popup__radio-tile">
+								<div class="call-popup__radio-icon">
+									<svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.1435 19.0081L16.4035 20.2791L16.4055 20.282L7.85049 11.7271L9.12149 6.98901L3.11148 0.977051L0.105469 3.98206L0.143494 4.02002C1.18349 9.78502 3.91549 15.3051 8.37149 19.7581C12.8185 24.2091 18.3305 26.938 24.0845 27.98L24.1475 28.0231L27.1525 25.019L21.1435 19.0081Z" fill="#A8A8A8"/><path d="M25.106 13.022V11.021L19.519 11.0229L29.126 1.41595L27.713 0L18.106 9.60797L18.107 4.02295H16.108L16.106 13.022H25.106Z" fill="#A8A8A8"/></svg>
+								</div>
+								<label for="now" class="call-popup__radio-tile-label">Утром (9:00-12:00 МСК)</label>
+							</div>
+						</label>
+						<label class="call-popup__radio-input">
+							<input type="radio" name="radio" class="call-popup__radio-button" value="Днем (12:00-17:00 МСК)">
+							<div class="call-popup__radio-tile">
+								<div class="call-popup__radio-icon">
+									<svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.1435 19.0081L16.4035 20.2791L16.4055 20.282L7.85049 11.7271L9.12149 6.98901L3.11148 0.977051L0.105469 3.98206L0.143494 4.02002C1.18349 9.78502 3.91549 15.3051 8.37149 19.7581C12.8185 24.2091 18.3305 26.938 24.0845 27.98L24.1475 28.0231L27.1525 25.019L21.1435 19.0081Z" fill="#A8A8A8"/><path d="M25.106 13.022V11.021L19.519 11.0229L29.126 1.41595L27.713 0L18.106 9.60797L18.107 4.02295H16.108L16.106 13.022H25.106Z" fill="#A8A8A8"/></svg>
+								</div>
+								<label for="now" class="call-popup__radio-tile-label">Днем (12:00-17:00 МСК)</label>
+							</div>
+						</label>
+						<label class="call-popup__radio-input">
+							<input type="radio" name="radio" class="call-popup__radio-button" value="Вечером (17:00-21:00 МСК)">
+							<div class="call-popup__radio-tile">
+								<div class="call-popup__radio-icon">
+									<svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.1435 19.0081L16.4035 20.2791L16.4055 20.282L7.85049 11.7271L9.12149 6.98901L3.11148 0.977051L0.105469 3.98206L0.143494 4.02002C1.18349 9.78502 3.91549 15.3051 8.37149 19.7581C12.8185 24.2091 18.3305 26.938 24.0845 27.98L24.1475 28.0231L27.1525 25.019L21.1435 19.0081Z" fill="#A8A8A8"/><path d="M25.106 13.022V11.021L19.519 11.0229L29.126 1.41595L27.713 0L18.106 9.60797L18.107 4.02295H16.108L16.106 13.022H25.106Z" fill="#A8A8A8"/></svg>
+								</div>
+								<label for="now" class="call-popup__radio-tile-label">Вечером (17:00-21:00 МСК)</label>
+							</div>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="call-popup__field">
+				<label class="call-popup__phone">
+					<div class="call-popup__title">Ваше имя</div>
+					<input type="text" name="name" placeholder="" class="call-popup__field-input call-popup__field-input--name _call-popup-required">
+				</label>
+			</div>
+			<div class="call-popup__field">
+				<label class="call-popup__phone">
+					<div class="call-popup__title">Номер телефона</div>
+					<input type="tel" name="phone" placeholder="" class="call-popup__field-input _call-popup__mask _call-popup-required">
+				</label>
+			</div>
+			 <div class="call-popup__submit-wr">
+			 	<button class="call-popup__btn" type="submit">
+			 		<span class="call-popup__btn-text">Отправить заявку &rarr;</span>
+			 	</button>
+			</div>
+		</form>
+	</div>
+
+
+	<div class="call-popup__body-sms">
+		<div class="call-popup__body-top">
+			<div class="call-popup__header call-popup__header_confirm">
+				Введите код<br>из&nbsp;SMS
+			</div>
+			<div class="call-popup__close" onclick="o2.popups.close('._call-popup')">
+				<div class="call-popup__close-icon"></div>
+			</div>
+			<a href="" class="call-popup__close-back" onclick="o2.againStep()">&larr; Вернуться</a>
+		</div>
+		<div class="call-popup__text">
+			Вводя код, вы&nbsp;подтверждаете заказ звонка<br>на&nbsp;номер&nbsp;
+			<span class="call-popup__text-phone">+7 (111) 494 93 93</span>
+			<br>
+			<span class="call-popup__text-time">Прямо сейчас</span>
+		</div>
+		<form class="call-popup__form">
+			<label class="call-popup__form-sms">
+				<div class="call-popup__title">SMS-код</div>
+				<input type="tel" id="phone" name="phone" placeholder="_ _ _ _" maxlength="4" class="call-popup__field-input def-input sign-up-input__input call-popup__field-sms" im-insert="true" oninput="o2.getInput(this, event)">
+			</label>
+			<button type="button" class="call-popup__again" onclick="o2.phoneCheck(this, event)">
+				<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.2364 1.7625C9.14822 0.675 7.65478 0 5.99625 0C2.67917 0 0 2.685 0 6C0 9.315 2.67917 12 5.99625 12C8.7955 12 11.1295 10.0875 11.7974 7.5H10.2364C9.62101 9.2475 7.95497 10.5 5.99625 10.5C3.51219 10.5 1.49343 8.4825 1.49343 6C1.49343 3.5175 3.51219 1.5 5.99625 1.5C7.24203 1.5 8.35272 2.0175 9.16323 2.835L6.74672 5.25H12V0L10.2364 1.7625Z" fill="#6AA4DE"></path></svg>
+				<span>Выслать код еще раз</span>
+			</button>
+		</form>
+	</div>
+	<div class="call-popup-success call-popup__body">
+		<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M36 72C55.8823 72 72 55.8823 72 36C72 16.1177 55.8823 0 36 0C16.1177 0 0 16.1177 0 36C0 55.8823 16.1177 72 36 72Z" fill="#66B759"/>
+			<path d="M17.4375 51.7502H26.4375V33.7502H17.4375V51.7502ZM42.5019 29.2502L45.0506 19.7349C45.5338 17.9355 44.4662 16.0855 42.6645 15.6017L41.5789 15.3092L30.1939 34.8752L30.204 34.878C29.2444 36.5329 28.6875 38.4493 28.6875 40.5002C28.6875 46.713 33.7236 51.7502 39.9375 51.7502H46.0193C49.1946 51.7502 51.8501 49.5548 52.5701 46.6011L52.5774 46.5955L57.2169 29.2502H42.5019Z" fill="white"/>
+		</svg>
+		<h2 class="call-popup-message__title">Спасибо</h2>
+		<p class="call-popup__paragraph">
+			Наш менеджер свяжется с&nbsp;вами и&nbsp;уточнит детали.
+		</p>
+		<div class="call-btn-block">
+			<button class="call-popup__btn" onclick="o2.popups.close('.call-popup')">
+				<span class="call-btn__text">Понятно</span>
+			</button>
+		</div>
+	</div>
+	<div class="call-popup-error call-popup__body">
+		<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 3L35 35" stroke="#F04F48" stroke-width="6"/><path d="M35 3L3 35" stroke="#F04F48" stroke-width="6"/></svg>
+		<div class="call-popup-message__title">Упс, что-то пошло не так</div>
+		<div class="call-popup__paragraph">Упс, что-то пошло не так</div>
+		<div class="call-btn-block">
+			<button class="call-popup__btn" onclick="o2.popups.close('.call-popup')">
+				<span class="call-btn__text">Понятно</span>
+			</button>
+		</div>
+	</div>
+</div>
+{% endblock %}

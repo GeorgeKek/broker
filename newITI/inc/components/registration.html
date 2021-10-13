@@ -1,0 +1,230 @@
+<div class="registration-wrapper" onclick="o2.openAccount();">
+	Открыть брокерский счёт
+	<i></i>
+</div>
+<div class="registration-form">
+	<div class="close__icon" onclick="o2.openAccountClose();">
+		<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <g fill="none" fill-rule="evenodd">
+        <rect width="43" height="43" x=".5" y=".5" stroke="#D6D6D6" rx="21.5"/>
+        <path fill="#B3B3B3" fill-rule="nonzero" d="M29.142 16.414L27.728 15 15 27.728l1.414 1.414 12.728-12.728zM16.414 15L15 16.414l12.728 12.728 1.414-1.414L16.414 15z"/>
+    </g>
+</svg>
+	</div>
+	<div class="registration-form-wrapper">
+		<div class="registration-form__top">
+			<div class="registration-form__title">
+				Открыть брокерский счёт
+			</div>
+			<div class="open-account-tabs-block">
+				<div class="registration__mobile-select" onclick="o2.tabsCreate.tabsSelectDropdown(this)">
+					При помощи консультанта
+				</div>
+				<ul class="open-account__tabs-list clearfix">
+					<li class="open-account__tabs-list-item active" data-tab-id="0" onclick="o2.tabsCreate.openTab(this, event);">При помощи консультанта</li>
+					<li class="open-account__tabs-list-item" data-tab-id="1" onclick="o2.tabsCreate.openTab(this, event);">через портал госуслуг</li>
+					<li class="open-account__tabs-list-item" data-tab-id="2" onclick="o2.tabsCreate.openTab(this, event);">через смэв</li>
+				</ul>
+			</div>
+		</div>
+		<div class="open-account-tabs-wrapper">
+			<div class="open-account__tab-content active" data-tab-id="0">
+				<div class="open-account-tabs-content">
+					<form onsubmit="o2.sendForm(this, event)">
+						<div class="form-block__tab-item-inputs open-account__tab-item-inputs clearfix">
+							<div class="open-account-block__input-item-full">
+								<label class="open-account-label">
+									<div class="form-block__input-label-title open-accont-block__input-label-title">Фамилия, имя и отчество</div>
+									<input class="wer" type="text" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+								</label>
+							</div>
+							<div class="open-account-block__input-item-half">
+								<label class="open-account-label">
+									<div class="form-block__input-label-title open-accont-block__input-label-title">Номер телефона</div>
+									<input type="text" class="_phone-mask" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+								</label>
+							</div>
+							<div class="open-account-block__input-item-half">
+								<label class="open-account-label">
+									<div class="form-block__input-label-title open-accont-block__input-label-title">Электронная почта</div>
+									<input type="text" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+								</label>
+							</div>
+						</div>
+						<div class="form-block__btn-block open-account-block__btn-block clearfix">
+							<div class="form-block__btn-block-warning open-account__btn-block-warning">
+									Нажимая на кнопку, вы соглашаетесь <br>
+								<a href="#">
+									с политикой обработки персональных данных
+								</a>
+							</div>
+							<button type="submit" class="red-btn form-block__enter loading">Отправить консультанту</button>
+						</div>
+					</form>
+				</div>
+				<div class="open-account-desc">
+					<div class="open-account-desc-text">
+						<p>В течение 15 минут с Вами свяжется консультант Компании и ответит на любые вопросы</p>
+						<p>Вместе вы определите подходящий способ онлайн-открытия счета или запланируете визит в офис. Наш консультант сопроводит Вас в процессе открытия счета либо вышлет подробную инструкцию. </p>
+					</div>
+				</div>
+			</div>
+			<div class="open-account__tab-content" data-tab-id="1">
+				<div class="open-account-tabs-content">
+					<form onsubmit="o2.sendForm(this, event)">
+						<div class="form-block__tab-item-inputs open-account__tab-item-inputs clearfix">
+							<div class="open-account-block__input-item-half open-account-block__input-item-half-form">
+								<label class="open-account-label">
+									<div class="form-block__input-label-title open-accont-block__input-label-title">Фамилия</div>
+									<input type="text" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+								</label>
+							</div>
+							<div class="open-account-block__input-item-half open-account-block__input-item-half-form">
+								<label class="open-account-label">
+									<div class="form-block__input-label-title open-accont-block__input-label-title">Имя</div>
+									<input type="text" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+								</label>
+							</div>
+							<div class="open-account-block__input-item-half open-account-block__input-item-half-form">
+								<label class="open-account-label">
+									<div class="form-block__input-label-title open-accont-block__input-label-title">Номер телефона</div>
+									<input type="text" class="_phone-mask" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+								</label>
+							</div>
+							<div class="open-account-block__input-item-half open-account-block__input-item-half-form">
+								<label class="open-account-label">
+									<div class="form-block__input-label-title open-accont-block__input-label-title">Электронная почта</div>
+									<input type="text" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+								</label>
+							</div>
+						</div>
+						<div class="form-block__btn-block open-account-block__btn-block clearfix">
+							<div class="form-block__btn-block-warning open-account__btn-block-warning">
+									Нажимая на кнопку, вы соглашаетесь <br>
+								<a href="#">
+									с политикой обработки персональных данных
+								</a>
+							</div>
+							<button type="submit" class="red-btn form-block__enter loading">Отправить консультанту</button>
+						</div>
+					</form>
+				</div>
+				<div class="open-account-desc">
+					<div class="open-account-desc-text">
+						<p>Дополнительная информация по открытию счета через портал «Госуслуги»
+						Чтобы открыть брокерский счёт через портал «Госуслуги», необходимо:<p>
+
+						<p>На любой странице www.iticapital.ru в форме заявки на открытие счёта выбрать «Открытие счета через портал «Госуслуги».
+						Подтвердить возможность предоставления порталом gosuslugi.ru данных, которые требуются для формирования документов.
+						В открывшейся форме заполнить дату рождения и адрес регистрации в соответствии с паспортными данными.
+						Подписать с помощью смс-кода, который система пришлет на ваш мобильный телефон, заявление о присоединении к Электронному Документообороту”
+						После завершения процедуры Вам будет направлено email-письмо (как правило, на следующий день) с доступом в web-кабинет и ознакомительной инструкцией.
+						Подписать сформированный системой комплект документов на удалённое открытие брокерского счета. Документы не требуют заполнения — используются данные, полученные с портала Госуслуг.
+						Перед подписанием Вы можете ознакомиться с документами.
+						Возможность вносить изменения в документы будет предоставлена после открытия счёта (в web-кабинете АО «ИК «Ай Ти Инвест»).
+						После завершения процедуры Вам будет направлено email-письмо с доступом в web-кабинет и ознакомительной инструкцией</p>
+					</div>
+				</div>
+			</div>
+			<div class="open-account__tab-content" data-tab-id="2">
+				<div class="open-account-tabs-content">
+					<form onsubmit="o2.sendForm(this, event)">
+						<div class="form-block__tab-item-inputs open-account__tab-item-inputs clearfix">
+							<div class="open-account-block__input-item-full">
+								<label class="open-account-label">
+									<div class="form-block__input-label-title open-accont-block__input-label-title">Фамилия, имя и отчество</div>
+									<input class="wer" type="text" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+								</label>
+							</div>
+							<div class="open-account-block__input-item-half open-account-block__input-item-half-form">
+								<label class="open-account-label">
+									<div class="form-block__input-label-title open-accont-block__input-label-title">Номер телефона</div>
+									<input type="text" class="_phone-mask" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+								</label>
+							</div>
+							<div class="open-account-block__input-item-half open-account-block__input-item-half-form">
+								<label class="open-account-label">
+									<div class="form-block__input-label-title open-accont-block__input-label-title">Электронная почта</div>
+									<input type="text" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+								</label>
+							</div>
+							<div class="open-account-block__input-item-half open-account-block__input-item-half-form">
+								<label class="open-account-label">
+									<div class="form-block__input-label-title open-accont-block__input-label-title">ИНН</div>
+									<input type="text" class="_inn-mask" name="inn" aria-invalid="true" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+								</label>
+							</div>
+							<div class="open-account-block__input-item-half open-account-block__input-item-half-form">
+								<label class="open-account-label">
+									<div class="form-block__input-label-title open-accont-block__input-label-title">Снилс</div>
+									<input type="text" class="_snils-mask" name="snils" aria-invalid="true" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+								</label>
+							</div>
+							<div class="open-account-block__input-item-half open-account-block__input-item-half-form">
+								<label class="open-account-label">
+									<div class="form-block__input-label-title open-accont-block__input-label-title">Полис ОМС</div>
+									<input type="text" class="_oms-mask" name="oms" aria-invalid="true" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+								</label>
+							</div>
+							<div class="open-account-block__input-item-half open-account-block__input-item-half-form">
+								<label class="open-account-label">
+									<div class="form-block__input-label-title open-accont-block__input-label-title">Серия паспорта</div>
+									<input type="text" class="_ser-mask" name="pass_seria" aria-invalid="true" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+								</label>
+							</div>
+							<div class="open-account-block__input-item-half open-account-block__input-item-half-form">
+								<label class="open-account-label">
+									<div class="form-block__input-label-title open-accont-block__input-label-title">Номер паспорта</div>
+									<input type="text" class="_num-mask" name="pass_number" aria-invalid="true" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+								</label>
+							</div>
+							<div class="open-account-block__input-item-half open-account-block__input-item-half-form">
+								<label class="open-account-label">
+									<div class="form-block__input-label-title open-accont-block__input-label-title">Дата выдачи</div>
+									<input type="text" class="_date-mask" name="" aria-invalid="true" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+								</label>
+							</div>
+							<div class="open-account-block__input-item-half open-account-block__input-item-half-form">
+								<label class="open-account-label">
+									<div class="form-block__input-label-title open-accont-block__input-label-title">Код подразделеия</div>
+									<input type="text" class="_code-mask" name="DepartCode" aria-invalid="true" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+								</label>
+							</div>
+							<div class="open-account-block__input-item-half open-account-block__input-item-half-form">
+								<label class="open-account-label">
+									<div class="form-block__input-label-title open-accont-block__input-label-title">Кем выдан</div>
+									<input type="text" class="" name="" aria-invalid="true" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+								</label>
+							</div>
+						</div>
+						<div class="form-block__btn-block open-account-block__btn-block clearfix">
+							<div class="form-block__btn-block-warning open-account__btn-block-warning">
+									Нажимая на кнопку, вы соглашаетесь <br>
+								<a href="#">
+									с политикой обработки персональных данных
+								</a>
+							</div>
+							<button type="submit" class="red-btn form-block__enter loading">Отправить</button>
+						</div>
+					</form>
+				</div>
+				<div class="open-account-desc">
+					<div class="open-account-desc-text">
+						<p>Дополнительная информация по открытию счета через СМЭВ
+						Чтобы открыть брокерский счёт через портал «СМЭВ», необходимо:</p>
+
+						<p>Оставить заявку на нашем сайте, заполнив паспортные данные, а также номер ИНН, либо СНИЛС. Ваша заявка будет отправлена на проверку в СМЭВ.
+						Дождаться ответа от системы на электронную почту (это, как правило, занимает 10-15 минут). В случае одобрения заявки СМЭВ, в письме будет ссылка на продолжение процедуры открытия счета. Проверьте, не попадет ли письмо в папку "Спам"!
+						Перейдите по полученной в письме ссылке на сайт www.iticapital.ru, где необходимо заполнить дату1 и место рождения и адрес регистрации2.
+						Автоматически будет сформировано заявление на присоединение к Электронному Документообороту, а затем комплект документов на открытие брокерского счета (подписание документов происходит с помощью смс-кода).
+						После завершения процедуры открытия счета (как правило, на следующий день) Вам будет направлено email-письмо с доступом в web-кабинет и ознакомительной инструкцией.
+
+						1 Дата рождения заполняется в формате ДД.ММ.ГГГГ. Пользователю должно быть больше 18 лет.
+						2 Все поля регистрации обязательны к заполнению. Если в адресе Вашей регистрации нет названия района, в поле "Название района" необходимо вписать слово "нет".</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

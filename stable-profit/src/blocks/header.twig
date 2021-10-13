@@ -1,0 +1,41 @@
+{% block header %}
+	<header class="header header--sub _header" style="background-image: url({{ background }})">
+		<div class="container">
+			<div class="header__flex">
+				<div class="header__flex-icon">
+					<div class="header__flex-icon-text">
+						<a href="#">
+							<img class="header__flex-logo" src="./img/logo.png" alt="">
+						</a>
+						<div class="header__flex-buttons">
+							<button class="header__flex-sign-in">
+								Вход
+							</button>
+							<button class="header__flex-sign-up banner__link">
+								Регистрация
+							</button>
+						</div>
+					</div>
+					<h1 class="header__title">{{ titlePage }}</h1>
+				</div>
+				<ul class="header__flex-menu">
+					<li class="header__flex-menu-item">
+						<a href="" href-#="" class="header__flex-menu-item-link">О компании</a>
+					</li>
+					<li class="header__flex-menu-item">
+						<a href="" href-#="" class="header__flex-menu-item-link">Услуги</a>
+					</li>
+					<li class="header__flex-menu-item">
+						<a href="" href-#="" class="header__flex-menu-item-link">Раскрытие информации</a>
+					</li>
+					<li class="header__flex-menu-item">
+						<a href="" href-#="" class="header__flex-menu-item-link">Акционеры</a>
+					</li>
+					<li class="header__flex-menu-item">
+						<a href="" href-#="" class="header__flex-menu-item-link">Контакты</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+{% endblock %}

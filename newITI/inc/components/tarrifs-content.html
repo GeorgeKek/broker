@@ -1,0 +1,182 @@
+<div class="services-text lists-content visual-editor">
+	<div class="services__right-consult__author services__right-consult__author_mobile">
+		<div class="tarrifs-right">
+			<div class="tarrifs-right__icon">
+				<img src="images/svg/calendar.svg" alt="calendar">
+			</div>
+			<div class="tarrifs-right__title">Первый месяц бесплатно</div>
+			<div class="tarrifs-right__text">Если вы новый клиент или не торговали в течение последних 12 месяцев,<br>вам подойдет тариф «Попробуй».</div>
+			<div class="tarrifs-right__bot">
+				<a href="https://iticapital.ru/poprobui" class="red-btn tarrifs-right__button">Попробовать</a>
+				<div class="tarrifs-right__warning">Через 30 дней мы предложим вам<br>выбрать удобный тариф </div>
+			</div>
+		</div>
+	</div>
+	<h2>Какими будут ваши расходы <br>на брокерскую комиссию?</h2>
+	<div id="app">
+		<div class="tarrifs-slider">
+			<div class="tarrifs-slider__label">У вас примерно</div>
+			<div class="tarrifs-slider__slider">
+				<span v-cloak>{-{days}-} торговых {-{returnWord(days)}-} в месяц</span>
+				<vue-slider
+					class="tarrifs-slider__slider-el"
+					ref="slider"
+					v-model="days"
+					v-bind="options"
+					:height="3"
+					@callback=""
+					@drag-end="">
+				</vue-slider>
+			</div>
+		</div>
+		<div class="tarrifs__items">
+			<div class="tarrifs-item">
+				<div class="tarrifs-item__title">Фондовый рынок</div>
+				<div class="tarrifs-item__descr">Акции, облигации, ETF</div>
+				<div class="tarrifs-item__input-label">
+					<div class="tarrifs-item__name"><br>Оборот за день</div>
+					<div class="tarrifs-item__input-wrapper" id="first-input">
+						<div class="tarrifs-item__input-cancel" v-show="stocksMoney" @click="cancelValue('stocksMoney')"></div>
+						<vue-numeric @input="setValWithSpacesOnInput(stocksMoney, '#first-input input');" @focus="setValWithSpacesOnFocus(stocksMoney, '#first-input input');" currency-symbol-position="suffix" class="tarrifs-item__input" separator="space" output-type="Number" v-model="stocksMoney" currency="руб."></vue-numeric>
+					</div>
+				</div>
+				<div class="tarrifs-item__info" v-if="stocksMoney" v-cloak>
+					<div class="tarrifs-item__parameters">
+						<div class="tarrifs-item__parameters-broker">× {-{stocksCommision.comission}-}%</div>
+					</div>
+					<div class="tarrifs-item__price">{-{setMoneyFormatBalance(stocksCommision.percent)}-} руб./день</div>
+					<div class="tarrifs-item__month-price">или {-{setMoneyFormatBalance(stocksCommision.monthPercent)}-} руб./мес.</div>
+				</div>
+				<div v-else class="tarrifs-item__no-info">
+					Укажите оборот,<br>мы рассчитаем<br>комиссию
+				</div>
+				<div class="tarrifs-item-info" v-show="stocksMoney">
+					<div class="tarrifs-item-info__item">
+						<span>Комиссия при обороте<br>{-{stocksCommision.range}-} млн руб.</span>
+					</div>
+				</div>
+			</div>
+			<div class="tarrifs-item">
+				<div class="tarrifs-item__title">Срочный рынок</div>
+				<div class="tarrifs-item__descr">Фьючерсы, опционы</div>
+				<div class="tarrifs-item__input-label">
+					<div class="tarrifs-item__name">Оборот за день, контракты</div>
+					<div class="tarrifs-item__input-wrapper" id="second-input">
+						<div class="tarrifs-item__input-cancel" v-show="futuresMoney" @click="cancelValue('futuresMoney')"></div>
+						<vue-numeric @input="setValWithSpacesOnInput(futuresMoney, '#second-input input');" @focus="setValWithSpacesOnFocus(futuresMoney, '#second-input input');" class="tarrifs-item__input" separator="space" output-type="Number" v-model="futuresMoney" currency=""></vue-numeric>
+					</div>
+				</div>
+
+				<div class="tarrifs-item__info" v-if="futuresMoney" v-cloak>
+					<div class="tarrifs-item__parameters">
+						<div class="tarrifs-item__parameters-exchange">× 0.51руб.</div>
+						<div class="tarrifs-item__parameters-broker">× {-{futuresCommision.comission}-}%</div>
+					</div>
+					<div class="tarrifs-item__price">{-{setMoneyFormatBalance(futuresCommision.percent)}-} руб./день</div>
+					<div class="tarrifs-item__month-price">или {-{setMoneyFormatBalance(futuresCommision.monthPercent)}-} руб./мес.</div>
+				</div>
+				<div v-else class="tarrifs-item__no-info">
+					Укажите оборот,<br>мы рассчитаем<br>комиссию
+				</div>
+				<div class="tarrifs-item-info" v-show="futuresMoney">
+					<div class="tarrifs-item-info__item">
+						<span>Комиссия при обороте <br>{-{futuresCommision.range}-} тыс. контрактов</span>
+					</div>
+					<div class="tarrifs-item-info__item">
+						<span>Комиссия биржи на примере скальперской сделки с фьючерсом на курс доллара США к рублю (Si) на 30.01.19</span>
+					</div>
+				</div>
+			</div>
+			<div class="tarrifs-item">
+				<div class="tarrifs-item__title">Валютный рынок</div>
+				<div class="tarrifs-item__descr">Доллары, евро, юани и пр.</div>
+				<div class="tarrifs-item__input-label">
+					<div class="tarrifs-item__name">Беспоставочный режим<br>оборот за день</div>
+					<div class="tarrifs-item__input-wrapper" id="third-input">
+						<div class="tarrifs-item__input-cancel" v-show="valuteMoney" @click="cancelValue('valuteMoney')"></div>
+						<vue-numeric currency-symbol-position="suffix" @input="setValWithSpacesOnInput(valuteMoney ,'#third-input input');" @focus="setValWithSpacesOnFocus(valuteMoney ,'#third-input input');" class="tarrifs-item__input" separator="space" output-type="Number" v-model="valuteMoney" currency="руб."></vue-numeric>
+					</div>
+				</div>
+				<div class="tarrifs-item__info" v-if="valuteMoney" v-cloak>
+					<div class="tarrifs-item__parameters">
+						<div class="tarrifs-item__parameters-broker">× {-{valutesCommision.comission}-}%</div>
+					</div>
+					<div class="tarrifs-item__price">{-{setMoneyFormatBalance(valutesCommision.percent)}-} руб./день</div>
+					<div class="tarrifs-item__month-price">или {-{setMoneyFormatBalance(valutesCommision.monthPercent)}-} руб./мес.</div>
+				</div>
+				<div v-else class="tarrifs-item__no-info">
+					Укажите оборот,<br>мы рассчитаем<br>комиссию
+				</div>
+				<div class="tarrifs-item-info" v-show="valuteMoney">
+					<div class="tarrifs-item-info__item">
+						<span>Комиссия при обороте<br>{-{valutesCommision.range}-} млн руб.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tarrifs__items-info" v-show="stocksMoney || futuresMoney || valuteMoney">
+			<div class="tarrifs-item-info__wr">
+				<div class="tarrifs-item-info" v-show="stocksMoney">
+					<div class="tarrifs-item-info__item">
+						<span>Комиссия при обороте<br>{-{stocksCommision.range}-} млн руб.</span>
+					</div>
+				</div>
+			</div>
+			<div class="tarrifs-item-info__wr">
+				<div class="tarrifs-item-info" v-show="futuresMoney">
+					<div class="tarrifs-item-info__item">
+						<span>Комиссия при обороте <br>{-{futuresCommision.range}-} тыс. контрактов</span>
+					</div>
+					<div class="tarrifs-item-info__item">
+						<span>Комиссия биржи на примере скальперской сделки с фьючерсом на курс доллара США к рублю (Si) на 30.01.19</span>
+					</div>
+				</div>
+			</div>
+			<div class="tarrifs-item-info__wr">
+				<div class="tarrifs-item-info" v-show="valuteMoney">
+					<div class="tarrifs-item-info__item">
+						<span>Комиссия при обороте<br>{-{valutesCommision.range}-} млн руб.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tarrifs-sum" v-if="stocksMoney || futuresMoney || valuteMoney">
+			<div class="tarrifs-sum__text">Всего вы заплатите брокерскую комиссию в размере</div>
+			<div class="tarrifs-sum__values">
+				<div class="tarrifs-sum__day-value">{-{setMoneyFormatBalance(returnSumm.day)}-} руб. в день</div>
+				<div class="tarrifs-sum__month-value">или {-{setMoneyFormatBalance(returnSumm.month)}-} руб. в месяц</div>
+			</div>
+		</div>
+	</div>
+	<div class="tarrifs-text">
+		<h2>Наши тарифы</h2>
+		<div class="tarrifs-text__text">
+			Мы предлагаем вам удобную сетку тарифов и следим за тем, чтобы они оставались максимально низкими.
+		</div>
+		<div class="tarrifs-text__table">
+			<div class="tarrifs-text__table-item">
+				<span><a href="https://iticapital.ru/tariffs/brokerage/stock-market/">На фондовом рынке</a></span>
+				<span>от 0,017%</span>
+				<span>от суммы сделки</span>
+			</div>
+			<div class="tarrifs-text__table-item">
+				<span><a href="https://iticapital.ru/tariffs/brokerage/futures-market/">На срочном рынке</a></span>
+				<span>от 20%</span>
+				<span>от комиссии биржи</span>
+			</div>
+			<div class="tarrifs-text__table-item">
+				<span><a href="https://iticapital.ru/tariffs/brokerage/currency-market/">На валютном рынке</a></span>
+				<span>от 0,004%</span>
+				<span>от суммы сделки</span>
+			</div>
+		</div>
+		<div class="tarrifs-text__table-subscr">
+			Калькулятор учитывает тарифы на фондовом, срочном и валютном рынках Московской биржи.
+		</div>
+		<div class="tarrifs-text__text">
+			Нам важно ваше мнение о нашей тарифной сетке. <br>Будем признательны за отзыв и предложения
+		</div>
+		<button class="software-downloads__download tarrifs-text__button" onclick="carrotquest.open();">Оставить отзыв</button>
+	</div>
+	<script type="text/javascript" src="js/tarrifs/tarrifs.min.js"></script>
+</div>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>request call</title>
+<meta name="viewport" content="width=device-width">
+<meta name="MobileOptimized" content="320">
+<meta name="HandheldFriendly" content="true">
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport min-width=320px" content="min-width=320, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<script></script>
+</head>
+<body>
+<div class="rqc-form-body-wr _rqc-form-body-wr">
+<div class="rqc-form-body _rqc-form-body">
+<div class="rqc-form-body__form">
+<div class="rqc-form-body-top">
+<div class="rqc-form__header">#title#</div>
+<div class="rqc-form-close" onclick="itiRqCall.hideForm()">
+<div class="rqc-form-close__icon"></div>
+</div>
+</div>
+<form action="#" class="rqc-form" novalidate onsubmit="itiRqCall.submitForm(this,event)">
+#inputs#
+<div class="rqc-enums-wr">
+#enumsList#
+</div>
+<div class="rqc-agreement">#description#</div>
+<div class="rqc-submit-wr">
+<button class="rqc-btn" type="submit">
+<span class="rqc-btn__text">#btnText#</span>
+</button>
+</div>
+</form>
+</div>
+<div class="rqc-form-message rqc-form-message_success">
+<div class="rqc-form__header">#success-message#</div>
+<div class="rqc-form-message__text">#success-text#</div>
+</div>
+<div class="rqc-form-message rqc-form-message_error">
+<div class="rqc-form__header">#success-message#</div>
+<div class="rqc-form-message__header">#success-text#</div>
+</div>
+</div>
+</div>
+<div class="container flex-container">
+<div class="accordeon-wrapper">
+<button class="red-btn" data-gsc-widget="4962" style="top:20px;position:sticky">Открытие из любого места</button>
+<br><br>
+<button class="red-btn" data-gsc-widget="4963" style="top:20px;position:sticky">Открытие из любого места</button>
+</div>
+<div class="content-wrapper">
+<style>.red-btn{margin-bottom:20px;height:50px}</style>
+<div class="sevices-content">
+<div class="services-text">
+<h2>Форма заказа звонка</h2>
+<p>открыть при помощи</p>
+<div>
+<button class="red-btn" data-gsc-widget="4962">дата атрибута <span style="font-weight:900">data-gsc-widget</span></button>
+<button class="red-btn" onclick="itiRqCall.showForm(4963)">метода <span style="font-weight:900">itiRqCall.showForm()</span></button>
+<button class="red-btn" onclick='_gscq.push(["show",4962])'>метода <span style="font-weight:900">_gscq.push(['show', 4962]);</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="js/vendors/body-scroll-lock.min.js" async></script>
+<script src="js/vendors/vanilla-masker.min.js" async></script>
+<script src="js/request-call.js" async></script>
+</body>
+</html>

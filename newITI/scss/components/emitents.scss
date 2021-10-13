@@ -1,0 +1,80 @@
+.sevices-content_emitents
+{
+	padding-top: 60px;
+}
+.emitents-list-item
+{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+	&:last-child
+	{
+		margin-bottom: 0;
+	}
+}
+.emitents-list-item__left
+{
+	color: #979797;
+	font-feature-settings: "dlig" 0, "numr" 0, "dnom" 0, "tnum" 1, "case" 0, "zero", "frac" 0, "sups" 0, "subs" 0, "cpsp" 0, "salt" 0, "ss01", "ss02" 0, "cv01" 0, "cv02" 0, "cv03" 0, "cv04" 0, "cv05" 0, "cv06" 0, "cv07" 0, "cv08" 0, "cv09" 0, "cv10" 0, "calt", "liga", "kern";
+	max-width: 75px;
+	white-space: nowrap;
+	margin-right: 60px;
+	line-height: 1.46;
+}
+.emitents-list-item__right
+{
+	flex: 1;
+}
+.emitents-item__link
+{
+	line-height: 1.46;
+	color: $accent-color !important;
+	border-bottom: none !important;
+	padding-bottom: 0 !important;
+}
+.emitents-pagination-wr
+{
+	padding-top: 56px;
+	padding-left: 132px;
+}
+.special
+{
+	.emitents-list-item__left
+	{
+		font-size: 24px;
+		color: #333;
+	}
+}
+@media (max-width: $mobile)
+{
+	.emitents-list-item__left
+	{
+		margin-right: 40px;
+	}
+	.emitents-pagination-wr
+	{
+		padding-left: 112px;
+	}
+}
+
+@media (max-width: 450px)
+{
+	.emitents-list-item
+	{
+		flex-direction: column;
+	}
+	.emitents-list-item__left
+	{
+		margin-right: 0;
+		padding-bottom: 4px;
+		width: 100%;
+	}
+	.emitents-list-item__right
+	{
+		width: 100%;
+	}
+	.emitents-pagination-wr
+	{
+		padding-left: 0;
+	}
+}

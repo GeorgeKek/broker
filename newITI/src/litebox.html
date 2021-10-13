@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('./inc/components/pagehead.html')
+</head>
+	<body>
+	<div class="page-wrapper">
+		@@include('./inc/components/header.html')
+		<section class="services services-dictionary">
+			<div class="gray"></div>
+				<div class="sevices-top">
+					<div class="sevices-top__title">
+						Словарь начинающего инвестора
+					</div>
+				</div>
+				<div class="container no-container__1024">
+					<div class="row no-row__1024">
+						<div class="col-lg-3 col-md-3">
+							@@include('./inc/components/new-accordeon-stocks.html')
+						</div>
+						<div class="col-lg-9 col-md-9 sevices-bot__no-padding stocks__padding-right__0">
+							<div class="sevices-bot stocks-service-bot__padding-bottom__61px">
+								@@include('./inc/components/breadcrumbs.html')
+								<div class="sevices-content sevices-content_dictionary">
+									@@include('./inc/components/litebox.html')
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+		<section class="registration">
+			@@include('./inc/components/registration.html')
+		</section>
+		@@include('./inc/components/footer.html')
+		</div>
+	</body>
+</html>

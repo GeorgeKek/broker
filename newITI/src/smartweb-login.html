@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('./inc/components/pagehead.html')
+</head>
+	<body onclick="o2.closePopover()">
+	<div class="page-wrapper">
+		<header class="small-header smartweb-header">
+			<div class="container no-container__1024">
+				<div class="header-top clearfix">
+					<div class="header-top-left clearfix">
+						<a href="#">
+							<div class="header-logo">
+								<img src="images/svg/presentation-red.svg" alt="">
+							</div>
+						</a>
+						<div class="header-top-left-country">
+							<a href="#" class="active">Рус<span>ский</span></a>
+							<a href="#"><span>In </span>Eng<span>lish</span></a>
+						</div>
+					</div>
+					<div class="header-right">
+						<a href="tel:+78002005571" class="header-phone">8 800 200-55-71</a>
+						<div class="header-time">Пн-Пт 09 — 21 <span class="hidden-xs">МСК</span> <span class="dot">•</span> Сб-Вс  10 — 17 <span class="hidden-xs">МСК</span></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="smartweb-login">
+			<div class="smartweb-login__form">
+				<div class="smartweb-login__top">
+					<img src="images/svg/smartweb.svg" alt="">
+				</div>
+				<div class="smartweb-login__bot">
+					<div class="open-account-block__input-item-full">
+						<label class="open-account-label"> <!-- класс error для обводки полей красным -->
+							<div class="form-block__input-label-title open-accont-block__input-label-title">Фамилия, имя и отчество</div>
+							<input class="wer" type="text" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+						</label>
+					</div>
+					<div class="open-account-block__input-item-full">
+						<label class="open-account-label open-account-label__password"> <!-- класс error для обводки полей красным -->
+							<div class="form-block__input-label-title open-accont-block__input-label-title">Пароль</div>
+							<input class="wer" type="password" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+							<div class="popover error-warning" onclick="event.stopPropagation(); event.preventDefault();">
+								<div class="mobile-menu__close" onclick="o2.closePopover();"></div>
+								<div class="error-warning__title"> <!-- класс openned для отображения поповера -->
+									ВНИМАНИЕ!
+								</div>
+								<p>Доступ к счету <b>будет заблокирован</b> после трех попыток ввода неправильного пароля. <br><br>Чтобы разблокировать счёт — звоните 8 (800) 200-32-35</p>
+							</div>
+						</label>
+					</div>
+					<div class="form-block__btn-block open-account-block__btn-block clearfix">
+						<button type="submit" class="red-btn form-block__enter">Войти</button>
+						<div class="form-block__btn-block-warning open-account__btn-block-warning">
+							<a href="#">
+								Зарегистрируйтесь, если у вас ещё нет брокерского счёта
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="overlay" onclick="o2.popups.closePopup();">
+	@@include('./inc/components/mobile-menu.html')
+	<div class="user-data__popup popup" onclick="event.stopPropagation();">
+		<div class="mobile-menu__close" onclick="o2.popups.closePopup();"></div>
+		<div class="user-popup__title">Заголовок</div>
+		<div class="user-popup__input-wrapper">
+			<label class="open-account-label">
+				<div class="form-block__input-label-title open-accont-block__input-label-title">Имя</div>
+				<input class="wer" type="text" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+			</label>
+		</div>
+		<div class="user-popup__input-wrapper">
+			<label class="open-account-label">
+				<div class="form-block__input-label-title open-accont-block__input-label-title">Номер телефона</div>
+				<input class="wer" type="text" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+			</label>
+		</div>
+		<div class="user-popup__input-wrapper">
+			<label class="open-account-label">
+				<div class="form-block__input-label-title open-accont-block__input-label-title">E-mail</div>
+				<input class="wer" type="text" onfocus="o2.customPlaceholder(this)" onblur="o2.customPlaceholderHide(this)">
+			</label>
+		</div>
+		<button type="submit" class="user-popup__button">Отправить</button>
+	</div>
+</div>
+		</div>
+	</body>
+</html>

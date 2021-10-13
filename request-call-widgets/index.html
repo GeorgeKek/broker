@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Конструктор виджетов</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="MobileOptimized" content="320" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport min-width=320px" content="min-width=320, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>widgets</h1>
+        <div class="row">
+
+        </div>
+        <div class="wigdet-row" style="display: none;">
+            <div class="col-lg-12">
+                <h5>#widget-title#</h5>
+                <div class="">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div>Открытие при помощи "itiRqCall.showForm(#widget-id#)"</div>
+                            <button class="btn btn-primary" onclick="itiRqCall.showForm(#widget-id#)">Открыть виджет #widget-id#</button>
+                        </div>
+                        <div class="col-lg-4">
+                            <div>Открытие при помощи "_gscq.push(['show', #widget-id#])"</div>
+                            <button class="btn btn-primary" onclick="_gscq.push(['show', #widget-id#])">Открыть виджет #widget-id#</button>
+                        </div>
+                        <div>Открытие при помощи " data-gsc-widget="#widget-id#" "</div>
+                        <div class="col-lg-4" data-gsc-widget="#widget-id#">
+                            <button class="btn btn-primary">Открыть виджет #widget-id#</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var itiRqCallOptions = {
+            show: function(widgetId, data) {
+                console.log('show ', widgetId);
+            },
+            close: function(widgetId, data) {
+                console.log('close ', widgetId);
+            },
+            submit: function(widgetId, data) {
+                console.log('submit ', widgetId);
+            },
+            error: function(widgetId, data) {
+                console.log('error ', widgetId);
+            },
+            debug: true,
+            timeoutBeforeClose: 1200
+        }
+    </script>
+
+    <script src="js/request-call.min.js" async=""></script>
+
+    <script>
+        var tmp = document.querySelector('.wigdet-row').innerHTML;
+
+		var interval = setInterval(function()
+		{
+            if (typeof itiRqCall.widgets != 'undefined' && Object.keys(itiRqCall.widgets).length) {
+                var html = '';
+                for (let widgetId in itiRqCall.widgets) {
+                    var widget = itiRqCall.widgets[widgetId];
+                    html += tmp.replace(/#widget-title#/g, widget.name)
+                        .replace(/#widget-id#/g, widgetId)
+                }
+
+                document.querySelector('.row').innerHTML = html;
+                clearInterval(interval)
+            }
+        }, 100)
+
+        setTimeout(function() {
+            clearInterval(interval);
+        }, 5000)
+    </script>
+</body>
+
+</html>

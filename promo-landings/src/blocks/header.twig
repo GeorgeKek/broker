@@ -1,0 +1,30 @@
+{% block header %}
+	<header class="header {% if black %}header--black{% endif %}{% if big %}header--big{% endif %}">
+		<a href="#" class="header__logo {% if black %}header__logo--black{% endif %}{% if big %}header__logo--big{% endif %}">
+			<img src="./img/logo{% if black %}-black{% endif %}{% if big %}-big{% endif %}.svg" alt="logo">
+		</a>
+
+		<a href="#" class="header__title {% if black %}header__title--black{% endif %}{% if big %}header__title--big{% endif %}">{{title}}</a>
+
+		<a href="tel:88002003235" class="header__phone {% if big %}header__phone--big{% endif %}">
+			<div class="header__phone-icon">
+				<img src="./img/phone.svg" alt="">
+			</div>
+
+			<div class="header__phone-number {% if black %}header__phone-number--black{% endif %}">
+				8 800 200 32 35
+			</div>
+		</a>
+		{% if big %}
+			<div class="header__right">
+				<a href="tel:88002005532" class="header__right-phone">
+					<img src="./img/phone-icon.svg" alt="">
+					<div class="header__right-number">8 (800) 200-55-32</div>
+				</a>
+				<div class="header__right-time">
+					Пн–Пт с 9 до 21 · Сб–Вс с 10 до 17
+				</div>
+			</div>
+		{% endif %}
+	</header>
+{% endblock %}

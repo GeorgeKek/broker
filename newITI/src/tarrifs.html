@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('./inc/components/pagehead.html')
+</head>
+	<body>
+		<div class="wrap">
+			@@include('./inc/components/header.html')
+			<section class="main">
+				<div class="sevices-top">
+					<div class="container">
+						<div class="sevices-top__wrapper">
+							@@include('./inc/components/breadcrumbs.html')
+							<h1 class="sevices-top__title">
+								Брокерское обслуживание
+							</h1>
+						</div>
+					</div>
+				</div>
+				@@include('./inc/components/mobile-accordeon.html')
+				<div class="container flex-container">
+					<div class="accordeon-wrapper">
+						@@include('./inc/components/accordeon.html')
+						<div class="hidden-accordeon">
+							@@include('./inc/components/accordeon.html')
+						</div>
+					</div>
+					<div class="content-wrapper">
+						<div class="sevices-bot">
+							<div class="sevices-content">
+								<div class="services-text analitics-detail__author">
+									@@include('./inc/components/tarrifs-content.html')
+								</div>
+								<div class="services__right-cards services__right-cards_tarrifs">
+									<div class="services__right-consult__author">
+										<div class="tarrifs-right">
+											<div class="tarrifs-right__icon">
+												<img src="images/svg/calendar.svg" alt="calendar">
+											</div>
+											<div class="tarrifs-right__title">Первый месяц бесплатно</div>
+											<div class="tarrifs-right__text">Если вы новый клиент или не торговали в течение<br>последних 12 месяцев, вам подойдет тариф «Попробуй».</div>
+											<div class="tarrifs-right__bot">
+												<a href="https://iticapital.ru/poprobui" class="red-btn tarrifs-right__button">Попробовать</a>
+												<div class="tarrifs-right__warning">Через 30 дней мы предложим вам выбрать удобный тариф </div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- <section class="registration">
+				@@include('./inc/components/registration.html')
+			</section> -->
+			@@include('./inc/components/footer.html')
+		</div>
+	</body>
+</html>

@@ -1,0 +1,186 @@
+.banner-calendar
+{
+	display: block;
+	position: relative;
+	padding-top: 25px;
+	margin-bottom: 25px;
+}
+.banner-calendar__main
+{
+	width: 90%;
+	background-color: #3C7C84;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 29px 50px 35px 47px;
+	&:after
+	{
+		content: '+14%';
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		background-color: #7DB7B7;
+		padding: 37px 32px;
+		font-family: $bold;
+		font-size: 72px;
+		line-height: 87px;
+		text-align: right;
+		z-index: -1;
+		color: rgba(255, 255, 255, 0.7);
+	}
+}
+.banner-calendar__title
+{
+	max-width: 576px;
+	width: 100%;
+	font-weight: 600;
+	font-size: 38px;
+	line-height: 47px;
+	color: #FFFFFF;
+}
+.banner-calendar__percent
+{
+	font-family: $bold;
+	font-size: 98px;
+	line-height: 119px;
+	text-align: right;
+	color: #FFFFFF;
+}
+.special
+{
+	.banner-calendar__title
+	{
+		font-size: 44px;
+		line-height: 57px;
+	}
+}
+
+@media (max-width: 1439px)
+{
+	.banner-calendar__main
+	{
+		padding: 29px 20px 35px 27px;
+	}
+	.special
+	{
+		.banner-calendar__title
+		{
+			font-size: 40px;
+		}
+	}
+}
+
+
+@media (max-width: 1279px)
+{
+	.banner-calendar__main
+	{
+		&:after
+		{
+			font-size: 52px;
+		}
+	}
+	.banner-calendar__title
+	{
+		max-width: 416px;
+	    font-size: 28px;
+	    line-height: 35px;
+	}
+	.banner-calendar__percent
+	{
+		font-size: 68px;
+	}
+}
+
+
+@media (max-width: 1023px)
+{
+	.banner-calendar__title
+	{
+	    max-width: 336px;
+	    font-size: 22px;
+	    line-height: 28px;
+	}
+	.banner-calendar__percent
+	{
+		font-size: 50px;
+		line-height: 70px;
+	}
+	.banner-calendar__main
+	{
+		&:after
+		{
+			font-size: 45px;
+			line-height: 65px;
+		}
+		svg
+		{
+			width: 70px;
+		}
+	}
+	.special
+	{
+		.banner-calendar__title
+		{
+			font-size: 24px;
+			line-height: 36px;
+		}
+	}
+}
+
+
+@media (max-width: 767px)
+{
+	.banner-calendar__main
+	{
+		svg
+		{
+			width: 60px;
+			height: 60px;
+		}
+		&:after
+		{
+			content: none;
+		}
+	}
+	.banner-calendar__main
+	{
+		width: 100%;
+	}
+	.banner-calendar__title
+	{
+	    max-width: 275px;
+	    font-size: 14px;
+	    line-height: 18px;
+	}
+	.banner-calendar__percent
+	{
+	    font-size: 30px;
+	    line-height: 40px;
+	}
+	.special
+	{
+		.banner-calendar__title
+		{
+			font-size: 16px;
+			line-height: 26px;
+		}
+		.banner-calendar__main
+		{
+			padding-left: 10px;
+		}
+	}
+}
+
+
+@media (max-width: 540px)
+{
+	.banner-calendar__main
+	{
+		svg
+		{
+			display: none;
+		}
+	}
+}

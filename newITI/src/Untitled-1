@@ -1,0 +1,29 @@
+<div class="rqc-time-list">
+    <div class="rqc-form-field__label">Выберите удобное время для звонка:</div>
+    <div class="rqc-time-list-items">
+        <label class="rqc-radio-wr" onclick="ga('send', 'event', 'rqcall', 'time 1');">
+            <input type="radio" class="rqc-radio" name="call-time" checked="" value="1">
+            <span class="rqc-radio-box">
+                <span class="rqc-radio-box__text">Прямо сейчас</span>
+            </span>
+        </label>
+        <label class="rqc-radio-wr" onclick="ga('send', 'event', 'rqcall', 'time 2');">
+            <input type="radio" class="rqc-radio" name="call-time" value="2">
+            <span class="rqc-radio-box">
+                <span class="rqc-radio-box__text">Утром (9:00–12:00 МСК)</span>
+            </span>
+        </label>
+        <label class="rqc-radio-wr" onclick="ga('send', 'event', 'rqcall', 'time 3');">
+            <input type="radio" class="rqc-radio" name="call-time" value="3">
+            <span class="rqc-radio-box">
+                <span class="rqc-radio-box__text">Днём (12:00–17:00 МСК)</span>
+            </span>
+        </label>
+        <label class="rqc-radio-wr" onclick="ga('send', 'event', 'rqcall', 'time 4');">
+            <input type="radio" class="rqc-radio" name="call-time" value="4">
+            <span class="rqc-radio-box">
+                <span class="rqc-radio-box__text">Вечером (17:00–21:00 МСК)</span>
+            </span>
+        </label>
+    </div>
+</div>

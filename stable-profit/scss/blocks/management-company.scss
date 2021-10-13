@@ -1,0 +1,46 @@
+.management-company
+{
+	margin-bottom: 48px;
+	margin-top: 32px;
+	svg{margin-bottom: 16px;}
+}
+.management-company__list
+{
+	padding-bottom: 44px;
+	border-bottom: 1px solid #808080;
+}
+.management-company__item
+{
+	display: flex;
+	&:not(:last-child){margin-bottom: 16px;}
+}
+.management-company__inform
+{
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 150%;
+	color: #808080;
+	flex-basis:21.4%;
+	margin-right: 8px;
+}
+.management-company__detail
+{
+	font-family: $bold-font;
+	font-size: 15px;
+	line-height: 150%;
+	flex-basis:44%;
+	display: block;
+}
+.management-company__detail--link
+{
+	color:#388AE9;
+}
+@media (max-width: 1024px)
+{
+	.management-company__inform{flex-basis: 45%;}
+	.management-company__detail{flex-basis: 100%;}
+}
+@media (max-width: 400px)
+{
+	.management-company__inform{margin-right: 32px;}
+}

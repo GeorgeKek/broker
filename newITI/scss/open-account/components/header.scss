@@ -1,0 +1,117 @@
+.fixed-header
+{
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 20;
+}
+.header-wr
+{
+	background-color: #fff;
+}
+.header
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+}
+.header-logo
+{
+	display: block;
+	line-height: 0;
+}
+.header-label
+{
+	font-family: $bold;
+	font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on, 'liga' off;
+	font-size: 28px;
+	padding-left: 38px;
+	line-height: 1;
+	color: #333;
+}
+.header-work-info-wr
+{
+	text-align: right;
+	padding-right: 24px;
+}
+.header-phone-link
+{
+	display: flex;
+	justify-content: flex-end;
+	font-family: $bold;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: right;
+	font-feature-settings: 'tnum' on, 'lnum' on, 'ss02' on;
+	color: #388AE9;
+	img
+	{
+		margin-right: 5px;
+	}
+}
+.header-working-hours
+{
+	font-size: 12px;
+	line-height: 17px;
+	color: #707070;
+}
+.header-label_mobile
+{
+	display: none;
+}
+@media (max-width: 767px)
+{
+	.header
+	{
+		box-shadow: none;
+	}
+	.header-wr
+	{
+		padding-bottom: 10px;
+		box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.2);
+	}
+	.header-logo
+	{
+		max-width: 146px;
+		img
+		{
+			max-width: 100%;
+		}
+	}
+	.header-work-info-wr
+	{
+		padding-right: 10px;
+	}
+	.header-label,
+	.header-working-hours
+	{
+		display: none;
+	}
+	.header-phone-link
+	{
+		font-size: 0;
+		width: 44px;
+		height: 44px;
+		background-color: #f2f2f2;
+		display: block;
+		border-radius: 100%;
+		background-image: url('../images/open-acc-img/header-phone-icon.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		img
+		{
+			display: none;
+		}
+	}
+	.header-label_mobile
+	{
+		display: block;
+		text-align: center;
+		padding-top: 9px;
+		font-size: 22px;
+		line-height: 28px;
+		padding-left: 0;
+	}
+}

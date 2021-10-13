@@ -1,0 +1,32 @@
+{# index.twig #}
+{%
+	set manage = {
+	'title': 'Доверительное управление',
+	'descr': 'Управляющая компания «Стабильный Доход» предлагает присоединиться к индивидуальному договору доверительного управления для реализации инвестиционной стратегии «Доходная»',
+	'background': './img/manage-bg.jpg',
+	},
+%}
+{%
+	set pif = {
+	'title': 'ПИФы',
+	'descr': 'Управляющая компания «Стабильный Доход» предоставляет услуги по структурированию, созданию (регистрации) и управлению паевыми инвестиционными фондами (ПИФ).',
+	'background': './img/pif-bg.jpg',
+	},
+%}
+{%
+	set titlePage = {
+	'titlePage': 'ООО УК «Ай Ти Ай Менеджмент»',
+	'background': './img/banner-header.jpeg',
+	},
+%}
+{% set small = 'small' %}
+
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	{% include "./blocks/news.twig" with {show:false} %}
+	{% include "./blocks/banner.twig" with manage %}
+	{% include "./blocks/banner.twig" with pif %}
+	{% include "./blocks/contacts.twig" with small %}
+	{% include "./blocks/license.twig" %}
+{% endblock %}

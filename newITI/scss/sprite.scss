@@ -1,0 +1,144 @@
+%svg-common {
+	background: url("../images/sprite-23aee52a.svg") no-repeat;
+}
+
+.svg-cabinet {
+	@extend %svg-common;
+	background-position: 56.41025641025641% 100%;
+}
+
+.svg-cabinet-dims {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-calculator {
+	@extend %svg-common;
+	background-position: 0 100%;
+}
+
+.svg-calculator-dims {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-chevron {
+	@extend %svg-common;
+	background-position: 92.63157894736842% 74.80314960629921%;
+}
+
+.svg-chevron-dims {
+	width: 10px;
+	height: 12px;
+}
+
+.svg-close-icon {
+	@extend %svg-common;
+	background-position: 28.205128205128204% 100%;
+}
+
+.svg-close-icon-dims {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-fb {
+	@extend %svg-common;
+	background-position: 68.75% 78.51239669421487%;
+}
+
+.svg-fb-dims {
+	width: 8px;
+	height: 18px;
+}
+
+.svg-google {
+	@extend %svg-common;
+	background-position: 86.85714285714286% 43.90243902439025%;
+}
+
+.svg-google-dims {
+	width: 25px;
+	height: 16px;
+}
+
+.svg-logo {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-logo-dims {
+	width: 200px;
+	height: 54px;
+}
+
+.svg-logo-footer {
+	@extend %svg-common;
+	background-position: 0 55.10204081632653%;
+}
+
+.svg-logo-footer-dims {
+	width: 152px;
+	height: 41px;
+}
+
+.svg-phone {
+	@extend %svg-common;
+	background-position: 70.2127659574468% 91.869918699187%;
+}
+
+.svg-phone-dims {
+	width: 12px;
+	height: 16px;
+}
+
+.svg-search {
+	@extend %svg-common;
+	background-position: 76.92307692307692% 78.51239669421487%;
+}
+
+.svg-search-dims {
+	width: 18px;
+	height: 18px;
+}
+
+.svg-telegram {
+	@extend %svg-common;
+	background-position: 84.91620111731844% 57.377049180327866%;
+}
+
+.svg-telegram-dims {
+	width: 21px;
+	height: 17px;
+}
+
+.svg-tw {
+	@extend %svg-common;
+	background-position: 95.05494505494505% 56%;
+}
+
+.svg-tw-dims {
+	width: 18px;
+	height: 14px;
+}
+
+.svg-vk {
+	@extend %svg-common;
+	background-position: 98.33333333333333% 42.1875%;
+}
+
+.svg-vk-dims {
+	width: 20px;
+	height: 11px;
+}
+
+.svg-youtube {
+	@extend %svg-common;
+	background-position: 86.81318681318682% 75.39682539682539%;
+}
+
+.svg-youtube-dims {
+	width: 18px;
+	height: 13px;
+}
+

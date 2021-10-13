@@ -1,0 +1,14 @@
+{# index.twig #}
+{%
+	set titlePage = {
+	'titlePage': 'Контакты',
+	'subTitle': 'УК Стабильный Доход',
+	'background': './img/contacts-header.jpeg',
+	},
+%}
+
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	{% include "./blocks/contacts.twig" %}
+{% endblock %}

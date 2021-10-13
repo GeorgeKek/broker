@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('./inc/components/pagehead.html')
+</head>
+	<body>
+			@@include('./inc/components/header.html')
+			<section class="main">
+				<div class="sevices-top">
+					<div class="container">
+						<div class="sevices-top__wrapper">
+							@@include('./inc/components/breadcrumbs.html')
+							<h1 class="sevices-top__title">
+								Наши услуги
+							</h1>
+						</div>
+					</div>
+				</div>
+				<div class="container flex-container">
+					<div class="accordeon-wrapper">
+						@@include('./inc/components/accordeon.html')
+					</div>
+					<div class="content-wrapper">
+
+						<div class="sevices-bot">
+							<div class="sevices-content">
+								@@include('./inc/components/sevices-page-content.html')
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container no-container__1024">
+					<div class="row no-row__1024">
+						<div class="col-lg-3 col-md-3">
+
+						</div>
+						<div class="col-lg-9 col-md-9 sevices-bot__no-padding">
+
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="registration">
+				@@include('./inc/components/registration.html')
+			</section>
+			@@include('./inc/components/footer.html')
+	</body>
+</html>

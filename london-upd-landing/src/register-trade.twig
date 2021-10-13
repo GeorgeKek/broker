@@ -1,0 +1,38 @@
+{# news-list.twig #}
+{% extends "layouts/news-layout.twig" %}
+
+{% set headerModifier = 'news-layout-header--big' %}
+
+{% set title = 'IPOs, Placings and Trade Ideas
+' %}
+
+{% block page %}
+
+<div class="register__success">
+	Thank you for registering interest for global IPOs, Placings and Trade Ideas services through ITI Capital. Our team will be in touch with you soon to run a suitability test with you and determine if these services are a good fit for you.
+</div>
+<h2 class="register__title">
+	Register Interest for global IPOs, Placings and Trade Ideas services by entering your details below.
+</h2>
+<div class="register">
+	<div class="register__disclaimer">
+		 ITI Capital offers these opportunities to Professional Clients and existing ITI Capital Retail Clients. Retail Clients must confirm they are aware of the characteristics of Trade Ideas, IPOs and Placings and fully understand the risks involved. Available on an Execution Only basis*.
+	</div>
+	<form action="" class="register__form" onsubmit="event.preventDefault()">
+		<label for="">
+			<div class="register__form-wrap">
+				<input type="hidden" name="06dd82c351">
+				<input class="register__input _user-name" type="text" name="name" placeholder="Enter your name">
+				<input class="register__input _user-surname" type="text" name="surname" placeholder="Enter your surname">
+				<input class="register__input _user-phone" type="text" name="phone" placeholder="Enter your phone">
+				<input class="register__input _user-email" type="text" name="email" placeholder="Enter your email address">
+				<button class="register__button" type="submit">REGISTER INTEREST</button>
+			</div>
+		</label>
+	</form>
+	<div class="register__disclaimer">
+		*Subject to meeting suitability and risk assessment criteria. ITI Capital offers these opportunities exclusively to investors who are sufficiently sophisticated to understand the risks and make their own investment decisions. You will only be able to invest via ITI Capital once you are onboarded and have confirmed you are aware of the characteristics of IPOs and Placings and fully understand the risks involved.
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,141 @@
+.alter-profit__wrap
+{
+	background-image: url('../img/alter-prof-bg.png');
+	background-size: cover;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding-top: 50px;
+	padding-right: 80px;
+	padding-left: 80px;
+}
+h2.alter-profit__title
+{
+	font-weight: 600;
+	font-size: 44px;
+	line-height: 53px;
+	color: #FFFFFF;
+}
+.alter-profit__left
+{
+	max-width: 600px;
+	width: 100%;
+	margin-bottom: 40px;
+}
+.alter-profit__item
+{
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 19px;
+	padding-top: 14px;
+	&:not(:last-child)
+	{
+		border-bottom: 1px dashed rgba(255, 255, 255, 0.48);
+	}
+}
+.alter-profit__item-title
+{
+	font-size: 16px;
+	line-height: 22px;
+	color: #FFFFFF;
+}
+.alter-profit__item-descr
+{
+	font-size: 16px;
+	line-height: 22px;
+	color: rgba(255, 255, 255, 0.48);
+}
+.alter-profit__item-right
+{
+	font-family: $bold-font;
+	font-size: 42px;
+	line-height: 42px;
+	text-align: right;
+	font-feature-settings: 'zero' on;
+	color: #FFFFFF;
+}
+.alter-profit__right
+{
+	img
+	{
+		display: block;
+	}
+}
+
+
+@media (max-width: 1024px)
+{
+	.alter-profit__right
+	{
+		display: none;
+	}
+	.alter-profit__left
+	{
+		width: 530px;
+	}
+	.alter-profit__wrap
+	{
+		padding-left: 40px;
+		padding-right: 40px;
+		background-position: right;
+	}
+}
+
+
+@media (max-width: 768px)
+{
+	h2.alter-profit__title
+	{
+		text-align: center;
+		font-size: 28px;
+		line-height: 34px;
+		br
+		{
+			display: none;
+		}
+	}
+	.alter-profit
+	{
+		.container
+		{
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	.alter-profit__wrap
+	{
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 32px;
+		background-position: right;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	.alter-profit__right
+	{
+		display: none;
+	}
+	.alter-profit__item
+	{
+		flex-direction: column;
+		text-align: center;
+	}
+	.alter-profit__item-right
+	{
+		font-size: 32px;
+		text-align: center;
+	}
+	.alter-profit__item-left
+	{
+		margin-bottom: 5px;
+		margin-bottom: 20px;
+	}
+	.alter-profit__item-title
+	{
+		font-size: 14px;
+	}
+	.alter-profit__item-descr
+	{
+		font-size: 14px;
+	}
+}

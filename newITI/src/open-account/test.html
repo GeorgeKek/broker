@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('components/pagehead.html')
+</head>
+	<body>
+		<div class="page-wrapper">
+			@@include('components/header-simple.html', {"title": "Анкета инвестора"})
+
+			<div class="test-box">
+				<!-- если юзера прошел тест и обновил страницу то блоку test-content добавляем класс test-content_end -->
+				<div class="test-content">
+					<div class="test-header">
+						Вопрос <span class="test-header__current">1</span> из <span class="test-header__all"> 9</span>
+					</div>
+					<div class="test-content__body">
+						<div class="test-questions-wr">
+							<div class="test-question"></div>
+							<div class="test-question-tooltip">
+								Можно выбрать несколько ответов или написать свой
+							</div>
+							<div class="test-questions-box">
+								<div class="test-answers">
+									<div class="test-answers-lists">
+										<div class="test-answers-list-wr"></div>
+										<!-- <div class="test-answers-list-wr"></div> -->
+									</div>
+									<div class="another-answer">
+										<span class="another-answer__icon">
+											<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.148 8.5824L8.185 1.545l2.2695 2.2695-7.037 7.0373-2.2696-2.2695zM0 12.0001l2.508-.6947L.6947 9.4921 0 12zM11.0818.3522c-.4708-.4697-1.2331-.4697-1.704 0l-.5111.5112 2.2695 2.2695.5111-.5112c.4699-.4708.4699-1.233 0-1.704l-.5655-.5655z" fill="#B2B2B2"/></svg>
+										</span>
+										<textarea type="text" id="another-answer" class="input another-answer__textarea" onchange="Testing.setAnotherAnswer(this)" placeholder="Ваш вариант"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="test-actions test-actions_first-step">
+							<button data-href="sign-up-success.html" class="open-acc-btn open-acc-btn_skin test-actions__prev" onclick="Testing.prevQuestion(this);">← Назад</button>
+							<button class="open-acc-btn test-actions__next" disabled="" onclick="Testing.nextQuestion(this);">Дальше →</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- если юзера прошел тест и обновил страницу то блоку test-content добавляем класс test-content_end -->
+				<div class="test-success">
+					<div class="test-success-header">
+						<span>Тест пройден, спасибо!</span>
+						<span class="test-success-header__icon">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#87AF4F"/><path d="M4.5 10.9993l1.0955-1.008 2.2039 2.0102L14.398 6l1.1019.9963L7.7994 14 4.5 10.9993z" fill="#fff"/></svg>
+						</span>
+					</div>
+					<div class="test-success-descr">
+						Ответы помогут сделать вам оптимальное инвестиционное предложение
+					</div>
+					<div class="test-success-actions">
+						<div class="test-actions">
+							<a href="#" class="open-acc-btn test-actions__prev">Пополнить счёт →</a>
+							<a href="#" class="open-acc-btn open-acc-btn_skin test-actions__next">Наши услуги →</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			window.testSuccessUrl = '/iticapital/open-account-html/test-success.html';
+
+			window.testQuestions = [
+				{
+					question: 'Сколько вам лет?',
+					answersList: ['19&nbsp;&mdash; 34', '35&nbsp;&mdash; 50', 'Старше 50'],
+				},
+				{
+					question: 'Какое у&nbsp;вас образование?',
+					answersList: ['Среднее или неполное высшее', 'Высшее', 'Высшее финансовое'],
+				},
+				{
+					question: 'Ваш доход за&nbsp;последние 12&nbsp;месяцев',
+					answersList: ['до&nbsp;3&nbsp;млн рублей', 'от&nbsp;3&nbsp;до&nbsp;6&nbsp;млн рублей', 'свыше 6&nbsp;млн рублей'],
+					answerListSubValues: ['до 250&nbsp;000 руб./мес.', '250-500&nbsp;000 руб./мес.', 'свыше 500&nbsp;000 руб./мес.'],
+				},
+				{
+					question: 'Какой процент вашего дохода <br> вы&nbsp;переводите в&nbsp;сбережения?',
+					answersList: ['до&nbsp;10% вашего дохода', '10-50% вашего дохода', 'более&nbsp;50% вашего дохода'],
+				},
+				{
+					question: 'Как вы&nbsp;планируете инвестировать?',
+					answersList: ['Уже есть стартовый капитал', 'Буду регулярно откладывать некоторую сумму'],
+				},
+				{
+					question: 'Для чего вам инвестиционный портфель?',
+					answersList: ['Хочу получать пассивный доход/ищу альтернативу депозиту', 'Коплю на&nbsp;дорогие покупки/пенсию', 'Делаю первые шаги на&nbsp;фондовом рынке'],
+					multi: true,
+					anotherAnswer: true,
+				},
+				{
+					question: 'Какую сумму вы&nbsp;хотели&nbsp;бы инвестировать?',
+					answersList: ['от&nbsp;50&nbsp;000 до&nbsp;1&nbsp;млн рублей', 'от&nbsp;1&nbsp;до&nbsp;10&nbsp;млн рублей', 'свыше 10&nbsp;млн рублей'],
+				},
+				{
+					question: 'На&nbsp;какой срок вы&nbsp;хотите инвестировать?',
+					answersList: ['до&nbsp;6&nbsp;месяцев', 'от&nbsp;6&nbsp;месяцев до&nbsp;1&nbsp;года', 'более 1&nbsp;года'],
+				},
+				{
+					question: 'Насколько вы&nbsp;готовы рисковать?',
+					answersList: ['Не&nbsp;готов к&nbsp;убыткам', 'Допускаю потери в&nbsp;5-10%', 'Готов рисковать ради дохода более&nbsp;10%'],
+				},
+			]
+		</script>
+		<script src="../js/open-account/test.js" defer></script>
+	</body>
+</html>

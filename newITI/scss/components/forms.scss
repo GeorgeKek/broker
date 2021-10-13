@@ -1,0 +1,276 @@
+.buy-form
+{
+	width: 100%;
+	margin: 0 auto;
+	border-radius: 10px;
+	background-color: #ffffff;
+	box-shadow: 0 9px 14px 0 rgba(0, 0, 0, 0.06);
+	border: solid 1px #d9d9d9;
+	padding: 28px 0px 36px 36px;
+	background-image: url('../images/svg/gazprom-big.svg');
+	background-repeat: no-repeat;
+	background-position: 98% 0%;
+	position: relative;
+	&.error
+	{
+		background-image: none;
+		padding-bottom: 39px;
+		.buy-form__input
+		{
+			display: none;
+		}
+		.buy-form__close
+		{
+			display: none;
+		}
+		.buy-form__descr
+		{
+			width: 675px;
+		}
+		.buy-form__logo
+		{
+			padding-top: 10px;
+		}
+	}
+}
+.buy-form__close
+{
+	position: absolute;
+	cursor: pointer;
+}
+.buy-form__logo
+{
+	float: left;
+	width: 34px;
+	height: 61px;
+	img
+	{
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		object-position: center;
+	}
+}
+.buy-form__descr
+{
+	float: left;
+	font-size: 14px;
+	padding-left: 30px;
+	padding-top: 11px;
+	line-height: 26px;
+	width: 502px;
+}
+.buy-form__input
+{
+	padding-top: 10px;
+	input
+	{
+		font-size: 21px;
+		color: #4d4d4d;
+		width: 192px;
+		height: 57px;
+		border-radius: 3px;
+		background-color: #ffffff;
+		box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+		border: solid 1px #d9d9d9;
+		text-align: right;
+		padding-right: 5px;
+		padding-left: 5px;
+	}
+}
+.buy-form-left
+{
+	float: left;
+}
+.buy-form-middle
+{
+	float: right;
+}
+.buy-form-right
+{
+	float: right;
+	padding-right: 14px;
+	padding-right: 33px;
+	button
+	{
+		border: none;
+		margin-left: 57px;
+    	margin-top: 12px;
+		width: 110px;
+		height: 49px;
+		border-radius: 25px;
+		background-image: radial-gradient(circle at 7% 14%, #93cef9, #5aa0f1);
+		box-shadow: 0 4px 10px 0 rgba(90, 160, 241, 0.3);
+		border: solid 1px rgba(90, 160, 241, 0.4);
+		font-size: 18px;
+		color: #ffffff;
+		position: relative;
+		line-height: 17px;
+		&:after
+		{
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			-webkit-border-radius: 30px;
+			      border-radius: 30px;
+			background-image: -webkit-radial-gradient(11% 14%, circle, #83bae2, #4e8ad0);
+			background-image: radial-gradient(circle at 11% 14%, #83bae2, #4e8ad0);
+			-webkit-transition: opacity 0.5s ease-out;
+			transition: opacity 0.5s ease-out;
+			z-index: 2;
+			opacity: 0; 
+			content: 'Купить';
+			padding-top: 15px;
+		}
+		&:hover:after 
+		{
+	      opacity: 1;
+	      
+	  	}
+	}
+}
+.error
+{
+	.buy-form-right button:after
+	{
+		content: 'Закрыть';
+	}
+}
+.buy-form__close
+{
+	position: absolute;
+	right: 30px;
+	top: 20px;
+	opacity: 0.8;
+	&:before,
+	&:after
+	{
+		content: '';
+		display: inline-block;
+		width: 15px;
+		height: 2px;
+		background-color: #979797;
+		position: absolute;
+		transform: rotate(45deg);
+	}
+	&:after
+	{
+		transform: rotate(-45deg);
+	}
+}
+.special
+{
+	.buy-form__descr
+	{
+		font-size: 22px;
+		line-height: 30px;
+		width: 700px;
+	}
+	.buy-form.error .buy-form__descr
+	{
+		width: 900px;
+	}
+	.buy-form__input input
+	{
+		font-size: 22px;
+	}
+	.buy-form-right button
+	{
+		font-size: 24px;
+		width: 140px;
+	}
+}
+@media (max-width: 1200px)
+{
+	.buy-form__descr
+	{
+		width: 470px;
+	}
+}
+@media (max-width: 1023px)
+{
+	.buy-form__descr
+	{
+		width: 335px;
+	}
+	.buy-form.error .buy-form__descr
+	{
+		width: 460px;
+	}
+	.buy-form__input
+	{
+		text-align: center;
+		width: 100%;
+	}
+	.buy-form__input input
+	{
+		width: 96%;
+		margin: 0 auto;
+		max-width: 500px;
+	}
+	.buy-form-right button
+	{
+		margin-left: 0px;
+		text-align: center;
+		width: 96%;
+	}
+	.buy-form-left
+	{
+		width: 100%;
+		order: 1;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.buy-form__logo
+	{
+		width: 100%;
+	}
+	.buy-form__descr
+	{
+		width: 100%;
+		padding-left: 0;
+		text-align: center;
+	}
+	.buy-form-middle
+	{
+		width: 100%;
+		display: flex;
+		order: 3;
+	}
+	.buy-form-right
+	{
+		width: 100%;
+		padding-right: 0;
+		order: 4;
+		display: flex;
+		justify-content: center;
+	}
+	.buy-form-right button
+	{
+		margin-left: 0;
+		max-width: 500px;
+	}
+	.buy-form.error .buy-form__descr
+	{
+		width: 100%;
+	}
+	.buy-form.error .buy-form-right
+	{
+		width: 100%;
+		text-align: center;
+	}
+	.buy-form
+	{
+		padding: 25px;
+	}
+	.buy-form
+	{
+		background-image: none;
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+

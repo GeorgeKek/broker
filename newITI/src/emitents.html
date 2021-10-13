@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru" class="">
+<head>
+	@@include('./inc/components/pagehead.html')
+</head>
+	<body>
+		@@include('./inc/components/header.html')
+		<div class="wrap">
+			<section class="main">
+				<div class="sevices-top">
+					<div class="container">
+						<div class="sevices-top__wrapper">
+							@@include('./inc/components/breadcrumbs.html')
+							<h1 class="sevices-top__title">
+								Новости эмитентов
+							</h1>
+						</div>
+					</div>
+				</div>
+				@@include('./inc/components/mobile-accordeon.html')
+				<div class="container flex-container">
+					<div class="accordeon-wrapper">
+						@@include('./inc/components/accordeon.html')
+						<div class="hidden-accordeon">
+							@@include('./inc/components/accordeon.html')
+						</div>
+					</div>
+					<div class="content-wrapper">
+						@@include('./inc/components/finder-news.html')
+						<div class="sevices-bot">
+							<div class="sevices-content sevices-content_emitents">
+								<div class="services-text">
+									<div class="emitents-list">
+										<div class="emitents-list-item">
+											<div class="emitents-list-item__left">
+												01.09.19
+											</div>
+											<div class="emitents-list-item__right">
+												<a href="#" class="emitents-item__link">Приняты на обслуживание в НКО АО НРД облигации Ford Motor Credit Company LLC (выпуск - US345397ZM88) – информация предназначена для квалифицированных инвесторов</a>
+											</div>
+										</div>
+										<div class="emitents-list-item">
+											<div class="emitents-list-item__left">
+												13.03.19
+											</div>
+											<div class="emitents-list-item__right">
+												<a href="#" class="emitents-item__link">Приняты на обслуживание в НКО АО НРД облигации Ford Motor Credit Company LLC (выпуск - US345397ZM88) – информация предназначена для квалифицированных инвесторов</a>
+											</div>
+										</div>
+										<div class="emitents-list-item">
+											<div class="emitents-list-item__left">
+												13.03.19
+											</div>
+											<div class="emitents-list-item__right">
+												<a href="#" class="emitents-item__link">MEET) О корпоративном действии "Годовое общее собрание акционеров" - Американская депозитарная расписка на обыкновенные акции KEPCO (депозитарная расписка ISIN US5006311063)</a>
+											</div>
+										</div>
+									</div>
+									<div class="emitents-pagination-wr">
+										<div class="search-pagination">
+											<a href="javascript:void(0)" class="load_prev" style="display: none" onclick="o2.emitentObj.loadPrev(this)">@@include('./inc/components/svg/pagination-arrow.html')</a>
+											<span class="page-visible">12-24/95-107</span>
+											<a href="javascript:void(0)" class="load_next" onclick="o2.emitentObj.loadNext(this)">@@include('./inc/components/svg/pagination-arrow.html')</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- <section class="registration">
+				@@include('./inc/components/registration.html')
+			</section> -->
+			@@include('./inc/components/footer.html')
+		</div>
+		@@include('./inc/components/search-box.html')
+	</body>
+</html>

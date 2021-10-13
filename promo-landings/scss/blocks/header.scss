@@ -1,0 +1,196 @@
+.header
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	z-index: 8;
+	width: 100%;
+	height: 50px;
+	padding-right: 30px;
+	background-color: #fff;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	&--black
+	{
+		background-color: #161D21;
+	}
+	&--big
+	{
+		box-shadow: none;
+		height: 72px;
+		padding-right: 24px;
+	}
+}
+.header__logo
+{
+	font-size: 0;
+	height: 100%;
+
+	img
+	{
+		height: 100%;
+	}
+	&--black
+	{
+		padding-left: 30px;
+		padding-top: 10px;
+		img
+		{
+			height: 70%;
+		}
+	}
+	&--big
+	{
+		img
+		{
+			height: auto;
+		}
+	}
+}
+
+.header__title
+{
+	font-family: $accent-font;
+	font-size: 24px;
+	color: #292929;
+	&--black
+	{
+		color: #fff;
+		&:active
+		{
+			color: #fff;
+		}
+	}
+	&--big
+	{
+		display: none;
+	}
+}
+
+.header__phone
+{
+	display: flex;
+	align-items: center;
+	&--big
+	{
+		display: none;
+	}
+}
+
+.header__phone-icon
+{
+	margin-right: 12px;
+	font-size: 0;
+	width: 28px;
+	height: 28px;
+
+	img
+	{
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.header__phone-number
+{
+	font-family: $accent-font;
+	font-size: 21px;
+	color: #333;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	&--black
+	{
+		color: #fff;
+	}
+}
+.header__right-phone
+{
+	display: flex;
+	justify-content: flex-end;
+	font-family: $bold-font;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: right;
+	font-feature-settings: 'tnum' on, 'lnum' on, 'ss02' on;
+	color: #388AE9;
+	img
+	{
+		margin-right: 5px;
+	}
+}
+.header__right-time
+{
+	font-size: 12px;
+	line-height: 17px;
+	color: #707070;
+}
+@media (max-width: 1023px)
+{
+	.header__phone-number, .header__title
+	{
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 767px)
+{
+	.header
+	{
+		flex-wrap: wrap;
+		padding-right: 20px;
+		&--big
+		{
+			height: 50px;
+		}
+	}
+	.header__logo
+	{
+		&--big
+		{
+			img
+			{
+				height: 60px;
+			}
+		}
+	}
+	.header__right-phone
+	{
+		display: flex;
+		justify-content: flex-end;
+		font-family: $bold-font;
+		font-size: 12px;
+		line-height: 17px;
+		text-align: right;
+		font-feature-settings: 'tnum' on, 'lnum' on, 'ss02' on;
+		color: #388AE9;
+		img
+		{
+			margin-right: 5px;
+		}
+	}
+	.header__right-time
+	{
+		font-size: 10px;
+		line-height: 14px;
+		color: #707070;
+	}
+	.header__title
+	{
+		display: none;
+	}
+}
+
+@media (max-width: 374px)
+{
+	.header
+	{
+		padding-right: 10px;
+	}
+
+	.header__phone-icon
+	{
+		width: 20px;
+		height: 20px;
+		margin-right: 8px;
+	}
+}

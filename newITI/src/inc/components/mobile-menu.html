@@ -1,0 +1,119 @@
+	@@include('./proposal.html')
+	@@include('./proposal-download.html')
+<div class="mobile-menu popup" onclick="event.stopPropagation(); event.preventDefault();">
+	<div class="mobile-menu__top">
+		<div class="mobile-menu__top-horizontal">
+			<button class="mobile-menu__open-account mobile-menu__top-item _openProposal" onclick="o2.mobileProposal(this, '._proposalDownload');">Войти</button>
+			<a class="mobile-menu__open-account mobile-menu__top-item" href="#">Пополнить счёт</a>
+		</div>
+		<button class="mobile-menu__open-account__wide mobile-menu__top-item _enterProposal" onclick="o2.mobileProposal(this, '._proposal');">Открыть счёт</button>
+		<a href="#" class="test-access test-access_menu">Тестовый&nbsp;доступ</a>
+	</div>
+	<div class="services-accordeon mobile-menu__accordeon">
+		<div class="services-accordeon__item" onclick="o2.search.showLarge();">
+			<div class="services-accordeon__title services-accordeon__title_search">
+				<a class="services-accordeon__item-text" href="#">Поиск</a>
+				<div class="services-accordeon__search-icons">
+					<div class="services-accordeon__search-icon">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.502 11h-.794l-.276-.274A6.47 6.47 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.47 6.47 0 0 0 4.225-1.566l.276.274v.792l4.998 4.991L17.49 16l-4.988-5zM6.5 11a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z" fill="#B3B3B3"/></svg>
+					</div>
+					<button class="services-accordeon__special-size" onclick="o2.specialSize(this); event.stopPropagation();">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.17083 5.89387C7.69059 4.45034 9.73906 3.55882 12 3.55882C14.2609 3.55882 16.3101 4.45034 17.8292 5.89387L24 12.0294L17.8292 18.165C16.3101 19.6085 14.2609 20.5 12 20.5C9.73906 20.5 7.69059 19.6085 6.17083 18.165L0 12.0294L6.17083 5.89387ZM12 17.6765C15.1136 17.6765 17.6471 15.1431 17.6471 12.0294C17.6471 8.91576 15.1136 6.38235 12 6.38235C8.88635 6.38235 6.35294 8.91576 6.35294 12.0294C6.35294 15.1431 8.88635 17.6765 12 17.6765ZM10.5882 11.3235C11.3668 11.3235 12 10.6911 12 9.91176C12 9.66118 11.9287 9.42894 11.8137 9.22424C11.8765 9.22071 11.9365 9.20588 12 9.20588C13.5572 9.20588 14.8235 10.4722 14.8235 12.0294C14.8235 13.5866 13.5572 14.8529 12 14.8529C10.4435 14.8529 9.17647 13.5866 9.17647 12.0294C9.17647 11.5776 9.29293 11.157 9.48211 10.7786C9.74046 11.1075 10.1372 11.3235 10.5882 11.3235Z" fill="#B3B3B3"/></svg>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="services-accordeon__item">
+			<div class="services-accordeon__title noArrow">
+				<a class="services-accordeon__item-text" href="#">Главная</a>
+			</div>
+		</div>
+		<div class="services-accordeon__item">
+			<div class="services-accordeon__title opened" onclick="o2.servicesAccordeon(this)">
+				<span class="services-accordeon__item-text">Услуги</span>
+				<div class="chevron"></div>
+			</div>
+			<ul class="services-accordeon__content" style="display: block;">
+				<li><a href="#">ИИС</a></li>
+				<li><a href="#">Еврооблигации</a></li>
+				<li><a href="#">Внебиржевые сделки</a></li>
+			</ul>
+		</div>
+		<div class="services-accordeon__item">
+			<div class="services-accordeon__title" onclick="o2.servicesAccordeon(this)">
+				<span class="services-accordeon__item-text">Тарифы</span>
+				<div class="chevron"></div>
+			</div>
+			<ul class="services-accordeon__content">
+				<li><a href="#">ИИС</a></li>
+				<li><a href="#">Еврооблигации</a></li>
+				<li><a href="#">Внебиржевые сделки</a></li>
+			</ul>
+		</div>
+		<div class="services-accordeon__item">
+			<div class="services-accordeon__title" onclick="o2.servicesAccordeon(this)">
+				<span class="services-accordeon__item-text">Аналитика</span>
+			</div>
+			<ul class="services-accordeon__content">
+				<li><a href="#">ИИС</a></li>
+				<li><a href="#">Еврооблигации</a></li>
+				<li><a href="#">Внебиржевые сделки</a></li>
+			</ul>
+		</div>
+		<div class="services-accordeon__item">
+			<div class="services-accordeon__title" onclick="o2.servicesAccordeon(this)">
+				<span class="services-accordeon__item-text">Программное обеспечение</span>
+			</div>
+			<ul class="services-accordeon__content">
+				<li><a href="#">ИИС</a></li>
+				<li><a href="#">Еврооблигации</a></li>
+				<li><a href="#">Внебиржевые сделки</a></li>
+			</ul>
+		</div>
+		<div class="services-accordeon__item">
+			<div class="services-accordeon__title" onclick="o2.servicesAccordeon(this)">
+				<span class="services-accordeon__item-text">Обучение</span>
+			</div>
+			<ul class="services-accordeon__content">
+				<li><a href="#">ИИС</a></li>
+				<li><a href="#">Еврооблигации</a></li>
+				<li><a href="#">Внебиржевые сделки</a></li>
+			</ul>
+		</div>
+		<div class="services-accordeon__item">
+			<div class="services-accordeon__title" onclick="o2.servicesAccordeon(this)">
+				<span class="services-accordeon__item-text">О компании</span>
+			</div>
+			<ul class="services-accordeon__content">
+				<li><a href="#">ИИС</a></li>
+				<li><a href="#">Еврооблигации</a></li>
+				<li><a href="#">Внебиржевые сделки</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="mobile-menu__bottom">
+		<div class="mobile-menu__phone">
+			<a class="header-phone" href="javascript:void(0)">8 800 200 32 35</a>
+		</div>
+		<div class="footer__socials socials__menu">
+				<a href="#" class="footer__socials-item __vk">
+					@@include('./svg/vk.html')
+				</a>
+				<a href="#" class="footer__socials-item __youtube">
+					@@include('./svg/youtube.html')
+				</a>
+				<a href="#" class="footer__socials-item __tw">
+					@@include('./svg/tw.html')
+				</a>
+				<a href="#" class="footer__socials-item __fb">
+					@@include('./svg/fb.html')
+				</a>
+				<a href="#" class="footer__socials-item __telegram">
+					@@include('./svg/telegram.html')
+				</a>
+				<a href="#" class="footer__socials-item __rss">
+					@@include('./svg/rss.html')
+				</a>
+			</div>
+	</div>
+</div>

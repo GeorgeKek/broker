@@ -1,0 +1,46 @@
+.g-btn-stroke
+{
+	display: block;
+	position: relative;
+	width: 270px;
+	max-width: calc(100% - 16px);
+	height: 54px;
+	line-height: 54px;
+	font-family: $semi-font;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	background-color: #528447;
+	border: 0;
+	box-shadow: 0px 4.49425px 17.977px rgba(82, 132, 71, 0.2), 0px 1.7977px 3.5954px rgba(82, 132, 71, 0.4);
+	border-radius: 98px;
+
+	&:before
+	{
+		position: absolute;
+		content: "";
+		width: calc(100% + 16px);
+		height: calc(100% + 16px);
+		left: -8px;
+		top: -8px;
+		border-radius: 116px;
+		border: 2px solid #528447;
+		transition: .2s;
+	}
+
+	&:hover:before
+	{
+		transform: scale(1.03);
+	}
+}
+.g-button
+{
+	font-weight: 600;
+	font-size: 13px;
+	color: #333333;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 24px;
+	border: 1px solid #528447;
+	border-radius: 100px;
+}

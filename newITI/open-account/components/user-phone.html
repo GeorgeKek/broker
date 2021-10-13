@@ -1,0 +1,39 @@
+<div class="user-phone-wr">
+	<div class="user-phone-info">
+		<div class="user-phone-info__data">
+			<span>Мы отправили SMS на номер </span>
+			<span class="user-phone-info__phone">
+				<span class="user-phone-info__phone-text">+7 918 345 54 32</span>
+
+				<span class="user-phone-info__change show-mob" onclick="OpenAcc.userPhone.showChangePhonePopup(event);">
+					<span class="link-devider">·</span>Изменить
+				</span>
+			</span>
+		</div>
+		<div class="user-phone-info__change hide-mob" onclick="OpenAcc.userPhone.showChangePhonePopup(event);">
+			 · Изменить номер
+		</div>
+	</div>
+</div>
+
+<div class="change-data-popup">
+	<div class="change-data-popup__overlay" onclick="OpenAcc.userPhone.closeChangePhonePopup(event);"></div>
+	<div class="change-data-popup__container">
+		<div class="change-phone-wr">
+			<div class="change-phone__left">
+				<label for="new-phone" class="def-label change-phone__label">Ваш номер телефона</label>
+			</div>
+			<div class="change-phone__right">
+				<form action="" id="user-change-phone" onsubmit="OpenAcc.userPhone.changeUserPhone(this, event, '@@type');">
+					<div class="change-phone-input-wr">
+						<input type="tel" id="new-phone" name="phone" class="confirm__input confirm__input_phone _phone-mask" placeholder="+7 ___ ___ __ __">
+					</div>
+					<div class="change-phone-actions">
+						<button class="open-acc-btn open-acc-btn_skin change-phone-actions__item" onclick="OpenAcc.userPhone.closeChangePhonePopup(event);">Отмена</button>
+						<button class="open-acc-btn btn-submit_disabled change-phone-actions__item" type="submit">Сохранить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

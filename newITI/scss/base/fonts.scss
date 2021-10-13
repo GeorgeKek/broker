@@ -1,0 +1,51 @@
+@font-face {
+	font-family: 'Inter-Bold';
+	src: url('../../global-assets/fonts/Inter-Bold.eot');
+	src: local('Inter Bold'), local('Inter-Bold'),
+		url('../../global-assets/fonts/Inter-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../../global-assets/fonts/Inter-Bold.woff2') format('woff2'),
+		url('../../global-assets/fonts/Inter-Bold.woff') format('woff'),
+		url('../../global-assets/fonts/Inter-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter-Regular';
+	src: url('../../global-assets/fonts/Inter-Regular.eot');
+	src: local('Inter Regular'), local('Inter-Regular'),
+		url('../../global-assets/fonts/Inter-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../../global-assets/fonts/Inter-Regular.woff2') format('woff2'),
+		url('../../global-assets/fonts/Inter-Regular.woff') format('woff'),
+		url('../../global-assets/fonts/Inter-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Aeroport';
+	src: url('../../global-assets/fonts/Aeroport.eot');
+	src: url('../../global-assets/fonts/Aeroport.eot?#iefix') format('embedded-opentype'),
+			url('../../global-assets/fonts/Aeroport.woff2') format('woff2'),
+			url('../../global-assets/fonts/Aeroport.woff') format('woff'),
+			url('../../global-assets/fonts/Aeroport.ttf') format('truetype'),
+			url('../../global-assets/fonts/Aeroport.svg#Aeroport') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Lato-BlackItalic';
+	src: url('../../global-assets/fonts/Lato-BlackItalic.eot');
+	src: url('../../global-assets/fonts/Lato-BlackItalic.woff2') format('woff2'),
+			 url('../../global-assets/fonts/Lato-BlackItalic.woff') format('woff'),
+			 url('../../global-assets/fonts/Lato-BlackItalic.ttf') format('truetype'),
+			 url('../../global-assets/fonts/Lato-BlackItalic.svg#Lato-BlackItalic') format('svg'),
+			 url('../../global-assets/fonts/Lato-BlackItalic.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}

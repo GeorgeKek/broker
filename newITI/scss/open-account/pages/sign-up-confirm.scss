@@ -1,0 +1,155 @@
+.confirm-inputs-wr
+{
+	display: flex;
+	align-items: flex-end;
+	padding-top: 20px;
+}
+.btn-confirm
+{
+	max-width: 264px;
+	margin: inherit;
+	margin-bottom: 3px;
+	margin-left: 12px;
+	&:before
+	{
+		display: none;
+	}
+	&:hover
+	{
+		box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.15);
+	}
+}
+.confirm-user-phone-wr
+{
+	padding-top: 24px;
+}
+
+.send-code__timer
+{
+	font-size: 14px;
+	line-height: 18px;
+	font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on;
+	color: #707070;
+}
+.send-code__new
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	box-shadow: 0px 9px 12px rgba(0, 0, 0, 0.04), 0px 2.01027px 2.68036px rgba(0, 0, 0, 0.0238443), 0px 0.598509px 0.798012px rgba(0, 0, 0, 0.0161557);
+	border-radius: 80px;
+	transition: 0.25s;
+	&:hover
+	{
+		box-shadow: none;
+		transition: 0.25s;
+	}
+}
+.confirm-terms-wr
+{
+	padding-top: 32px;
+	p
+	{
+		margin-bottom: 0;
+		&:not(:last-child)
+		{
+			margin-bottom: 16px;
+		}
+	}
+}
+.confirm-terms-link
+{
+	display: inline-flex;
+	align-items: center;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	color: #388AE9;
+	&:hover
+	{
+		.confirm-terms-link__icon
+		{
+			transform: translateY(-4px);
+		}
+	}
+	svg
+	{
+	}
+}
+.confirm-terms-link__icon
+{
+		transition: 0.3s;
+		margin-right: 10px;
+		line-height: 0;
+}
+
+@media (max-width: 767px)
+{
+	.confirm-inputs-wr
+	{
+		padding-top: 0;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.sign-up-input__label
+	{
+		font-size: 14px;
+	}
+	.confirm-input-wr
+	{
+		margin-bottom: 15px;
+		.confirm__input
+		{
+			width: 100%;
+		}
+	}
+	.btn-confirm
+	{
+		max-width: 180px;
+		padding-left: 20px;
+		padding-right: 20px;
+		font-size: 14px;
+		margin-left: 0;
+		margin-bottom: 0;
+	}
+	.confirm-user-phone-wr
+	{
+		padding-top: 0;
+		padding-bottom: 15px;
+		margin-left: -10px;
+		margin-right: -10px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.send-code__timer, .user-phone-info__data
+	{
+		font-size: 14px;
+	}
+	.user-phone-info
+	{
+		width: 100%;
+	}
+	.user-phone-wr
+	{
+		flex-direction: column;
+	}
+	.user-phone-info__phone
+	{
+		display: flex;
+		align-items: center;
+	}
+	.confirm-terms-wr
+	{
+		padding-top: 15px;
+		p
+		{
+			font-size: 14px;
+		}
+	}
+	.confirm-terms-link
+	{
+		font-size: 14px;
+		margin-top: 14px;
+		margin-bottom: 14px;
+	}
+}

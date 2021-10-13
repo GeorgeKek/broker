@@ -1,0 +1,892 @@
+.registration
+{
+	background-color: #f6f6f6;
+}
+.registration-wrapper
+{
+	height: 85px;
+	text-align: center;
+	background-color: #f04f48;
+	font-size: 30px;
+	font-family: $air;
+	font-feature-settings: "ss01" 0;
+	color: white;
+	padding-top: 18px;
+	letter-spacing: 0px;
+	position: relative;
+	margin-bottom: 62px;
+	transition: all 0.3s;
+	cursor: pointer;
+	&.opened
+	{
+		font-size: 0px;
+		height: 3px;
+		content: '';
+		padding-top: 0;
+		transition: all 0.3s;
+		i
+		{
+			display: none;
+		}
+	}
+	i
+	{
+		width: 13px;
+		height: 13px;
+		border-top: 3px solid #ffbdbd;
+		border-right: 3px solid #ffbdbd;
+		position: absolute;
+		margin-top: 18px;
+		margin-left: 20px;
+		color: #ffbdbd;
+		transform: rotate(45deg);
+	}
+}
+.registration-form
+{
+	width: 740px;
+	margin: 0 auto;
+	display: none;
+	position: relative;
+	padding-bottom: 95px;
+	&.opened
+	{
+		margin-bottom: 77px;
+	}
+}
+.close__icon
+{
+	position: absolute;
+	right: -95px;
+	top: 43px;
+	cursor: pointer;
+	width: 44px;
+	height: 44px;
+	rect
+	{
+		transition: all 0.3s;
+	}
+	&:hover
+	{
+		rect
+		{
+			fill: #e5e5e5
+		}
+		path
+		{
+			fill: #333333;
+		}
+	}
+}
+.registration-form-wrapper
+{
+
+}
+.registration-form__title
+{
+	font-family: $bold;
+	font-size: 24px;
+	line-height: 0.75;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #b3b3b3;
+	text-align: center;
+	margin-bottom: 49px;
+}
+.open-account
+{
+	padding-top: 68px;
+	padding-bottom: 30px;
+}
+.open-account-wrapper
+{
+	width: 78.6%;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+.open-account-header
+{
+	background-color: #f5f5f5;
+	padding-top: 50px;
+	border: 1px solid #d9d9d9;
+}
+.open-account-title
+{
+	color: #4d4d4d;
+	text-align: center;
+	margin-bottom: 47px;
+	letter-spacing: 0.3px;
+}
+.open-account__tabs-list
+{
+	padding-left: 50px;
+	padding-bottom: 2px;
+}
+.open-account__tabs-list-item
+{
+	display: inline-block;
+	font-family: $medium;
+	text-transform: uppercase;
+	height: 42px;
+	cursor: pointer;
+	font-size: 14px;
+	color: #4d4d4d;
+	position: relative;
+	margin-right: 50px;
+	letter-spacing: 1px;
+	transition: all 0.3s;
+	&:after
+	{
+		content: "";
+		display: block;
+		position: absolute;
+		visibility: hidden;
+		bottom: -3px;
+		left: 0;
+		right: 0;
+		width: 0%;
+		height: 3px;
+		background-color: red;
+		margin: 0 auto;
+	}
+	&:last-child
+	{
+		margin-right: 0;
+	}
+	&.active
+	{
+		color: #ec231a;
+		transition: all 0.3s;
+		&:after
+		{
+			visibility: visible;
+			width: 100%;
+			transition: all 0.3s;
+		}
+	}
+}
+.open-account__tab-content
+{
+	display: none;
+	&.active
+	{
+		display: block;
+	}
+}
+.open-account-tabs-content
+{
+	padding: 48px 48px 97px 51px;
+	border-top: none;
+	margin-bottom: 50px;
+	border: solid 1px rgba(0, 0, 0, 0.15);
+	border-top: none;
+	background-color: white;
+}
+.registration-form__top
+{
+	border: solid 1px rgba(0, 0, 0, 0.15);
+	border-bottom: solid 2px rgba(0, 0, 0, 0.15);
+	padding-top: 55px;
+	background-color: white;
+}
+.open-account-block__input-item-full
+{
+	width: 100%;
+	margin-bottom: 30px;
+}
+.open-account-block__input-item-half
+{
+	float: left;
+	width: 47.9%;
+	margin-right: 4.2%;
+	margin-bottom: 20px;
+	&:nth-child(odd)
+	{
+		margin-right: 0;
+	}
+}
+.open-account-block__input-item-half-form
+{
+	&:nth-child(odd)
+	{
+		margin-right: 4.2% !important;
+	}
+	&:nth-child(even)
+	{
+		margin-right: 0;
+	}
+}
+.open-account__tab-content[data-tab-id="2"]
+{
+	.open-account-block__input-item-half-form
+	{
+		&:nth-child(odd)
+		{
+			margin-right: 4.2% !important;
+		}
+		&:nth-child(even)
+		{
+			margin-right: 0 !important;
+		}
+	}
+}
+@keyframes rotate
+{
+	0%
+	{
+		transform: rotate(0deg);
+	}
+	100%
+	{
+		transform: rotate(360deg);
+	}
+}
+.form-block__enter
+{
+	transition: all 0.3s;
+	text-align: center;
+	span
+	{
+		position: relative;
+		display: inline-block;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.3s;
+		&:before
+		{
+			position: absolute;
+			content: '';
+			width: 20px;
+			height: 20px;
+			top: 50%;
+			left: -25px;
+			margin-top: -10px;
+			visibility: hidden;
+			overflow: hidden;
+			margin-right: 10px;
+			background-image: url('../images/svg/loader.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			animation: rotate 2.5s infinite linear;
+		}
+	}
+	&.loading
+	{
+		position: relative;
+		span
+		{
+			margin-left: 25px;
+			&:before
+			{
+				display: block;
+				left: -25px;
+				visibility: visible;
+			}
+		}
+	}
+}
+.open-account-label
+{
+	position: relative;
+	display: block;
+	input
+	{
+		background-color: #fafafa;
+		border: 1px solid #d9d9d9;
+		border-radius: 3px;
+		height: 66px;
+		letter-spacing: 0.1px;
+		padding-left: 18px;
+		padding-top: 14px;
+		font-size: 16px;
+		color: rgba (0 0 0, 0.87);
+		width: 100%;
+		padding-right: 18px;
+		&.error
+		{
+			border: 1px solid #ec231a;
+		}
+	}
+}
+.open-accont-block__input-label-name
+{
+	input
+	{
+		padding-top: 14px;
+	}
+}
+.open-accont-block__input-label-title
+{
+	position: absolute;
+	color: rgba(0, 0, 0, 0.45);
+	left: 20px;
+    top: 21px;
+    transition: all 0.3s;
+	&.onFocus
+	{
+		left: 20px;
+		top: 14px;
+		font-size: 12px;
+		transition: all 0.3s;
+	}
+}
+.open-account__tab-item-inputs
+{
+	margin-bottom: 18px;
+}
+.open-account__btn-block-warning
+{
+	color: rgba(0, 0, 0, 0.45);
+	padding-left: 0;
+	padding-top: 1px;
+	letter-spacing: 0.1px;
+	font-size: 12px;
+	line-height: 19px;
+	width: 270px;
+	float: left;
+	padding-top: 6px;
+	a
+	{
+		letter-spacing: 0.1px;
+		font-size: 12px;
+		color: rgba(0, 0, 0, 0.45);
+		transition: all 0.3s;
+		border-bottom: 1px solid #7db7b7;
+		&:hover
+		{
+			border-bottom: 1px solid transparent;
+		}
+	}
+}
+.open-account-block__btn-block
+{
+	button
+	{
+		width: 248px;
+		height: 50px;
+		border-radius: 53px;
+		background-color: #f04f48;
+		font-weight: 500;
+		line-height: 1.38;
+		text-align: center;
+		color: #ffffff;
+		font-family: $medium;
+		float: right;
+		display: block;
+		border: none;
+		transition: all 0.3s;
+		&:hover
+		{
+			box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.15);
+		}
+	}
+}
+.open-account-desc
+{
+	width: 635px;
+	margin: 0 auto;
+}
+.open-account-desc-text
+{
+	p
+	{
+		font-size: 18px;
+		line-height: 26px;
+		color: #606060;
+		margin-bottom: 26px;
+	}
+}
+.open-account-tabs-block-mobile-menu
+{
+	display: none;
+}
+.special
+{
+	.registration-form
+	{
+		svg
+		{
+			height: 80px;
+			width: 80px;
+		}
+	}
+	.registration-form__title
+	{
+		font-size: 38px;
+	}
+	.open-account__tabs-list-item
+	{
+		font-size: 20px;
+		&:after
+		{
+			bottom: 13px;
+		}
+	}
+	.open-account-label input
+	{
+		font-size: 24px;
+	}
+	.form-block__tab-item-inputs
+	{
+		font-size: 20px;
+		input
+		{
+			font-size: 24px;
+			padding-top: 8px;
+		}
+	}
+	.open-accont-block__input-label-title.onFocus
+	{
+		font-size: 14px;
+		top: 6px;
+	}
+	.open-account__btn-block-warning
+	{
+		font-size: 18px;
+		a
+		{
+			font-size: 18px;
+		}
+	}
+	.open-account-block__btn-block button
+	{
+		width: 310px;
+    	height: 70px;
+    	font-size: 20px;
+	}
+	.open-account-desc-text p
+	{
+		font-size: 22px;
+		line-height: 30px;
+	}
+}
+@media (max-width: 1439px)
+{
+	.open-account__tabs-list
+	{
+		padding-left: 0;
+		text-align: center;
+	}
+	.open-account__tabs-list-item
+	{
+		&:last-child
+		{
+			margin-right: 0;
+		}
+	}
+	.open-account-block__input-item-half
+	{
+		width: 47.5%;
+		margin-bottom: 9px !important;
+	}
+	.open-account
+	{
+		padding-top: 63px;
+	}
+	.open-account-header
+	{
+		padding-top: 39px;
+	}
+}
+@media (max-width: 1023px)
+{
+	.open-account-tabs-content
+	{
+		padding-top: 40px;
+		border: none;
+		padding: 60px 50px 56px;
+	}
+	.open-account-wrapper
+	{
+		width: 100%;
+	}
+	.open-account-container
+	{
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+	}
+	.open-account-title
+	{
+		font-size: 32px;
+		margin-bottom: 36px;
+	}
+	.open-account-block__input-item-full
+	{
+		margin-bottom: 30px;
+	}
+	.open-account-block__input-item-half
+	{
+		width: 47.9%;
+	}
+	.open-accont-block__input-label-title
+	{
+		left: 29px;
+	}
+	.open-account__tab-item-inputs
+	{
+		margin-bottom: 26px;
+	}
+	.open-account__btn-block-warning
+	{
+		padding-top: 9px;
+	}
+	.open-account-desc
+	{
+		display: none;
+	}
+	.close__icon
+	{
+		right: 49px;
+		top: 47px
+	}
+	.registration
+	{
+		background-color: transparent;
+		border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+		margin-bottom: 49px;
+	}
+	.registration-form__top
+	{
+		border: none;
+		border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+		padding-top: 0;
+	}
+	.registration-form__title
+	{
+		font-size: 22px;
+		margin-bottom: 50px;
+	}
+	.open-account__tabs-list-item
+	{
+		height: 32px;
+	}
+	.open-account-tabs-content
+	{
+		margin-bottom: 0;
+	}
+	.registration-form.opened
+	{
+		margin-bottom: 0;
+		padding-top: 62px;
+	}
+	.registration-form
+	{
+		padding-bottom: 30px;
+	}
+	.registration-wrapper
+	{
+		margin-bottom: 0px;
+	}
+}
+@media (max-width: 767px)
+{
+	.registration
+	{
+		margin-bottom: 0;
+	}
+	.registration-form__top
+	{
+		border-bottom: none;
+	}
+	.registration-form
+	{
+		width: 100%;
+		display: block;
+	}
+	.registration-wrapper
+	{
+		display: none;
+	}
+	.registration-form-wrapper
+	{
+		margin-top: 34px;
+	}
+	.registration-form__title
+	{
+		font-size: 18px;
+		margin-bottom: 23px;
+	}
+	.registration__mobile-select
+	{
+		font-family: "Lato-Medium", "PT Sans", sans-serif;
+		text-transform: uppercase;
+		height: 42px;
+		cursor: pointer;
+		font-size: 14px;
+		color: #ec231a;
+		position: relative;
+		letter-spacing: 1px;
+		-webkit-transition: all 0.3s;
+		transition: all 0.3s;
+		text-align: center;
+		border-top: solid 1px rgba(0, 0, 0, 0.15);
+		padding-top: 17px;
+		&:after
+		{
+			content: '';
+			display: inline-block;
+			background-size: cover;
+			width: 13px;
+			height: 6px;
+			background-image: url(../images/svg/chevron.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			position: relative;
+			top: -3px;
+			bottom: 0;
+			margin: auto;
+			left: 39px;
+			color: #ec231a;
+			-webkit-transition: all 0.3s;
+			transition: all 0.3s;
+		}
+		&.openned:after
+		{
+			transform: rotate3d(1, 0, 0, 180deg);
+			background-image: url(../images/svg/chevron.svg);
+		}
+	}
+
+	.open-account__tabs-list-item.active
+	{
+		display: none;
+	}
+	.open-account__tabs-list
+	{
+		position: absolute;
+		background-color: white;
+		box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+	}
+	.close__icon
+	{
+		display: none;
+	}
+	.open-account-tabs-content
+	{
+		padding: 0px 22px;
+		padding-top: 12px;
+		padding-bottom: 31px;
+		margin-bottom: 0px;
+	}
+	.open-account-block__input-item-full
+	{
+		margin-bottom: 7px;
+	}
+	.open-accont-block__input-label input
+	{
+		padding-left: 11px;
+		height: 66px;
+	}
+	.open-accont-block__input-label-title.onFocus
+	{
+		left: 12px;
+	}
+	.open-accont-block__input-label-title
+	{
+		left: 13px;
+	}
+	.open-account__tab-item-inputs
+	{
+		margin-bottom: 8px;
+	}
+	.open-account
+	{
+		padding-top: 0px;
+	}
+	.open-account-title
+	{
+		font-size: 24px;
+		margin-bottom: 31px;
+	}
+	.open-account-wrapper
+	{
+		border: 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+	}
+	.open-account-header
+	{
+		position: relative;
+		padding-top: 9px;
+		padding-bottom: 0;
+		border: none;
+		border-bottom: 3px solid #f5f5f5;
+	}
+	.open-account-block__input-item-half
+	{
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	.open-account-tabs-block
+	{
+		margin: 0 auto;
+		ul li
+		{
+			text-align: center;
+			padding: 5px;
+			&:hover
+			{
+				color: #ee152f;
+				transition: all 0.3s;
+			}
+		}
+	}
+	.open-account__btn-block-warning
+	{
+		float: none;
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		padding-top: 2px;
+		padding-bottom: 10px;
+		margin-bottom: 31px;
+	}
+	.open-account-block__btn-block
+	{
+		button
+		{
+			float: none;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	.open-account__tabs-list
+	{
+		display: none;
+		width: 100%;
+		margin: 0 auto;
+		text-align: left;
+		padding-top: 2px;
+		padding-bottom: 6px;
+		z-index: 9;
+	}
+	.open-account__tabs-list-item
+	{
+		width: 100%;
+		margin-right: 0;
+		&:after
+		{
+			display: none;
+		}
+	}
+	.open-account-desc
+	{
+		width: 82%;
+	}
+	.open-account-tabs-mobile-wrapper
+	{
+		padding-top: 17px;
+		background-color: white;
+		padding-bottom: 16px;
+	}
+	.open-account-tabs-block
+	{
+		background-color: white;
+	}
+	.open-account-tabs-block-mobile-menu
+	{
+		display:block;
+		font-family: $medium;
+		font-size: 14px;
+		letter-spacing: 1px;
+		color: #ec231a;
+		width: 242px;
+		margin: 0 auto;
+		text-transform: uppercase;
+		position: relative;
+		text-align: center;
+		&:after
+		{
+			content: "";
+			width: 0;
+			height: 0;
+			float: right;
+			position: absolute;
+			top: 4px;
+			right: -38px;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-top: 8px solid #4d4d4d;
+		}
+		&.active
+		{
+			&:after
+			{
+				transform: rotate(-180deg);
+			}
+		}
+	}
+	.index-registration
+	{
+		margin-bottom: 20px !important;
+		.registration-wrapper
+		{
+			display: block;
+			.index-container
+			{
+				font-size: 22px;
+				line-height: 30px;
+				text-align: center;
+				i
+				{
+					display: none;
+				}
+			}
+		}
+		.registration-form
+		{
+			padding-top: 0;
+			display: none;
+		}
+		.close__icon
+		{
+			display: block;
+			width: 20px;
+			height: 20px;
+			right: 10px;
+			top: -5px;
+			svg
+			{
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+	.special
+	{
+		.registration-form__title
+		{
+			font-size: 30px;
+			line-height: 36px;
+		}
+	}
+}
+@media (max-width: 420px)
+{
+
+	.open-account-block__input-item-full
+	{
+		margin-bottom: 9px;
+	}
+	.open-account-block__input-item-half
+	{
+		margin-bottom: 11px;
+	}
+	.open-account__btn-block-warning
+	{
+		margin-bottom: 19px;
+	}
+	.open-account-desc
+	{
+		width: 89%;
+	}
+	.open-account-desc-text
+	{
+		p
+		{
+			font-size: 16px;
+			padding-top: 3px;
+		}
+	}
+}

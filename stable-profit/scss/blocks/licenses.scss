@@ -1,0 +1,38 @@
+.licenses
+{
+	margin-bottom: 48px;
+	svg{margin-bottom: 16px;}
+}
+.licenses__list
+{
+	display: grid;
+	padding-bottom: 47px;
+	border-bottom: 1px solid #808080;
+	grid-template-columns: repeat(auto-fit, 229px);
+	grid-gap: 15px;
+	position: relative;
+}
+.licenses__text
+{
+	position: absolute;
+	top: 46%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 140%;
+	color: #808080;
+}
+.licenses__item
+{
+	height: 348px;
+	img
+	{
+		width: 100%;
+		height: 100%;
+	}
+}
+@media (max-width: 1024px)
+{
+	.licenses__list	{grid-template-columns: repeat(auto-fit, minmax(229px, 1fr));}
+}

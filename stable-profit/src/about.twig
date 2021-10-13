@@ -1,0 +1,17 @@
+{# index.twig #}
+{%
+	set titlePage = {
+	'titlePage': 'О компании',
+	'subTitle': 'УК Стабильный Доход',
+	'background': './img/about-header.jpeg',
+	},
+%}
+{% set small = 'small' %}
+
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	{% include "./blocks/management-company.twig" %}
+	{% include "./blocks/licenses.twig" %}
+	{% include "./blocks/news.twig" with {show:true} %}
+{% endblock %}

@@ -1,0 +1,226 @@
+.smartweb-login__form
+{
+	width: 495px;
+	height: 514px;
+	background-color: #ffffff;
+	border: solid 1px #d9d9d9;
+	margin: 0 auto;
+	.form-block__enter
+	{
+		width: auto;
+		padding-left: 38px;
+		padding-right: 38px;
+		display: block;
+		margin: 0 auto;
+		float: none;
+		margin-top: 10px;
+	}
+	.open-account__btn-block-warning
+	{
+		width: 90%;
+		margin: 0 auto;
+		float: none;
+		text-align: center;
+		margin-top: 30px;
+		a
+		{
+			border-bottom: 1px dashed #7db7b7;
+			text-align: center;
+		}
+	}
+	.open-account-label input
+	{
+		background-color: transparent;
+	}
+	.open-account-label
+	{
+
+		.error-warning
+		{
+			width: 340px;
+			height: 150px;
+			border: solid 2px #ec231a;
+			position: absolute;
+			right: -370px;
+			top: -42px;
+			background-color: #fff;
+			padding: 10px 20px;
+			visibility: hidden;
+			opacity: 0;
+			transform: translateX(20px);
+			transition: all .3s;
+			&.openned
+			{
+				visibility: visible;
+				opacity: 1;
+				transform: translateX(0px);
+			}
+			.mobile-menu__close
+			{
+				right: 10px;
+				top: 7px;
+			}
+			p
+			{
+				font-family: $regular;
+				font-size: 14px;
+				line-height: 18px;
+				b
+				{
+					font-family: $bold;
+					font-weight: normal;
+				}
+			}
+			&:before,
+			&:after
+			{
+				content: '';
+				border: 20px solid transparent;
+				border-right: 20px solid #ec231a;
+				position: absolute;
+				left: -20px;
+				width: 20px;
+				height: 20px;
+			}
+			&:before
+			{
+				top: 55px;
+				left: -40px;
+			}
+			&:after
+			{
+				border-right: 20px solid #fff;
+				top: 55px;
+				left: -37px;
+			}
+
+		}
+		.error-warning__title
+		{
+			font-family: $bold;
+			font-size: 15px;
+			line-height: 25px;
+			margin-bottom: 6px;
+		}
+		&.error
+		{
+			&:before
+			{
+				content: '';
+				width: 16px;
+				height: 16px;
+				background-image: url('../images/input-error.svg');
+				display: block;
+				position: absolute;
+				right: 8px;
+				top: 8px;
+			}
+			input
+			{
+				border-color: #ec231a;
+			}
+			.open-accont-block__input-label-title
+			{
+				color: #ec231a;
+			}
+		}
+	}
+}
+.smartweb-login__top
+{
+	width: 493px;
+	height: 106px;
+	background-image: linear-gradient(102deg, #fcfcfc, #f5f5f5);
+	border-bottom: solid 1px #d9d9d9;
+	position: relative;
+	img
+	{
+		width: 304px;
+		height: 53px;
+		display: block;
+		position: absolute;
+		left: -5px;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+	}
+}
+.smartweb-login__bot
+{
+	padding: 40px 97px;
+}
+@media (max-width: 1279px)
+{
+	.smartweb-login__form .open-account-label .error-warning
+	{
+		width: 330px;
+		right: -355px;
+	}
+}
+@media (max-width: 1023px)
+{
+	.smartweb-login
+	{
+		padding-bottom: 200px;
+	}
+	.smartweb-login__form .open-account-label .error-warning
+	{
+		top: 270px;
+		left: -98px;
+		width: 495px;
+		padding-top: 25px;
+		text-align: center;
+		transform: translateX(0);
+		transform: translateY(20px);
+		&.openned
+		{
+			transform: translateX(0);
+			transform: translateX(0px);
+		}
+		&:after,
+		&:before,
+		{
+			transform: rotate(90deg);
+			left: calc(50% - 20px);
+			top: -40px;
+		}
+		&:after
+		{
+			top: -37px;
+		}
+		.mobile-menu__close
+		{
+			right: 15px;
+			top: 6px;
+		}
+	}
+}
+@media (max-width: 767px)
+{
+
+	.smartweb-login__form
+	{
+		width: 375px;
+		border: none
+	}
+	.smartweb-login__bot
+	{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.smartweb-login__top
+	{
+		width: 100%;
+		background-image: none;
+		border: none;
+	}
+	.smartweb-login__form .open-account-label .error-warning
+	{
+		width: 375px;
+		border-right: none;
+		border-left: none;
+		border-bottom: none;
+		left: -20px;
+	}
+}

@@ -1,0 +1,35 @@
+.test-access-wrapper
+{
+	width: 640px;
+	form
+	{
+		margin-bottom: 80px;
+	}
+	.test-access-wrapper__title
+	{
+		margin-bottom: 30px;
+		margin-top: 0;
+	}
+}
+@media (max-width: 1023px)
+{
+	.test-access-wrapper
+	{
+		margin: 0 auto;
+	}
+}
+@media (max-width: 767px)
+{
+	.test-access-wrapper
+	{
+		width: 100%;
+		max-width: 640px;
+		padding-left: 20px;
+		padding-right: 20px;
+		.form-block__enter
+		{
+			width: 100%;
+			max-width: 335px;
+		}
+	}
+}

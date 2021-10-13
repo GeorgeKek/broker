@@ -1,0 +1,99 @@
+.deloitte
+{
+	font-family: $accent-font;
+	text-align: center;
+	max-width: 736px;
+	margin: 0 auto;
+}
+
+.deloitte__logo
+{
+	margin-bottom: 27px;
+}
+
+.deloitte__title
+{
+	font-size: 32px;
+	line-height: 1.45;
+	font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on, 'liga' off;
+	color: #575762;
+	margin-bottom: 20px;
+}
+
+.deloitte__descr
+{
+	font-size: 20px;
+	line-height: 1.6;
+	font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on;
+	color: #7C7C85;
+	margin-bottom: 84px;
+}
+.deloitte__get
+{
+	max-width: 535px;
+	margin: 0 auto;
+
+	.g-btn-stroke
+	{
+		margin: 0 auto;
+		margin-bottom: 24px;
+	}
+}
+.deloitte__get-note
+{
+	font-size: 20px;
+	line-height: 1.6;
+	text-align: center;
+	font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on;
+	color: #A1A0A8;
+}
+.deloitte__btn
+{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+}
+.deloitte__text
+{
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on;
+	color: #A1A0A8;
+}
+@media (max-width: 1199px)
+{
+	.deloitte
+	{
+		margin: 0 auto 60px;
+		&--alter
+		{
+			margin-bottom: 0;
+		}
+	}
+	.mobile-app__title
+	{
+		font-size: 46px;
+	}
+}
+
+@media (max-width: 767px)
+{
+	.deloitte
+	{
+		padding: 0 20px;
+	}
+
+	.deloitte__title
+	{
+		font-size: 22px;
+		margin-bottom: 20px;
+	}
+
+	.deloitte__descr
+	{
+		font-size: 15px;
+		line-height: 1.4;
+		margin-bottom: 78px;
+	}
+}

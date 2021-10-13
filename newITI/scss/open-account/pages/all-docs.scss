@@ -1,0 +1,39 @@
+.pdf-container
+{
+	margin-left: -3vw;
+	margin-right: -3vw;
+}
+.all-docs-nav
+{
+	padding-top: 15px;
+	padding-bottom: 25px;
+}
+.all-docs-nav__item
+{
+	font-size: 14px;
+	margin-bottom: 12px;
+	&:last-child
+	{
+		margin-bottom: 0;
+	}
+}
+.all-docs-nav__item-content
+{
+	border-bottom: 1px solid #333;
+	cursor: pointer;
+	padding-bottom: 2px;
+	transition: 0.2s;
+	line-height: 22px;
+	&:hover
+	{
+		border-color: lighten(#333, 50);
+	}
+}
+@media (max-width: 767px)
+{
+	.pdf-container
+	{
+		margin-left: -25px;
+		margin-right: -25px;
+	}
+}

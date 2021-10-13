@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>request call</title>
+	<meta name="viewport" content="width=device-width">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="HandheldFriendly" content="true"/>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport min-width=320px" content="min-width=320, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- <script async src="https://www.google-analytics.com/analytics_debug.js"></script> -->
+	<script>
+// (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+// (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+// m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+// })(window,document,'script','https://www.google-analytics.com/analytics_debug.js','ga');
+
+// ga('create', 'UA-90746493-1', 'auto');
+// ga('send', 'pageview');
+	  // gtag('config', 'UA-90746493-1');
+	</script>
+
+	<!-- Google Tag Manager -->
+	<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-PMS7GZP');</script> -->
+    <!-- End Google Tag Manager -->
+	<style>
+		/*.rqc-form-wr,
+		.rqc-form-wr *
+		{
+			box-sizing: border-box;
+			font-family: inherit;
+			font-size: inherit;
+			font-weight: inherit;
+			font-style: inherit;
+			text-transform: inherit;
+			text-decoration: inherit;
+			white-space: normal
+		}
+
+		.rqc-form-wr
+		{
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			z-index: 9999999999;
+			overflow-y: auto;
+			font-size: 14px;
+			-webkit-transition: .2s;
+			-o-transition: .2s;
+			transition: .2s;
+			display: none;
+			top: 0;
+			left: 0
+		}
+
+		.rqc-form-wr.rqc-form-wr_opened .rqc-form-overlay
+		{
+			visibility: visible;
+			opacity: 1
+		}
+
+		.rqc-form-wr.rqc-form-wr_opened .rqc-form-body
+		{
+			opacity: 1;
+			-webkit-transform: translateY(0);
+			-ms-transform: translateY(0);
+			-o-transform: translateY(0);
+			transform: translateY(0)
+		}
+
+		.rqc-form-overlay
+		{
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: rgba(0, 0, 0, .42);
+			z-index: -1;
+			visibility: hidden;
+			opacity: 0;
+			-webkit-transition: 0.3s;
+			-o-transition: 0.3s;
+			transition: 0.3s;
+		}
+
+		.rqc-form-body-wr
+		{
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			margin: auto;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: space-between;
+			-ms-align-items: center;
+			align-items: center;
+			overflow-y: auto;
+			padding-bottom: 20px;
+			padding-top: 20px
+		}
+
+		.rqc-form-body
+		{
+			margin-bottom: 20px;
+			max-width: 410px;
+			min-width: 370px;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 4px;
+			box-shadow: 0 12px 27.26px 1.74px rgba(0, 0, 0, .4);
+			overflow: hidden;
+			margin-top: auto;
+			margin-bottom: auto;
+			-webkit-transition: .3s;
+			-o-transition: .3s;
+			transition: .3s;
+			-webkit-transform: translateY(-20%);
+			-ms-transform: translateY(-20%);
+			-o-transform: translateY(-20%);
+			transform: translateY(-20%);
+			opacity: 0
+		}
+
+		.rqc-form-body_sended .rqc-form-message_success,
+		.rqc-form-body_error .rqc-form-message_error
+		{
+			-webkit-transform: translateY(-100%);
+			-ms-transform: translateY(-100%);
+			-o-transform: translateY(-100%);
+			transform: translateY(-100%);
+		}
+
+		.rqc-form-body-top
+		{
+			position: relative
+		}
+
+		.rqc-form__header
+		{
+			font-size: 18px;
+			font-weight: 700;
+			margin-bottom: 16px;
+			line-height: 1.2
+		}
+
+		.rqc-form-close
+		{
+			position: absolute;
+			width: 44px;
+			height: 44px;
+			top: -20px;
+			right: -20px;
+			padding-top: 24px;
+			padding-right: 24px;
+			cursor: pointer;
+			z-index: 22;
+		}
+
+		.rqc-form-close:hover .rqc-form-close__icon
+		{
+			-webkit-transform: rotate(90deg);
+			-ms-transform: rotate(90deg);
+			-o-transform: rotate(90deg);
+			transform: rotate(90deg)
+		}
+
+		.rqc-form-close__icon
+		{
+			-webkit-transition: .2s;
+			-o-transition: .2s;
+			transition: .2s;
+			-webkit-transform-origin: center center;
+			-moz-transform-origin: center center;
+			-ms-transform-origin: center center;
+			-o-transform-origin: center center;
+			transform-origin: center center;
+			background-color: red;
+			position: absolute;
+			top: 20px;
+			right: 20px
+		}
+
+		.rqc-form-close__icon:before,
+		.rqc-form-close__icon:after
+		{
+			position: absolute;
+			content: '';
+			width: 2px;
+			height: 14px;
+			background-color: #d8d8d8;
+			top: 0;
+			left: 0;
+			-webkit-transform-origin: center;
+			-moz-transform-origin: center;
+			-ms-transform-origin: center;
+			-o-transform-origin: center;
+			transform-origin: center;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto
+		}
+
+		.rqc-form-close__icon:before
+		{
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			transform: rotate(45deg)
+		}
+
+		.rqc-form-close__icon:after
+		{
+			-webkit-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
+			-o-transform: rotate(-45deg);
+			transform: rotate(-45deg)
+		}
+
+		.rqc-form-field
+		{
+			margin-bottom: 15px
+		}
+
+		.rqc-form-field__group
+		{
+			padding-top: 10px
+		}
+
+		.rqc-form-field__group-delimeter
+		{
+			color: rgba(0, 0, 0, 0.7);
+			font-size: 12px;
+			margin-bottom: 15px
+		}
+
+		.rqc-form-field__label
+		{
+			color: #333;
+			font-size: 14px;
+			line-height: 1.15;
+			display: block;
+			margin-bottom: 4px
+		}
+
+		.rqc-form-field__input
+		{
+			display: block;
+			height: 40px;
+			line-height: 40px;
+			width: 100%;
+			border: solid 1px #f0f0f0;
+			border-radius: 3px;
+			outline: 0 none!important;
+			background-color: #fff!important;
+			font-size: inherit!important;
+			padding: 0 8px!important;
+			color: #333!important
+		}
+
+		.rqc-form-field__input.error
+		{
+			border-color: #f04f48
+		}
+
+		.rqc-radio-wr
+		{
+			display: block;
+			cursor: pointer;
+			line-height: 1.2;
+			display: block;
+			position: relative;
+			min-height: 14px;
+			border-radius: 2px;
+			padding: 10px;
+			overflow: hidden;
+			background: #f5f5f5;
+			transition: background-color .2s ease-out!important;
+			margin-bottom: 4px;
+			border-radius: 2px
+		}
+
+		.rqc-radio-wr:hover
+		{
+			background-color: #e8e8e8
+		}
+
+		.rqc-radio
+		{
+			position: absolute;
+			visibility: hidden;
+			opacity: 0;
+			top: 0;
+			left: 0;
+			width: 1px;
+			height: 1px
+		}
+
+		.rqc-radio:checked~.rqc-radio-box:after
+		{
+			position: absolute;
+			content: '';
+			width: 8px;
+			height: 8px;
+			left: 3px;
+			top: 50%;
+			margin-top: -4px;
+			background-color: black;
+			border-radius: 100%
+		}
+
+		.rqc-radio-wr:last-child
+		{
+			margin-bottom: 0
+		}
+
+		.rqc-radio-box
+		{
+			padding-left: 23px;
+			position: relative
+		}
+
+		.rqc-radio-box:before
+		{
+			position: absolute;
+			content: '';
+			width: 14px;
+			height: 14px;
+			background-color: #fff;
+			border-radius: 100%;
+			left: 0;
+			top: 50%;
+			margin-top: -7px
+		}
+
+		.rqc-agreement
+		{
+			margin-top: 15px;
+			opacity: .5;
+			font-size: 12px;
+			line-height: 16px
+		}
+
+		.rqc-agreement a
+		{
+			color: inherit;
+			text-decoration: underline
+		}
+
+		.rqc-submit-wr
+		{
+			margin-top: 34px
+		}
+
+		.rqc-btn,
+		.rqc-btn:active,
+		.rqc-btn:hover
+		{
+			background: #f04f48;
+			color: #fff
+		}
+
+		.rqc-btn
+		{
+			width: 100%;
+			display: block;
+			font-size: 14px;
+			padding: 5px 26px;
+			text-align: center;
+			border-radius: 2px;
+			vertical-align: middle;
+			height: auto;
+			border: 0
+		}
+
+		.rqc-btn__text
+		{
+			font-size: 14px;
+			font-weight: 700;
+			vertical-align: middle;
+			line-height: 32px;
+			word-wrap: normal;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			display: inline-block;
+			max-width: 100%
+		}
+
+		.rqc-form-message
+		{
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #fff;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			-webkit-flex-direction: column;
+			-moz-flex-direction: column;
+			-ms-flex-direction: column;
+			-o-flex-direction: column;
+			flex-direction: column;
+			justify-content: center;
+			-ms-align-items: center;
+			align-items: center;
+			-webkit-transition: 0.25s;
+			-o-transition: 0.25s;
+			transition: 0.25s;
+		}*/
+	</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMS7GZP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+<!-- End Google Tag Manager (noscript) -->
+	<!-- <div class="rqc-form-body-wr _rqc-form-body-wr">
+		<div class="rqc-form-body _rqc-form-body">
+			<div class="rqc-form-body__form">
+				<div class="rqc-form-body-top">
+					<div class="rqc-form__header">#title#</div>
+					<div class="rqc-form-close" onclick="itiRqCall.hideForm()">
+						<div class="rqc-form-close__icon"></div>
+					</div>
+				</div>
+				<form action="#" class="rqc-form" novalidate="" onsubmit="itiRqCall.submitForm(this, event)">
+					#inputs#
+					<div class="rqc-enums-wr">
+						#enumsList#
+					</div>
+					<div class="rqc-agreement">#description#</div>
+					<div class="rqc-submit-wr">
+						<button class="rqc-btn" type="submit">
+							<span class="rqc-btn__text">#btnText#</span>
+						</button>
+					</div>
+				</form>
+			</div>
+			<div class="rqc-form-message rqc-form-message_success">
+				<div class="rqc-form__header">#success-message#</div>
+				<div class="rqc-form-message__text">#success-text#</div>
+			</div>
+			<div class="rqc-form-message rqc-form-message_error">
+				<div class="rqc-form__header">#success-message#</div>
+				<div class="rqc-form-message__header">#success-text#</div>
+			</div>
+		</div>
+	</div> -->
+	<div class="container flex-container">
+		<div class="accordeon-wrapper">
+            <button class="red-btn" data-gsc-widget="4962" style="top: 20px; position: sticky;">Открытие из любого места</button>
+            <br><br>
+			<button class="red-btn" data-gsc-widget="4963" style="top: 20px; position: sticky;">Открытие из любого места</button>
+		</div>
+		<div class="content-wrapper">
+			<style>
+				.red-btn
+				{
+					margin-bottom: 20px;
+					height: 50px;
+				}
+			</style>
+			<div class="sevices-content">
+				<div class="services-text">
+					<h2>Форма заказа звонка</h2>
+					<p>открыть при помощи</p>
+					<div class="">
+						<button class="red-btn" data-gsc-widget="4962">дата атрибута <span style="font-weight: 900;">data-gsc-widget</span></button>
+						<button class="red-btn" onclick="itiRqCall.showForm(4963)">метода <span style="font-weight: 900;">itiRqCall.showForm()</span></button>
+						<button class="red-btn" onclick="_gscq.push(['show', 4962]);">метода <span style="font-weight: 900;">_gscq.push(['show', 4962]);</span></button>
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam doloremque voluptates alias. Voluptate facere sint fuga nobis esse eos hic assumenda quasi magnam. Obcaecati corporis esse, delectus eaque facere. Maxime deleniti enim soluta, eum modi provident quidem tenetur fugit voluptas consequatur hic aut nostrum aperiam nulla doloribus architecto dolore tempora sunt tempore error deserunt repellat commodi, sint! Asperiores incidunt, autem minus error necessitatibus repellat. Non, placeat! Vel accusamus exercitationem maiores quia. Aperiam atque accusantium similique voluptate, voluptas aliquid tempora reprehenderit placeat voluptatibus labore sed temporibus sapiente consequuntur possimus. Voluptatum itaque doloremque facilis, maiores quas accusantium unde cum velit dolorem ipsa, dolor dolores laborum sed voluptas eos officiis accusamus assumenda! Temporibus qui magnam dignissimos laudantium eos est dolorem, suscipit ut, iusto maxime doloremque quas. Vel illum perspiciatis maiores aliquam perferendis tenetur enim adipisci error rem sunt, obcaecati cumque deleniti, repellat molestias! Minus qui voluptates incidunt laboriosam facilis voluptatem molestias, inventore voluptatum? Minima, alias, earum? Dolorem, nisi vero officiis nobis eius voluptatibus earum adipisci eveniet, fugit mollitia excepturi maiores! Accusantium quas recusandae ducimus vitae non, voluptatibus consequatur, iste laborum suscipit dolore odio vero. Tempora eum aliquid, ea tempore, voluptate cum. Debitis cum laboriosam, esse praesentium amet dicta dolorem nesciunt, vel placeat porro. Unde consequatur, accusamus nemo similique beatae dolorum quod dolorem possimus nulla labore modi facere deserunt totam aut aliquid obcaecati tenetur eligendi! Ab autem nesciunt, laboriosam beatae! Officia illum autem molestias, voluptatibus, officiis porro doloribus distinctio error sint, cumque enim obcaecati at aliquam tenetur cum laboriosam non! Veniam, corporis, illum. Iste minima vero necessitatibus, quas enim odio ex hic unde incidunt dolorem, explicabo quam ad perferendis quo tempore. Temporibus soluta porro architecto sequi amet aliquid ipsam quam odit suscipit saepe ex cum ad inventore autem, qui eaque distinctio, sint nobis aperiam sed molestias! Aut consequatur minus voluptatibus nobis. Quaerat illum ratione quo, eum perspiciatis eligendi corrupti temporibus repellendus cum modi aliquam nihil nam tempore iste voluptate nesciunt inventore minus adipisci qui fugiat dolores officia quas ut! Minima vel labore, iure ipsa quo non maxime laudantium nam ullam temporibus veritatis expedita, excepturi quam ut atque fugiat. Ullam vitae, molestiae, labore veritatis aperiam tempora natus error nihil, velit quisquam incidunt maiores voluptatem sequi dignissimos vero eius ut a esse. Quos odit sint odio quo vitae voluptas rem pariatur, eaque placeat vero, quidem quibusdam modi ducimus ad, nostrum doloremque repudiandae. Voluptas accusantium nostrum minima eius hic rerum, recusandae similique quasi! Fugit ea qui esse voluptatum laborum, id, ab nobis. Rem inventore deleniti quo nisi modi tenetur aspernatur iusto laboriosam perferendis doloremque asperiores quas dolorum officiis explicabo at, dolores accusamus dignissimos. Consequatur perferendis doloremque asperiores, sunt aliquid dignissimos earum porro eligendi, officiis accusantium iste esse et non odio eos sed suscipit cumque modi laboriosam nostrum autem! Ipsa dicta perspiciatis cumque quos suscipit consequuntur sapiente provident, impedit repellendus ut commodi natus modi quis placeat. Cumque dignissimos dolores laboriosam eum repellendus explicabo, nulla saepe, necessitatibus quis quod, ipsam voluptatem autem quasi. Facilis hic voluptates ipsa incidunt aliquid molestias vel iste minus dolorem minima non, reiciendis! Praesentium assumenda maxime iusto animi quaerat voluptates delectus deserunt! Veritatis eaque atque, sequi, cum delectus hic obcaecati sit quod ipsum magni ab ea! Dignissimos unde hic similique officia ipsam nulla libero adipisci mollitia porro suscipit voluptatum voluptates, modi sed ab aspernatur corporis. Nemo obcaecati vel minima earum rem optio sit reiciendis, incidunt tempore omnis dolorum non libero nobis, perferendis, dolores velit repellat facilis deserunt? Sit error harum consequuntur rerum totam quia excepturi placeat quae. Voluptatem cupiditate natus quidem, repellat illum pariatur cumque doloribus placeat adipisci quia, ex voluptatibus cum saepe! Doloribus distinctio suscipit enim dicta sed, blanditiis quo libero eius aut quibusdam iure sequi eligendi voluptates vero atque nesciunt dolores doloremque aperiam cumque quod impedit. Dolorem fugit quae est perspiciatis nihil deserunt tenetur veritatis, aspernatur dignissimos nobis repellendus molestiae quis quaerat optio delectus, facere! Repudiandae, laudantium, ipsum? Modi labore, facere cupiditate inventore maxime totam magni adipisci aspernatur. Officiis incidunt soluta cum quae dolor a omnis iure vitae iste ipsam doloremque veritatis rerum cupiditate, dignissimos officia, placeat suscipit tempore expedita nihil quas ad, cumque eos repellat quis quisquam. Quidem ipsum, illo quo fugiat recusandae quae inventore voluptate aliquid totam odit hic minima nam beatae. Sunt obcaecati ducimus, odit voluptas doloremque debitis ab soluta amet veniam eius vel numquam molestiae atque, quisquam officiis labore accusantium accusamus voluptate mollitia eligendi ad neque nesciunt eaque. Maxime dolore nesciunt voluptate rerum vel repellat. Ut sequi, fugit officiis, mollitia beatae soluta repudiandae, sint voluptates maxime, assumenda voluptatum accusamus iure nesciunt quas saepe nulla at necessitatibus. Vero iusto illo sed ratione, deleniti debitis, quis, consequuntur quidem ex ipsum commodi. Nemo recusandae saepe dolor inventore ratione consequatur, corporis officia necessitatibus perferendis. Magni maiores quas excepturi ipsam quod, doloremque cupiditate sunt necessitatibus rerum! Adipisci animi optio vero temporibus maxime libero modi vitae blanditiis iusto sit quia ad, porro sint tempora, natus ab fuga perferendis in sunt a cum labore necessitatibus eveniet repellendus? Recusandae, rerum. Ratione suscipit, sequi, corrupti soluta dignissimos rerum. Molestiae maxime dolorem numquam, aliquid a, ipsum quas dolorum mollitia distinctio eius, voluptate repellendus omnis perspiciatis at consequuntur sit quod ducimus corporis sapiente deleniti accusamus vero earum alias libero iste. Necessitatibus at eveniet earum a ea iste dolorum hic. Dolor nisi ducimus temporibus! Laborum praesentium officiis voluptate asperiores aperiam tenetur quia facere atque, maiores perferendis eveniet recusandae, error, tempora ab architecto vero laboriosam assumenda sunt reprehenderit! Itaque sequi deleniti nam excepturi nesciunt quis aliquam nisi expedita, minima, quaerat iusto, adipisci accusamus consectetur, explicabo at animi repudiandae accusantium! Eum perferendis maxime itaque possimus minus nisi, eius amet ipsam iusto ducimus dolores excepturi minima, voluptates ex ratione inventore officia, sit similique quam. Ipsam, ducimus porro est maiores quisquam eius nesciunt doloribus aspernatur molestias, mollitia fugiat vitae accusamus praesentium illum ullam nobis, quod magnam nostrum quis deleniti? Laboriosam expedita, veritatis nobis, reiciendis asperiores aut veniam illo rem facere repellat tempore, harum fugiat dolores quaerat consectetur saepe. Culpa blanditiis laboriosam sit enim eaque dignissimos dicta voluptatibus, expedita dolorum modi, architecto libero, possimus, ad nostrum cum dolor praesentium. Vero, suscipit eaque, sapiente fuga in excepturi.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/vendors/body-scroll-lock.min.js" async=""></script>
+	<script src="js/vendors/vanilla-masker.min.js" async=""></script>
+	<script src="js/request-call.js" async=""></script>
+	<!-- <script src="js/request-call.min.js" async=""></script> -->
+
+</body>
+</html>

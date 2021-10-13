@@ -1,0 +1,402 @@
+.index-container
+{
+	width: 1410px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+}
+.index-banner
+{
+	height: 300px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('../images/index-banner-bg.jpg');
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	margin-bottom: 137px;
+	&:before
+	{
+		content: '';
+		bottom: -60px;
+		height: 268px;
+		background-color: #4a4a4a;
+		width: 50%;
+		position: absolute;
+		right: 0;
+	}
+}
+.index-banner__advantages
+{
+	height: 268px;
+	background-color: #4a4a4a;
+	position: relative;
+	bottom: -60px;
+	padding-top: 45px;
+	padding-bottom: 32px;
+	display: flex;
+	position: relative;
+	&:before
+	{
+		content: '';
+		top: 0;
+		height: 100%;
+		background-color: #4a4a4a;
+		width: 70px;
+		position: absolute;
+		left: -70px;
+	}
+}
+.index-banner__advantage
+{
+	margin-right: 160px;
+	color: #fff;
+	transition: all 1s;
+	opacity: 0;
+	&:nth-child(1){transition-delay: .1s}
+	&:nth-child(2){transition-delay: .3s}
+	&:nth-child(3){transition-delay: .6s}
+	&.showA
+	{
+		opacity: 1;
+	}
+}
+.index-banner__advantage-title
+{
+	font-size: 35px;
+	line-height: 55px;
+	margin-bottom: 25px;
+	font-family: $air;
+	font-feature-settings: "ss01" 0;
+}
+.index-banner__advantage-text
+{
+	font-family: $regular;
+	font-size: 18px;
+	line-height: 26px;
+}
+.index-registration
+{
+	margin-bottom: 86px;
+	.registration-wrapper
+	{
+		font-size: 35px;
+		text-transform: none;
+		font-family: $air;
+		font-feature-settings: "ss01" 0;
+		line-height: 26px;
+		i
+		{
+			transform: rotate(0);
+			border: none;
+			width: 21px;
+			height: 21px;
+			background-image: url('../images/registration-arrow.svg');
+			margin-top: 6px;
+			margin-left: 23px;
+		}
+	}
+}
+.index-registration .registration-wrapper
+{
+	padding-top: 26px;
+}
+.itinvest-history-block
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #F2F2F2;
+	border: 1px solid #D8D8D8;
+	min-height: 174px;
+	padding-right: 48px;
+	margin-bottom: 65px;
+}
+.itinvest-history-block__left
+{
+	padding-left: 10%;
+	padding-right: 10%;
+	text-align: center;
+}
+.itinvest-history-logo
+{
+	line-height: 0;
+	padding-bottom: 20px;
+}
+.itinvest-history-time
+{
+	font-size: 18px;
+	color: #A8A8A8;
+}
+.itinvest-history-block__right
+{
+	font-size: 18px;
+	line-height: 26px;
+	flex: 1;
+}
+.special
+{
+	filter: grayscale(1);
+	.index-banner__advantage-title
+	{
+		font-size: 50px;
+	}
+	.index-banner__advantage-text
+	{
+		font-size: 20px;
+	}
+	.itinvest-history-block__right
+	{
+		font-size: 30px;
+		line-height: 38px;
+	}
+	.itinvest-history-time
+	{
+		font-size: 30px;
+		color: #333;
+	}
+}
+@media (max-width: 1439px)
+{
+	.index-container
+	{
+		width: 1225px;
+	}
+	.index-banner__advantages
+	{
+		padding-left: 50px;
+		display: flex;
+		justify-content: space-between;
+	}
+	.index-banner__advantage
+	{
+		margin-right: 80px;
+		min-width: 0px;
+		padding-right: 50px;
+		margin-right: 0;
+		&:last-child
+		{
+			margin-right: 0;
+		}
+	}
+	.index-banner__advantages:before
+	{
+		display: none;
+	}
+	.index-registration .registration-wrapper
+	{
+		height: 119px;
+		padding-top: 45px;
+		&.opened
+		{
+			height: 3px !important;
+			padding: 0 !important;
+		}
+	}
+	.index-bottom-banner .index-container
+	{
+		width: 100%;
+		padding-right: 0;
+	}
+	.index-bottom-banner__wrapper
+	{
+		width: calc(100% - 129px);
+	}
+	.itinvest-history-block__left
+	{
+		padding-left: 7%;
+		padding-right: 7%;
+	}
+	.special
+	{
+		.index-banner__advantage-title
+		{
+			font-size: 44px;
+		}
+	}
+}
+@media (max-width: 1279px)
+{
+	.index-container
+	{
+		width: 1024px;
+		padding-left: 43px;
+		padding-right: 43px;
+	}
+	.index-banner
+	{
+		height: 572px;
+		padding-top: 134px;
+		align-items: flex-start;
+		margin-bottom: 177px;
+	}
+	.index-banner__advantages
+	{
+		flex-wrap: wrap;
+		height: auto;
+	}
+	.index-banner:before
+	{
+		display: none;
+	}
+	.index-banner__advantages
+	{
+		padding: 0;
+		margin: 0 auto;
+	}
+	.index-banner__advantage
+	{
+		width: 100%;
+		padding: 20px 40px;
+		padding-bottom: 37px;
+		border-bottom: 1px solid #656565;
+	}
+	.index-banner__advantage-title
+	{
+		margin-bottom: 10px;
+	}
+	.index-banner__advantage-text
+	{
+		width: 575px;
+		br
+		{
+			display: none;
+		}
+	}
+	.itinvest-history-block
+	{
+		padding-right: 40px;
+		min-height: 179px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.itinvest-history-block__left
+	{
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	.special
+	{
+		.index-banner__advantage-title
+		{
+			font-size: 30px;
+		}
+	}
+}
+@media (max-width: 1023px)
+{
+	.index-banner
+	{
+		background-image: url('../images/h-2-a-5924-small.jpg');
+	}
+	.index-container
+	{
+		width: 747px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.index-news__banner-text
+	{
+		height: 116px;
+		position: absolute;
+	}
+	.index-registration .registration-wrapper
+	{
+		.index-container
+		{
+			position: relative;
+		}
+		height: 80px;
+		padding-top: 25px;
+		text-align: left;
+		i
+		{
+			position: absolute;
+			right: 0;
+		}
+	}
+}
+@media (max-width: 767px)
+{
+	.index-registration .registration-wrapper .index-container
+	{
+		span
+		{
+			display: none;
+		}
+	}
+	.index-container
+	{
+		width: 100%;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.index-banner
+	{
+		height: 532px;
+		width: calc(100% - 20px);
+		-ms-align-self: flex-end;
+		margin-left: 20px;
+		padding-top: 30px;
+		margin-bottom: 120px;
+	}
+	.index-banner__advantages
+	{
+		position: relative;
+		left: -40px;
+		width: calc(100% + 40px);
+		max-width: 470px;
+		margin: 0;
+		bottom: -40px;
+	}
+	.index-banner__advantage
+	{
+		padding: 24px 45px 34px 20px;
+	}
+	.index-banner__advantage-title
+	{
+		font-size: 22px;
+		line-height: 30px;
+		margin-bottom: 14px;
+	}
+	.index-banner__advantage-text
+	{
+		width: 100%;
+		font-size: 16px;
+		line-height: 25px;
+	}
+	.itinvest-history-block
+	{
+		flex-direction: column;
+		padding: 0;
+		margin-bottom: 55px;
+	}
+	.itinvest-history-block__left
+	{
+		padding: 0;
+		padding-top: 35px;
+	}
+	.itinvest-history-block__right
+	{
+		padding-top: 35px;
+		padding-bottom: 45px;
+		padding-left: 20px;
+		padding-right: 13px;
+	}
+	.special
+	{
+		.index-banner__advantage-title
+		{
+			font-size: 36px;
+		}
+		.index-banner
+		{
+			margin-bottom: 200px;
+		}
+		.itinvest-history-block__right
+		{
+			font-size: 22px;
+			line-height: 30px;
+		}
+	}
+}

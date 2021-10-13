@@ -1,0 +1,14 @@
+{# index.twig #}
+{%
+	set titlePage = {
+	'titlePage': 'УК Стабильный Доход',
+	'background': './img/article-header.jpeg',
+	},
+%}
+
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	{% include "./blocks/breadcrumbs.twig" %}
+	{% include "./blocks/editor.twig" %}
+{% endblock %}

@@ -1,0 +1,620 @@
+<div class="payment-wrapper">
+	<div class="payment__nav payment__nav_desctop">
+		<div class="payment__nav__items">
+			<div class="payment__nav__item active" data-tab-id="0" onclick="o2.payment.tabs.openTab(this, event, '.payment__nav__item', '.payment__nav-content-item');">
+				<div class="payment__nav__item-img">
+					@@include('./svg/payment1.html')
+				</div>
+				<div class="payment__nav__item-text">Переводом</div>
+			</div>
+			<div class="payment__nav__item" data-tab-id="1" onclick="o2.payment.tabs.openTab(this, event, '.payment__nav__item', '.payment__nav-content-item');">
+				<div class="payment__nav__item-img">
+					@@include('./svg/payment2.html')
+				</div>
+				<div class="payment__nav__item-text">Через платежный <br>терминал QIWI</div>
+			</div>
+			<div class="payment__nav__item" data-tab-id="2" onclick="o2.payment.tabs.openTab(this, event, '.payment__nav__item', '.payment__nav-content-item');">
+				<div class="payment__nav__item-img">
+					@@include('./svg/payment3.html')
+				</div>
+				<div class="payment__nav__item-text">Нерезидентам</div>
+			</div>
+		</div>
+		<div class="border-bottom"></div>
+	</div>
+	<div class="payment__nav-content">
+		<div class="payment__nav-content-item first-tab" style="display: block;" data-tab-id="0">
+			<div class="payment__nav__item  payment__nav__item_mobile accordeonOpened" data-tab-id="0" onclick="o2.payment.accordeon.showItem(this, '.first-accordeon-wrapper')">
+				<div class="payment__nav__item-img">
+					@@include('./svg/payment1.html')
+				</div>
+				<div class="payment__nav__item-text">Переводом</div>
+			</div>
+			<div class="first-accordeon-wrapper mobileLastVisible">
+				<div class="payment__nav payment__select-group">
+					<button class="payment__first-select first-nav active innerNav" data-tab-id="0" onclick="o2.payment.tabs.openTab(this, event, '.first-nav', '.first'); o2.payment.removeBorder(this);">Рубли</button>
+					<button class="payment__first-select first-nav innerNav" data-tab-id="1" onclick="o2.payment.tabs.openTab(this, event, '.first-nav', '.first');">Валюта</button>
+					<button class="payment__first-select first-nav innerNav stocks-mobile" data-tab-id="2" onclick="o2.payment.tabs.openTab(this, event, '.first-nav', '.first'); o2.payment.removeBorder(this);">Ценные бумаги</button>
+					<div class="border-bottom" style="display: none;"></div>
+				</div>
+				<div class="first innerTab" data-tab-id="0" style="display: block">
+					<div class="payment__last-wrapper">
+						<div class="firstFirst innerTab" data-tab-id="0" style="display: block">
+							<div class=" payment-bank-list">
+								<div class="payment-bank _custom-tab-nav" data-tab-id="1" onclick="o2.payment.tabs.openTab(this, event, '.firstFirst-nav', '.firstFirst');">
+									<div class="payment-bank__top">
+										<div class="payment-bank__icon">
+											<img src="images/svg/payment-bank-logo-1.svg" alt="">
+										</div>
+										<div class="payment-bank__name">Райффайзенбанк</div>
+									</div>
+									<div class="payment-bank-info">
+										<div class="payment-bank__descr">
+											По&nbsp;рабочим дням зачисление день в&nbsp;день
+										</div>
+									</div>
+								</div>
+								<div class="payment-bank _custom-tab-nav" data-tab-id="2" onclick="o2.payment.tabs.openTab(this, event, '.firstFirst-nav', '.firstFirst');">
+									<div class="payment-bank__top">
+										<div class="payment-bank__icon">
+											<img src="images/svg/payment-bank-logo-2.svg" alt="">
+										</div>
+										<div class="payment-bank__name">НРД</div>
+									</div>
+									<div class="payment-bank-info">
+										<div class="payment-bank__descr">
+											По&nbsp;рабочим дням зачисление день&nbsp;в&nbsp;день
+										</div>
+									</div>
+								</div>
+								<div class="payment-bank _custom-tab-nav" data-tab-id="3" onclick="o2.payment.tabs.openTab(this, event, '.firstFirst-nav', '.firstFirst');">
+									<div class="payment-bank__top">
+										<div class="payment-bank__icon">
+											<img src="images/svg/payment-bank-logo-3.svg" alt="">
+										</div>
+										<div class="payment-bank__name">Сбербанк</div>
+									</div>
+									<div class="payment-bank-info">
+										<div class="payment-bank__descr">
+											Обычно перевод поступает на&nbsp;следующий рабочий день
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="firstFirst firstFirst_bank-tab innerTab asdf" data-tab-id="1" style="display: none">
+							<div class="payment__content-item payment__content-item_bank">
+								<div class="payment__last-title">
+									<div class="payment__last-title-logo">
+										<img src="images/svg/payment-bank-logo-1.svg" alt="">
+									</div>
+									<div class="payment__last-title-text">
+										Райффайзенбанк <a href="javascript:void(0)" class="payment-bank-nav _custom-tab-nav" data-tab-id="0" onclick="o2.payment.tabs.openTab(this, event, '.firstFirst-nav', '.firstFirst');"><span>·</span>В другой банк</a>
+									</div>
+								</div>
+								<div class="payment__descr">
+									По&nbsp;рабочим дням зачисление день&nbsp;в&nbsp;день. <br>
+									Пополнение брокерского счёта рублями для резидентов РФ&nbsp;&mdash; бесплатно.
+									<br>
+									Возможны комиссии Вашего банка.
+								</div>
+								<div class="payment-requisites">
+									<div class="payment-requisites__item">
+										<div class="payment-requisites__item-left">Реквизиты</div>
+										<div class="payment-requisites__item-right">
+											P/c 40701810800000000226 в АО «РАЙФФАЙЗЕНБАНК» г.Москва<br>
+											к/c 30101810200000000700<br>
+											БИК 044525700<br>
+											ИНН 7744000302<br>
+											КПП 775001001<br>
+											<br>
+											Получатель:<br>
+											АО «ИК «Ай Ти Инвест»<br>
+											ИНН 7717116241<br>
+											КПП 770301001
+										</div>
+									</div>
+									<div class="payment-requisites__item">
+										<div class="payment-requisites__item-left">Назначение платежа</div>
+										<div class="payment-requisites__item-right">Перевод средств для участия в торгах по договору на брокерское обслуживание №ВР**** от __.__.__ г. НДС не облагается.</div>
+									</div>
+									<div class="payment-requisites__item">
+										<div class="payment-requisites__item-left"></div>
+										<div class="payment-requisites__item-right small"><b>Внимание!</b>  В соответствии с изменениями от 28.11.2007, внесенными в Федеральный закон от 7 августа 2001 г. N 115-ФЗ "О противодействии легализации (отмыванию) доходов, полученных преступным путем, и финансированию терроризма" с 15 января 2008 года при безналичном перечислении денег на счет Брокера без открытия банковского счета в платежном поручении необходимо указывать ИНН плательщика, а при отсутствии ИНН необходимо указывать либо адрес (место жительства или регистрации), либо дату и место рождения. <br><br>В соответствии с Регламентом Брокерского обслуживания Брокер не принимает денежные переводы в вашу пользу, осуществленные со счетов третьих лиц.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="firstFirst firstFirst_bank-tab innerTab" data-tab-id="2" style="display: none">
+							<!-- <button class="payment__first-select payment__last-select" onclick="o2.payment.accordeon.showItem(this, '.payment__content-item payment__content-item_bank')">НКО АО НРД</button> -->
+							<div class="payment__content-item payment__content-item_bank">
+								<div class="payment__last-title">
+									<div class="payment__last-title-logo">
+										<img src="images/svg/payment-bank-logo-2.svg" alt="">
+									</div>
+									<div class="payment__last-title-text">
+										НКО АО НРД
+										<a href="javascript:void(0)" class="payment-bank-nav _custom-tab-nav" data-tab-id="0" onclick="o2.payment.tabs.openTab(this, event, '.firstFirst-nav', '.firstFirst');"><span>·</span>В другой банк</a>
+									</div>
+								</div>
+								<div class="payment__descr">
+									По&nbsp;рабочим дням зачисление день в&nbsp;день. <br>
+									Пополнение брокерского счёта рублями для резидентов РФ&nbsp;&mdash; бесплатно.
+									<br>
+									Возможны комиссии Вашего банка.
+								</div>
+								<div class="payment-requisites">
+									<div class="payment-requisites__item">
+										<div class="payment-requisites__item-left">Реквизиты</div>
+										<div class="payment-requisites__item-right">
+											P/c 30411810000007000645 в Банк получателя: НКО АО НРД г.Москва<br>
+											к/с 30105810345250000505<br>
+											БИК 044525505<br>
+											ИНН 7702165310<br>
+											КПП 775001001<br>
+											<br>
+											Получатель:<br>
+											АО «ИК «Ай Ти Инвест»<br>
+											ИНН 7717116241<br>
+											КПП 770301001
+										</div>
+									</div>
+									<div class="payment-requisites__item">
+										<div class="payment-requisites__item-left">Назначение платежа</div>
+										<div class="payment-requisites__item-right">Перевод средств для участия в торгах по договору на брокерское обслуживание №ВР**** от __.__.__ г. НДС не облагается.</div>
+									</div>
+									<div class="payment-requisites__item">
+										<div class="payment-requisites__item-left"></div>
+										<div class="payment-requisites__item-right small"><b>Внимание!</b>  В соответствии с изменениями от 28.11.2007, внесенными в Федеральный закон от 7 августа 2001 г. N 115-ФЗ "О противодействии легализации (отмыванию) доходов, полученных преступным путем, и финансированию терроризма" с 15 января 2008 года при безналичном перечислении денег на счет Брокера без открытия банковского счета в платежном поручении необходимо указывать ИНН плательщика, а при отсутствии ИНН необходимо указывать либо адрес (место жительства или регистрации), либо дату и место рождения. <br><br>В соответствии с Регламентом Брокерского обслуживания Брокер не принимает денежные переводы в вашу пользу, осуществленные со счетов третьих лиц.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="firstFirst firstFirst_bank-tab innerTab" data-tab-id="3" style="display: none">
+							<!-- <button class="payment__first-select payment__last-select accordeonOpened" onclick="o2.payment.accordeon.showItem(this, '.payment__content-item payment__content-item_bank')">Сбербанк</button> -->
+							<div class="payment__content-item payment__content-item_bank">
+								<div class="payment__last-title">
+									<div class="payment__last-title-logo">
+										<img src="images/svg/sber.svg" alt="">
+									</div>
+									<div class="payment__last-title-text">
+										Сбербанк
+										<a href="javascript:void(0)" class="payment-bank-nav _custom-tab-nav" data-tab-id="0" onclick="o2.payment.tabs.openTab(this, event, '.firstFirst-nav', '.firstFirst');"><span>·</span>В другой банк</a>
+									</div>
+								</div>
+								<div class="payment__descr">
+									Обычно перевод поступает на&nbsp;следующий рабочий день. <br>
+									Пополнение брокерского счёта рублями для резидентов РФ&nbsp;&mdash; бесплатно.
+									<br>
+									Возможны комиссии Вашего банка.
+								</div>
+								<div class="payment-requisites">
+									<div class="payment-requisites__item">
+										<div class="payment-requisites__item-left">Реквизиты</div>
+										<div class="payment-requisites__item-right">
+											P/с 40701810538000001951 в ПАО Сбербанк г.Москва<br>
+											к/c 30101810400000000225<br>
+											БИК 044525225<br>
+											ИНН 7707083893<br>
+											КПП 775003035<br>
+											<br>
+											Получатель:<br>
+											АО «ИК «Ай Ти Инвест»<br>
+											ИНН 7717116241<br>
+											КПП 770301001
+										</div>
+									</div>
+									<div class="payment-requisites__item">
+										<div class="payment-requisites__item-left">Назначение платежа</div>
+										<div class="payment-requisites__item-right">Перевод средств для участия в торгах по договору на брокерское обслуживание №ВР**** от __.__.__ г. НДС не облагается.</div>
+									</div>
+									<div class="payment-requisites__item">
+										<div class="payment-requisites__item-left"></div>
+										<div class="payment-requisites__item-right small"><b>Внимание!</b>  В соответствии с изменениями от 28.11.2007, внесенными в Федеральный закон от 7 августа 2001 г. N 115-ФЗ "О противодействии легализации (отмыванию) доходов, полученных преступным путем, и финансированию терроризма" с 15 января 2008 года при безналичном перечислении денег на счет Брокера без открытия банковского счета в платежном поручении необходимо указывать ИНН плательщика, а при отсутствии ИНН необходимо указывать либо адрес (место жительства или регистрации), либо дату и место рождения. <br><br>В соответствии с Регламентом Брокерского обслуживания Брокер не принимает денежные переводы в вашу пользу, осуществленные со счетов третьих лиц.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="first innerTab" data-tab-id="1" style="display: none">
+					<div class="payment__nav payment__select-group payment__nav_desctop">
+						<button class="payment__first-select firstSecond-nav active innerNav" data-tab-id="0" onclick="o2.payment.tabs.openTab(this, event, '.firstSecond-nav', '.firstSecond');">Евро</button>
+						<button class="payment__first-select firstSecond-nav innerNav" data-tab-id="1" onclick="o2.payment.tabs.openTab(this, event, '.firstSecond-nav', '.firstSecond');">Доллар</button>
+					</div>
+					<div class="payment__last-wrapper">
+						<div class="firstSecond innerTab" data-tab-id="0" style="display: block">
+							<button class="payment__first-select payment__last-select accordeonOpened" data-tab-id="0" onclick="o2.payment.accordeon.showItem(this, '.payment__content-item')">Евро</button>
+							<div class="payment__content-item mobileLastVisible">
+								<div class="payment__last-title">
+									<div class="payment__last-title-logo">
+										<img src="images/svg/payment-bank-logo-1.svg" alt="">
+									</div>
+									<div class="payment__last-title-text">Райффайзенбанк (Евро)</div>
+								</div>
+								<div class="payment-requisites">
+									<div class="payment-requisites__item">
+										<div class="payment-requisites__item-left">Реквизиты</div>
+										<div class="payment-requisites__item-right">
+											Raiffeisenbank AO<br>
+											Legal Address: 17 bld 1, Troitskaya str., Moscow<br>
+											SWIFT: RZBMRUMM<br>
+											Beneficiar Acc. No: Acc. 40701.978.9. 00000000068<br>
+											Correspondent account: 001-55.025.928<br>
+											Correspondent Bank: Raiffeisen Bank International AG, Am Stadtpark 9,<br>
+											A-1030 Vienna, Austria.<br>
+											SWIFT: RZBAATWW<br>
+											<br>
+											Получатель:<br>
+											JSC Investment Company ITInvest<br>
+											123317, Moscow, Presnenskaya embankment, 8, building 1, room 12/<br>
+											RU/MOSCOW
+										</div>
+									</div>
+									<div class="payment-requisites__item">
+										<div class="payment-requisites__item-left">Назначение платежа</div>
+										<div class="payment-requisites__item-right">Transfer of funds according to the agreement brokerage services BP----- dd --.--.----. Not subject to VAT.</div>
+									</div>
+									<div class="payment-requisites__item">
+										<div class="payment-requisites__item-left"></div>
+										<div class="payment-requisites__item-right small"><b>Внимание!</b>  В соответствии с изменениями от 28.11.2007, внесенными в Федеральный закон от 7 августа 2001 г. N 115-ФЗ "О противодействии легализации (отмыванию) доходов, полученных преступным путем, и финансированию терроризма" с 15 января 2008 года при безналичном перечислении денег на счет Брокера без открытия банковского счета в платежном поручении необходимо указывать ИНН плательщика, а при отсутствии ИНН необходимо указывать либо адрес (место жительства или регистрации), либо дату и место рождения. <br><br>В соответствии с Регламентом Брокерского обслуживания Брокер не принимает денежные переводы в вашу пользу, осуществленные со счетов третьих лиц.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="firstSecond innerTab" data-tab-id="1" style="display: none">
+							<button class="payment__first-select payment__last-select" data-tab-id="0" onclick="o2.payment.accordeon.showItem(this, '.payment__content-item')">Доллар</button>
+							<div class="payment__content-item">
+								<div class="payment__last-title">
+									<div class="payment__last-title-logo">
+										<img src="images/svg/payment-bank-logo-1.svg" alt="">
+									</div>
+									<div class="payment__last-title-text">Райффайзенбанк (Доллар)</div>
+								</div>
+								<div class="payment-requisites">
+									<div class="payment-requisites__item">
+										<div class="payment-requisites__item-left">Реквизиты</div>
+										<div class="payment-requisites__item-right">
+											Raiffeisenbank AO<br>
+											Legal Address: 17 bld 1, Troitskaya str., Moscow<br>
+											SWIFT: RZBMRUMM<br>
+											Beneficiar Acc. No: Acc. 40701.840.0. 00003401812<br>
+											Correspondent account: 36343873<br>
+											Correspondent Bank: Citibank NA<br>
+											111 Wall Street, New York, NY 10043, USA<br>
+											SWIFT: CITI US 33<br>
+											<br>
+											Получатель:<br>
+											JSC Investment Company ITInvest<br>
+											123317, Moscow, Presnenskaya embankment, 8, building 1, room 12/<br>
+											RU/MOSCOW
+										</div>
+									</div>
+									<div class="payment-requisites__item">
+										<div class="payment-requisites__item-left">Назначение платежа</div>
+										<div class="payment-requisites__item-right">Transfer of funds according to the agreement brokerage services BP----- dd --.--.----. Not subject to VAT..</div>
+									</div>
+									<div class="payment-requisites__item">
+										<div class="payment-requisites__item-left"></div>
+										<div class="payment-requisites__item-right small"><b>Внимание!</b>  В соответствии с изменениями от 28.11.2007, внесенными в Федеральный закон от 7 августа 2001 г. N 115-ФЗ "О противодействии легализации (отмыванию) доходов, полученных преступным путем, и финансированию терроризма" с 15 января 2008 года при безналичном перечислении денег на счет Брокера без открытия банковского счета в платежном поручении необходимо указывать ИНН плательщика, а при отсутствии ИНН необходимо указывать либо адрес (место жительства или регистрации), либо дату и место рождения. <br><br>В соответствии с Регламентом Брокерского обслуживания Брокер не принимает денежные переводы в вашу пользу, осуществленные со счетов третьих лиц.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="first innerTab" data-tab-id="2" style="display: none">
+					<div class="payment__content-item mobileLastVisible">
+						<div class="payment__last-title">
+							<div class="payment__last-title-logo">
+								<img src="images/svg/payment-bank-logo-2.svg" alt="">
+							</div>
+							<div class="payment__last-title-text">НКО АО НРД</div>
+						</div>
+						<div class="payment-requisites">
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left">Реквизиты</div>
+								<div class="payment-requisites__item-right">
+									НКО АО НРД<br>
+									ИНН/КПП: 7702165310/775001001;<br>
+									ОГРН 1027739132563 выдан 30 августа 2002 года межрайонной <br>
+									инспекцией МНС России №39 по г.Москве<br>
+									<br>
+									Идентификатор: МС0138200000<br>
+									Торговый счет депо номинального держателя АО «ИК «Ай Ти Инвест»: <br>
+									HL1212111312<br>
+									Раздел счета депо: 36МС0138200000F00<br>
+									Основание: Договор междепозитарного счета депо между НКО АО НРД <br>
+									и АО «ИК «Ай Ти Инвест» №1382/ДМС-0 от 17.09.2002г.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="payment__nav-content-item second-tab" data-tab-id="1">
+			<div class="payment__nav__item payment__nav__item_mobile" data-tab-id="1" onclick="o2.payment.accordeon.showItem(this, '.first-accordeon-wrapper')">
+				<div class="payment__nav__item-img">
+					@@include('./svg/payment2.html')
+				</div>
+				<div class="payment__nav__item-text">Через платежный <br>терминал QIWI</div>
+			</div>
+			<div class="first-accordeon-wrapper">
+				<div class="payment__nav payment__select-group payment__nav_desctop">
+					<button class="payment__first-select secondFirst-nav active innerNav" data-tab-id="0" onclick="o2.payment.tabs.openTab(this, event, '.secondFirst-nav', '.secondFirst');">QIWI терминал</button>
+					<button class="payment__first-select secondFirst-nav innerNav" data-tab-id="1" onclick="o2.payment.tabs.openTab(this, event, '.secondFirst-nav', '.secondFirst');">QIWI wallet</button>
+				</div>
+				<div class="secondFirst innerTab" data-tab-id="0" style="display: block">
+					<button class="payment__first-select payment__last-select accordeonOpened" data-tab-id="0" onclick="o2.payment.accordeon.showItem(this, '.payment__content-item')">QIWI терминал</button>
+					<div class="payment__content-item mobileLastVisible">
+						<div class="payment__last-title">
+							<div class="payment__last-title-logo">
+								<img src="images/svg/qiwi.svg" alt="">
+							</div>
+							<div class="payment__last-title-text">QIWI терминал</div>
+						</div>
+						<div class="payment-requisites qiwi">
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left">Где найти: </div>
+								<div class="payment-requisites__item-right">
+									Терминалы моментальной оплаты Qiwi есть во всех регионах России. <a href="#">Найдите ближайший к вам терминал.</a>
+								</div>
+							</div>
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left">Максимальная <br>сумма платежа</div>
+								<div class="payment-requisites__item-right">- 15 000 рублей единовременно; <br>- 29 000 рублей в сутки.</div>
+							</div>
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left">Когда и куда будут зачислены средства: </div>
+								<div class="payment-requisites__item-right">- денежные средства переводятся на счет мгновенно; <br>- на первый портфель с суффиксом MO-01 (MS-01) для брокерских счетов.</div>
+							</div>
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left">Комиссия:</div>
+								<div class="payment-requisites__item-right">
+									Комиссия взимается КИВИ Банк (ЗАО) и владельцами терминалов
+								</div>
+							</div>
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left">Идентификация клиента:</div>
+								<div class="payment-requisites__item-right grey">
+									Для оплаты вам понадобится «платежный код договора».<br>
+									Этот 6-ти значный код находится в личном кабинете<br>
+									<b>(Меню > Настройка > Настройка счетов).</b>
+								</div>
+							</div>
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left">Где найти: </div>
+								<div class="payment-requisites__item-right">
+									<div class="payment-requisites__item-right-downloads">
+										<a href="#">
+											при первичном<br>платеже
+										</a>
+										<a href="#">
+											при повторном<br>платеже
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="secondFirst innerTab" data-tab-id="1" style="display: none">
+					<button class="payment__first-select payment__last-select" data-tab-id="0" onclick="o2.payment.accordeon.showItem(this, '.payment__content-item')">QIWI wallet</button>
+					<div class="payment__content-item">
+						<div class="payment__last-title">
+							<div class="payment__last-title-logo">
+								<img src="images/svg/qiwi.svg" alt="">
+							</div>
+							<div class="payment__last-title-text">QIWI кошелек</div>
+						</div>
+						<div class="payment-requisites qiwi">
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left">Сайт</div>
+								<div class="payment-requisites__item-right">
+									<a href="https://qiwi.com">https://qiwi.com</a>
+								</div>
+							</div>
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left">Приложение:</div>
+								<div class="payment-requisites__item-right">- Visa QIWI Wallet Кошелек (QIWI Кошелек) для iPhone, iPad, Android.</div>
+							</div>
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left">Максимальная <br>сумма платежа</div>
+								<div class="payment-requisites__item-right">- 15 000 рублей единовременно; <br>- 29 000 рублей в сутки.</div>
+							</div>
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left">Когда и куда будут зачислены средства: </div>
+								<div class="payment-requisites__item-right">- денежные средства переводятся на счет мгновенно; <br>- на первый портфель с суффиксом MO-01 (MS-01) для брокерских счетов.</div>
+							</div>
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left">Комиссия:</div>
+								<div class="payment-requisites__item-right">
+									Комиссия взимается КИВИ Банк (ЗАО) и владельцами терминалов
+								</div>
+							</div>
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left">Как пополнить:</div>
+								<div class="payment-requisites__item-right grey">
+									<ul>
+										<li>Войдите в QIWI Кошелек через сайт или приложение <a href="#">(iPhone,</a><a href="#">iPad,</a><a href="#">Android)</a></li>
+										<li>Пополните его любым удобным вам способом;</li>
+										<li>Найдите в поле «поиск» компанию «Ай Ти Инвест».</li>
+										<li>Введите сумму платежа и шестизначный платежный код 	договора (находится в Личном кабинете <b>(Меню > 	Настройка > Настройка счетов)</b>);</li>
+										<li>Выберите способ оплаты (из кошелька или банковской картой);</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="payment__nav-content-item third-tab" data-tab-id="2">
+			<div class="payment__nav__item payment__nav__item_mobile" data-tab-id="2" onclick="o2.payment.accordeon.showItem(this, '.first-accordeon-wrapper')">
+				<div class="payment__nav__item-img">
+					@@include('./svg/payment3.html')
+				</div>
+				<div class="payment__nav__item-text">Нерезидентам</div>
+			</div>
+			<div class="first-accordeon-wrapper">
+				<div class="payment__nav payment__select-group payment__nav_desctop">
+					<button class="payment__first-select thirdFirst-nav active innerNav" data-tab-id="0" onclick="o2.payment.tabs.openTab(this, event, '.thirdFirst-nav', '.thirdFirst');">Рубли</button>
+					<button class="payment__first-select thirdFirst-nav innerNav" data-tab-id="1" onclick="o2.payment.tabs.openTab(this, event, '.thirdFirst-nav', '.thirdFirst');">Евро</button>
+					<button class="payment__first-select thirdFirst-nav innerNav" data-tab-id="2" onclick="o2.payment.tabs.openTab(this, event, '.thirdFirst-nav', '.thirdFirst');">Доллар</button>
+					<button class="payment__first-select thirdFirst-nav innerNav" data-tab-id="3" onclick="o2.payment.tabs.openTab(this, event, '.thirdFirst-nav', '.thirdFirst');">Ценные бумаги</button>
+				</div>
+				<div class="thirdFirst innerTab" data-tab-id="0" style="display: block">
+					<button class="payment__first-select payment__last-select accordeonOpened" data-tab-id="0" onclick="o2.payment.accordeon.showItem(this, '.payment__content-item')">Рубли</button>
+					<div class="payment__content-item mobileLastVisible">
+						<div class="payment__last-title">
+							<div class="payment__last-title-logo">
+								<img src="images/svg/payment-bank-logo-1.svg" alt="">
+							</div>
+							<div class="payment__last-title-text">Райффайзенбанк (Рубли)</div>
+						</div>
+						<div class="payment-requisites">
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left">Реквизиты</div>
+								<div class="payment-requisites__item-right">
+									P/c 40701810800000000226 в АО «РАЙФФАЙЗЕНБАНК» г.Москва<br>
+									к/c 30101810200000000700<br>
+									БИК 044525700<br>
+									ИНН 7744000302<br>
+									КПП 775001001<br>
+									<br>
+									Получатель:<br>
+									АО «ИК «Ай Ти Инвест»<br>
+									ИНН 7717116241<br>
+									КПП 770301001
+								</div>
+							</div>
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left">Назначение платежа</div>
+								<div class="payment-requisites__item-right">Перевод средств для участия в торгах по договору на брокерское обслуживание №ВР**** от __.__.__ г. НДС не облагается.</div>
+							</div>
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left"></div>
+								<div class="payment-requisites__item-right small"><b>Внимание!</b>  В соответствии с изменениями от 28.11.2007, внесенными в Федеральный закон от 7 августа 2001 г. N 115-ФЗ "О противодействии легализации (отмыванию) доходов, полученных преступным путем, и финансированию терроризма" с 15 января 2008 года при безналичном перечислении денег на счет Брокера без открытия банковского счета в платежном поручении необходимо указывать ИНН плательщика, а при отсутствии ИНН необходимо указывать либо адрес (место жительства или регистрации), либо дату и место рождения. <br><br>В соответствии с Регламентом Брокерского обслуживания Брокер не принимает денежные переводы в вашу пользу, осуществленные со счетов третьих лиц.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="thirdFirst innerTab" data-tab-id="1" style="display: none">
+					<button class="payment__first-select payment__last-select" data-tab-id="0" onclick="o2.payment.accordeon.showItem(this, '.payment__content-item')">Евро</button>
+					<div class="payment__content-item">
+						<div class="payment__last-title">
+							<div class="payment__last-title-logo">
+								<img src="images/svg/payment-bank-logo-1.svg" alt="">
+							</div>
+							<div class="payment__last-title-text">Райффайзенбанк (Евро)</div>
+						</div>
+						<div class="payment-requisites">
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left">Реквизиты</div>
+								<div class="payment-requisites__item-right">
+									Raiffeisenbank AO<br>
+									Legal Address: 17 bld 1, Troitskaya str., Moscow<br>
+									SWIFT: RZBMRUMM<br>
+									Beneficiar Acc. No: Acc. 40701.978.9. 00000000068<br>
+									Correspondent account: 001-55.025.928<br>
+									Correspondent Bank: Raiffeisen Bank International AG, Am Stadtpark 9,<br>
+									A-1030 Vienna, Austria.<br>
+									SWIFT: RZBAATWW<br>
+									<br>
+									Получатель:<br>
+									JSC Investment Company ITInvest<br>
+									123317, Moscow, Presnenskaya embankment, 8, building 1, room 12/<br>
+									RU/MOSCOW
+								</div>
+							</div>
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left">Назначение платежа</div>
+								<div class="payment-requisites__item-right">Transfer of funds according to the agreement brokerage services BP----- dd --.--.----. Not subject to VAT.</div>
+							</div>
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left"></div>
+								<div class="payment-requisites__item-right small"><b>Внимание!</b>  В соответствии с изменениями от 28.11.2007, внесенными в Федеральный закон от 7 августа 2001 г. N 115-ФЗ "О противодействии легализации (отмыванию) доходов, полученных преступным путем, и финансированию терроризма" с 15 января 2008 года при безналичном перечислении денег на счет Брокера без открытия банковского счета в платежном поручении необходимо указывать ИНН плательщика, а при отсутствии ИНН необходимо указывать либо адрес (место жительства или регистрации), либо дату и место рождения. <br><br>В соответствии с Регламентом Брокерского обслуживания Брокер не принимает денежные переводы в вашу пользу, осуществленные со счетов третьих лиц.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="thirdFirst innerTab" data-tab-id="2" style="display: none">
+					<button class="payment__first-select payment__last-select" data-tab-id="0" onclick="o2.payment.accordeon.showItem(this, '.payment__content-item')">Доллар</button>
+					<div class="payment__content-item">
+						<div class="payment__last-title">
+							<div class="payment__last-title-logo">
+								<img src="images/svg/payment-bank-logo-1.svg" alt="">
+							</div>
+							<div class="payment__last-title-text">Райффайзенбанк (Доллар)</div>
+						</div>
+						<div class="payment-requisites">
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left">Реквизиты</div>
+								<div class="payment-requisites__item-right">
+									Raiffeisenbank AO<br>
+									Legal Address: 17 bld 1, Troitskaya str., Moscow<br>
+									SWIFT: RZBMRUMM<br>
+									Beneficiar Acc. No: Acc. 40701.840.0. 00003401812<br>
+									Correspondent account: 36343873<br>
+									Correspondent Bank: Citibank NA<br>
+									111 Wall Street, New York, NY 10043, USA<br>
+									SWIFT: CITI US 33<br>
+									<br>
+									Получатель:<br>
+									JSC Investment Company ITInvest<br>
+									123317, Moscow, Presnenskaya embankment, 8, building 1, room 12/<br>
+									RU/MOSCOW
+								</div>
+							</div>
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left">Назначение платежа</div>
+								<div class="payment-requisites__item-right">Transfer of funds according to the agreement brokerage services BP----- dd --.--.----. Not subject to VAT..</div>
+							</div>
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left"></div>
+								<div class="payment-requisites__item-right small"><b>Внимание!</b>  В соответствии с изменениями от 28.11.2007, внесенными в Федеральный закон от 7 августа 2001 г. N 115-ФЗ "О противодействии легализации (отмыванию) доходов, полученных преступным путем, и финансированию терроризма" с 15 января 2008 года при безналичном перечислении денег на счет Брокера без открытия банковского счета в платежном поручении необходимо указывать ИНН плательщика, а при отсутствии ИНН необходимо указывать либо адрес (место жительства или регистрации), либо дату и место рождения. <br><br>В соответствии с Регламентом Брокерского обслуживания Брокер не принимает денежные переводы в вашу пользу, осуществленные со счетов третьих лиц.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="thirdFirst innerTab" data-tab-id="3" style="display: none">
+					<button class="payment__first-select payment__last-select" data-tab-id="0" onclick="o2.payment.accordeon.showItem(this, '.first-accordeon-wrapper')">Ценные бумаги</button>
+					<div class="payment__content-item">
+						<div class="payment__last-title">
+							<div class="payment__last-title-logo">
+								<img src="images/svg/payment-bank-logo-2.svg" alt="">
+							</div>
+							<div class="payment__last-title-text">НКО АО НРД</div>
+						</div>
+						<div class="payment-requisites">
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-left">Реквизиты</div>
+								<div class="payment-requisites__item-right">
+									НКО АО НРД<br>
+									ИНН/КПП: 7702165310/775001001;<br>
+									ОГРН 1027739132563 выдан 30 августа 2002 года межрайонной <br>
+									инспекцией МНС России №39 по г.Москве<br>
+									<br>
+									Идентификатор: МС0138200000<br>
+									Торговый счет депо номинального держателя АО «ИК «Ай Ти Инвест»: <br>
+									HL1212111312<br>
+									Раздел счета депо: 36МС0138200000F00<br>
+									Основание: Договор междепозитарного счета депо между НКО АО НРД <br>
+									и АО «ИК «Ай Ти Инвест» №1382/ДМС-0 от 17.09.2002г.
+								</div>
+							</div>
+							<div class="payment-requisites__item">
+								<div class="payment-requisites__item-right"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

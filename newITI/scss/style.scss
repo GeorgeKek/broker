@@ -1,0 +1,144 @@
+/* ********************** */
+/* ******* */
+@import 'sprite';
+@import 'vendors/slick';
+@import 'vendors/slick-theme';
+@import 'vendors/datalist';
+@import 'vendors/jquery-nice-select';
+@import 'vendors/no-ui-slider';
+
+/* base */
+@import 'base/variables';
+@import 'base/fonts';
+@import 'base/normalize';
+@import 'base/typography';
+@import 'base/grid';
+@import 'base/common-styles';
+/* components */
+@import 'components/header';
+@import 'components/hft';
+@import 'components/finder-news';
+@import 'components/trade-ideas-element';
+@import 'components/index-header';
+@import 'components/ipo-banner';
+@import 'components/sticky-header';
+@import 'components/footer';
+@import 'components/footer-small';
+@import 'components/services';
+@import 'components/services-page';
+@import 'components/breadcrumbs';
+@import 'components/registration';
+@import 'components/forms';
+@import 'components/institutional';
+@import 'components/institutional-slider';
+@import 'components/institutional-content';
+@import 'components/analitics';
+@import 'components/analitics-detail';
+@import 'components/software';
+@import 'components/stocks';
+@import 'components/shares-company';
+@import 'components/shares-buy';
+@import 'components/glossary';
+@import 'components/managment';
+@import 'components/about';
+@import 'components/software-main';
+@import 'components/dividend-calendar';
+@import 'components/main-slides';
+@import 'components/index-tabs';
+@import 'components/index-news';
+@import 'components/index';
+@import 'components/marketplaces';
+@import 'components/index-partners';
+@import 'components/index-social';
+@import 'components/dicitionary';
+@import 'components/litebox';
+@import 'components/payment';
+@import 'components/not-avaliable';
+@import 'components/popups';
+@import 'components/test-access';
+@import 'components/smartx-login';
+@import 'components/ipo';
+@import 'components/search';
+@import 'components/search-box';
+@import 'components/seo-article';
+@import 'components/site-map';
+@import 'components/content-model-stats';
+@import 'components/tarrifs';
+@import 'components/currency-calc';
+@import 'components/emitents';
+@import 'components/feedback-form';
+@import 'components/proposal';
+@import 'components/banner-calendar';
+@import 'components/add-cash';
+@import 'components/cookies-mesage';
+@import 'components/cash';
+@import 'components/sbp-popup';
+@import 'components/qiwi-popup';
+@import 'components/citizen-popup';
+@import 'components/faq-popup';
+@import 'components/choose-bank';
+@import 'components/requisites';
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: 0;
+}
+
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.clearfix:after,
+.row:after
+{
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+.float-left
+{
+	float: left;
+}
+
+.float-right
+{
+	float: right;
+}
+
+.float-none
+{
+	float: none;
+}
+
+.text-center
+{
+	text-align: center;
+}
+
+.text-left
+{
+	text-align: left;
+}
+
+.text-right
+{
+	text-align: right;
+}
+
+.full-table
+{
+	width: 100% !important;
+}
+
+.term
+{
+	cursor: pointer;
+	border-bottom: 1px solid #333;
+	width: max-content;
+}

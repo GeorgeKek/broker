@@ -1,0 +1,44 @@
+.anchors
+{
+	padding:32px 0;
+}
+.anchors__wrap
+{
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	margin-left: -12px;
+	margin-right: -12px;
+}
+.anchors__item
+{
+	position: relative;
+	font-size: 15px;
+	line-height: 22px;
+	font-feature-settings: 'zero' on;
+	color: #575762;
+	margin-left: 12px;
+	margin-right: 12px;
+	margin-bottom: 12px;
+	&:after
+	{
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 50%;
+		bottom: 0;
+		transform: translateX(-50%);
+		background-color: transparent;
+		transition: 0.2s;
+	}
+	&:hover
+	{
+		&:after
+		{
+			background-color: #575762;
+			transition: 0.2s;
+		}
+	}
+}

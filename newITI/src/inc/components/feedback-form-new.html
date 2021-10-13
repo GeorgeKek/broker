@@ -1,0 +1,157 @@
+<div class="feedback-form-wr feedback-form-wr--new">
+	<div class="feedback-form-box">
+		<h2 class="feedback-title">
+			Напишите нам
+		</h2>
+		<div class="feedback-subtitle">
+			Если вы не нашли подходящей вакансии все равно напишите нам
+		</div>
+		<form action="/куда отправлять/" onsubmit="feedbackForm.sendForm(this, event)" id="feedback-form">
+			<div class="feedback-form">
+				<div class="feedback-form-groups">
+					<div class="feedback-form-group">
+						<div class="feedback-form-group__item">
+							<div class="label-wr">
+								<label for="" class="label">Фамилия</label>
+							</div>
+							<div class="input-wr input-wr_error-br">
+								<input type="text"
+									class="input dadata-input-name _only-letters _required"
+									name="LastName"
+									hint-part="surname"
+									dadata-type="name">
+								<span class="input__err-label">Ошибка</span>
+							</div>
+						</div>
+						<div class="feedback-form-group__item">
+							<div class="label-wr">
+								<label for="" class="label">Имя</label>
+							</div>
+							<div class="input-wr input-wr_error-br">
+								<input type="text"
+									class="input dadata-input-name _only-letters _required"
+									name="FirstName"
+									hint-part="name"
+									dadata-type="name">
+								<span class="input__err-label">Ошибка</span>
+							</div>
+						</div>
+						<div class="feedback-form-group__item">
+							<div class="label-wr">
+								<label for="" class="label">Email</label>
+							</div>
+							<div class="input-wr input-wr_error-br">
+								<input type="email" name="email" class="input _required">
+								<span class="input__err-label">Ошибка</span>
+							</div>
+						</div>
+						<div class="feedback-form-group__item">
+							<div class="label-wr">
+								<label for="" class="label">Телефон</label>
+							</div>
+							<div class="input-wr input-wr_error-br">
+								<input type="text"
+									class="input _required"
+									name="Phone"
+									hint-part="patronymic"
+									dadata-type="name">
+								<span class="input__err-label">Ошибка</span>
+							</div>
+						</div>
+					</div>
+					<div class="feedback-form-group">
+						<div class="feedback-form-group__item">
+							<div class="label-wr">
+								<label for="" class="label">Ссылка на портфолио</label>
+							</div>
+							<div class="input-wr input-wr_error-br">
+								<input type="text"
+									class="input _required"
+									name="Portfolio"
+									hint-part="patronymic"
+									dadata-type="name">
+								<span class="input__err-label">Ошибка</span>
+							</div>
+						</div>
+					</div>
+					<div class="feedback-form-group">
+						<div class="feedback-form-group__item">
+							<div class="label-wr">
+								<label for="" class="label">Информация о себе</label>
+							</div>
+							<div class="input-wr">
+								<textarea id="" name="vacancies-message" rows="20" class="textarea textarea-message"></textarea>
+								<span class="input__err-label">Ошибка</span>
+							</div>
+						</div>
+					</div>
+					<div class="feedback-form-group feedback-form-group--buttons">
+						<div class="feedback-form-group__item feedback-form-group__item--resume">
+							<label class="input-file">
+								<span class="input-file__text">Прикрепить резюме</span>
+								<input type="file" class="feedback-files _required" name="resume" onchange="feedbackForm.uploadDocs.uploadNewResume(this)">
+							</label>
+							<div class="feedback-file__tooltip feedback-file__tooltip--new">
+								Максимум 1 файл размером до 5 Мб
+							</div>
+							<div class="feedback-added-wr feedback-added-wr--new">
+								<div class="feedback-added-name"></div>
+								<div class="feedback-added-remove" onclick="feedbackForm.uploadDocs.clearFilesNewResume();">
+									<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.159 6.563L.447.59 1.012 0l5.712 5.972L12.434 0 13 .59 7.289 6.564 13 12.534l-.565.591-5.711-5.972-5.712 5.972-.565-.59L6.16 6.561z" fill="gray"/></svg>
+								</div>
+							</div>
+						</div>
+						<div class="feedback-form-group__item feedback-form-group__item--file">
+							<label class="input-file">
+								<span class="input-file__text">Прикрепить файл</span>
+								<input type="file" class="feedback-files" name="user-files" onchange="feedbackForm.uploadDocs.uploadNewFile(this)" multiple>
+							</label>
+							<div class="feedback-file__tooltip feedback-file__tooltip--new">
+								Максимум 1 файл размером до 5 Мб
+							</div>
+							<div class="feedback-added-wr feedback-added-wr--new">
+								<div class="feedback-added-name"></div>
+								<div class="feedback-added-remove" onclick="feedbackForm.uploadDocs.clearFilesNewFile();">
+									<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.159 6.563L.447.59 1.012 0l5.712 5.972L12.434 0 13 .59 7.289 6.564 13 12.534l-.565.591-5.711-5.972-5.712 5.972-.565-.59L6.16 6.561z" fill="gray"/></svg>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+					<div class="feedback-form-group feedback-form-group--send">
+						<div class="location-wr">
+							<div class="feedback-form-group__item">
+								<div class="location-input-items">
+									<label class="checkbox-fb-label">
+										<input type="checkbox" id="show-address" name="checkbox" class="checkbox-fb _required">
+										<span class="checkbox-fb-box"></span>
+									</label>
+									<div class="label-wr">
+										<label for="show-address" class="label label_address-show">Я соглашаюсь с <a href="#">Правилами пользования</a><br>и <a href="">Политикой конфиденциальности</a></label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="feedback-submit">
+							<button type="submit" class="red-btn btn-submit_disabled">Отправить</button>
+						</div>
+					</div>
+				<div class="feedback-succees-wr">
+					<div class="feedback-success__header">
+						Спасибо! <br />
+						Мы&nbsp;получили ваше обращение
+					</div>
+					<div class="feedback-success__text">
+						Вы&nbsp;получите официальный ответ на&nbsp;почту, в&nbsp;течение 30&nbsp;дней
+					</div>
+					<div class="feedback-succees-nav">
+						<a href="/" class="feedback-succees-nav__link software-downloads__download">На главную →</a>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/suggestions-jquery@18.11.1/dist/js/jquery.suggestions.min.js"></script>
+<script src="js/vendors/jquery-validation-plugin.min.js" defer=""></script>
+<script src="js/feedback-form.min.js" defer=""></script>

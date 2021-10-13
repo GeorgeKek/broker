@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('components/pagehead.html')
+</head>
+	<body>
+		<div class="_overlay overlay">
+			@@include('components/alone-doc-popup.html")
+		</div>
+		<div class="page-wrapper">
+			@@include('components/header.html')
+
+			<div class="content">
+				<h1 class="content-header hide-mob">
+					<a href="/" class="content-back">
+						<img src="../images/open-acc-img/arrow-left.svg" alt="">
+					</a>
+					Введите код из SMS — <br>подтвердите свою электронную подпись
+				</h1>
+				<div class="confirm-user-phone-wr">
+					@@include('components/user-phone.html', {"type": "add"})
+				</div>
+				<form action="SMS/" redirect-url="/newITI/open-account-html/input-doc-info.html" id="confirm-form" onsubmit="OpenAcc.signup.checkSmsCode(this, event, 3, true);">
+					<div class="confirm-inputs-wr">
+						<div class="confirm-input-wr">
+							<label class="sign-up-input__label" for="sms-code">Код из SMS</label>
+							<div class="def-input-wr">
+								<input type="tel" id="sms-code" name="sms-code" class="confirm__input confirm__input--code _focused _code-mask" placeholder="_ _ _ _">
+								<div class="def-input__err-label"></div>
+							</div>
+						</div>
+						<button type="submit" class="btn-confirm btn-submit btn-submit_disabled">Подтвердить подпись →</button>
+						 <!-- onclick="ga('send', 'event', 'new_reg_form', 'sms1_click', 'клик в поле \'Код из sms\'');" -->
+						 <!-- onclick="ga('send', 'event', 'new_reg_form', 'sms2_click', 'клик на \'Подтвердить\'');" -->
+					</div>
+				</form>
+				<!-- send-code_timer-end прячет send-code__timer и показывает "выслать код еще раз" -->
+				<div class="send-code">
+					<div class="send-code__timer">
+						Выслать код еще раз<br>можно через <span class="send-code__last-time">6:00</span>
+					</div>
+					<!-- send-code__new_sending включает анимацию отправки и отключает возможность кликнуть еще раз -->
+					<div class="send-code__new" onclick="OpenAcc.userPhone.sendNewCode('@@type');">
+						<div class="send-conde__timer-label">Выслать код еще раз</div>
+					</div>
+				</div>
+				<div class="confirm-terms-wr">
+					<p>Нажимая кнопку &laquo;Подтвердить подпись&raquo;, вы&nbsp;принимаете условия Соглашения о&nbsp;признании и&nbsp;использовании электронной подписи:</p>
+					<a href="https://iticapital.ru/editorfiles/File/documents/20170410_smev_agr.pdf" target="_blank" class="confirm-terms-link">
+						<div class="confirm-terms-link__icon">
+							<svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M16 14L12 21V14H16ZM10 12H16V0H0V21H10V12Z" fill="#388AE9"/>
+							</svg>
+						</div>
+						<div class="confirm-terms-link__text">Текст соглашения</div>
+					</a>
+					<p>В&nbsp;дальнейшем это позволит вам дистанционно подписывать документы, используя подобные СМС-коды.</p>
+				</div>
+			</div>
+			@@include('components/security-footer.html')
+		</div>
+		<script src="../js/vendors/slick-1.9.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.2/pdf.min.js" async></script>
+		<script src="../js/open-account/render-pdfs.min.js" async></script>
+		<script>
+			OpenAcc.userPhone.startTimer(2);
+		</script>
+		<script>
+			// на препроде рендери вот этот список,
+			// на боевом уже будешь подставлять данные от api
+			window.pdfToRender = {"code":"200","data":{"status":"ok","result":
+				[{"name_file":"\u041f\u043e\u0440\u0443\u0447\u0435\u043d\u0438\u0435 \u043d\u0430 \u043e\u0442\u043a\u0440\u044b\u0442\u0438\u0435 \u0434\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0433\u043e \u0440\u0430\u0437\u0434\u0435\u043b\u0430","link_file":"../BP26376-oper_spb_utf.pdf"}]}};
+
+		</script>
+		<script>
+			OpenAcc.userPhone.startTimer(1);
+		</script>
+	</body>
+</html>

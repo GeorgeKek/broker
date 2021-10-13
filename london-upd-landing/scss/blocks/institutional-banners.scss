@@ -1,0 +1,194 @@
+.institutional-banners
+{
+    height: 1px;
+    width: 100vw;
+    min-height: 360px;
+    transition: all .3s ease;
+
+    &.hide
+    {
+        height: 0;
+        overflow: hidden;
+        min-height: 0;
+    }
+
+    &__slider
+    {
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+
+        .slick-list {height: 100%;}
+
+        .slick-track {display: flex; height: 100%;}
+
+        .slick-arrow
+        {
+            position: absolute;
+            top: 40px;
+            svg circle {fill-opacity: 1;}
+            z-index: 10;
+
+            &:active {transform: translateY(2px);}
+            &:hover svg circle {fill: #eee;}
+
+            @include tablet
+            {
+                &:first-child {right: 123px;}
+                &:last-child {right: 43px;}
+            }
+
+            @include desktop
+            {
+                &:first-child {right: 163px;}
+                &:last-child {right: 83px;}
+            }
+        }
+    }
+
+    &__item
+    {
+        height: 100%;
+        position: relative;
+        color: #FFFFFF;
+        padding: 32px 20px 20px;
+
+        a {color: inherit;}
+
+        @include tablet {padding: 40px 60px;}
+
+        @include desktop {padding: 40px 83px;}
+    }
+
+    &__item-wrap
+    {
+        width: 100%; height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__bg
+    {
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        z-index: -1;
+
+        &::before
+        {
+            content: '';
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        &--btce
+        {
+            background: #192F4A;
+            @include tablet {
+                &::before {background: url('../img/inst-btce.jpg') right / auto 100% no-repeat;}
+            }
+        }
+
+        &--zeth
+        {
+            background: #1A4C8A;
+            @include tablet {
+                &::before {background: url('../img/inst-zeth.jpg') right / auto 100% no-repeat;}
+            }
+        }
+
+        &--financing
+        {
+            background: #244368;
+            @include tablet {
+                &::before {background: url('../img/inst-financing.jpg') right / auto 100% no-repeat;}
+            }
+        }
+        &--investment
+        {
+            background: #424E5E;
+            @include tablet {
+                &::before {background: url('../img/inst-investment.jpeg') right / auto 100% no-repeat;}
+            }
+        }
+    }
+
+    &__data
+    {
+        flex: 1 0;
+        @include tablet {max-width: 600px;}
+    }
+
+    &__title
+    {
+        @include font-set(24, 1.3, 600);
+        margin-bottom: 16px;
+
+        @include tablet {font-size: 32px;}
+    }
+
+    &__text
+    {
+        @include font-set(18, 1.4, 400);
+        margin-bottom: 16px;
+
+        @include tablet {font-size: 20px;}
+    }
+
+    &__desc
+    {
+        @include font-set(15, 1.6, 400);
+        opacity: .72;
+
+        @include tablet {font-size: 16px;}
+    }
+
+    &__link
+    {
+        display: inline-block;
+        @include font-set(15, 46px, 600);
+        padding: 0 30px;
+        background: #EC231A;
+        border-radius: 60px;
+        width: fit-content;
+        &.desc{display: inline-block;}
+        &.mob{display: none;}
+    }
+}
+@media (max-width: 767px)
+{
+    .institutional-banners__link
+    {
+        &.desc{display: none;}
+        &.mob{display: inline-block;}
+    }
+    .institutional-banners .slick-dots
+    {
+        position: absolute;
+        bottom: 33px;
+        right: 20px;
+        width: auto;
+    }
+    // .institutional-banners .slick-dots li
+    // {
+    //     width: 8px;
+    //     height: 8px;
+    // }
+    // .institutional-banners .slick-dots li button
+    // {
+    //     width: 8px;
+    //     height: 8px;
+    // }
+    .institutional-banners .slick-dots li button:before
+    {
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.4);
+    }
+    .institutional-banners .slick-dots li.slick-active button:before
+    {
+        color: white;
+        font-size: 17px;
+    }
+}

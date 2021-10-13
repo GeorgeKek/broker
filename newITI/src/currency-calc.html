@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('./inc/components/pagehead.html')
+</head>
+	<body>
+		<div class="wrap">
+			@@include('./inc/components/header.html')
+			<section class="main">
+				<div class="sevices-top">
+					<div class="container">
+						<div class="sevices-top__wrapper">
+							@@include('./inc/components/breadcrumbs.html')
+							<h1 class="sevices-top__title">
+								Калькулятор покупки валюты
+							</h1>
+						</div>
+					</div>
+				</div>
+				@@include('./inc/components/mobile-accordeon.html')
+				<div class="container flex-container">
+					<div class="accordeon-wrapper">
+						@@include('./inc/components/accordeon.html')
+						<div class="hidden-accordeon">
+							@@include('./inc/components/accordeon.html')
+						</div>
+					</div>
+					<div class="content-wrapper">
+						<div class="sevices-bot">
+							<div class="sevices-content">
+								<div class="services-text analitics-detail__author">
+									@@include('./inc/components/currency-calc-content.html')
+								</div>
+								<div class="services__right-cards services__right-cards_tarrifs">
+									<div class="services__right-consult__author">
+										<div class="currency-right">
+											<div class="currency-right__icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none"><path fill="#E42C22" fill-rule="evenodd" d="M38.15 28.35l-2.12-2.122L44.256 18H2v-3h42.257L36.03 6.772l2.122-2.121L50 16.5 38.15 28.35zm-26.3-6.7l2.12 2.122L5.744 32H48v3H5.743l8.228 8.228-2.122 2.121L0 33.5l11.85-11.85z" clip-rule="evenodd"/></svg>
+											</div>
+											<div class="currency-right__text">Предлагаем вам возможность покупать и&nbsp;продавать валюту на&nbsp;бирже. Это выгоднее, чем в&nbsp;банках или через посредников.</div>
+											<div class="currency-right__bot">
+												<!-- если авторизован, то отправляем в личный кабинет, если нет, то на открытие счета -->
+												<a href="#" class="red-btn currency-right__button">Купить валюту</a>
+												<div class="currency-right__warning">На&nbsp;Московской бирже с&nbsp;помощью ITI&nbsp;Capital</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- <section class="registration">
+				@@include('./inc/components/registration.html')
+			</section> -->
+			@@include('./inc/components/footer.html')
+		</div>
+	</body>
+</html>

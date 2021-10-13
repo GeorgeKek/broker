@@ -1,0 +1,286 @@
+.main.no-title
+{
+	.sevices-top
+	{
+		display: none;
+	}
+	.accordeon-wrapper
+	{
+		padding-bottom: 50px;
+	}
+}
+.search-wrapper
+{
+	padding: 45px 70px;
+	&_no-result
+	{
+		.search-input input
+		{
+			color: #f04f48;
+		}
+		.search-results
+		{
+			display: none;
+		}
+		.search-error
+		{
+			display: block;
+		}
+	}
+}
+.search-error
+{
+	display: none;
+	font-size: 20px;
+	font-family: $bold;
+	color: #f04f48;
+}
+.search-input
+{
+	margin-bottom: 20px;
+	position: relative;
+	.search-btn
+	{
+		position: absolute;
+		outline: none;
+		box-shadow: none;
+		display: block;
+		border: none;
+		cursor: pointer;
+		content: '';
+		width: 18px;
+		height: 18px;
+		background-image: url(../images/svg/search.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		right: 10px;
+		top: 0;
+		bottom: 0;
+		margin: auto 0;
+	}
+}
+.search-input input
+{
+	width: 100%;
+	height: 40px;
+	border-left: none;
+	border-top: none;
+	border-right: none;
+	padding-left: 0;
+	font-size: 18px;
+	font-family: $medium;
+	padding-right: 35px;
+}
+.search-top
+{
+	font-size: 14px;
+	font-family: $medium;
+	line-height: 26px;
+	margin-bottom: 20px;
+}
+.search-form__bot
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.search-calc
+{
+	color: #999999;
+	font-size: 14px;
+}
+.search-form
+{
+	margin-bottom: 45px;
+}
+.search-results__item
+{
+	max-width: 670px;
+	width: 100%;
+	margin-bottom: 35px;
+}
+.search-results__item-title
+{
+	margin-bottom: 10px;
+	font-size: 20px;
+	line-height: 20px;
+	font-family: $bold;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 100%;
+	display: inline-block;
+	color: #333333;
+	display: inline-block;
+	transition: all .2s;
+	border-bottom: 1px solid transparent;
+	span
+	{
+		color: #f04f48;
+	}
+	&:hover
+	{
+		color: #f04f48;
+		border-color: #f04f48;
+	}
+}
+.search-results__item-body
+{
+	font-size: 16px;
+	font-family: $regular;
+	margin-bottom: 5px;
+	max-height: 57px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    span
+	{
+		color: #f04f48;
+	}
+}
+.search-results__item-link
+{
+	color: #80b6b4;
+	font-size: 16px;
+	font-family: $regular;
+	border-bottom: 1px solid transparent;
+	transition: all .2s;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 100%;
+	display: inline-block;
+	&:hover
+	{
+		border-color: #80b6b4;
+	}
+}
+.search-pagination
+{
+	display: flex;
+	span
+	{
+		color: #808080;
+		font-size: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: $regular;
+		height: 40px;
+	}
+	a
+	{
+		color: #808080;
+		font-size: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: $regular;
+		border: 1px solid transparent;
+		border-radius: 50%;
+		height: 40px;
+		transition: all .3s;
+		&:hover
+		{
+			color: #f04f48;
+			border-color: transparent;
+		}
+		&.active
+		{
+			border-color: #f04f48;
+		}
+		&:first-of-type
+		{
+			padding-left: 15px;
+		}
+		&:last-of-type
+		{
+			padding-left: 15px;
+		}
+		&:first-child,
+		&:last-child
+		{
+			svg path
+			{
+				transition: all .3s;
+			}
+			&:hover svg path
+			{
+				fill: #000;
+				transition: all .3s;
+			}
+		}
+		&:first-child
+		{
+			transform: rotate(180deg);
+		}
+	}
+}
+.special
+{
+	.search-pagination span
+	{
+		font-size: 24px;
+	}
+	.search-top
+	{
+		font-size: 24px;
+		line-height: 32px;
+	}
+	.search-input input
+	{
+		font-size: 28px;
+		height: 60px;
+	}
+	.search-input .search-btn
+	{
+		height: 28px;
+		width: 28px;
+		background-size: contain;
+	}
+	.checkbox-label
+	{
+		font-size: 24px;
+		padding-left: 50px;
+	}
+	.checkbox:not(checked)+span
+	{
+		width: 30px;
+		height: 30px;
+	}
+	.checkbox:not(checked)+span:after
+	{
+		width: 30px;
+		height: 30px;
+	}
+	.search-calc
+	{
+		font-size: 24px;
+		color: #333;
+	}
+	.search-results__item-title
+	{
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.search-results__item-body
+	{
+		font-size: 24px;
+		max-height: 90px;
+	}
+	.search-results__item-link
+	{
+		color: #f04f48;
+		font-size: 24px;
+	}
+}
+@media (max-width: 767px)
+{
+	.search-wrapper
+	{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}

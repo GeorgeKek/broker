@@ -1,0 +1,255 @@
+{# index.twig #}
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	{% include "./popups/index.twig" %}
+ 	<section class="main">
+		<div class="container">
+			<div class="main__left">
+
+				<div class="main__view">
+					<div class="tradingview-widget-container">
+					<div id="tradingview_b6f0e"></div>
+					<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+					<script type="text/javascript">
+						new TradingView.widget(
+						{
+							"width": 600,
+							"height": 300,
+							"symbol": "XETR:BTCE",
+							"interval": "W",
+							"timezone": "Europe/London",
+							"theme": "dark",
+							"style": "2",
+							"locale": "en",
+							"toolbar_bg": "#f1f3f6",
+							"enable_publishing": false,
+							"hide_top_toolbar": true,
+							"save_image": false,
+							"container_id": "tradingview_b6f0e"
+						}
+						);
+					</script>
+					</div>
+				</div>
+
+				<div class="main__text">
+					<p>
+						Thanks to BTCetc you can now invest in the <span>most popular digital asset</span> of the last decade in a secure and <span>efficient</span> way.
+					</p>
+					<p>
+						You don’t need a crypto wallet, BTCetc trades like any other stock or share.
+					</p>
+				</div>
+				<ul class="main__items">
+					<li>Gain access to Bitcoin without the need for a new account. You can buy BTC via your existing brokerage/trading platform or bank</li>
+					<li>Don’t have a trading account? Sicgn up with ITI Capital or any broker from our list of popular trading platforms.</li>
+					<li>BTCetc trades like a security on the regulated stock exchange. it’s time for transparency and no hidden fees like on unregulated “crypto-exchanges”</li>
+				</ul>
+			</div>
+			<div class="main__right">
+				<h3 class="main__title">
+					Product information
+				</h3>
+				<ul class="main__list">
+					<li>
+						<div class="main__list-left">Ticker Symbol</div>
+						<div class="main__list-right">BTCE</div>
+					</li>
+					<li>
+						<div class="main__list-left">Asset Class</div>
+						<div class="main__list-right">Cryptocurrency</div>
+					</li>
+					<li>
+						<div class="main__list-left">ISIN</div>
+						<div class="main__list-right">DE000A27Z304</div>
+					</li>
+					<li>
+						<div class="main__list-left">SEDOL</div>
+						<div class="main__list-right">BMWSLR9</div>
+					</li>
+					<li>
+						<div class="main__list-left">TER</div>
+						<div class="main__list-right">2.00%</div>
+					</li>
+					<li>
+						<div class="main__list-left">Crypto Entitlement (Bitcoins Per ETC)</div>
+						<div class="main__list-right">0.000997510</div>
+					</li>
+					<li>
+						<div class="main__list-left">Base Currency</div>
+						<div class="main__list-right">USD</div>
+					</li>
+					<li>
+						<div class="main__list-left">Bitcoin Price Per Coin (USD)</div>
+						<div class="main__list-right">9185.35</div>
+					</li>
+					<li>
+						<div class="main__list-left">Total Holdings (Number of Bitcoin)</div>
+						<div class="main__list-right">461.330</div>
+					</li>
+					<li>
+						<div class="main__list-left">Price Per BTCE* (USD)</div>
+						<div class="main__list-right">$9.16</div>
+					</li>
+				</ul>
+				<div class="main__note">
+					* Important Note: Values might be outdated the moment you are viewing this website. For accurate pricing information on Bitcoin or price of the securities please refer to other official sources.
+				</div>
+			</div>
+		</div>
+		<button class="main__btn main__btn--red" onclick="o2.popups.show('._buy-popup')">How to Buy</button>
+		<a href="" class="main__btn main__btn--white">Show me the Fact Sheet</a>
+	</section>
+	<section class="why">
+			<h2 class="why__title">
+				Why BTCetc?
+			</h2>
+			<div class="why__wrap">
+				<div class="why__item">
+					<div class="why__wrap-title">
+						Listed on regulated exchange
+					</div>
+					<div class="why__wrap-text">
+						XETRA is one of the most important exchanges in Europe. You can buy and sell BTCetc like any other stock
+					</div>
+					<div class="why__wrap-img">
+						<img src="./img/why-1.png" alt="">
+					</div>
+				</div>
+				<div class="why__item">
+					<div class="why__wrap-title">
+						100% German, with all the perks
+					</div>
+					<div class="why__wrap-text">
+						With the prospectus approved by the German regulator BaFin, BTCetc has been securely and efficiently structured
+					</div>
+					<div class="why__wrap-img">
+						<img src="./img/why-2.png" alt="">
+					</div>
+				</div>
+				<div class="why__item">
+					<div class="why__wrap-title">
+						Physically backed with actual Bitcoin
+					</div>
+					<div class="why__wrap-text">
+						Bitcoin is stored in institutional-grade custody, and you can at any time redeem your units of BTCetc for Bitcoin if you want to
+					</div>
+					<div class="why__wrap-img">
+						<img src="./img/why-3.png" alt="">
+					</div>
+				</div>
+				<div class="why__item">
+					<div class="why__wrap-title">
+						Low management fee
+					</div>
+					<div class="why__wrap-text">
+						the 2%p.a. the management fee covers all investor protection mechanisms put in place by the BTCE issuer
+					</div>
+					<div class="why__wrap-img">
+						<img src="./img/why-4.png" alt="">
+					</div>
+				</div>
+			</div>
+			<a href="" class="why__btn">How to Buy</a>
+	</section>
+	<section class="product">
+		<div class="product__wrap">
+			<div class="product__left">
+				<div class="product__quote">
+					<div class="product__slider">
+						<div>
+							<div class="product__quote-board">
+								Board member of the Frankfurt Stock Exchange
+							</div>
+							<div class="product__quote-author">
+								Michael Krogmann
+							</div>
+							<div class="product__quote-text">
+								With the new product, investors can easily participate in the performance of the Bitcoin price without having to use unregulated crypto-trading platforms. Separate infrastructure, such as a crypto wallet, is not required
+							</div>
+						</div>
+						<div>
+							<div class="product__quote-board">
+								Board member of the Frankfurt Stock Exchange
+							</div>
+							<div class="product__quote-author">
+								Michael Krogmann
+							</div>
+							<div class="product__quote-text">
+								With the new product, investors can easily participate in the performance of the Bitcoin price without having to use unregulated crypto-trading platforms. Separate infrastructure, such as a crypto wallet, is not required
+							</div>
+						</div>
+						<div>
+							<div class="product__quote-board">
+								Board member of the Frankfurt Stock Exchange
+							</div>
+							<div class="product__quote-author">
+								Michael Krogmann
+							</div>
+							<div class="product__quote-text">
+								With the new product, investors can easily participate in the performance of the Bitcoin price without having to use unregulated crypto-trading platforms. Separate infrastructure, such as a crypto wallet, is not required
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="product__right">
+				<div class="product__item">
+					<div class="product__title">
+						Product document
+					</div>
+					<ul class="product__list">
+						<li><a href="">Key Investor Document (KID)</a></li>
+						<li><a href="">Fact sheet</a></li>
+						<li><a href="">Prospectus</a></li>
+					</ul>
+				</div>
+				<div class="product__item">
+					<div class="product__title">
+						Useful Resources
+					</div>
+					<ul class="product__list">
+						<li><a href="">Bitcoin Primer</a></li>
+						<li><a href="">BTCE Points of Difference</a></li>
+						<li><a href="">BTCE FAQ Document</a></li>
+						<li><a href="">BTCE</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<h2 class="product__title">
+			Start investing in Bitcoin <a href="">today</a>
+		</h2>
+		<h3 class="product__subtitle">
+			through a convenient, exchange-listed product on<br>a major regulated stock exchange
+		</h3>
+		<a href="" class="product__btn product__btn--red">Buy BTCetc</a>
+		<div class="product__contacts">
+			<div class="container">
+				<div class="product__contacts-wrap">
+					<div class="product__contacts-item">
+						<img src="./img/kelso.png" alt="">
+						<div class="product__contacts-name">
+							Stephen Kelso
+						</div>
+						<div class="product__contacts-details">
+							<a href="mailto:steve.kelso@iticapital.com">steve.kelso@iticapital.com</a>
+						</div>
+					</div>
+					<div class="product__contacts-item">
+						<img src="./img/zanatta.png" alt="">
+						<div class="product__contacts-name">
+							Rafael Zanatta
+						</div>
+						<div class="product__contacts-details">
+							<a href="tel:+442075628075">+442075628075</a>
+							<a href="mailto:rafael.zanatta@iticapital.com">rafael.zanatta@iticapital.com</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="" class="product__btn product__btn--white">Contact us</a>
+	</section>
+{% endblock %}

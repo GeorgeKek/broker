@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--[if IE 6]>		<html id="section-reco_main" class="nojs ie6 ieb7 ieb8 ieb9 ieb10 split1 nosplit5 platform-PC platform-notouch"><![endif]-->
+    <!--[if IE 7]>		<html id="section-reco_main" class="nojs iea6 ie7 ieb8 ieb9 ieb10 split1 nosplit5 platform-PC platform-notouch"><![endif]-->
+    <!--[if IE 8]>		<html id="section-reco_main" class="nojs iea6 iea7 ie8 ieb9 ieb10 split1 nosplit5 platform-PC platform-notouch"><![endif]-->
+    <!--[if IE 9]>		<html id="section-reco_main" class="nojs iea6 iea7 iea8 ie9 ieb10 split1 nosplit5 platform-PC platform-notouch"><![endif]-->
+    <meta name="viewport" content="width=device-width">
+    <meta name="MobileOptimized" content="320" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telepdf-headone=no">
+    <meta name="viewport min-width=320px" content="min-width=320, initial-scale=1.0" />
+    <!-- <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Lato-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../global-assets/fonts/Aeroport.woff2" as="font" type="font/woff2" crossorigin> -->
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/libs/flexibility.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/libs/flexie.js"></script>
+    <![endif]-->
+    <title>index</title>
+    <style>
+        @import url('https://rsms.me/inter/inter.css');
+        html { font-family: 'Inter', sans-serif; }
+
+        body{
+            font-family: 'Inter';
+        }
+
+        .page
+        {
+            width: 21cm;
+            height: 29.7cm;
+            margin: 30px auto;
+            border: 1px solid #000;
+        }
+
+
+
+        .pdf-h
+        {
+            height: 24mm;
+            margin-bottom: 23mm;
+            position: relative;
+        }
+        .pdf-h-left
+        {
+            float: left;
+        }
+        .pdf-h-logo-wr
+        {
+            display: block;
+            position: relative;
+        }
+        .pdf-h-logo-img-wr
+        {
+            display: inline-block;
+            text-decoration: none;
+            position: absolute;
+            width: 50mm;
+            top: 12mm;
+            left: 17mm;
+        }
+        .pdf-h-logo-img
+        {
+            width: 50mm;
+            height: auto;
+            display: block;
+        }
+        .pdf-h-logo-bg
+        {
+            display: block;
+            width: 84mm;
+            height: auto;
+        }
+
+        .pdf-h-right-wr
+        {
+            position: absolute;
+            right: 0;
+            bottom: -1.5mm;
+        }
+        .pdf-h-right
+        {
+            float: right;
+            margin-right: 25mm;
+            text-align: right;
+            margin-top: 8mm;
+        }
+        .pdf-h-info__author
+        {
+            font-size: 12pt;
+            color: #292929;
+        }
+        .pdf-h-info__descr
+        {
+            font-size: 8pt;
+            line-height: 12pt;
+            color: #7f7f7f;
+        }
+        .pdf-h-info__descr a
+        {
+            color: #7f7f7f;
+            text-decoration: none;
+        }
+
+        .pdf-content-container
+        {
+            margin-left: 17mm;
+            margin-right: 25mm;
+        }
+
+        .pdf-footer
+        {
+            text-align: right;
+            margin-right: 8mm;
+            font-size: 8pt;
+            color: #7f7f7f;
+            margin-bottom: 12mm;
+            margin-top: 13mm;
+        }
+
+        .pdf-disclaimer-wr
+        {
+            margin-left: 25mm;
+        }
+        .pdf-disclaimer
+        {
+            font-size: 7pt;
+            line-height: 10.5pt;
+            color: #7f7f7f;
+            padding-bottom: 21.1mm;
+            margin-bottom: 5mm;
+            padding-right: 25mm;
+            border-bottom: 1px solid #7f7f7f;
+        }
+        .pdf-disclaimer-contacts-wr
+        {
+            color: #292929;
+        }
+        .pdf-disclaimer-contacts-label
+        {
+            margin-bottom: 1mm;
+            font-size: 10pt;
+        }
+        .pdf-disclaimer-contacts-data
+        {
+            font-size: 10pt;
+            line-height: 14pt;
+            color: #7f7f7f;
+            margin-bottom: 12mm;
+        }
+        .pdf-disclaimer-cont-tb
+        {
+            width: 100%;
+            table-layout: fixed;
+            font-size: 10pt;
+            line-height: 15pt;
+            overflow: wrap;
+        }
+        .pdf-disclaimer-cont-tb-col
+        {
+            float: left;
+        }
+        .pdf-disclaimer-cont-tb-col a
+        {
+            text-decoration: none;
+            color: #292929;
+        }
+        .pdf-disclaimer-cont-tb-col_en
+        {
+            line-height: 14.7pt;
+        }
+        .pdf-disclaimer-cont-tb-col_phones
+        {
+            margin-left: 22.8mm;
+        }
+
+        .pdf-disclaimer_en
+        {
+            font-size: 10pt;
+            line-height: 12.8pt;
+            padding-right: 13mm;
+            padding-bottom: 56mm;
+            margin-bottom: 5mm;
+        }
+        .pdf-disclaimer-cont-tb-col_en-right
+        {
+            margin-left: 39mm;
+        }
+        .pdf-disclaimer-addr
+        {
+            color: #7f7f7f;
+        }
+        .pdf-disclaimer-en-phones a
+        {
+            color: #7f7f7f;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="pdf-h">
+            <div class="pdf-h-left">
+                <div class="pdf-h-logo-wr">
+                    <div class="pdf-h-logo-bg-wr">
+                        <img src="images/pdf_header-bg.png" class="pdf-h-logo-bg" alt="">
+                    </div>
+                    <a href="https://iticapital.ru/" class="pdf-h-logo-img-wr">
+                        <img src="images/pdf-logo.png" class="pdf-h-logo-img" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="pdf-h-right-wr">
+                <div class="pdf-h-right">
+                    <div class="pdf-h-info">
+                        <div class="pdf-h-info__author">
+                            Автор: Искандер Луцко<br>
+                            &mdash;
+                        </div>
+                        <div class="pdf-h-info__descr">
+                            Главный инвестиционный стратег<br>
+                            <a href="mailto:Iskander.Lutsko@iticapital.com">Iskander.Lutsko@iticapital.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="clear: both; margin: 0pt; padding: 0pt; "></div>
+        </div>
+
+        <div class="pdf-content-container">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat libero tenetur sequi animi nam sed nostrum voluptate, temporibus pariatur impedit corrupti voluptatum sunt dolor facilis. Quo maxime possimus ullam ad?
+        </div>
+
+        <div class="pdf-footer">
+            <div class="pdf-footer-page-number">1</div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="pdf-h">
+            <div class="pdf-h-left">
+                <div class="pdf-h-logo-wr">
+                    <div class="pdf-h-logo-bg-wr">
+                        <img src="images/pdf_header-bg.png" class="pdf-h-logo-bg" alt="">
+                    </div>
+                    <a href="https://iticapital.ru/" class="pdf-h-logo-img-wr">
+                        <img src="images/pdf-logo.png" class="pdf-h-logo-img" alt="">
+                    </a>
+                </div>
+            </div>
+            <div style="clear: both; margin: 0pt; padding: 0pt; "></div>
+        </div>
+
+        <div class="pdf-content-container">
+            <div class="pdf-disclaimer-wr">
+                <div class="pdf-disclaimer">
+                    Представленная в настоящем документе информация подготовлена АО «ИК «Ай Ти Инвест» (далее – Компания, лицензия
+                    профессионального участника рынка ценных бумаг <br>
+                    No 045-07514-100000 от 17.03.2004 на осуществление брокерской деятельности предостав- лена Центральным Банком Российской
+                    Федерации (Банком России)) и предназначена исключительно для ознакомления. Материалы, предоставленные Компанией,
+                    основаны
+                    на информации, полученной из открытых источников, которые рассматриваются Компанией как надежные. Компания не имеет
+                    возможности провести должную проверку такой информации и не несет ответственности за точность, полноту и достоверность
+                    материалов, предоставленных Компанией. При принятии инвестиционных решений инвестор должен провести собственный анализ
+                    финансового положения эмитента, процентных ставок, доходности и всех рисков, связанных с инвестированием в ценные бумаги
+                    и другие финансовые инструменты и при необходимости воспользоваться услугами финансовых, юридических и иных
+                    консультантов. Стоимость инвестиций может как снижаться, так
+                    и повышаться, и инвестор может потерять первоначально инвестированную сумму. Доходность в прошлом не гарантирует
+                    доходности в будущем. Материалы и сведения, предоставленные Компанией, носят исключительно информационный характер,
+                    предназна- чены для лиц, которые вправе получать такие материалы и сведения, и не должны рассматриваться как заверение
+                    об обстоятельствах, имеющих значение для заключения, исполнения или прекращения какой-либо сделки. Настоящий документ,
+                    включая любые его части и отдельные положения настоящего документа, не могут рассматриваться
+                    в качестве оферты (включая публичную оферту), приглашения делать оферты, коммерческо- го намерения Компании заключить
+                    сделку на условиях, изложенных в документе, а также гарантий Компании в отношении последствий заключения какой-либо
+                    сделки и/или использования какого-либо инструмента Представленная информация не является индивидуальной инвестиционной
+                    рекомендацией, не является формой выражения мнения Компании и/или ее сотрудников о том, отвечает ли конкретная ценная
+                    бумага или финансо- вый инструмент вашим финансовым и/или иным интересам. Определение соответствия финансового
+                    инструмента либо операции инвестиционным целям, инвестиционному горизонту и толерантности к риску является задачей
+                    инвестора. Компания не несет ответственности за возможные убытки инвестора в случае совершения операций, либо
+                    инвестирования в финансовые инструменты, упомянутые в данных материалах. Настоящий документ, включая любые его части и
+                    положения, а также любые комментарии Компании
+                    и ее работников в отношении данного документа не могут рассматриваться в качестве консультации, совета, разъяснений
+                    Компании в отношении рассматриваемого или любых других финансовых инструментов и сделок. Любое использование информации,
+                    представ- ленной в данном документе, включая любые части/разделы документа, допускается только на собственный страх и
+                    риск пользователя. Любое копирование и воспроизведение информации, представленной в данном документе, как в устной, так
+                    и в письменной форме, допускается только при условии предварительного разрешения (согласия) Компании. Представленная
+                    информация и мнения подлежат изменению без уведомления получателей данной информации и мнений.
+
+                </div>
+                <div class="pdf-disclaimer-contacts-wr">
+                    <div class="pdf-disclaimer-contacts-label">РЕКВИЗИТЫ КОМПАНИИ ITI CAPITAL:</div>
+                    <div class="pdf-disclaimer-contacts-data">
+                        официальное юридическое наименование АО&nbsp;&laquo;ИК&nbsp;&bdquo;Ай&nbsp;Ти&nbsp;Инвест&ldquo;&raquo; <br> ИНН: 7717116241,
+                        КПП 770301001, юридический адрес: 123112, <br>г.Москва, Пресненская наб., д.10, этаж&nbsp;13, пом.I, ком. 1&ndash;51
+                    </div>
+                    <div class="pdf-disclaimer-cont-tb">
+                        <div class="pdf-disclaimer-cont-tb-col">
+                            ОФИЦИАЛЬНЫЙ САЙТ:<br>
+                            <a href="https://www.iticapital.ru/">http://www.iticapital.ru/</a>
+                        </div>
+                        <div class="pdf-disclaimer-cont-tb-col pdf-disclaimer-cont-tb-col_phones">
+                            ТЕЛЕФОН:<br>
+                            <a href="tel:84959333235">(495) 933–32–35</a>
+                            |
+                            <a href="tel:88002003235">8 800 200–32–35</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="pdf-h">
+            <div class="pdf-h-left">
+                <div class="pdf-h-logo-wr">
+                    <div class="pdf-h-logo-bg-wr">
+                        <img src="images/pdf_header-bg.png" class="pdf-h-logo-bg" alt="">
+                    </div>
+                    <a href="https://iticapital.ru/" class="pdf-h-logo-img-wr">
+                        <img src="images/pdf-logo.png" class="pdf-h-logo-img" alt="">
+                    </a>
+                </div>
+            </div>
+            <div style="clear: both; margin: 0pt; padding: 0pt; "></div>
+        </div>
+
+        <div class="pdf-content-container">
+            <div class="pdf-disclaimer-wr">
+                <div class="pdf-disclaimer pdf-disclaimer_en">
+                    ITI Capital Ltd. (hereinafter, the “Company”) is not responsible for and <br>
+                    does not give any warranties in connection with the transfer of marketing materials. This marketing document is for
+                    information purposes only. <br>
+                    Any information in this document is based on data obtained from sources believed by the Company to be reliable, but no
+                    representations, guarantees or warranties are made by the Company with regard to the accuracy, completeness or
+                    suitability of the data. The information contained herein does not constitute the provision of investment advice. It is
+                    not intended to be nor should it be construed as an offer or solicitation to acquire, or dispose of, any of the
+                    financial instruments and/or securities mentioned in this document and will not form the basis or a part of any contract
+                    or offer.
+                    <br>
+                    <br>
+                    Neither the Company, nor its affiliates, principals, directors, employees or agents accept any liability for any direct
+                    or consequential loss arising from any use of this marketing document and any accompanying materials. Investors should
+                    make their own investment decisions using their own independent advisors, as they believe necessary and based upon their
+                    specific financial situations and investment objectives when investing. <br>
+                    This material is not intended for the use of Private Customers as that term <br>
+                    is defined under the Financial Services and Markets Act 2000 in the United Kingdom. This material has been approved for
+                    publication in the United Kingdom and European Union by ITI Capital Limited, authorised and regulated by the Financial
+                    Services Authority and a member firm of the London Stock Exchange.
+                </div>
+                <div class="pdf-disclaimer-contacts-wr">
+                    <div class="pdf-disclaimer-cont-tb">
+                        <div class="pdf-disclaimer-cont-tb-col pdf-disclaimer-cont-tb-col_en">
+                            CONTACT DETAILS:<br>
+                            <div class="pdf-disclaimer-addr">
+                                ITI Capital Limited <br>
+                                Level&nbsp;33 Tower&nbsp;42, <br>
+                                25&nbsp;Old Broad Street, <br>
+                                London EC2N 1HQ, <br>
+                                United Kingdom
+                            </div>
+                        </div>
+                        <div class="pdf-disclaimer-cont-tb-col pdf-disclaimer-cont-tb-col_en pdf-disclaimer-cont-tb-col_en-right">
+                            PHONE:<br>
+                            <a href="tel:+4402038898333">+44 (0) 20 3889 8333</a>
+                            <br>
+                            <a href="tel:+4402038898331">+44 (0) 20 3889 8331</a>
+                            <br>
+                            <br>
+                            WEB:<br>
+                            <a href="https://iticapital.com/">iticapital.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

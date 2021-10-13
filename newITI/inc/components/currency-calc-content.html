@@ -1,0 +1,279 @@
+<div class="services-text lists-content visual-editor">
+	<div class="services__right-consult__author services__right-consult__author_mobile">
+		<div class="currency-right">
+			<div class="currency-right__icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none"><path fill="#E42C22" fill-rule="evenodd" d="M38.15 28.35l-2.12-2.122L44.256 18H2v-3h42.257L36.03 6.772l2.122-2.121L50 16.5 38.15 28.35zm-26.3-6.7l2.12 2.122L5.744 32H48v3H5.743l8.228 8.228-2.122 2.121L0 33.5l11.85-11.85z" clip-rule="evenodd"/></svg>
+			</div>
+			<div class="currency-right__text">Предлагаем вам возможность покупать и&nbsp;продавать валюту на&nbsp;бирже. Это&nbsp;выгоднее,&nbsp;чем в&nbsp;банках или через посредников.</div>
+			<div class="currency-right__bot">
+				<!-- если авторизован, то отправляем в личный кабинет, если нет, то на открытие счета -->
+				<a href="#" class="red-btn currency-right__button">Купить валюту</a>
+				<div class="currency-right__warning">На&nbsp;Московской бирже с&nbsp;помощью ITI Capital</div>
+			</div>
+		</div>
+	</div>
+	<h2 class="currency-calc-header">Рассчитайте свою выгоду при&nbsp;покупке</h2>
+	<div id="app">
+		<div class="currency-actions-wr">
+			<div class="currency-actions-wr__left">
+				<div class="currency-action-label">Покупка валюты</div>
+				<div class="currency-action-select-wr">
+					<div class="currency-action-select" :class="{open: dropDownOpen}" @click="dropDownOpen = !dropDownOpen" v-click-outside="closeDropDown">
+						<div class="currency-action-select__arrow">
+							<svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" fill="none" viewBox="0 0 11 6"><path stroke="#333" d="M10.194 5.639L5.278.722.36 5.64"/></svg>
+						</div>
+
+						<div class="currency-action-select__selected" :class="{loaded: loaded}">
+							<div class="currency-action-select__label">{-{selectedTypeObject.label}-}</div>
+							<div class="currency-action-select__descr" v-html="selectedTypeObject.descr"></div>
+						</div>
+
+						<div class="currency-action-select__options">
+							<div
+								class="currency-action-select__option"
+								v-for="(type, index) of typesList"
+								v-show="index != selectedType"
+								@click="selectType(index)">
+								<div class="currency-action-select__label">{-{ type.label }-}</div>
+								<div class="currency-action-select__descr" v-html="type.descr"></div>
+							</div>
+						</div>
+
+						<!-- список выдающих элементов -->
+						<div class="currency-action-select__options-list" style="display: none;">
+							<div class="currency-action-select__option" data-name="beginner">
+								<div class="currency-action-select__label">Для начинающих</div>
+								<div class="currency-action-select__descr">
+									Для тех, кто привык покупать валюту наличными в отделениях банка для личных нужд
+								</div>
+							</div>
+							<div class="currency-action-select__option" data-name="pro">
+								<div class="currency-action-select__label">Для опытных</div>
+								<div class="currency-action-select__descr">
+									Для тех, кто покупает валюту в&nbsp;качестве инвестиций и&nbsp;зарабатывает на&nbsp;разнице курса
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="selected-type-descr" v-html="selectedTypeObject.descr"></div>
+			</div>
+			<div class="currency-actions-wr__right">
+				<div class="currency-action-label currency-action-label_slider currency-action-label_tooltip-wr">
+					Хочу купить
+					<span class="currency-action-label__icon">
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM11 11V5H9V11H11ZM11 15V13H9V15H11ZM2 10C2 14.42 5.58 18 10 18C14.42 18 18 14.42 18 10C18 5.58 14.42 2 10 2C5.58 2 2 5.58 2 10Z" fill="black"/>
+						</svg>
+					</span>
+					<div class="currency-action-tooltip">
+						<p>Валюта на&nbsp;Московской бирже продается лотами, 1&nbsp;лот = 1&nbsp;000&nbsp;EUR&nbsp;/ USD.</p>
+						<p>Т.е. любая сумма, которую вы&nbsp;покупаете, должна быть кратна 1000 (евро, долларов или другой валюты).</p>
+						<p>Мы&nbsp;рекомендуем обменивать на&nbsp;бирже от&nbsp;3000 долларов или евро.</p>
+					</div>
+				</div>
+				<div class="currency-actions">
+					<div class="currency-actions__left">
+						<vue-numeric
+							:currency="valute.prefix"
+							separator="space"
+							v-model="money"
+							class="currency-action-input"
+							v-on:change.native="changeMoney">
+						</vue-numeric>
+						<vue-slider
+							class="currency-calc__slider"
+							v-model="money"
+							height="1"
+							v-bind="sliderOptions"
+							@callback="changeMoney">
+						</vue-slider>
+					</div>
+					<div class="currency-actions__right">
+						<label class="currency-action-radio">
+							<input type="checkbox" class="currency-action-radio__input" hidden="" v-model="currencySwitch">
+							<div class="currency-action-radio__values">
+								<div class="currency-action-radio__value currency-action-radio__value_first">
+									USD
+								</div>
+								<div class="currency-action-radio__value currency-action-radio__value_second">
+									EUR
+								</div>
+							</div>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="currency-calc-table" :class="{loaded: loaded}">
+			<div class="currency-calc-table-col currency-calc-table-col_labels">
+				<div class="currency-calc-table__cel"></div>
+				<div class="currency-calc-table__cel">Текущий курс продажи {-{valute.str}-}</div>
+				<div class="currency-calc-table__cel">Комиссия за сделку</div>
+				<div class="currency-calc-table__cel">Комиссия за вывод валюты</div>
+				<div class="currency-calc-table__cel currency-calc-table__cel-total" :class="{'profit-plus': calculated.profit > 0}">Итого</div>
+				<div class="currency-calc-table__cel currency-calc-table__cel_profit">
+					<div class="currency-calc-profit-header">Ваша выгода</div>
+					<div class="currency-calc-profit-sub-header">при покупке {-{ money | moneyFormat }-} {-{valute.str}-} в ITI Capital</div>
+				</div>
+			</div>
+
+			<div class="currency-calc-table-col currency-calc-table-col_result">
+				<div class="currency-calc-table__cel currency-calc-table__cel_header">Касса банка</div>
+				<div class="currency-calc-table__cel">
+					<div class="currency-calc-table__cel-label">Текущий курс продажи&nbsp;{-{valute.str}-}</div>
+					<div class="currency-calc-table__cel-value">{-{ curses.bank[valute.str] | moneyFormat(2) }-} руб.</div>
+				</div>
+				<div class="currency-calc-table__cel">
+					<div class="currency-calc-table__cel-label">Комиссия за сделку</div>
+					<div class="currency-calc-table__cel-value">неизвестно</div>
+				</div>
+				<div class="currency-calc-table__cel">
+					<div class="currency-calc-table__cel-label">Комиссия за вывод валюты</div>
+					<div class="currency-calc-table__cel-value">0</div>
+				</div>
+				<div class="currency-calc-table__cel currency-calc-table__cel-total" :class="{'profit-plus': calculated.profit > 0}">
+					<div class="currency-calc-table__cel-label">Итого:</div>
+					<div class="currency-calc-table__cel-value">{-{ calculated.bankTotal | moneyFormat }-} руб.</div>
+				</div>
+				<div class="currency-calc-table__cel currency-calc-table__cel_profit"></div>
+			</div>
+
+			<div class="currency-calc-table-col currency-calc-table-col_result currency-calc-table-col_result-total">
+				<div class="currency-calc-table__cel currency-calc-table__cel_header">ITI Capital</div>
+
+				<div class="currency-calc-table__cel">
+					<div class="currency-calc-table__cel-label">Текущий курс продажи&nbsp;{-{valute.str}-}&nbsp;на&nbsp;бирже</div>
+					<div class="currency-calc-table__cel-value">
+						{-{ curses.exchange[valute.str] | moneyFormat(2) }-} руб.
+						<div class="currency-calc-table__cel-descr">Курс на бирже</div>
+					</div>
+				</div>
+				<div class="currency-calc-table__cel">
+					<div class="currency-calc-table__cel-label">Комиссия за сделку</div>
+					<div class="currency-calc-table__cel-value">{-{ valuteCommission | moneyFormat }-} руб.</div>
+				</div>
+				<div class="currency-calc-table__cel">
+					<div class="currency-calc-table__cel-label">Комиссия за вывод валюты</div>
+					<div class="currency-calc-table__cel-value">{-{ outputCommission | moneyFormat}-} руб.</div>
+				</div>
+				<div class="currency-calc-table__cel currency-calc-table__cel-total" :class="{'profit-plus': calculated.profit > 0}">
+					<div class="currency-calc-table__cel-label">Итого:</div>
+					<div class="currency-calc-table__cel-value">{-{calculated.exchangeTotal | moneyFormat}-} руб.</div>
+				</div>
+				<div class="currency-calc-table__cel currency-calc-table__cel_profit" :class="{'profit-plus': calculated.profit > 0}">
+					<span>+ </span>
+					{-{ calculated.profit | moneyFormat }-} руб.
+				</div>
+			</div>
+
+			<div class="currency-calc-table-col currency-calc-table-col__profit">
+				<div class="currency-calc-table-col__profit-left">
+					<div class="currency-calc-profit-header">Ваша выгода</div>
+					<div class="currency-calc-profit-sub-header">при покупке {-{ money | moneyFormat }-} {-{valute.str}-} в&nbsp;ITI&nbsp;Capital</div>
+				</div>
+				<div class="currency-calc-table-col__profit-right" :class="{'profit-plus': calculated.profit > 0}">
+					<span v-if="calculated.profit > 0">+ </span>
+					{-{ calculated.profit | moneyFormat }-} руб.
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="currency-text">
+		<h2 class="currency-calc-header">Плюсы покупки валюты&nbsp;на&nbsp;бирже</h2>
+		<div class="curreny-pluses-wr">
+			<div class="curreny-pluses-item">
+				<div class="curreny-pluses-item__top">
+					<div class="curreny-pluses-item__icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none"><path stroke="#E42C22" stroke-width="3" d="M24.5 1.5h-17a6 6 0 0 0-6 6v35a6 6 0 0 0 6 6h17a6 6 0 0 0 6-6v-35a6 6 0 0 0-6-6z"/><path fill="#E42C22" d="M35 18h15v3H35v-3zm0 6h8v3h-8v-3zm0 6h3v3h-3v-3zM9 3h14a3 3 0 0 1-3 3h-8a3 3 0 0 1-3-3z"/><rect width="14" height="3" x="9" y="41" fill="#E42C22" rx="1.5"/></svg>
+					</div>
+					<div class="curreny-pluses-item__name">
+						Вы&nbsp;можете получить и&nbsp;продать валюту
+					</div>
+				</div>
+				<ul class="curreny-pluses-item__list">
+					<li>в любой момент</li>
+					<li>одной кнопкой </li>
+					<li>через интернет или по телефону</li>
+				</ul>
+			</div>
+
+			<div class="curreny-pluses-item">
+				<div class="curreny-pluses-item__top">
+					<div class="curreny-pluses-item__icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none"><g stroke="#E42C22" stroke-width="3" clip-path="url(#a)"><path d="M1 34l7.195-7.195L15.391 34 32.18 17.21l7.195 7.196 5.12-5.105"/><path d="M1.5 3.5h43v43h-43v-43z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h50v50H0z"/></clipPath></defs></svg>
+					</div>
+					<div class="curreny-pluses-item__name">
+						Всегда выгодный курс
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <script type="text/javascript" src="js/vendors/accounting.js"></script>
+	<script type="text/javascript" src="js/vendors/vue-numeric.js"></script>
+	<script type="text/javascript" src="js/vendors/vue-slider.js"></script>
+	<script type="text/javascript" src="js/vendors/vue.js"></script> -->
+	<script>
+		// максимальное значени для покупки
+		// var max = 100000;
+
+		// минимальное значание для покупки
+		var min = 5000;
+
+		// объект с курсами
+		var curses =
+		{
+			// курс цб
+			bank:
+			{
+				USD: 55,
+				EUR: 78.3
+			},
+			// курс MOEX
+			exchange:
+			{
+				USD: 54,
+				EUR: 75.32
+			}
+		}
+
+		// объект с комиссиями
+		var commissions =
+		{
+			// комиссии за вывод валюты
+			USD:
+			{
+				'0': 1400,
+				'5000': 3750,
+				'100000': 5625,
+			},
+			EUR:
+			{
+				'0': 2250,
+				'5000': 4250,
+				'100000': 6375,
+			},
+			// комиссия за сделку
+			beginner:
+			{
+				'0': 0.1,
+				'1000000': 0.05,
+				'6000000': 0.03,
+			},
+			pro:
+			{
+				'0': 0.013,
+				'1000000': 0.011,
+				'3000000': 0.009,
+				'5000000': 0.0008,
+				'10000000': 0.006,
+				'25000000': 0.0045,
+				'50000000': 0.004
+			}
+		}
+	</script>
+	<!-- <script type="text/javascript" src="js/currency-calc/currency-calc.js"></script> -->
+	<script type="text/javascript" src="js/currency-calc/currency-calc.min.js" async=""></script>
+</div>

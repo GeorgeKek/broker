@@ -1,0 +1,24 @@
+{# index.twig #}
+{%
+	set titlePage = {
+	'titlePage': 'Раскрытие <br>информации',
+	'subTitle': 'УК Стабильный Доход',
+	'background': './img/documents-header.jpeg',
+	},
+%}
+
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	{% include "./blocks/anchors.twig" %}
+	<div class="documents__link">
+		<div class="container">
+			<div class="documents__link-wrap">
+				<a href="">Информация об Управляющей Компании</a>
+			</div>
+		</div>
+	</div>
+	{% include "./blocks/documents.twig" with {show:false} %}
+	{% include "./blocks/documents.twig" with {show:true} %}
+	{% include "./blocks/documents.twig" with {show:true} %}
+{% endblock %}

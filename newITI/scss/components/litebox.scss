@@ -1,0 +1,52 @@
+.litebox-video-wrapper-btn
+{
+	width: 97px;
+	height: 97px;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	position: absolute;
+}
+.yt-preview
+{
+	max-width: 100%;
+	width: 100%;
+}
+.litebox-video-wrapper-btn-wrapper
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	cursor: pointer;
+}
+.litebox-video-wrapper
+{
+	position: relative;
+	width: 100%;
+	max-width: 636px;
+	height: 359px;
+	margin-bottom: 55px;
+}
+.litebox-wrapper
+{
+	padding-bottom: 76px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	max-width: 640px;
+	width: 100%;
+	h2
+	{
+		font-size: 26px;
+		line-height: 36px;
+		margin-bottom: 25px;
+	}
+}
+.litebox-video-wrapper__descr
+{
+	color: rgba(51, 51, 51, 0.87);
+	font-size: 16px;
+	line-height: 26px;
+}

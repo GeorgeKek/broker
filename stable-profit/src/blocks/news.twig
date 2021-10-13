@@ -1,0 +1,87 @@
+<div class="news">
+	<div class="container">
+		<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M0 22.1738V12.5199H4V22.1738C4 23.628 3.10467 24.8066 2 24.8066C0.895333 24.8066 0 23.628 0 22.1738ZM24 0.233276V22.1738C24 23.628 23.104 24.8066 22 24.8066H5.33333V0.233276H24ZM13.3333 12.5199H16V7.25423H13.3333V12.5199ZM9.33333 12.5199H12V9.00947H9.33333V12.5199ZM20 18.6633H9.33333V20.4185H20V18.6633ZM20 15.1528H9.33333V16.908H20V15.1528ZM20 5.49899H17.3333V12.5199H20V5.49899Z" fill="#575762"/>
+		</svg>
+		<h2 class="g-title">Новости компании</h2>
+		<div class="news__list">
+			<a href="#" class="news__item">
+				<article class="news__item-name">Новый проект бюджета США на&nbsp;$6&nbsp;трлн</article>
+				<div class="news__item-text">Основные индексы, как ожидается, завершат неделю ростом&nbsp;&mdash; инвесторы все больше привыкают</div>
+				<div class="news__item-date-block">
+					<div class="news__item-date">06.04.2021</div>
+					<span>Подробнее</span>
+				</div>
+			</a>
+			<a href="#" class="news__item">
+				<article class="news__item-name">Снижение торговой активности</article>
+				<div class="news__item-text">В&nbsp;пятницу в&nbsp;лидеры роста вышли акции нефтегазовой отрасли, в&nbsp;результате чего недооцененные</div>
+				<div class="news__item-date-block">
+					<div class="div news__item-date">06.04.2021</div>
+					<span>Подробнее</span>
+				</div>
+			</a>
+			<a href="#" class="news__item">
+				<article class="news__item-name">Нефть стремится к&nbsp;новым высотам</article>
+				<div class="news__item-text">Торговля на&nbsp;мировых рынках в&nbsp;понедельник выдалась спокойной ввиду государственных</div>
+				<div class="news__item-date-block">
+					<div class="div news__item-date">06.04.2021</div>
+					<span>Подробнее</span>
+				</div>
+			</a>
+			<a href="#" class="news__item">
+				<article class="news__item-name">Нефть и&nbsp;драгоценные металлы в&nbsp;центре внимания</article>
+				<div class="news__item-text">На&nbsp;неделе с&nbsp;24&nbsp;по&nbsp;28&nbsp;мая переход в&nbsp;недооцененные акции ускорился на&nbsp;фоне восстановления</div>
+				<div class="news__item-date-block">
+					<div class="div news__item-date">06.04.2021</div>
+					<span>Подробнее</span>
+				</div>
+			</a>
+			<a href="#" class="news__item">
+				<article class="news__item-name">Рынок сохраняет осторожный оптимизм</article>
+				<div class="news__item-text">РТС повысился на&nbsp;0,7%, европейский фондовый рынок отступил на&nbsp;0,07%. Американские индексы выросли</div>
+				<div class="news__item-date-block">
+					<div class="div news__item-date">06.04.2021</div>
+					<span>Подробнее</span>
+				</div>
+			</a>
+			<a href="#" class="news__item">
+				<article class="news__item-name">Слабая статистика по&nbsp;потреблению</article>
+				<div class="news__item-text">Акции упали, так как экономические данные перевесили &laquo;мягкие&raquo; заявления управляющих Федеральной</div>
+				<div class="news__item-date-block">
+					<div class="div news__item-date">06.04.2021</div>
+					<span>Подробнее</span>
+				</div>
+			</a>
+			<a href="#" class="news__item">
+				<article class="news__item-name">Всё наоборот</article>
+				<div class="news__item-text">Европейские индексы повысились, РТС&nbsp;&mdash; на&nbsp;0,1%, американский рынок акций перешел от&nbsp;потерь к&nbsp;росту</div>
+				<div class="news__item-date-block">
+					<div class="div news__item-date">06.04.2021</div>
+					<span>Подробнее</span>
+				</div>
+			</a>
+			<a href="#" class="news__item">
+				<article class="news__item-name">Цветные металлы и&nbsp;биткоин продолжат дешеветь под давлением Китая</article>
+				<div class="news__item-text">На&nbsp;неделе с&nbsp;14&nbsp;по&nbsp;21&nbsp;мая рынок накрыла очередная волна волатильности из-за динамики</div>
+				<div class="news__item-date-block">
+					<div class="div news__item-date">06.04.2021</div>
+					<span>Подробнее</span>
+				</div>
+			</a>
+			<a href="#" class="news__item">
+				<article class="news__item-name">В&nbsp;центре внимания&nbsp;&mdash; IT&nbsp;и&nbsp;нефтегазовые компании</article>
+				<div class="news__item-text">Акции роста опередили недооцененные акции, волатильность продолжает повышаться. В&nbsp;лидеры роста вышел</div>
+				<div class="news__item-date-block">
+					<div class="div news__item-date">06.04.2021</div>
+					<span>Подробнее</span>
+				</div>
+			</a>
+		</div>
+		<div class="news__btn-block">
+			{% if show == true %}
+				<button class="g-button" onclick="o2.addNews(this);">Загрузить ещё</button>
+			{% endif %}
+		</div>
+	</div>
+</div>

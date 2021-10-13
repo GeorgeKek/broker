@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('./inc/components/pagehead.html')
+</head>
+	<body>
+		<div class="wrap">
+			@@include('./inc/components/header.html')
+			<section class="main">
+				<div class="sevices-top sevices-top--stocks">
+					<div class="container">
+						@@include('./inc/components/breadcrumbs.html')
+						<h1 class="sevices-top__title sevices-top__title--stocks">
+							Акции компаний
+						</h1>
+					</div>
+				</div>
+				<nav class="stocks-nav">
+					<div class="container">
+						<div class="stocks-nav__items">
+							<a class="stocks-nav__item active" href="#">
+								<div class="stocks-nav__item-icon">
+									@@include('../images/svg/actions.svg')
+								</div>
+								<div class="stocks-nav__item-text">
+									ВСЕ АКЦИИ
+								</div>
+							</a>
+
+							<a class="stocks-nav__item" href="#">
+								<div class="stocks-nav__item-icon">
+									@@include('../images/svg/russian-emblem.svg')
+								</div>
+								<div class="stocks-nav__item-text">
+									АКЦИИ РОСИЙСКИХ КОМПАНИЙ
+								</div>
+							</a>
+
+							<a class="stocks-nav__item" href="#">
+								<div class="stocks-nav__item-icon">
+									@@include('../images/svg/world-emblem.svg')
+								</div>
+								<div class="stocks-nav__item-text">
+									ИНОСТРАННЫЕ АКЦИИ
+								</div>
+							</a>
+						</div>
+						<div class="stocks-nav__mobile-value">
+							ВСЕ АКЦИИ
+						</div>
+
+						<!-- это кнопка возврата для детальной страницы акции. Её на детальной показывай а все что выше в контейнере скрывай -->
+
+						<!-- <a href="#" class="stocks-nav__back">
+							@@include('../images/svg/go-back.svg')
+							<span>Назад к списку акций</span>
+						</a> -->
+					</div>
+				</nav>
+				<div class="container flex-container">
+					<div class="content-wrapper">
+						<div class="sevices-bot">
+							@@include('./inc/components/stocks-content.html')
+						</div>
+					</div>
+				</div>
+			</section>
+			@@include('./inc/components/footer.html')
+		</div>
+	</body>
+</html>

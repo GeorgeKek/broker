@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('components/pagehead.html')
+</head>
+	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMS7GZP"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+
+		<div class="page-wrapper">
+			@@include('components/header.html')
+
+			<div class="sign-up-content">
+				<div class="sign-up-faq-list">
+					<div class="faq-list-btn" onclick="OpenAcc.faq.toggleShow(this);">
+						<div class="faq-list-btn__text">Частые вопросы</div>
+						<div class="faq-list-btn__arrow">
+							<svg width="19" height="10" viewBox="0 0 19 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1L9.5 8L18 1" stroke="#B2B2B2" stroke-width="2"/>
+							</svg>
+						</div>
+					</div>
+					<div class="sign-up-faq-list__items">
+						<div class="sign-up-faq">
+							<div class="sign-up-faq__icon">
+								<img src="../images/open-acc-img/faq-icon-1.svg" alt="">
+							</div>
+							<div class="sign-up-faq__info">
+								<div class="sign-up-faq__header">Зачем нужен счёт?</div>
+								<div class="sign-up-faq__descr">
+									С&nbsp;брокерским счетом вы&nbsp;можете работать на&nbsp;финансовых&nbsp;рынках: инвестировать самостоятельно или&nbsp;приобретать готовые инвестиционные продукты.
+								</div>
+							</div>
+						</div>
+
+						<div class="sign-up-faq">
+							<div class="sign-up-faq__icon">
+								<img src="../images/open-acc-img/faq-icon-2.svg" alt="">
+							</div>
+							<div class="sign-up-faq__info">
+								<div class="sign-up-faq__header">Сколько времени займёт открытие?</div>
+								<div class="sign-up-faq__descr">
+									Заполнить анкету можно за&nbsp;три минуты. Мы&nbsp;откроем&nbsp;ваш&nbsp;счёт в&nbsp;этот&nbsp;же день или на&nbsp;следующий рабочий день, если вы&nbsp;заполнили заявку в&nbsp;выходной или&nbsp;вечером.
+								</div>
+							</div>
+						</div>
+
+						<div class="sign-up-faq">
+							<div class="sign-up-faq__icon">
+								<img src="../images/open-acc-img/faq-icon-3.svg" alt="">
+							</div>
+							<div class="sign-up-faq__info">
+								<div class="sign-up-faq__header">Как я&nbsp;буду подписывать документы?</div>
+								<div class="sign-up-faq__descr">
+									Не&nbsp;нужно никуда ехать или ждать курьера. Подать&nbsp;заявку&nbsp;и&nbsp;подписать документы можно с&nbsp;помощью&nbsp;простой SMS.
+								</div>
+							</div>
+						</div>
+
+						<div class="sign-up-faq">
+							<div class="sign-up-faq__icon">
+								<img src="../images/open-acc-img/faq-icon-4.svg" alt="">
+							</div>
+							<div class="sign-up-faq__info">
+								<div class="sign-up-faq__header">Сколько стоит открыть счёт?</div>
+								<div class="sign-up-faq__descr">
+									Открыть счёт, пополнить его и&nbsp;вывести средства в&nbsp;рублях&nbsp;&mdash;&nbsp;бесплатно.
+								</div>
+							</div>
+						</div>
+
+						<div class="sign-up-faq">
+							<div class="sign-up-faq__icon">
+								<img src="../images/open-acc-img/faq-icon-5.svg" alt="">
+							</div>
+							<div class="sign-up-faq__info">
+								<div class="sign-up-faq__header">С&nbsp;какой суммы я&nbsp;смогу начать?</div>
+								<div class="sign-up-faq__descr">
+									Минимальная сумма, с&nbsp;которой вы&nbsp;можете начать инвестировать&nbsp;&mdash; 30&nbsp;000&nbsp;рублей, для готовых инвестиционных продуктов&nbsp;&mdash; 50&nbsp;000&nbsp;рублей. Пополнить&nbsp;счёт вы&nbsp;можете в&nbsp;любое время.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sign-up-form-wr">
+					<div class="sign-up-form">
+						<form action="AddClient/smev" redirect-url="/newITI/open-account-html/sign-up-confirm.html" id="reg_form" autocomplete="on" onsubmit="OpenAcc.signup.signupStart(this, event)" method="post">
+							<div class="sign-up-inputs">
+								<input type="hidden" id="prod-name" value="">
+								<div class="sign-up-input-wr">
+									<label class="sign-up-input__label" for="phone">Ваш телефон</label>
+									<div class="def-input-wr">
+										<input type="tel" id="phone" name="phone" autocomplete="on" class="def-input sign-up-input__input _focused _phone-mask" placeholder="+7 ___ ___ __ __" value="">
+										<div class="def-input__err-label"></div>
+									</div>
+								</div>
+								<div class="sign-up-input-wr">
+									<label class="sign-up-input__label" for="email">Ваша электронная почта</label>
+									<div class="def-input-wr">
+										<input type="email" id="email" autocomplete="email" name="email" class="def-input sign-up-input__input" value="">
+										<div class="def-input__err-label"></div>
+									</div>
+								</div>
+							</div>
+							<div class="sign-up-submit-wr">
+								<button class="btn-submit sign-up-submit">Отправить →</button>
+								<div class="sign-up-submit__text">и&nbsp;перейти к&nbsp;подаче документов</div>
+							</div>
+						</form>
+						<div class="sign-up-rules">
+							Нажимая кнопку &laquo;Отправить&raquo;, вы&nbsp;соглашаетесь <br> <a href="#">с&nbsp;политикой обработки</a> персональных данных
+						</div>
+					</div>
+					<div class="sign-up-info">
+						<div class="sign-up-info__item">
+							<div class="sign-up-info__icon sign-up-info__icon_lock">
+								<svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M2.5 4.5C2.5 2.29086 4.29086 0.5 6.5 0.5C8.70914 0.5 10.5 2.29086 10.5 4.5V11.5H2.5V4.5Z" stroke="#87AF4F"/>
+									<path d="M2.36364 8H10.6364C11.9418 8 13 9.05824 13 10.3636V17.6364C13 18.9418 11.9418 20 10.6364 20H2.36364C1.05824 20 0 18.9418 0 17.6364V10.3636C0 9.05824 1.05824 8 2.36364 8Z" fill="#87AF4F"/>
+									<rect x="5" y="12" width="3" height="4" rx="1.5" fill="white"/>
+								</svg>
+							</div>
+							<div class="sign-up-info__text">
+								Ваши данные защищены <br />
+								128-битным шифрованием (TLS 1.2)
+							</div>
+						</div>
+						<a href="#" class="sign-up-info__item sign-up-info__item_link">
+							<div class="sign-up-info__icon">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#5F94C8"/>
+									<path d="M10.577 8.01551V14.6H9.41998V8.01551H10.577ZM10.824 5.94851C10.824 6.06117 10.8001 6.16734 10.7525 6.26701C10.7091 6.36234 10.6485 6.44901 10.5705 6.52701C10.4968 6.60067 10.408 6.65917 10.304 6.70251C10.2043 6.74584 10.0981 6.76751 9.98548 6.76751C9.87281 6.76751 9.76664 6.74584 9.66698 6.70251C9.57164 6.65917 9.48714 6.60067 9.41348 6.52701C9.33981 6.44901 9.28131 6.36234 9.23798 6.26701C9.19464 6.16734 9.17298 6.06117 9.17298 5.94851C9.17298 5.83584 9.19464 5.72967 9.23798 5.63001C9.28131 5.52601 9.33981 5.43717 9.41348 5.36351C9.48714 5.28551 9.57164 5.22484 9.66698 5.18151C9.76664 5.13817 9.87281 5.11651 9.98548 5.11651C10.0981 5.11651 10.2043 5.13817 10.304 5.18151C10.408 5.22484 10.4968 5.28551 10.5705 5.36351C10.6485 5.43717 10.7091 5.52601 10.7525 5.63001C10.8001 5.72967 10.824 5.83584 10.824 5.94851Z" fill="white"/>
+								</svg>
+							</div>
+							<div class="sign-up-info__text">
+								Если нет гражданства&nbsp;РФ
+							</div>
+						</a>
+					</div>
+				</div>
+				<a href="#" class="sign-up-info__item sign-up-info__item_mobile sign-up-info__item_link">
+					<div class="sign-up-info__icon">
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#5F94C8"/>
+							<path d="M10.577 8.01551V14.6H9.41998V8.01551H10.577ZM10.824 5.94851C10.824 6.06117 10.8001 6.16734 10.7525 6.26701C10.7091 6.36234 10.6485 6.44901 10.5705 6.52701C10.4968 6.60067 10.408 6.65917 10.304 6.70251C10.2043 6.74584 10.0981 6.76751 9.98548 6.76751C9.87281 6.76751 9.76664 6.74584 9.66698 6.70251C9.57164 6.65917 9.48714 6.60067 9.41348 6.52701C9.33981 6.44901 9.28131 6.36234 9.23798 6.26701C9.19464 6.16734 9.17298 6.06117 9.17298 5.94851C9.17298 5.83584 9.19464 5.72967 9.23798 5.63001C9.28131 5.52601 9.33981 5.43717 9.41348 5.36351C9.48714 5.28551 9.57164 5.22484 9.66698 5.18151C9.76664 5.13817 9.87281 5.11651 9.98548 5.11651C10.0981 5.11651 10.2043 5.13817 10.304 5.18151C10.408 5.22484 10.4968 5.28551 10.5705 5.36351C10.6485 5.43717 10.7091 5.52601 10.7525 5.63001C10.8001 5.72967 10.824 5.83584 10.824 5.94851Z" fill="white"/>
+						</svg>
+					</div>
+					<div class="sign-up-info__text">
+						Если нет гражданства&nbsp;РФ
+					</div>
+				</a>
+			</div>
+			<div class="sign-up-mobile-footer">
+				@@include('components/security-footer.html')
+			</div>
+			<!-- <script src="http://pre-prod.iticapital.ru/assets/templates/newITI/js/request-call.min.js" async=""></script> -->
+		</div>
+	</body>
+</html>

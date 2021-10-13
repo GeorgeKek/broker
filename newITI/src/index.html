@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('./inc/components/pagehead.html')
+</head>
+	<body>
+		@@include('./inc/components/index-header.html')
+		@@include('./inc/components/trade-ideas-element.html')
+		<div class="wrap">
+			<div class="index-container">
+				<!-- @@include('./inc/components/ipo-banner.html', {"modif": "ipo-preview-wr_index"}) -->
+				@@include('./inc/components/banner-calendar.html')
+			</div>
+			<section class="index-news-wrapper">
+				@@include('./inc/components/index-news.html')
+			</section>
+			<section class="index-banner">
+				<div class="index-container">
+					<div class="index-banner__advantages">
+						<div class="index-banner__advantage">
+							<div class="index-banner__advantage-title">Технологичность</div>
+							<div class="index-banner__advantage-text">Собственное программное обеспечение, <br>профессиональная команда <br>разработчиков.</div>
+						</div>
+						<div class="index-banner__advantage">
+							<div class="index-banner__advantage-title">Стабильность</div>
+							<div class="index-banner__advantage-text">Категория ААА — максимальный рейтинг <br>надежности по версии Национального <br>Рейтингового Агентства (НРА).</div>
+						</div>
+						<div class="index-banner__advantage">
+							<div class="index-banner__advantage-title">Надежность</div>
+							<div class="index-banner__advantage-text">Позиция в ТОП-10 <br>Московской биржи. <br>18 лет на рынке России.</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="index-itinvest-wr">
+				<div class="index-container">
+					<div class="itinvest-history-block">
+						<div class="itinvest-history-block__left">
+							<div class="itinvest-history-logo">
+								<svg width="180" height="33" viewBox="0 0 180 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M48.5552 32.2455h-5.0376V7.1489h4.9953v25.0966h.0423zM48.5552 3.9945h-5.0376v-2.144L48.5129.043v3.9515h.0423zM61.8491 7.1483c.0846.6306.127 1.3452.1693 2.144.0423.7986.0423 1.4712.0423 1.9757h.1694c.3386-.6726.762-1.3032 1.3123-1.8917s1.1853-1.093 1.905-1.5554c.7196-.4204 1.4816-.7987 2.3283-1.051.8466-.2522 1.7356-.3783 2.667-.3783 1.651 0 3.0479.2943 4.2333.8408 1.1853.5465 2.159 1.261 2.9209 2.186.762.9248 1.3547 1.9757 1.7357 3.2368.381 1.2191.5503 2.5643.5503 3.9516v15.554h-5.0376V18.3303c0-1.0089-.0847-1.9757-.254-2.9006-.1693-.9248-.4657-1.7235-.889-2.4382-.4233-.7146-1.016-1.2611-1.778-1.6815-.762-.4204-1.6933-.6305-2.8786-.6305-1.9897 0-3.5983.7566-4.8683 2.27-1.27 1.5134-1.905 3.4891-1.905 6.0114v13.326h-4.9953V12.5712c0-.6726 0-1.5554-.0423-2.6064-.0424-1.051-.0847-1.9758-.1694-2.8165h4.7837zM99.314 32.2455h-5.4187L83.6084 7.1489h5.5456l7.4083 19.7578h.127L104.14 7.1489h5.334l-10.16 25.0966zM137.034 19.5048v.8408c0 .2942 0 .5465-.042.8407h-20.109c.043 1.051.297 2.0599.72 2.9847.423.9248 1.058 1.7236 1.778 2.4382.762.6726 1.609 1.2191 2.582 1.5974a8.641 8.641 0 0 0 3.133.5886c1.693 0 3.175-.3784 4.445-1.093 1.228-.7567 2.201-1.6395 2.921-2.6904l3.514 2.8165c-1.355 1.7656-2.964 3.0688-4.784 3.9095-1.82.8408-3.852 1.2611-6.096 1.2611-1.905 0-3.683-.3363-5.334-.9668-1.651-.6306-3.048-1.5134-4.233-2.6904-1.186-1.1351-2.117-2.5223-2.794-4.1618-.678-1.6395-1.016-3.405-1.016-5.3808 0-1.9338.338-3.7414.973-5.3809.678-1.6394 1.567-3.0267 2.752-4.2037 1.185-1.1771 2.582-2.0599 4.149-2.7325 1.608-.6726 3.344-.9669 5.164-.9669 1.863 0 3.556.2943 5.038.8828 1.524.5886 2.794 1.4713 3.852 2.6064 1.059 1.135 1.863 2.4802 2.413 4.1197.678 1.5554.974 3.363.974 5.3808zm-5.122-2.0178c-.043-1.0089-.212-1.9337-.508-2.7745-.297-.8828-.762-1.5974-1.313-2.27-.592-.6306-1.312-1.1351-2.201-1.5134-.889-.3783-1.905-.5465-3.048-.5465-1.058 0-2.074.1682-3.006.5465-.931.3783-1.778.8828-2.455 1.5134-.677.6305-1.27 1.3872-1.693 2.27-.424.8828-.72 1.8076-.762 2.7745h14.986zM157.606 13.4951c-.55-.9249-1.354-1.6816-2.413-2.2701-1.016-.5885-2.201-.8828-3.471-.8828-.55 0-1.143.0421-1.693.1682-.551.1261-1.059.3363-1.524.5885-.466.2522-.805.5885-1.059 1.0089-.254.4204-.381.9248-.381 1.5134 0 1.0509.466 1.8496 1.44 2.3541.973.5044 2.413.9669 4.318 1.3872 1.227.2943 2.328.6306 3.344 1.0089 1.016.3784 1.947.8828 2.709 1.4714.762.5885 1.355 1.2611 1.778 2.1018.424.7988.635 1.7656.635 2.8586 0 1.4713-.296 2.7325-.846 3.7414-.551 1.0089-1.313 1.8496-2.286 2.5222-.932.6727-2.032 1.1351-3.218 1.3873-1.227.2943-2.455.4204-3.725.4204-1.905 0-3.81-.3784-5.63-1.093-1.821-.7567-3.345-1.8917-4.572-3.4051l3.556-3.0267c.677 1.0089 1.608 1.8076 2.794 2.4802 1.185.6726 2.497 1.0089 3.937 1.0089.635 0 1.27-.042 1.82-.1681.593-.1261 1.101-.3363 1.609-.5885.465-.2943.846-.6726 1.143-1.093.296-.4624.423-1.051.423-1.7656 0-1.1771-.55-2.0178-1.693-2.6063-1.101-.5465-2.752-1.093-4.953-1.5975-.847-.2102-1.736-.4624-2.583-.7567-.889-.2942-1.651-.7146-2.37-1.2611-.72-.5465-1.27-1.1771-1.736-1.9758-.466-.7987-.677-1.7656-.677-2.9426 0-1.3452.254-2.4802.846-3.4892.551-.9668 1.27-1.7655 2.159-2.3961.889-.6306 1.905-1.093 3.048-1.3872 1.143-.2943 2.329-.4625 3.514-.4625 1.82 0 3.556.3363 5.249 1.051 1.694.7146 3.006 1.7235 3.937 3.0687l-3.429 3.0268zM180 11.2241h-6.731v13.0317c0 1.5134.296 2.6063.847 3.2369.55.6306 1.481.9669 2.709.9669.465 0 .973-.0421 1.481-.1261.551-.0841 1.016-.2523 1.44-.4204l.169 4.0776c-.593.2102-1.27.3784-1.99.5045-.719.1261-1.481.1682-2.285.1682-2.371 0-4.191-.6727-5.461-1.9758-1.27-1.3032-1.905-3.279-1.905-5.8853V11.2241h-4.869V7.1464h4.869V1.8076L173.227 0v7.1464h6.73v4.0777H180zM0 32.2442h7.239V8.7872L0 13.7895v18.4546zM7.239 0H0v7.1885L7.239 4.54V0z" fill="#3B4B80"/><path d="M9.0586 0v3.9095L19.8535 0H9.0585z" fill="#6AA666"/><path d="M27.0913 0h-7.2389L9.5654 7.1464h10.287V32.243h7.2389V7.1464h10.8373V0H27.0913z" fill="#6AA666"/></svg>
+							</div>
+							<div class="itinvest-history-time">2000 – 2017</div>
+						</div>
+						<div class="itinvest-history-block__right">
+							С&nbsp;2000 года вы&nbsp;знали нас&nbsp;как брокера ITinvest. В&nbsp;2014 году мы&nbsp;вошли в&nbsp;международную группу&nbsp;компаний ITI Group и&nbsp;теперь работаем под брендом&nbsp;&mdash; ITI Capital.
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="index-marketplaces">
+				@@include('./inc/components/index-marketplaces.html')
+			</section>
+			<section class="index-bottom-banners-wr">
+				<div class="index-container">
+					<div class="index-bottom-banners-list">
+						<div class="index-bottom-banner">
+							<a href="#1" target="_blank" class="index-bottom-banner__content index-bottom-banner__content-consultation">
+								<div class="index-bottom-banner__icon">
+									<svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="33.5" cy="33.5" r="33.5" fill="#3C3C3E"/><path d="M25.767 18.058c-3.87 12.32 4.878 27.39 17.495 30.14l2.185-5.137-5.775-3.619c-1.208-.83-3.412.45-3.412.45-3.34-1.93-6.699-7.717-6.736-11.604 0 0 2.204-1.28 2.083-2.74l-.279-6.81-5.56-.68z" fill="#fff"/></svg>
+								</div>
+								<div class="index-bottom-banner__title">
+									Получить консультацию
+									<span class="index-bottom-banner__title-icon">
+										<svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.58 21l-2.04-1.85 8.078-7.337H0V9.187h17.618L9.525 1.864 11.581 0l11.581 10.5L11.581 21z" fill="#fff"/></svg>
+									</span>
+								</div>
+								<div class="index-bottom-banner__sub-title">
+									Наши консультанты ответят на&nbsp;любые&nbsp;вопросы
+								</div>
+							</a>
+						</div>
+						<div class="index-bottom-banner">
+							<a href="#" target="_blank" class="index-bottom-banner__content index-bottom-banner__content-access">
+								<div class="index-bottom-banner__icon">
+									<svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M66 65.58L13.634 66 .42 52.939 0 .42 52.424 0l13.157 12.983L66 65.58z" fill="#EFEFEF"/><path fill="#D24A43" d="M48.79 15.706l3.515-.028.061 7.649-3.516.028zM42.088 19.189l3.516-.029.034 4.22-3.516.028z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M25.322 45.23c-4.314 0-7.187-.977-9.603-3.41l-.136-.146L19.07 38.1l.146.146a8.194 8.194 0 0 0 6.106 2.062c1.948 0 4.363-.557 4.343-3.039a2.72 2.72 0 0 0-.75-2.022 3.665 3.665 0 0 0-2.181-.84l-3.126-.41a9.003 9.003 0 0 1-5.103-2.169 7.046 7.046 0 0 1-1.948-5.227c0-4.884 3.545-8.088 9.135-8.137 3.671 0 6.3.899 8.512 3.009l.155.146-3.486 3.478-.146-.137a7.008 7.008 0 0 0-5.171-1.68c-2.796 0-3.77 1.612-3.76 3.097a2.24 2.24 0 0 0 .711 1.7 4.172 4.172 0 0 0 2.289.977l3.048.42c1.86.11 3.634.815 5.064 2.012a7.418 7.418 0 0 1 2.153 5.637c0 4.787-3.896 8.06-9.74 8.108zM46.404 44.43l-2.512-4.181-2.455 4.18H35.4l5.727-8.46-5.512-8.088h6.038l2.24 4.005 2.298-4.005h6.038l-5.483 8.089 5.736 8.46h-6.077z" fill="#201600"/></svg>
+								</div>
+								<div class="index-bottom-banner__title">
+									Тестовый доступ
+									<span class="index-bottom-banner__title-icon">
+										<svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.58 21l-2.04-1.85 8.078-7.337H0V9.187h17.618L9.525 1.864 11.581 0l11.581 10.5L11.581 21z" fill="#292929"/></svg>
+									</span>
+								</div>
+								<div class="index-bottom-banner__sub-title">
+									Откройте демо-счёт и&nbsp;попробуйте себя в&nbsp;трейдинге, без&nbsp;риска
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="index-container">
+				<div class="social">
+					<div class="social__title">
+						Мы в социальных сетях
+					</div>
+
+					<div class="social__descr">
+						Последние новости, актуальная аналитика, интересные статьи
+					</div>
+
+					<nav class="social__links">
+						<a href="#" class="social__link">
+							<img src="./images/svg/tg.svg" alt="">
+						</a>
+
+						<a href="#" class="social__link">
+							<img src="./images/svg/facebook.svg" alt="">
+						</a>
+
+						<a href="#" class="social__link">
+							<img src="./images/svg/dzen.svg" alt="">
+						</a>
+
+						<a href="#" class="social__link">
+							<img src="./images/svg/vk2.svg" alt="">
+						</a>
+
+						<a href="#" class="social__link">
+							<img src="./images/svg/ig.svg" alt="">
+						</a>
+
+						<a href="#" class="social__link">
+							<img src="./images/svg/rss.svg" alt="">
+						</a>
+
+						<a href="#" class="social__link">
+							<img src="./images/svg/yt.svg" alt="">
+						</a>
+					</nav>
+				</div>
+			</div>
+			@@include('./inc/components/cookies-mesage.html')
+			@@include('./inc/components/index-footer.html')
+		</div>
+		@@include('./inc/components/search-box.html')
+	</body>
+</html>

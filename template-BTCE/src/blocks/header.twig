@@ -1,0 +1,57 @@
+{% block header %}
+	<header class="header">
+	<div class="header__bg">
+		<video loop muted autoplay poster="../img/header-bg.jpg" class="header__bg-video">
+			<source src="../img/background.webm" type="video/webm">
+			<source src="../img/background.mp4" type="video/mp4">
+		</video>
+	</div>
+		<div class="container">
+			<div class="header__top">
+				<a href="#" class="header__logo">
+					<img src="./img/logo.svg" alt="logo">
+				</a>
+
+				<ul class="header__nav">
+					<li><a href="#">Why BTCE</a></li>
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#">Investing</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+
+			<div class="header__main">
+				<h1 class="header__title">
+					BTCetc<span>&reg;</span>
+				</h1>
+				<h2 class="header__subtitle">
+					Bitcoin investment made easy
+				</h2>
+				<div class="header__descr">
+					BTCetc - Bitcoin Exchange Traded Crypto (ticker: BTCE) tracks the price<br>of Bitcoin and is available through your regular broker or bank.
+				</div>
+				<a href="" class="header__btn header__btn--red">Invest now</a>
+				<a href="" class="header__btn header__btn--white">FAQ</a>
+				<div class="header__slider">
+					<div>
+						<img src="./img/etf.svg" alt="">
+					</div>
+					<div>
+						<img src="./img/xetra.svg" alt="">
+					</div>
+					<div>
+						<img src="./img/cnbs.svg" alt="">
+					</div>
+					<div>
+						<img src="./img/bloomberg.svg" alt="">
+					</div>
+					<div>
+						<img src="./img/xetra.svg" alt="">
+					</div>
+				</div>
+				<img src="./img/mouse.svg" alt="">
+			</div>
+		</div>
+	</header>
+{% endblock %}
+

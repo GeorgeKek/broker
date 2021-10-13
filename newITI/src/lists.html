@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('./inc/components/pagehead.html')
+</head>
+	<body>
+	<div class="page-wrapper">
+		@@include('./inc/components/header.html')
+		<section class="services services__no-img analitics-detail">
+			<div class="gray"></div>
+				<div class="sevices-top">
+					<h1 class="sevices-top__title">
+						Lorem ipsum dolor sit amet, consectetur adipisicing.
+					</h1>
+				</div>
+				<div class="container no-container__1024">
+					<div class="row no-row__1024">
+						<div class="col-lg-3 col-md-3">
+							@@include('./inc/components/accordeon.html')
+						</div>
+						<div class="col-lg-9 col-md-9 sevices-bot__no-padding">
+							<div class="sevices-bot">
+								@@include('./inc/components/breadcrumbs.html')
+								<div class="sevices-content__main-img">
+									<img src="images/background.jpg" alt="">
+								</div>
+								<div class="sevices-content clearfix lists-content" style="padding-top: 70px; padding-left: 30px;">
+									<h2>Тариф «Попробуй!»</h2>
+									<div class="marked-list__title">
+										Тариф «Попробуй» доступен:
+									</div>
+									<ul>
+										<li>Клиентам, которые впервые заключают Договор с АО «ИК «Ай Ти Инвест»;</li>
+										<li>Клиентам АО «ИК «Ай Ти Инвест», которые не проводили операции по брокерскому счету в течение последних 12 месяцев до даты подключения тарифа;</li>
+										<li>При условии, что брокерский счет Клиента будет пополнен активами (денежными средствами и/или ценными бумагами) на сумму не менее 50 00 (Пятидесяти тысяч) рублей.</li>
+									</ul>
+									<br>
+									<br>
+									<h2>Ordered-list</h2>
+									<ol>
+										<li>
+											<em>2.1.1</em>
+											<strong>Какой тарифный план на брокерское обслуживание будет оптимальным для меня?</strong>
+												Для удобства клиентов сейчас в компании существуют единые тарифные планы для каждого рынка. Вы можете выбрать депозитарный тарифный план, с помощью наших рекомендаций.
+										</li>
+										<li>
+											<em>2.1.2</em>
+											<strong>Где в личном кабинете можно увидеть, какой у меня тарифный план на брокерское обслуживание?</strong>
+												В WEB-кабинете, в разделе "Меню"/"Мои портфели" или "Меню"/"Документооборот”/”Подать документ”/”Технический протокол”
+										</li>
+										<li>
+											<em>2.2.3</em>
+											<strong>Если я не совершу ни одной сделки за месяц, будет ли с меня списана абонентская плата за брокерское обслуживание?</strong>
+												Комиссия за обслуживание и ведение счета взимается, если сумма совокупных чистых активов клиента на конец месяца составила менее 50 000 рублей, либо размер начисленной брокером комиссии по итогам месяца составил менее 300 рублей. Комиссия за обслуживание и ведение счета взимается в размере, равном разнице между 300 рублями и суммой уплаченных клиентом брокерских комиссий 
+										</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+		<section class="registration">
+			@@include('./inc/components/registration.html')
+		</section>
+		@@include('./inc/components/footer.html')
+		</div>
+	</body>
+</html>

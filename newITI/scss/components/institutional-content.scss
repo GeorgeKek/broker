@@ -1,0 +1,133 @@
+.institutional-content
+{
+	max-width: 640px;
+	width: 100%;
+	// margin-left: 66px;
+	// padding-top: 48px;
+}
+h2.institutional-content__title
+{
+	font-family: $bold;
+	font-size: 30px;
+	line-height: 130%;
+	color: #333333;
+	margin: 0;
+	margin-bottom: 32px;
+}
+.institutional-content__list
+{
+	display: flex;
+	align-items: start;
+	flex-wrap: wrap;
+	margin-bottom: 37px;
+}
+.institutional-content__item
+{
+	width: 304px;
+	margin-bottom: 21px;
+	&:first-child{margin-right: 32px;}
+	&:nth-child(3){margin-right: 32px;}
+}
+.institutional-content__image
+{
+	width: 34px;
+	height: 40px;
+	margin-bottom: 12px;
+	svg
+	{
+		width: 100%;
+		height: 100%;
+	}
+}
+.institutional-content__text
+{
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 145%;
+	color: #333333;
+	height: 70px;
+}
+.institutional-content__text-list
+{
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 145%;
+	// padding-left: 25px;
+	color: #333333;
+	margin-bottom: 64px;
+}
+.institutional-content__text-item
+{
+	position: relative;
+	&:not(:last-child){margin-bottom: 16px;}
+	// &::after
+	// {
+	// 	content: '';
+	// 	position: absolute;
+	// 	top: 11px;
+	// 	left: -22px;
+	// 	width: 16px;
+	// 	height: 1px;
+	// 	background: #A8A8A8;
+	// }
+}
+.institutional-content .institutional-content__button-phone
+{
+	float: unset;
+	margin-left: 0;
+	a
+	{
+		border-bottom: 3px solid #f2f2f2;
+		transition: all .2s;
+		&:hover
+		{
+			box-shadow: 0 10px 40px 0 rgba(0, 0, 0, .1);
+			top: -5px;
+			border-color:#f2f2f2;
+			border-bottom: 3px solid #f2f2f2;
+			transition: all .2s;
+		}
+	}
+}
+.institutional-content .institutional-content__contacts
+{
+	margin-bottom: 64px;
+	a{border-bottom: 0;}
+}
+.institutional-content h2.institutional-content__contacts-title
+{
+	font-family: $bold;
+	font-size: 18px;
+	line-height: 145%;
+	color: #333333;
+	margin: 0;
+	margin-bottom: 11px;
+}
+.institutional-content .institutional-content__contacts-phone
+{
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 145%;
+	color: #333333;
+}
+.institutional-content .institutional-content__contacts-phone--red
+{
+	color:#F04F48;
+}
+@media (max-width: 1280px)
+{
+	// .institutional-content{margin-left: 36px;}
+}
+@media (max-width: 550px)
+{
+	h2.institutional-content__title
+	{
+		font-size: 18px;
+		padding-right: 10px;
+	}
+	.institutional-content__text-list{padding-right: 26px;}
+	.institutional-content__button-phone
+	{
+		transform: translateX(-16px);
+	}
+}

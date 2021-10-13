@@ -1,0 +1,16 @@
+{# index.twig #}
+{%
+	set titlePage = {
+	'titlePage': 'Услуги',
+	'subTitle': 'УК Стабильный Доход',
+	'background': './img/services-header.jpeg',
+	},
+%}
+
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	{% include "./blocks/anchors.twig" %}
+	{% include "./blocks/services.twig" %}
+	{% include "./popups/call-popup.twig" %}
+{% endblock %}

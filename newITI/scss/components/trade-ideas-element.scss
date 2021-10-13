@@ -1,0 +1,614 @@
+.ow-hidden{overflow: hidden;}
+.overlayTrade
+{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 25;
+	padding: 0 15px;
+	transition: all .3s;
+	background: rgba(255, 255, 255, 0.8);
+	backdrop-filter: blur(4px);
+	&:after{display: none;}
+	&.show
+	{
+		visibility: visible;
+		opacity: 1;
+	}
+	// &.open
+	// {
+	// 	visibility: visible;
+	// 	opacity: 1;
+	// 	background: white;
+	// }
+}
+.popupTrade
+{
+	position: fixed;
+	margin: auto;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	transition: all .3s;
+	visibility: hidden;
+	opacity: 0;
+	background-color: #fff;
+	max-width: 1140px;
+	max-height: calc(var(--vh, 1vh) * 90);
+	height: fit-content;
+	z-index: 10;
+	overflow-y: hidden;
+	box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
+	&.show
+	{
+		visibility: visible;
+		opacity: 1;
+	}
+}
+.mobile-app__items div.mobile-app__items-flex-popup{background: white;}
+.mobile-app__wrap
+{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+	padding-top: 75px;
+}
+.mobile-app__wrap--popup
+{
+	position: relative;
+	padding-top: 45px;
+}
+.popup-close
+{
+	font-size: 0;
+	line-height: 0;
+	cursor: pointer;
+	position: absolute;
+	text-align: right;
+	top: 15px;
+	right: 15px;
+	z-index: 1;
+}
+.block-flex
+{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+	width: 100%;
+	height: fit-content;
+	// overflow-y: scroll;
+	// max-height: 400px;
+}
+.mobile-app__left
+{
+	line-height: 0;
+	margin-top: auto;
+	img{max-width: 538px;}
+}
+.mobile-app__left--mobile{display: none;}
+.mobile-app__right
+{
+	padding-top: 40px;
+	max-width: 626px;
+}
+.mobile-app__wrap--popup .mobile-app__right{padding: 20px;}
+.mobile-app__title
+{
+	font-family: "Inter-Medium", "PT Sans", sans-serif;
+	font-size: 42px;
+	line-height: 60px;
+	font-weight: 600;
+	color: #575762;
+	margin-bottom: 33px;
+}
+.mobile-app__wrap--popup .mobile-app__title
+{
+	font-family: 'Aeroport';
+	font-size: 44px;
+	line-height: 115%;
+	font-weight: normal;
+}
+.mobile-app__list
+{
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 24px;
+	color: #575762;
+	margin-bottom: 44px;
+}
+.mobile-app__item
+{
+	margin-bottom: 12px;
+	position: relative;
+	padding-left: 20px;
+	&:before
+	{
+		content: '->';
+		position: absolute;
+		left: 0px;
+		top: 0;
+	}
+}
+.br{display: none;}
+.trade-ideas-element
+{
+	min-height: 500px;
+	margin-bottom: 81px;
+	overflow:hidden;
+	.main-container
+	{
+		width: 1410px;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin: 0 auto;
+		position: relative;
+	}
+}
+.present
+{
+	background: #F08730;
+	padding: 28px 43px 28px 29px;
+	min-height: 143px;
+	display: inline-block;
+}
+.present__flex
+{
+	display: flex;
+	align-items: center;
+	img
+	{
+		margin-right: 28px;
+		display: block;
+	}
+	span
+	{
+		color: #FAFAFA;
+		display: block;
+
+		&:first-child
+		{
+			font-family: 'Inter-Bold';
+			font-size: 19px;
+			font-size: 19px;
+			line-height: 145%;
+		}
+		&:last-child
+		{
+			max-width: 263px;
+			font-size: 15px;
+		}
+	}
+}
+.banner-img
+{
+	position: absolute;
+	right: 0;
+	top: 20px;
+}
+.trade-ideas-element__content-ideas
+{
+	max-width: 680px;
+}
+.trade-ideas-element__text-title
+{
+	font-weight: normal;
+	font-size: 44px;
+	line-height: 115%;
+	color: #333333;
+	letter-spacing: -0.01em;
+	margin: 0;
+	margin-bottom: 20px;
+}
+.trade-ideas-element__text-abs
+{
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 145%;
+	letter-spacing: -0.01em;
+	color: #333333;
+	margin: 0;
+	margin-bottom: 28px;
+	max-width: 446px;
+}
+.trade-ideas-element__lists
+{
+	max-width: 560px;
+	overflow-x: scroll;
+	&::-webkit-scrollbar{width: 0;}
+}
+.trade-ideas-element__content-list
+{
+	display: flex;
+	margin-bottom: 8px;
+	flex-wrap: wrap;
+	.slick-slide
+	{
+		// width: min-content !important;
+	}
+}
+.trade-ideas-element__content-item
+{
+	flex-shrink: 0;
+	margin-bottom: 16px;
+	width: fit-content !important;
+	&:not(:last-child)
+	{
+		margin-right: 16px;
+	}
+	a
+	{
+		display: flex;
+		align-items: center;
+		background: white;
+		border: 1px solid #E8E8E8;
+		border-radius: 4px;
+		padding: 0 16px;
+		height: 72px;
+		.image
+		{
+			margin-right: 16px;
+		}
+	}
+}
+.trade-ideas-element__content-percent
+{
+	display: flex;
+	align-items: center;
+	img{margin-right: 4px;}
+}
+.trade-ideas-element__content-percent-numb
+{
+	font-family: 'Inter-Bold';
+	font-size: 15px;
+	line-height: 120%;
+	color: #66B759;
+}
+.trade-ideas-element__content-block
+{
+	span
+	{
+		font-weight: 600;
+		font-size: 15px;
+		line-height: 145%;
+		color: #333333;
+	}
+}
+.mobile-app__items
+{
+	.mobile-app__items-flex
+	{
+		display: inline-flex;
+		justify-content: flex-start;
+		padding: 29px;
+		background: #F9F9F9;
+		margin-top: -20px;
+		position: relative;
+		z-index: 3;
+	}
+}
+.mobile-app__items-qr
+{
+	width: 101px;
+	height: 101px;
+	margin-right: 13px;
+}
+.mobile-app__items-wrap
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.mobile-app__items-wrap-link
+{
+	display: block;
+	line-height: 0;
+	transition: 0.25s;
+}
+.mobile-app__items-wrap-link object
+{
+	pointer-events: none;
+	width: 147px;
+	height: 43px;
+}
+.mobile-app__items-wrap-link:last-child object{width: 137px;}
+.mobile-app__items-wrap-link:hover
+{
+	transform: scale(1.05);
+	transition: 0.25s;
+}
+.special
+{
+	.trade-ideas-element__text-title
+	{
+		font-size: 72px;
+	}
+	.trade-ideas-element__text-abs
+	{
+		font-size: 30px;
+	}
+	.trade-ideas-element__content-block span
+	{
+		font-size: 30px;
+	}
+	.trade-ideas-element__content-percent
+	{
+		img
+		{
+			width: 15px;
+		}
+	}
+	.trade-ideas-element__content-percent-numb
+	{
+		font-size: 30px;
+	}
+	.trade-ideas-element__content-item
+	{
+		a
+		{
+			height: 106px;
+			.image
+			{
+				width: 60px;
+			}
+		}
+	}
+	.present__flex
+	{
+		span:first-child
+		{
+			font-size: 36px;
+		}
+		span:last-child
+		{
+			font-size: 30px;
+		}
+		img
+		{
+			width: 200px;
+		}
+	}
+	.mobile-app__items-qr
+	{
+		width: 161px;
+		height: 161px;
+	}
+	.mobile-app__items-wrap-link object
+	{
+		width: 190px;
+		height: 65px;
+	}
+	.traiding-ideas__input-wrapper
+	{
+		&:first-child
+		{
+			&:after
+			{
+				font-size: 18px;
+				bottom: -40px;
+			}
+		}
+	}
+	.traiding-ideas-subscribe__bot p
+	{
+		font-size: 26px;
+		line-height: 32px;
+	}
+}
+@media (max-width: 1439px)
+{
+	.trade-ideas-element .main-container{width: 1225px;}
+}
+@media (max-width: 1279px)
+{
+	.trade-ideas-element .main-container
+	{
+		width: 1024px;
+		padding-left: 43px;
+		padding-right: 43px;
+	}
+	.banner-img{right: -120px;}
+}
+@media (max-width: 1023px)
+{
+	.trade-ideas-element .main-container
+	{
+		width: 747px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.banner-img{right: -180px;}
+	.mobile-app__wrap
+	{
+		flex-direction: column-reverse;
+		align-items: center;
+		text-align: center;
+	}
+	.mobile-app__left
+	{
+		display: none;
+	}
+	.mobile-app__wrap--popup .mobile-app__title
+	{
+		font-size: 32px;
+	}
+	.block-flex
+	{
+		justify-content: center;
+	}
+	.mobile-app__list{margin-bottom: 0;}
+	.mobile-app__item
+	{
+		padding-left: 0;
+		margin-bottom: 24px;
+		&:before
+		{
+			color: #EC231A;
+			left: 50%;
+			top: -23px;
+			transform: translateX(-50%) rotate(90deg);
+		}
+	}
+	.mobile-app__items-flex-popup .mobile-app__items-wrap
+	{
+		flex-direction: column;
+		a
+		{
+			margin-right: 0;
+			&:not(:last-child){margin-bottom: 16px;}
+		}
+	}
+	.popupTrade
+	{
+		max-height: 100vh;
+		height: 100vh;
+	}
+}
+@media (max-width: 767px)
+{
+	.trade-ideas-element .main-container
+	{
+		width: 100%;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.banner-img{display: none;}
+	.special
+	{
+		.trade-ideas-element__text-title
+		{
+			font-size: 44px;
+		}
+		.trade-ideas-element__text-abs
+		{
+			font-size: 20px;
+			line-height: 24px;
+		}
+		.trade-ideas-element__content-percent-numb
+		{
+			font-size: 20px;
+		}
+		.trade-ideas-element__content-block span
+		{
+			font-size: 20px;
+		}
+		.trade-ideas-element__content-item a
+		{
+			height: 76px;
+		}
+		.present
+		{
+			padding-top: 120px;
+		}
+		.present__flex span:first-child
+		{
+			max-width: 250px;
+		}
+		.present__flex span:last-child
+		{
+			font-size: 24px;
+		}
+	}
+}
+@media (max-width: 596px)
+{
+	.br{display: block;}
+	.trade-ideas-element
+	{
+		min-height: unset;
+		margin-bottom: 40px;
+	}
+	.trade-ideas-element .main-container--mobile{padding: 0;}
+	.trade-ideas-element__content{min-height: unset;}
+	.trade-ideas-element__content-title
+	{
+		font-size: 32px;
+		margin-bottom: 20px;
+	}
+	.trade-ideas-element__content-abs
+	{
+		max-width: 330px;
+	}
+	.trade-ideas-element__lists
+	{
+		overflow-x: scroll;
+		margin-bottom: 0;
+		width: 100%;
+		max-width: 100%;
+		scrollbar-width: none;
+		&::-webkit-scrollbar{width: 0;}
+		&.active{margin-right: 16px;}
+	}
+	.trade-ideas-element__content-list
+	{
+		padding: 0 20px;
+		width: max-content;
+	}
+	.trade-ideas-element__content-item
+	{
+		display: inline-block;
+	}
+	.mobile-app__items-qr{display: none;}
+	.mobile-app__items-wrap
+	{
+		flex-direction:row;
+	}
+	.mobile-app__items-wrap-link:first-child{margin-right: 16px;}
+	.mobile-app__items .mobile-app__items-flex
+	{
+		padding: 16px;
+		margin: 0;
+		max-width: 277px;
+		position: relative;
+		z-index: 9;
+		a object
+		{
+			position: relative;
+			z-index: 10;
+			background:white;
+			display: inline-block;
+		}
+	}
+	.present
+	{
+		padding-right: 0;
+		display: block;
+		position: relative;
+	}
+	.present__flex
+	{
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+		align-items: start;
+	}
+	.present__flex img
+	{
+		position: absolute;
+		right: -40px;
+		top: 28px;
+	}
+	.present__flex span:first-child
+	{
+		max-width: 140px;
+		margin-bottom: 10px;
+	}
+	.present__flex span:last-child
+	{
+		max-width: 202px;
+	}
+	.special
+	{
+		.present__flex span:first-child
+		{
+			max-width: 250px;
+		}
+		.mobile-app__items-wrap
+		{
+			flex-direction: column;
+		}
+	}
+}

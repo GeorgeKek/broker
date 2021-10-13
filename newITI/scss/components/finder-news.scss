@@ -1,0 +1,82 @@
+.finder-news
+{
+	display: flex;
+	align-items: center;
+	padding-left: 70px;
+	&.error
+	{
+		.error-text
+		{
+			visibility: visible;
+			opacity: 1;
+			transition: .2s;
+		}
+	}
+	&.filled-up
+	{
+		.finder-news__find-close
+		{
+			visibility: visible;
+			opacity: 1;
+			transition: .2s;
+		}
+	}
+}
+.error-text
+{
+	position: absolute;
+	bottom:-40px;
+	visibility: hidden;
+	opacity: 0;
+	transition: .2s;
+	color:#f04f48;
+	&.text-error
+	{
+		visibility: visible;
+		opacity: 1;
+		transition: .2s;
+	}
+}
+.finder-news__find
+{
+	position: relative;
+	width: 100%;
+	display: block;
+}
+.finder-news__find-icon
+{
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.finder-news__find-close
+{
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	visibility: hidden;
+	opacity: 0;
+	transition: .2s;
+	cursor: pointer;
+}
+.finder-news__find-input
+{
+	border:0;
+	border-bottom: 2px solid #a8a8a8;
+	height: 59px;
+	line-height: 55px;
+	font-family: Inter-Regular,PT Sans,sans-serif;
+	width: 100%;
+	padding-right: 40px;
+	padding-left: 56px;
+}
+.finder-news__button
+{
+	padding: 0 50px;
+	height: 52px;
+	border:0;
+	border:1px solid #f04f48;
+	border-radius:50px;
+}

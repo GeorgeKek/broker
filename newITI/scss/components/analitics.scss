@@ -1,0 +1,600 @@
+.analitics-wrapper
+{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.analitics
+{
+	.sevices-content.sevices-content__wide
+	{
+		padding-top: 46px;
+	}
+}
+.analitics-item
+{
+	width: 29%;
+	height: 290px;
+	position: relative;
+	margin-bottom: 66px;
+	margin-right: 4%;
+	transition: all 0.3s;
+	.analitics-bottom:hover
+	{
+		border-color: $main;
+		.analitics-item__title
+		{
+			color: $main;
+		}
+	}
+}
+.analitics-item__full
+{
+	width: 95%;
+	min-height: 271px;
+	display: flex;
+	align-items: center;
+	border-bottom: none;
+
+}
+.analitics-item__full-wrapper
+{
+	width: 100%;
+	height: 100%;
+	background-color: #d8d8d8;
+	background-image: url('https://www.w3schools.com/w3css/img_fjords.jpg');
+	padding: 71px 40px;
+	height: auto;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.analitics-item__text,
+.analitics-item__text__mobile
+{
+	width: 49%;
+	font-size: 26px;
+	line-height: 32px;
+	min-width: 412px;
+}
+.analitics-item__text__mobile
+{
+	min-width: 0px;
+	background-color: #d8d8d8;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: none;
+}
+.analitics-top
+{
+	font-size: 14px;
+	line-height: 1.71;
+	color: #999999;
+	margin-bottom: 12px;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.analitics-item__tag:before
+{
+	content: '·';
+	display: inline-block;
+	margin-left: 8px;
+	margin-right: 8px;
+
+}
+.analitics-item__date,
+.analitics-item__tag
+{
+	color: #999999;
+	&:hover
+	{
+		text-decoration: underline;
+	}
+}
+.analitics-item__title
+{
+	line-height: 1.1;
+	text-align: left;
+	color: #000000;
+	font-size: 21px;
+	font-weight: bold;
+	margin-bottom: 14px;
+	transition: all 0.3s;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	max-height: 100px;
+	transition: all 0.3s;
+	// font-family: 'Inter ','PT Sans','sans-serif';
+	// font-family: 'Inter ';
+	// font-family:'PT Sans';
+	// font-family: 'sans-serif';
+	font-family: $bold;
+}
+.analitics-item__descr
+{
+	line-height: 1.63;
+	height: 78px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	color: #333333;
+}
+.analitics-bottom
+{
+	position: absolute;
+	display: block;
+	width: 100%;
+	bottom: 0px;
+	padding-bottom: 56px;
+	border-bottom: 2px solid #e8e8e8;
+	transition: all 0.3s;
+}
+.analitics__show-more
+{
+	text-align: center;
+	width: 100%;
+	button
+	{
+		width: 282px;
+		height: 44px;
+		border-radius: 42px;
+		border: solid 1px $main;
+		font-size: 14px;
+		line-height: 1.44;
+		transition: all 0.3s;
+		&:hover
+		{
+			background-color: #f04f48;
+			color: #fff;
+			box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.15);
+		}
+	}
+}
+.analitics
+{
+	.services-accordeon__mobile
+	{
+		display: none;
+	}
+}
+.analitics-item__full
+{
+	margin-left: 20px;
+	width: calc(100% - 4%  - 30px);
+}
+.traiding-ideas-subscribe
+{
+	width: 96%;
+	margin-top: 50px;
+	padding-left: 40px;
+}
+.traiding-ideas-subscribe__top
+{
+	width: 100%;
+	height: 30px;
+	background-color: #f6f4f0;
+	border: solid 1px #d0d0d0;
+	border-bottom: none;
+}
+.traiding-ideas-subscribe__bot
+{
+	background-color: #ffffff;
+	border: solid 1px #d0d0d0;
+	padding: 45px 40px;
+	p
+	{
+		text-align: center;
+	}
+}
+.traiding-ideas-subscribe__title
+{
+	font-size: 40px;
+	font-family: $air;
+	font-feature-settings: "ss01" 0;
+	text-align: center;
+	margin-bottom: 49px;
+}
+.traiding-ideas__input-wrapper
+{
+	width: 305px;
+	&:first-child
+	{
+		position: relative;
+		&:after
+		{
+			position: absolute;
+			bottom: -30px;
+			content: '* Обязательное для заполнение поле';
+			font-size: 12px;
+			line-height: 18px;
+			color: #999999
+		}
+	}
+}
+.traiding-ideas-subscribe__inputs
+{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+.traiding-ideas__input-wrapper__button
+{
+	width: 188px;
+	margin-bottom: 0;
+	button
+	{
+		width: 100%;
+		height: 50px;
+		border-radius: 53px;
+		background-color: #f04f48;
+		font-weight: 500;
+		line-height: 1.38;
+		text-align: center;
+		color: #ffffff;
+		font-family: $medium;
+		float: right;
+		display: block;
+		border: none;
+		transition: all 0.3s;
+		&:hover
+		{
+			box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.15);
+		}
+	}
+}
+
+.service-search-text-wr
+{
+	max-width: 640px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 30px;
+}
+.service-search-text-control-wr
+{
+	text-align: center;
+	padding-bottom: 26px;
+}
+.service-search-text-control
+{
+	display: inline-block;
+	line-height: 0;
+	cursor: pointer;
+	transition: 0.2s;
+	transform-origin: center;
+	padding: 13px;
+}
+.service-search-text-control_opened
+{
+	transform: rotateX(180deg);
+}
+.service-search-text__header
+{
+	text-align: center;
+	font-size: 50px;
+	line-height: 1;
+	padding-bottom: 40px;
+	margin-bottom: 0;
+}
+.service-search-text-box
+{
+	font-size: 15px;
+	line-height: 22px;
+	display: none;
+	h2,h3
+	{
+		margin: 0;
+		margin-bottom: 20px;
+	}
+	p
+	{
+		color: $accent-color;
+		margin-top: 0;
+		margin-bottom: 25px;
+		&:last-child
+		{
+			margin-bottom: 0;
+		}
+		a
+		{
+			color: $accent-color;
+			border-bottom: 1px solid #7db7b7;
+			padding-bottom: 2px;
+			transition: 0.2s;
+			&:hover
+			{
+				border-color: #f04f48;
+				color: $main;
+			}
+		}
+	}
+	b
+	{
+		font-family: $bold;
+		font-weight: normal;
+	}
+}
+.special
+{
+	.analitics-top
+	{
+		font-size: 22px;
+	}
+	.analitics-bottom
+	{
+		padding-bottom: 36px;
+	}
+	.analitics-item__title
+	{
+		font-size: 22px;
+	}
+	.analitics-item__descr
+	{
+		height: 158px;
+		font-size: 20px;
+	}
+	.index-news__wrapper
+	{
+		.analitics-item
+		{
+			height: 400px;
+		}
+
+	}
+	.analitics-item
+	{
+		height: 400px;
+	}
+	.analitics__show-more button
+	{
+		height: 74px;
+		font-size: 28px;
+	}
+	.analitics-item__text
+	{
+		font-size: 36px;
+		min-width: 542px;
+	}
+	.analitics-item__date, .analitics-item__tag
+	{
+		color: #333;
+	}
+}
+@media (max-width: 1439px)
+{
+	.traiding-ideas__input-wrapper
+	{
+		width: 45%;
+		margin: 0;
+		margin-bottom: 55px;
+	}
+	.traiding-ideas__input-wrapper__button
+	{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 0;
+		button
+		{
+			width: 188px;
+		}
+	}
+	.traiding-ideas-subscribe__inputs
+	{
+		flex-wrap: wrap;
+	}
+}
+@media (max-width: 1279px)
+{
+	.traiding-ideas-subscribe
+	{
+		width: 100%;
+	}
+	.traiding-ideas__input-wrapper
+	{
+		width: 48%;
+	}
+	.traiding-ideas__input-wrapper__button
+	{
+		width: 100%;
+		margin-bottom: 0;
+	}
+	.traiding-ideas-subscribe__bot
+	{
+		padding: 40px 20px;
+	}
+	.analitics-item
+	{
+		width: 45%;
+		margin-right: 10%;
+		&:nth-child(even)
+		{
+			margin-right: 0;
+		}
+	}
+	.analitics-item__full
+	{
+		width: calc(100% + 15px);
+		max-width: calc(100% + 15px);
+		margin-left: -10px;
+	}
+	.analitics-wrapper
+	{
+		width: 100%
+	}
+	.sevices-content__wide
+	{
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+@media (max-width: 1023px)
+{
+	.traiding-ideas-subscribe
+	{
+		position: relative;
+		width: 100%;
+		padding-left: 0;
+	}
+	.traiding-ideas-subscribe__top,
+	.traiding-ideas-subscribe__bot
+	{
+		border-left: none;
+		border-right: none;
+	}
+	.analitics-item__text
+	{
+		display: none;
+	}
+	.analitics-item__full
+	{
+		display: block;
+		padding: 0;
+		min-height: 0px;
+	}
+	.analitics-item__full-wrapper
+	{
+		height: 160px;
+		padding: 0;
+	}
+	.analitics-item__text__mobile
+	{
+		display: block;
+		padding: 20px;
+		background-color: #fafafa;
+	}
+	.analitics-wrapper
+	{
+		padding: 0 20px;
+	}
+	.analitics-item
+	{
+		width: 45%;
+		&:nth-child(odd)
+		{
+			margin-left: 0;
+		}
+		&:nth-child(even)
+		{
+			margin-right: 0;
+		}
+	}
+	.analitics-item__full
+	{
+		width: 100%;
+		margin-left: 0;
+	}
+	.traiding-ideas-subscribe__title
+	{
+		font-size: 35px;
+	}
+}
+@media (max-width: 767px)
+{
+	.traiding-ideas-subscribe__top
+	{
+		display: none;
+	}
+	.traiding-ideas-subscribe__bot
+	{
+		border-top: none;
+	}
+	.traiding-ideas-subscribe
+	{
+		padding-bottom: 40px;
+		margin-top: 0;
+	}
+	.traiding-ideas-subscribe__title
+	{
+		font-size: 30px;
+		text-align: left;
+		margin-bottom: 35px;
+	}
+	.traiding-ideas__input-wrapper
+	{
+		width: 100%;
+		position: relative;
+		margin-bottom: 25px;
+	}
+	.traiding-ideas__input-wrapper__button
+	{
+		margin-top: 40px;
+		margin-bottom: 0;
+	}
+	.traiding-ideas__input-wrapper:first-child:after
+	{
+		display: none;
+	}
+	.traiding-ideas__input-wrapper:nth-child(2):after
+	{
+		position: absolute;
+		bottom: -30px;
+		content: '* Обязательное для заполнение поле';
+		font-size: 12px;
+		line-height: 18px;
+		color: #999999;
+	}
+	.analitics .sevices-top__title
+	{
+		padding-left: 0;
+	}
+	.analitics-wrapper
+	{
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.analitics-item__full
+	{
+		width: 100%;
+	}
+	.analitics-item
+	{
+		height: auto;
+		width: 100%;
+		margin: 0;
+		margin-bottom: 50px;
+		padding-bottom: 50px;
+	}
+	.analitics-bottom
+	{
+		position: static;
+	}
+	.analitics-item__descr
+	{
+		height: auto;
+	}
+	.service-search-text-wr
+	{
+		max-width: 100%;
+	}
+	.service-search-text__header
+	{
+		font-size: 35px;
+		text-align: left;
+		line-height: 1;
+		padding-bottom: 25px;
+	}
+	.special
+	{
+		.analitics__show-more
+		{
+			button
+			{
+				font-size: 22px;
+				height: 64px;
+			}
+		}
+	}
+}

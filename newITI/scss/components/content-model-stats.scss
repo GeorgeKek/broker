@@ -1,0 +1,152 @@
+.content-model-stats
+{
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 40px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	margin-bottom: 40px;
+}
+.content-model-stats__item-name
+{
+	padding-bottom: 15px;
+	font-family: $regular;
+}
+.content-model-stats__item_middle
+{
+	padding-right: 60px;
+	padding-left: 110px;
+}
+.content-model-stats__item-value
+{
+	font-family: $air;
+	font-feature-settings: "ss01" 0;
+	line-height: 1;
+	font-size: 35px;
+}
+.content-model-sectors
+{
+	display: flex;
+	justify-content: space-between;
+	padding-right: 60px;
+	padding-top: 20px;
+	margin-bottom: 60px;
+	flex-wrap: wrap;
+	padding-left: 25px;
+}
+.content-model-sectors__item
+{
+	position: relative;
+	padding-bottom: 20px;
+}
+.content-model-sectors__item-icon
+{
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	line-height: 0;
+	margin-bottom: 22px;
+}
+.content-model-sectors__item-name
+{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,0);
+	bottom: 0;
+	text-align: center;
+}
+.content-model-stats-img
+{
+	padding-bottom: 60px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	margin-bottom: 40px;
+	margin-top: 60px;
+}
+.special
+{
+	.content-model-stats__item-name
+	{
+		font-size: 22px;
+	}
+	.content-model-stats__item_middle
+	{
+		padding-left: 50px;
+	}
+	.content-model-stats__item-value
+	{
+		font-size: 48px;
+	}
+	.content-model-sectors__item-name
+	{
+		font-size: 22px;
+	}
+	.content-model-sectors
+	{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+@media (max-width: 1023px)
+{
+	.content-model-stats
+	{
+		justify-content: space-between;
+	}
+	.content-model-stats__item_middle
+	{
+		padding: 0;
+	}
+}
+@media (max-width: 767px)
+{
+	.content-model-stats
+	{
+		padding-top: 20px;
+	}
+	.content-model-sectors
+	{
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.content-model-stats-img
+	{
+		margin-top: 35px;
+		padding-bottom: 35px;
+		margin-bottom: 35px;
+	}
+}
+@media (max-width: 520px)
+{
+	.content-model-sectors
+	{
+		padding-top: 0;
+		margin-top: -15px;
+	}
+	.content-model-sectors__item
+	{
+		flex-basis: 50%;
+		text-align: center;
+		margin-top: 35px;
+	}
+	.content-model-stats
+	{
+		flex-direction: column;
+		padding-bottom: 0;
+		border: none;
+	}
+	.content-model-stats__item
+	{
+		padding-bottom: 20px;
+		margin-bottom: 25px;
+		border-bottom: 1px solid  rgba(0, 0, 0, 0.1);
+	}
+	.special
+	{
+		.content-model-sectors__item
+		{
+			flex-basis: 100%;
+		}
+	}
+}

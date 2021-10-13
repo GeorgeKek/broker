@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('./inc/components/pagehead.html')
+</head>
+	<body>
+		<div class="wrap">
+			@@include('./inc/components/header.html')
+			<section class="main no-title">
+				<div class="sevices-top">
+					<div class="container">
+						<div class="sevices-top__wrapper">
+							@@include('./inc/components/breadcrumbs.html')
+							<h1 class="sevices-top__title">
+								Словарь начинающего инвестора
+							</h1>
+						</div>
+					</div>
+				</div>
+				@@include('./inc/components/mobile-accordeon.html')
+				<div class="container flex-container">
+					<div class="accordeon-wrapper">
+						@@include('./inc/components/accordeon.html')
+						<div class="hidden-accordeon">
+							@@include('./inc/components/accordeon.html')
+						</div>
+					</div>
+					<div class="content-wrapper">
+						<div class="sevices-bot">
+							<div class="search-wrapper "><!-- search-wrapper_no-result для ошибки -->
+								<div class="search-top">Поисковый запрос ↓</div>
+								<div class="search-form">
+									<form>
+										<div class="search-input">
+											<input value="Брокер" type="text">
+											<button type="submit" class="search-btn"></button>
+										</div>
+										<div class="search-form__bot">
+											<label class="checkbox-label">
+												<input type="checkbox" class="checkbox">
+												<span></span>
+												Поиск в документах
+											</label>
+											<div class="search-calc">Найдено 5 ответов</div>
+										</div>
+									</form>
+								</div>
+								<div class="search-error">
+									Совпадений не найдено. Скорректируйте запрос!
+								</div>
+								<div class="search-results">
+									<div class="search-results__item">
+										<a href="#" class="search-results__item-title">Современный финансовый <span>брокер</span></a>
+										<div class="search-results__item-body">Мы работаем для вас уже 18 лет (до 2017 г. под именем «ITinvest»). Предлагаем готовые инвестиционные продукты, даем доступ на биржевые площадки и создаем условия для развития вашего бизнеса</div>
+										<a href="#" class="search-results__item-link">https://iticapital.ru</a>
+									</div>
+									<div class="search-results__item">
+										<a href="#" class="search-results__item-title">Персональный <span>брокер</span></a>
+										<div class="search-results__item-body">TI Capital предлагает вам услугу персонального брокерского обслуживания. Если на вашем счёте более 15 млн руб. совокупных активов, мы рады предложить вам персонального брокера… TI Capital предлагает вам услугу персонального брокерского обслуживания. Если на вашем счёте более 15 млн руб. совокупных активов, мы рады предложить вам персонального брокера… </div>
+										<a href="#" class="search-results__item-link">https://iticapital.ru/services/private-services/personal-broker/</a>
+									</div>
+									<div class="search-results__item">
+										<a href="#" class="search-results__item-title">Фондовый рынок</a>
+										<div class="search-results__item-body">Каждый клиент получает статус по уровню риска. <span>Брокер</span> назначает вам этот статус для того, чтобы повысить безопасность сделок и контролировать риски.</div>
+										<a href="#" class="search-results__item-link">https://iticapital.ru/services/markets/stock-market/</a>
+									</div>
+									<div class="search-results__item">
+										<a href="#" class="search-results__item-title">Современный финансовый <span>брокер</span></a>
+										<div class="search-results__item-body">Мы работаем для вас уже 18 лет (до 2017 г. под именем «ITinvest»). Предлагаем готовые инвестиционные продукты, даем доступ на биржевые площадки и создаем условия для развития вашего бизнеса</div>
+										<a href="#" class="search-results__item-link">https://iticapital.ru</a>
+									</div>
+									<div class="search-results__item">
+										<a href="#" class="search-results__item-title">Персональный <span>брокер</span></a>
+										<div class="search-results__item-body">TI Capital предлагает вам услугу персонального брокерского обслуживания. Если на вашем счёте более 15 млн руб. совокупных активов, мы рады предложить вам персонального брокера… TI Capital предлагает вам услугу персонального брокерского обслуживания. Если на вашем счёте более 15 млн руб. совокупных активов, мы рады предложить вам персонального брокера… </div>
+										<a href="#" class="search-results__item-link">https://iticapital.ru/services/private-services/personal-broker/</a>
+									</div>
+									<div class="search-pagination">
+										<a href="#">@@include('./inc/components/svg/pagination-arrow.html')</a>
+										<span>12-24/95-107</span>
+										<a href="#">@@include('./inc/components/svg/pagination-arrow.html')</a>
+									</div>
+								</div>
+								</div>
+								<!-- <div class="search-pagination">
+									<a href="#">@@include('./inc/components/svg/pagination-arrow.html')</a>
+									<span>12-24/95-107</span>
+									<a href="#">@@include('./inc/components/svg/pagination-arrow.html')</a>
+								</div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="registration">
+				@@include('./inc/components/registration.html')
+			</section>
+			@@include('./inc/components/footer.html')
+		</div>
+	</body>
+</html>

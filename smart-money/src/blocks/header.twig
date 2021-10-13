@@ -1,0 +1,32 @@
+{% block header %}
+	<header class="header _header">
+		<div class="container">
+			<div class="header__static">
+				<a href="#" class="header__logo">
+					<img src="./img/logo.svg" alt="logo">
+				</a>
+			{% if phone %}
+				<a href="tel:88002003235" class="header__phone">
+					<div class="header__phone-icon">
+						<img src="./img/phone.svg" alt="">
+					</div>
+
+					<div class="header__phone-number">
+						8 800 200 55 91
+					</div>
+				</a>
+			{% endif %}
+			</div>
+
+			<div class="header__fixed">
+				<div class="header__offer">
+					{{title}}
+				</div>
+
+				<button class="header__btn" onclick="_gscq.push(['show', {{widgetId}}])">
+					Получить доход ->
+				</button>
+			</div>
+		</div>
+	</header>
+{% endblock %}

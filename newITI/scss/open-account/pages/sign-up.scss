@@ -1,0 +1,320 @@
+.sign-up-content
+{
+	max-width: 1102px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0 auto;
+	display: flex;
+	padding-top: 49px;
+	padding-bottom: 50px;
+	justify-content: space-between;
+}
+.faq-list-btn
+{
+	display: none;
+}
+.sign-up-faq-list
+{
+	flex: 1;
+	padding-right: 52px;
+	padding-top: 31px;
+	// margin-left: -10vw;
+}
+.sign-up-faq
+{
+	display: flex;
+	margin-bottom: 40px;
+	&:last-child
+	{
+		margin-bottom: 0;
+	}
+}
+.sign-up-faq__icon
+{
+	margin-right: 20px;
+	text-align: center;
+	min-width: 40px;
+	line-height: 0;
+	padding-top: 5px;
+}
+.sign-up-faq__header
+{
+	font-family: $semi;
+	font-size: 18px;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 22px;
+	letter-spacing: normal;
+	color: #000;
+}
+.sign-up-faq__descr
+{
+	font-size: 16px;
+	line-height: 25px;
+	color: #646464;
+	flex: 1;
+	max-width: 450px
+}
+.sign-up-form-wr
+{
+	max-width: 456px;
+	width: 100%;
+	// margin-right: -10vw;
+}
+.sign-up-form
+{
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	padding-top: 30px;
+	padding-bottom: 32px;
+	padding-left: 41px;
+	padding-right: 41px;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+	border: 1px solid #F6F6F6;
+	overflow: hidden;
+}
+.sign-up-inputs
+{
+	position: relative;
+	z-index: 1;
+	max-width: 100%;
+}
+.sign-up-input__input
+{
+	max-width: 100%;
+}
+.sign-up-input-wr
+{
+	margin-bottom: 20px;
+	position: relative;
+	&:last-child
+	{
+		margin-bottom: 0;
+	}
+
+	&.sign-up-input-wr_valid
+	{
+		&:after
+		{
+			transform: translateX(0);
+		}
+	}
+}
+.sign-up-input__label
+{
+	display: inline-block;
+	margin-bottom: 8px;
+	font-size: 16px;
+	line-height: 1.38;
+	color: #707070;
+}
+.sign-up-submit-wr
+{
+	padding-top: 32px;
+	text-align: center;
+}
+.sign-up-submit
+{
+	max-width: 247px;
+	width: 100%;
+}
+.sign-up-submit__text
+{
+	padding-top: 13px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 1.43;
+	color: #808080;
+}
+.sign-up-rules
+{
+	text-align: center;
+	font-size: 12px;
+	line-height: 1.5;
+	color: #b2b2b2;
+	font-family: $regular;
+	padding-top: 21px;
+	a
+	{
+		color: #b2b2b2;
+		border-bottom: 1px solid rgba(#7db7b7, 0.56);
+		transition: 0.2s;
+		&:hover
+		{
+			border-color: $main;
+			color: $main;
+		}
+	}
+}
+.sign-up-info
+{
+	max-width: 282px;
+	margin: 0 auto;
+	padding-top: 41px;
+}
+.sign-up-info__item
+{
+	display: flex;
+	margin-bottom: 25px;
+	&:last-child
+	{
+		margin-bottom: 0;
+	}
+}
+.sign-up-info__item_mobile
+{
+	display: none;
+}
+.sign-up-info__item_link
+{
+	&:hover
+	{
+		.sign-up-info__text
+		{
+			border-color: rgba(95, 148, 200, 0.66);
+		}
+	}
+	.sign-up-info__text
+	{
+		color: #5f94c8;
+		align-self: center;
+		border-bottom: 1px solid rgba(95, 148, 200, 0.33);
+		transition: 0.2s;
+	}
+}
+.sign-up-info__icon
+{
+	width: 20px;
+	text-align: center;
+	margin-right: 12px;
+}
+.sign-up-info__icon_lock
+{
+	padding-top: 2px;
+}
+.sign-up-info__text
+{
+	font-size: 14px;
+	line-height: 1.43;
+	color: #b2b2b2;
+}
+.sign-up-mobile-footer
+{
+	display: none;
+}
+
+@media (max-width: 1150px)
+{
+	.sign-up-faq-list
+	{
+		margin-left: 0;
+	}
+	.sign-up-form-wr
+	{
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 840px)
+{
+	.sign-up-form-wr
+	{
+		max-width: 350px;
+	}
+}
+@media (min-width: 768px)
+{
+	.sign-up-faq-list__items
+	{
+		display: block !important;
+	}
+}
+@media (max-width: 767px)
+{
+	.sign-up-content
+	{
+		flex-direction: column;
+		max-width: 400px;
+		padding-bottom: 40px;
+	}
+	.sign-up-faq-list
+	{
+		order: 1;
+		padding-right: 0;
+	}
+	.sign-up-faq
+	{
+		margin-bottom: 20px;
+	}
+	.sign-up-faq__icon,
+	.sign-up-info
+	{
+		display: none;
+	}
+	.sign-up-faq__header
+	{
+		font-size: 16px;
+		line-height: 22px;
+		margin-bottom: 5px;
+	}
+	.sign-up-faq-list__items
+	{
+		display: none;
+		margin-bottom: 30px;
+	}
+	.sign-up-form-wr
+	{
+		max-width: 100%;
+	}
+	.faq-list-btn
+	{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 23px;
+		padding-bottom: 23px;
+		border-top: 1px solid #F2F2F2;
+		border-bottom: 1px solid #F2F2F2;
+		margin-top: 25px;
+		margin-left: -10px;
+		margin-right: -10px;
+		padding-left: 16px;
+		padding-right: 16px;
+		margin-bottom: 35px;
+		transition: 0.3s;
+	}
+	.faq-list-btn_opened
+	{
+		margin-bottom: 25px;
+		.faq-list-btn__arrow
+		{
+			transform: rotate(180deg);
+		}
+	}
+	.faq-list-btn__text
+	{
+		font-size: 15px;
+		color: #646464;
+		border-bottom: 2px dashed #B4D4D4;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		cursor: pointer;
+	}
+	.sign-up-faq__descr
+	{
+		font-size: 15px;
+	}
+	.faq-list-btn__arrow
+	{
+		transition: 0.3s;
+	}
+	.sign-up-info__item_mobile
+	{
+		display: flex;
+		order: 3;
+	}
+	.sign-up-mobile-footer
+	{
+		display: block;
+	}
+}

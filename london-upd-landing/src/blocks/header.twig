@@ -1,0 +1,376 @@
+{% block header %}
+	<header class="header _header {{headerModify}}">
+		<div class="header-big-block">
+		<div class="header-warning"><b>Risk Warning: All trading involves risk.</b> Clients may lose significantly more than they invest and therefore your capital may be&nbsp;at&nbsp;risk.</div>
+		<a class="header__logo" href="#">
+			{% if headerModify and headerModify == 'header--tech-digital' %}
+				<img src="img/digital-tech-logo.svg" alt="iticapital.com ">
+			{% else %}
+				{% if headerModify and headerModify == 'header--group'%}
+					<img src="img/logo-group.svg" alt="iticapital.com ">
+				{% else %}
+					<h1>
+				        <img src="img/logo.svg" alt="iticapital.com ">
+				    </h1>
+				{% endif %}
+			{% endif %}
+		</a>
+
+		<nav class="header-nav _headerNav">
+			<a onclick="o2.toggleNav()" class="header__burger active" href="javascript:void(0);">
+				<span></span>
+			</a>
+			<div class="header-nav__mobile-buttons">
+				<a href="javascript:void(0);" onclick="o2.hideMobMenu();o2.popups.showPopup('#popup-sign-in');" class="header__log-in">Sign In</a>
+
+				<a href="#" onclick="o2.hideMobMenu()" class="header__sign-in">Open an Account</a>
+			</div>
+
+			<div class="header-nav__wrapper">
+				<ul class="header-nav__list header-nav__list--top">
+					<li class="active">
+						<a href="#home" onclick="o2.scrollTo('#home', 146)">Home</a>
+					</li>
+
+					<li>
+						<a href="#about" onclick="o2.scrollTo('#about', 146)">About</a>
+					</li>
+
+					<li>
+						<a href="#our-people" onclick="o2.scrollTo('#our-people', 146)">Our People</a>
+					</li>
+
+					<li>
+						<a href="#news" onclick="o2.scrollTo('#news', 146)">News</a>
+					</li>
+
+					<li>
+						<a href="#careers" onclick="o2.scrollTo('#careers', 146)">Careers</a>
+					</li>
+
+					<li>
+						<a href="#faq" onclick="o2.scrollTo('#footer', 146)">FAQ</a>
+					</li>
+
+					<li>
+						<a href="#footer" onclick="o2.scrollTo('#footer', 146)">Contacts</a>
+					</li>
+
+					<li>
+						<a href="#">ITI Group</a>
+					</li>
+				</ul>
+				{% if headerModify != 'header--tech-digital' %}
+				<hr class="header-nav__devider">
+
+				<ul class="header-nav__list header-nav__list--clients">
+					<li class="expands _hover-overlay">
+						<a href="#" onclick="o2.showDropdown(this)">Private Clients</a>
+
+						<div class="header-dropdown _mobile-menu-dropdown-show">
+							<div class="header-dropdown__inner">
+								<div class="header-props">
+									<a href="#" class="header-prop" onclick="o2.hideMobMenu()">
+										<div class="header-prop__icon">
+											{% include '../../img/advisory.svg' %}
+										</div>
+
+										<div class="header-prop__bottom">
+											<div class="header-prop__title header-prop__title--IPO"><span>-></span> IPOs, Placings, <br>Trade Ideas <span>-></span></div>
+											<div class="header-prop__descr">
+											</div>
+										</div>
+									</a>
+
+									<a href="#" class="header-prop" onclick="o2.hideMobMenu()">
+										<div class="header-prop__icon">
+											{% include '../../img/advisory.svg' %}
+										</div>
+
+										<div class="header-prop__bottom">
+											<div class="header-prop__title"><span>-></span>Advisory <span>-></span></div>
+											<div class="header-prop__descr">
+												Our tailor-made passive and active investment portfolios provide a complete piece of mind to our customers
+											</div>
+										</div>
+									</a>
+
+									<a href="#" class="header-prop" onclick="o2.hideMobMenu()">
+										<div class="header-prop__icon">
+											{% include '../../img/Desktop.svg' %}
+										</div>
+
+										<div class="header-prop__bottom">
+											<div class="header-prop__title"><span>-></span>Trading <span>-></span></div>
+											<div class="header-prop__descr">
+												Sophisticated trading technology built by traders for traders
+											</div>
+										</div>
+									</a>
+
+									<a href="#" class="header-prop" onclick="o2.hideMobMenu()">
+										<div class="header-prop__icon">
+											{% include '../../img/fx.svg' %}
+										</div>
+
+										<div class="header-prop__bottom">
+											<div class="header-prop__title"><span>-></span>FX <span>-></span></div>
+											<div class="header-prop__descr">
+												Trade margin FX on majors, minors and most exotic currency pairs via MT4
+											</div>
+										</div>
+									</a>
+
+									<a href="#" class="header-prop" onclick="o2.hideMobMenu()">
+										<div class="header-prop__icon">
+											{% include '../../img/margin.svg' %}
+										</div>
+
+										<div class="header-prop__bottom">
+											<div class="header-prop__title"><span>-></span>Margin Lending <span>-></span></div>
+											<div class="header-prop__descr">
+												Investment loan that lets you borrow money to invest in shares
+											</div>
+										</div>
+									</a>
+
+									<a href="#" class="header-prop" onclick="o2.hideMobMenu()">
+										<div class="header-prop__icon">
+											{% include '../../img/deposit.svg' %}
+										</div>
+
+										<div class="header-prop__bottom">
+											<div class="header-prop__title"><span>-></span>Deposit & Withdrawal <span>-></span></div>
+											<div class="header-prop__descr">
+												Bank transfer deposits may be made in GBP, EUR or USD
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="expands">
+						<a href="#" onclick="o2.hideMobMenu()">Institutional Clients</a>
+					</li>
+				</ul>
+			</div>
+			{% endif %}
+		</nav>
+
+		<div class="header__right">
+			<a href="javascript:void(0);" onclick="o2.popups.showPopup('#popup-sign-in');" class="header__log-in">Sign In</a>
+
+			<a href="#" class="header__sign-in">Open an Account</a>
+
+			{% include "./lang-switch.twig" %}
+
+			<a onclick="o2.toggleNav()" class="header__burger _header__burger" href="javascript:void(0);">
+				<span></span>
+			</a>
+		</div>
+		{% if instModify == 'header-dropdown--short' %}
+			<div class="header-alerts">
+                <div class="header-alert">
+                    <div class="header-alert__text">
+                        A message from ITI Capital on operations during COVID-19.
+                        <span class="g-link" onclick="o2.popups.showPopup('#popup-alert-covid');">
+                            Read the message →
+                        </span>
+                    </div>
+
+                    <div onclick="o2.closeAlert(this, 'acceptedCovid')" class="header-alert__close">
+                        <img src="./img/close.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="header-alert">
+                    <div class="header-alert__text">
+                        Fraudsters look for new ways to scam consumers.
+                        <span class="g-link" onclick="o2.popups.showPopup('#popup-alert-covid');">
+                            Read the message →
+                        </span>
+                    </div>
+
+                    <div onclick="o2.closeAlert(this, 'acceptedCovid')" class="header-alert__close">
+                        <img src="./img/close.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="header-alert">
+                    <div class="header-alert__text">
+                        Message for Clients of SVS Securities.
+                        <span class="g-link" onclick="o2.popups.showPopup('#popup-alert-covid');">
+                            Read the message →
+                        </span>
+                    </div>
+
+                    <div onclick="o2.closeAlert(this, 'acceptedCovid')" class="header-alert__close">
+                        <img src="./img/close.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="institutional-banners _institutional-banners">
+                <div class="institutional-banners__slider _institutional-banners__slider">
+                    <div class="institutional-banners__item">
+                        <div class="institutional-banners__item-wrap">
+                            <div class="institutional-banners__bg institutional-banners__bg--btce"></div>
+                            <div class="institutional-banners__data">
+                                <div class="institutional-banners__title">
+                                    Invest in Bitcoin via BTCE
+                                </div>
+                                <div class="institutional-banners__text">
+                                    The world’s first centrally cleared exchange traded product (ETP) on Bitcoin
+                                </div>
+                                <div class="institutional-banners__desc">
+                                    ITI Capital provides block trading access to institutional investors via BTCE
+                                </div>
+                            </div>
+                            <a href="#" class="institutional-banners__link">Get started today -></a>
+                        </div>
+                    </div>
+                    <div class="institutional-banners__item">
+                        <div class="institutional-banners__item-wrap">
+                            <div class="institutional-banners__bg institutional-banners__bg--zeth"></div>
+                            <div class="institutional-banners__data">
+                                <div class="institutional-banners__title">
+                                    Invest in Ethereum via ZETH
+                                </div>
+                                <div class="institutional-banners__text">
+                                    The world’s first centrally cleared exchange traded product (ETP) on Ethereum
+                                </div>
+                                <div class="institutional-banners__desc">
+                                    ITI Capital provides block trading access to institutional investors via ZETH
+                                </div>
+                            </div>
+                        <a href="#" class="institutional-banners__link">Get started today -></a>
+                        </div>
+                    </div>
+                    <div class="institutional-banners__item">
+                        <div class="institutional-banners__item-wrap">
+                            <div class="institutional-banners__bg institutional-banners__bg--financing"></div>
+                            <div class="institutional-banners__data">
+                                <div class="institutional-banners__title">
+                                    Securities Financing
+                                </div>
+                                <div class="institutional-banners__text">
+                                    Customised insight and a one-stop solution for execution, borrowing, portfolio enhancement and financing.
+                                </div>
+                                <div class="institutional-banners__desc">
+                                    Plus, repo financing solutions on equities, ETFs and fixed income securities issued in a wide variety of markets.
+                                </div>
+                            </div>
+                            <a href="#" class="institutional-banners__link">Read More -></a>
+                        </div>
+                    </div>
+                    <div class="institutional-banners__item">
+                        <div class="institutional-banners__item-wrap">
+                            <div class="institutional-banners__bg institutional-banners__bg--investment"></div>
+                            <div class="institutional-banners__data">
+                                <div class="institutional-banners__title">
+                                    June 2021 : Trade and Investment ideas
+                                </div>
+                                <div class="institutional-banners__text">
+                                    A range of investment horizons across asset classes from daily tactical to 5-year structured products and private technology deals to take advantage of the current global investment cycle and investment megatrends.
+                                </div>
+
+                            </div>
+                            <a href="#" class="institutional-banners__link desc">Download PDF with Trade Ideas -></a>
+                            <a href="#" class="institutional-banners__link mob">Download PDF -></a>
+                        </div>
+                    </div>
+                </div>
+			<div class="header-dropdown {{instModify}}">
+				<div class="header-dropdown__inner">
+					<ul class="header-dropdown__list">
+						<li>
+							<a href="#inst-0" onclick="o2.scrollTo('#inst-0')">
+								Global Direct <br>Electronic Access
+							</a>
+						</li>
+
+						<li>
+							<a href="#inst-2" onclick="o2.scrollTo('#inst-2')">
+								Global High-Touch<br>Trading
+							</a>
+						</li>
+
+						<li>
+							<a href="#inst-3" onclick="o2.scrollTo('#inst-3')">
+								Foreign<br>Exchange
+							</a>
+						</li>
+
+						<li>
+							<a href="#inst-4" onclick="o2.scrollTo('#inst-4')">
+								Securities<br>Financing
+							</a>
+						</li>
+
+						<li>
+							<a href="#inst-5" onclick="o2.scrollTo('#inst-5')">
+								Structured <br>Product
+							</a>
+						</li>
+
+						<li>
+							<a href="#inst-6" onclick="o2.scrollTo('#inst-6')">
+								Research<br>and Analysis
+							</a>
+						</li>
+
+						<li>
+							<a href="#inst-7" onclick="o2.scrollTo('#inst-7');">
+								Digital<br>Assets
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		{% endif %}
+		</div>
+		{% if instModify != 'header-dropdown--short' %}
+		<div class="header-alerts">
+			<div class="header-alert">
+				<div class="header-alert__text">
+					A message from ITI Capital on operations during COVID-19.
+					<span class="g-link" onclick="o2.popups.showPopup('#popup-alert-covid');">
+						Read the message →
+					</span>
+				</div>
+
+				<div onclick="o2.closeAlert(this, 'acceptedCovid')" class="header-alert__close">
+					<img src="./img/close.svg" alt="">
+				</div>
+			</div>
+
+			<div class="header-alert">
+				<div class="header-alert__text">
+					Fraudsters look for new ways to scam consumers.
+					<span class="g-link" onclick="o2.popups.showPopup('#popup-alert-covid');">
+						Read the message →
+					</span>
+				</div>
+
+				<div onclick="o2.closeAlert(this, 'acceptedCovid')" class="header-alert__close">
+					<img src="./img/close.svg" alt="">
+				</div>
+			</div>
+
+			<div class="header-alert">
+				<div class="header-alert__text">
+					Message for Clients of SVS Securities.
+					<span class="g-link" onclick="o2.popups.showPopup('#popup-alert-covid');">
+						Read the message →
+					</span>
+				</div>
+
+				<div onclick="o2.closeAlert(this, 'acceptedCovid')" class="header-alert__close">
+					<img src="./img/close.svg" alt="">
+				</div>
+			</div>
+		</div>
+		{% endif %}
+	</header>
+{% endblock %}

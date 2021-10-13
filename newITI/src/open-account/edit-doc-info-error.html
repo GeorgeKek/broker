@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('components/pagehead.html')
+</head>
+	<body>
+		<div class="page-wrapper">
+			@@include('components/header.html')
+
+			<div class="content">
+				<div class="sign-up-error-box">
+					<div class="sign-up-error-icon">
+						<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M19 38C29.4934 38 38 29.4934 38 19C38 8.50659 29.4934 0 19 0C8.50659 0 0 8.50659 0 19C0 29.4934 8.50659 38 19 38Z" fill="#F5C28C"/>
+							<path d="M20.2325 13.8756V27.95H17.7594V13.8756H20.2325ZM20.7605 9.4574C20.7605 9.69823 20.7095 9.92516 20.6076 10.1382C20.515 10.342 20.3853 10.5272 20.2186 10.6939C20.0612 10.8514 19.8713 10.9765 19.649 11.0691C19.4359 11.1617 19.209 11.208 18.9682 11.208C18.7274 11.208 18.5004 11.1617 18.2874 11.0691C18.0836 10.9765 17.903 10.8514 17.7455 10.6939C17.5881 10.5272 17.463 10.342 17.3704 10.1382C17.2778 9.92516 17.2315 9.69823 17.2315 9.4574C17.2315 9.21658 17.2778 8.98964 17.3704 8.77661C17.463 8.55431 17.5881 8.36443 17.7455 8.20696C17.903 8.04024 18.0836 7.91056 18.2874 7.81794C18.5004 7.72531 18.7274 7.679 18.9682 7.679C19.209 7.679 19.4359 7.72531 19.649 7.81794C19.8713 7.91056 20.0612 8.04024 20.2186 8.20696C20.3853 8.36443 20.515 8.55431 20.6076 8.77661C20.7095 8.98964 20.7605 9.21658 20.7605 9.4574Z" fill="white"/>
+						</svg>
+					</div>
+					<div class="content-header content-header_centered sign-up-error-header">
+						К&nbsp;сожалению, данные из&nbsp;Госуслуг
+						<br />
+						переданы с&nbsp;ошибкой
+					</div>
+					<div class="alert-wr alert-wr_sign-up-error">
+						<div class="alert-content alert-content_error">
+							Наш специалист перезвонит вам в&nbsp;течение&nbsp;15&nbsp;минут&nbsp;<br class="hide-mob">и&nbsp;поможет открыть счёт
+						</div>
+					</div>
+				</div>
+				<div class="sign-up-error-actions-wr">
+					<div class="content-header content-header_centered sign-up-error-header">
+						Не хотите ждать звонка?
+					</div>
+					<div class="sign-up-error-actions">
+						<a href="sign-up-docs.html" class="sign-up-error-action">
+							Откройте счет, используя <br>всего два документа
+						</a>
+						<div class="sign-up-error-action-delimiter">
+							или
+						</div>
+						<div class="sign-up-error-action sign-up-error-action_one-line">
+							Cвяжитесь <br class="hide-mob">
+							с оператором
+						</div>
+					</div>
+				</div>
+			</div>
+			@@include('components/security-footer.html')
+		</div>
+	</body>
+</html>

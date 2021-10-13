@@ -1,0 +1,162 @@
+.alter-banner
+{
+	background-image: url('../img/bg-alter.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	padding-top: 147px;
+	padding-bottom: 75px;
+}
+.alter-banner__wrap
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	margin-bottom: 60px;
+}
+h1.alter-banner__title
+{
+	font-family: $bold-font;
+	font-size: 60px;
+	line-height: 66px;
+	color: #565661;
+	max-width: 730px;
+	margin-bottom: 12px;
+}
+.alter-banner__slogan
+{
+	font-size: 32px;
+	line-height: 38px;
+	color: #565661;
+}
+.alter-banner__items
+{
+	display: flex;
+	background-color: #fff;
+	border: 1px solid #EAEAEA;
+	border-radius: 8px;
+	box-shadow: 0px 60px 70px rgba(0, 0, 0, 0.08);
+}
+.alter-banner__item
+{
+	flex-grow: 1;
+	width: 100%;
+	padding: 40px;
+	&:not(:last-child)
+	{
+		border-right: 1px solid #EAEAEA;
+	}
+}
+.alter-banner__item-title
+{
+	font-family: $bold-font;
+	white-space: nowrap;
+	font-size: 40px;
+	line-height: 42px;
+	font-feature-settings: 'zero' on;
+	color: #1DA374;
+	margin-bottom: 8px;
+}
+.alter-banner__item-descr
+{
+	font-size: 16px;
+	line-height: 19px;
+	font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on;
+	color: #333333;
+}
+
+
+@media (max-width: 1024px)
+{
+	.alter-banner__items
+	{
+		flex-wrap: wrap;
+	}
+	.alter-banner__item
+	{
+		width: 50%;
+		&:nth-child(-n+2)
+		{
+			border-bottom: 1px solid #EAEAEA;
+		}
+		&:nth-child(2)
+		{
+			border-right: none;
+		}
+	}
+
+}
+
+
+@media (max-width: 768px)
+{
+	.alter-banner__wrap
+	{
+		flex-direction: column;
+		text-align: center;
+	}
+	.alter-banner__text
+	{
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 20px;
+	}
+	h1.alter-banner__title
+	{
+		font-size: 32px;
+		line-height: 100%;
+		text-align: center;
+		color: #4B4B5C;
+	}
+	.alter-banner__slogan
+	{
+		font-size: 18px;
+		line-height: 22px;
+	}
+	.alter-banner__btn
+	{
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 18px;
+	}
+	.alter-banner__item
+	{
+		width: 100%;
+		border-bottom: 1px solid #EAEAEA;
+		&:nth-child(-n+2)
+		{
+			border-bottom: 1px solid #EAEAEA;
+		}
+		&:nth-child(2)
+		{
+			border-right: none;
+		}
+		&:not(:last-child)
+		{
+			border-right: none;
+		}
+	}
+	.alter-banner__item-title
+	{
+		font-size: 24px;
+		line-height: 29px;
+		text-align: center;
+	}
+	.alter-banner__item-descr
+	{
+		font-size: 14px;
+		line-height: 17px;
+		text-align: center;
+		br
+		{
+			display: none;
+		}
+	}
+}
+
+
+
+
+
+

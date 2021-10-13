@@ -1,0 +1,153 @@
+.institutional-slider
+{
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin-bottom: 64px;
+	filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.08));
+	transition: .3s;
+	&.bg
+	{
+		transition: .3s;
+		&::after
+		{
+			content: '';
+			position: absolute;
+			width: 50px;
+			height: 212px;
+			top: 50%;
+			transform: translateY(-50%) rotate(-180deg);
+			left: 0;
+			background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+			z-index:1;
+		}
+	}
+	&::before
+	{
+		content: '';
+		position: absolute;
+		width: 100px;
+		height: 212px;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 0;
+		background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+		z-index:1;
+	}
+	.slick-slide
+	{
+		margin: 0 12px;
+	}
+	.slick-list
+	{
+		padding:0 20% 0 0;
+		transition: .3s;
+		&.last
+		{
+			padding:0;
+			transition: .3s;
+		}
+		&.center-mode
+		{
+			padding:0 10% 0 10%;
+			transition: .3s;
+		}
+		&.last-slide
+		{
+			padding:0 0 0 20%;
+			transition: .3s;
+		}
+	}
+	.slick-arrow
+	{
+		position: absolute;
+		cursor:pointer;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 40px;
+		height: 40px;
+		border-radius:50px;
+		background: rgba(0, 0, 0, 0.56);
+		z-index: 15;
+		background-image: url('../images/arrow.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.prev-arrow
+	{
+		left: -20px;
+		transform: translateY(-50%) rotate(180deg);
+		display: none !important;
+		&.active{display: block !important;}
+	}
+	.next-arrow
+	{
+		right: -20px;
+		display: block !important;
+		&.active
+		{
+			display: none !important;
+		}
+	}
+}
+.institutional-slider__element
+{
+	background: #FFFFFF;
+	border-radius: 4px;
+	// box-shadow: 0px 17.3363px 57.869px rgba(0 ,0 ,0 , .2);
+	padding: 16px;
+	// margin: 0 12px;
+	// box-sizing: border-box;
+	height: 212px;
+}
+.institutional-slider__image
+{
+	width: 40px;
+	height: 40px;
+	margin-bottom: 16px;
+	svg
+	{
+		width: 100%;
+		height: 100%;
+	}
+}
+.institutional-slider__name
+{
+	font-family: $bold;
+	font-size: 18px;
+	line-height: 145%;
+	color: #333333;
+	margin-bottom: 16px;
+}
+.institutional-slider__text
+{
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 130%;
+	color: #808080;
+	margin-bottom: 16px;
+}
+.institutional-slider__price
+{
+	font-family: $bold;
+	font-size: 18px;
+	line-height: 145%;
+	color: #333333;
+}
+@media (max-width: 600px)
+{
+	.institutional-slider
+	{
+		&::before
+		{
+			display: none;
+		}
+		&.bg
+		{
+			&::after
+			{
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,142 @@
+.profit-items
+{
+	display: flex;
+	border: 1px solid #F2F2F2;
+	box-shadow: 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.00843437), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0121168), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.015), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0178832), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0215656), 0px 100px 80px rgba(0, 0, 0, 0.03);
+	border-radius: 4px;
+	position: relative;
+	top: -35px;
+	background-color: #fff;
+	margin-bottom: 55px;
+}
+
+.profit-item
+{
+	flex-basis: calc(100% / 3);
+	max-width: calc(100% / 3);
+	min-height: 290px;
+	display: flex;
+	flex-direction: column;
+	padding: 38px 20px 39px 70px;
+
+	&:not(:last-child)
+	{
+		border-right: 1px solid rgba(0, 0, 0, 0.08);
+	}
+
+	&:last-child
+	{
+		padding-top: 59px;
+		text-align: center;
+		padding-right: 72px;
+	}
+
+	.g-btn-stroke
+	{
+		margin-bottom: 55px;
+	}
+}
+
+.profit-item__title
+{
+	font-family: $bold-font;
+	font-size: 64px;
+	line-height: 67px;
+	color: #1DA374;
+	margin-bottom: 15px;
+}
+
+.profit-item__descr
+{
+	font-family: $accent-font;
+	font-size: 20px;
+	line-height: 1.4;
+	color: #7C7C85;
+	font-feature-settings: 'tnum' on, 'lnum' on, 'zero' on;
+}
+
+@media (max-width: 1199px)
+{
+	.profit-item
+	{
+		padding: 46px 20px 49px 40px;
+		&:last-child
+		{
+			padding-right: 20px;
+		}
+		.g-btn-stroke
+		{
+			margin-bottom: 25px;
+		}
+	}
+
+	.profit-item__title
+	{
+		font-size: 50px;
+		line-height: 67px;
+	}
+}
+
+@media (max-width: 1023px)
+{
+	.profit-items
+	{
+		margin-bottom: 0;
+		flex-wrap: wrap;
+	}
+
+	.profit-item
+	{
+		padding: 20px;
+		min-height: auto;
+		justify-content: flex-start;
+		align-items: center;
+		text-align: center;
+		flex-basis: 50%;
+		max-width: 50%;
+
+		&:last-child
+		{
+			padding-top: 35px;
+			flex-basis: 100%;
+			max-width: 100%;
+			border-top: 1px solid rgba(0, 0, 0, 0.08);
+		}
+
+		.g-btn-stroke
+		{
+			margin-bottom: 31px;
+		}
+	}
+
+	.profit-item__title
+	{
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 767px)
+{
+	.profit-items
+	{
+		position: static;
+		margin-bottom: 80px;
+	}
+
+	.profit-item
+	{
+		flex-basis: 100%;
+		max-width: 100%;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+		&:not(:last-child)
+		{
+			border-right: 0;
+		}
+
+		&:last-child
+		{
+			border-bottom: 0;
+		}
+	}
+}

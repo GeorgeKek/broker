@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('./inc/components/pagehead.html')
+</head>
+	<body>
+		<div class="wrp">
+			@@include('./inc/components/header.html')
+			<section class="main">
+				<div class="sevices-top">
+					<div class="container">
+						<div class="sevices-top__wrapper">
+							@@include('./inc/components/breadcrumbs.html')
+							<h1 class="sevices-top__title">
+								Наши услуги
+							</h1>
+						</div>
+					</div>
+				</div>
+				@@include('./inc/components/mobile-accordeon.html')
+				<div class="container flex-container">
+					<div class="accordeon-wrapper">
+						@@include('./inc/components/accordeon.html')
+					</div>
+					<div class="content-wrapper">
+						<div class="sevices-bot">
+							<div class="sevices-content">
+								<div class="services-text">
+									@@include('./inc/components/sevices-page-content.html')
+								</div>
+								<div class="services__right-cards">
+									<div class="services__right-consult__author">Искандер Луцко</div>
+									<a href="#" class="services__right-card">
+										<div class="services__right-card-text">Продуктовый калькулятор</div>
+										<div class="services__right-card-img services__right-card-img_pdf">
+											<img src="images/svg/download-pdf.svg" alt="">
+										</div>
+									</a>
+									<a href="#" class="services__right-card">
+										<div class="services__right-card-text">Закажите обратный звонок</div>
+										<div class="services__right-card-img">
+											<img src="images/phone.svg" alt="">
+										</div>
+									</a>
+									<a href="#" class="services__right-card">
+										<div class="services__right-card-text">Продуктовый калькулятор</div>
+										<div class="services__right-card-img">
+											<img src="images/svg/calculator.svg" alt="">
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="registration">
+				@@include('./inc/components/registration.html')
+			</section>
+			@@include('./inc/components/footer.html')
+		</div>
+	</body>
+</html>

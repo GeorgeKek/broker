@@ -1,0 +1,13 @@
+<form class="finder-news _finder-news" onsubmit="return o2.finderNews(this,1)">
+	<label class="finder-news__find">
+		<div class="finder-news__find-icon">
+			<svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 18.239h-1.317l-.458-.454a10.727 10.727 0 0 0 2.6-7.008C21.555 4.825 16.73 0 10.778 0 4.825 0 0 4.825 0 10.777c0 5.953 4.825 10.778 10.778 10.778 2.678 0 5.12-.981 7.005-2.596l.458.454v1.313l8.287 8.276L29 26.529l-8.27-8.29zm-9.953 0a7.46 7.46 0 0 1-7.461-7.462 7.461 7.461 0 1 1 14.923 0 7.461 7.461 0 0 1-7.462 7.462z" fill="#8C8C8C"></path></svg>
+		</div>
+		<input type="text" class="finder-news__find-input" placeholder="Что ищете?" oninput="o2.filledUp(this)">
+		<div class="finder-news__find-close" onclick="o2.deleteFinder(this)">
+			<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.8 0L0 1.8 16.2 18l1.8-1.8L1.8 0z" fill="#8C8C8C"></path><path d="M18 1.8L16.2 0 0 16.2 1.8 18 18 1.8z" fill="#8C8C8C"></path></svg>
+		</div>
+		<p class="error-text"></p>
+	</label>
+	<button class="finder-news__button">Найти</button>
+</form>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	@@include('./inc/components/pagehead.html')
+</head>
+	<body>
+		<div class="wrap">
+			@@include('./inc/components/header.html')
+			<section class="main">
+				<div class="sevices-top">
+					<div class="container">
+						<div class="sevices-top__wrapper">
+							@@include('./inc/components/breadcrumbs.html')
+							<h1 class="sevices-top__title">
+								О компании
+							</h1>
+						</div>
+					</div>
+				</div>
+				@@include('./inc/components/mobile-accordeon.html')
+				<div class="container flex-container">
+					<div class="accordeon-wrapper">
+						@@include('./inc/components/accordeon.html')
+					</div>
+					<div class="content-wrapper">
+						<div class="sevices-bot">
+							<div class="sevices-content">
+								<iframe width="100%" id="iti-widget" height="auto" data-ticker="msft" onload="(function(){var f = this; var w = window; w.addEventListener('message', function(e) {if(e.data &amp;&amp; e.data.height) {f.style.height=e.data.height+'px';}},false)}).call(this)" scrolling="no" frameborder="0" src="http://trwidget-preprod.azurewebsites.net/content/iti-ru/iti-widget.html#domUrl?undefined" data-url="url"></iframe>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="registration">
+				@@include('./inc/components/registration.html')
+			</section>
+			@@include('./inc/components/footer.html')
+		</div>
+	</body>
+</html>
